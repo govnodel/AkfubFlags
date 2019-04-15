@@ -31,7 +31,10 @@ button:focus {
 svg {
   margin: 40vh;
 }
-svg rect {
-  border-radius: 5px;
+svg text{
+  font: 2em sans-serif;
+  color: white;
+  letter-spacing: .1em;
+  font-weight: bold;
 
 }
