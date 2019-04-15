@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: LightYellow
+  ;
+}
+.parent {
+  display: flex;
+  width: 87%;
+  margin: auto;
+  padding: 0;
+}
+button {
+  margin-top: 40vh;
+  margin-left: 30vw;
+  background: none;
+  border: 2px double tan;
+  width: 260px;
+  height: 181px;
+  border-radius: 6px;
+  padding: 0;
+}
+button img {
+  border-radius: 4px;
+  margin: 0;
+}
+button:focus {
+  outline: none;
+  opacity: .5;
+}
