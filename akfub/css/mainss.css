@@ -28,3 +28,10 @@ button:focus {
   outline: none;
   opacity: .5;
 }
+svg {
+  margin: 40vh;
+}
+svg rect {
+  border-radius: 5px;
+
+}
