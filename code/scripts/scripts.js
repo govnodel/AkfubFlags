@@ -14,22 +14,27 @@ generateWin(flags); //<-- генерация флага, который нужн
 document.getElementById("country").textContent = winName; //<-- элемент названия флага, который нужно выбрать
 //переменные изображений
 //нужно сократить
-document.getElementById("1").children[0].src = flags[0];
-document.getElementById("2").children[0].src = flags[1];
-document.getElementById("3").children[0].src = flags[2];
-document.getElementById("4").children[0].src = flags[3];;
-//<----------------------------------------------------------------->
+document.getElementById("_1").addEventListener("click",clickFlag)
+document.getElementById("_2").addEventListener("click",clickFlag)
+document.getElementById("_3").addEventListener("click",clickFlag)
+document.getElementById("_4").addEventListener("click",clickFlag)
+document.getElementById("_1").src = flags[0];
+document.getElementById("_2").src = flags[1];
+document.getElementById("_3").src = flags[2];
+document.getElementById("_4").src = flags[3];
+//<-------------------------------------------------------------------------------------------------->
+
 
 
 function autoFill(){
-  flagsLink[1] = "flags/Georgia_(1918–1921).png";
-  flagsLink[2] = "flags/the_Ottoman_Empire.png";
-  flagsLink[3] = "flags/Bavaria.png";
-  flagsLink[4] = "flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
-  flagsLink[5] = "flags/Texas.png";
-  flagsLink[6] = "flags/Hanover_(1837-1866).png";
-  flagsLink[7] = "flags/Golden_Horde_(1339).png";
-  flagsLink[8] = "flags/the_United_States_of_the_Ionian_Islands.png";
+  flagsLink[1] = "../akfub/flags/Georgia_(1918–1921).png";
+  flagsLink[2] = "../akfub/flags/the_Ottoman_Empire.png";
+  flagsLink[3] = "../akfub/flags/Bavaria.png";
+  flagsLink[4] = "../akfub/flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
+  flagsLink[5] = "../akfub/flags/Texas.png";
+  flagsLink[6] = "../akfub/flags/Hanover_(1837-1866).png";
+  flagsLink[7] = "../akfub/flags/Golden_Horde_(1339).png";
+  flagsLink[8] = "../akfub/flags/the_United_States_of_the_Ionian_Islands.png";
   //нужно сократить
   flagsName[1] = "Georgia (1918–1921)";
   flagsName[2] = "the Ottoman Empire";
@@ -48,8 +53,8 @@ function autoFill(){
   }
 }
 
-function clickFlag(id){ //<-- нужно переписать весь метод
-     if(id == winPosition){
+function clickFlag(){ //<-- нужно переписать весь метод
+     if(this.id == winPosition){
        alert("win");
      } else {
        alert("lose");

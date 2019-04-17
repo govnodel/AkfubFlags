@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: LightYellow;
+}
+.parent {
+  display: flex;
+  width: 87%;
+  margin: auto;
+  padding: 0;
+}
+#flags {
+  width: 520px;
+}
+#_1 {
+  border: 4px groove DodgerBlue;
+  border-radius: 6px;
+  animation: flagclick .2s linear infinite;
+
+}
+#_2 {
+  border: 4px double darkslategray;
+  border-radius: 6px;
+}
+#_3 {
+  border: 4px double darkslategray;
+  border-radius: 6px;
+}
+#_4 {
+  border: 4px double darkslategray;
+  border-radius: 6px;
+}
+@keyframes flagclick {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}
