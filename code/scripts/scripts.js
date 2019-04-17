@@ -1,4 +1,4 @@
-
+// как по мне ваня страдает хернёй
 
 //метод main
 //<----------------------------------------------------------------->
@@ -11,7 +11,7 @@ var flagsLink = []; //<-- массив с ссылками на флаги
 autoFill(flagsLink);//<-- их заполнение
 generateWin(flags); //<-- генерация флага, который нужно выбрать
 //alert("win = " + winPosition); //<-- cheker
-document.getElementById("name").textContent = winName; //<-- элемент названия флага, который нужно выбрать
+document.getElementById("country").textContent = winName; //<-- элемент названия флага, который нужно выбрать
 //переменные изображений
 //нужно сократить
 document.getElementById("1").children[0].src = flags[0];
