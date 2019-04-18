@@ -7,66 +7,60 @@
 //<==========================================<метод main>============================================>
 var winPosition;
 var winName;
+var winCounter = 0; //<-- количество правильных ответов
+var generalCounter = 0; //<-- счётчик попыток
+var maxWin = 4; //<-- количество попыток
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
-var flagsName = []; //<-- массив с именами флагов
-var flagsLink = []; //<-- массив с ссылками на флаги
+var flagsName; //<-- массив с именами флагов
+var flagsLink; //<-- массив с ссылками на флаги
+var arrayWithPos;
+flagsLink = window.links;
+flagsName = window.names;
 //---------------------
-autoFill(flagsLink);//<-- заполнение
-generateWin(flags); //<-- генерация флага, который нужно выбрать
-//alert("win = " + winPosition); //<-- cheker
-document.getElementById("country").textContent = winName; //<-- элемент названия флага, который нужно выбрать
-var flags = []; //<-- массив с элементами флагов
-//<-----------------------------------------<цикл заполнения>---------------------------------------->
-for(var i = 0; i < 4; i++){
-  flags[i] = document.getElementById("_" + (i + 1));
-  flags[i].addEventListener("click",clickFlag);
-  flags[i].src = flagsFinal[i];
-}
-//<-------------------------------------------------------------------------------------------------->
+var nameEl = document.getElementById("country"); //<-- элемент названия флага, который нужно выбрать
+var flagsEl = []; //<-- массив с элементами флагов
+autoFill();//<-- заполнение
 //<==================================================================================================>
 
 
 
 function autoFill(){
-  // flagsLink[1] = "../akfub/flags/Georgia_(1918–1921).png";
-  // flagsLink[2] = "../akfub/flags/the_Ottoman_Empire.png";
-  // flagsLink[3] = "../akfub/flags/Bavaria.png";
-  // flagsLink[4] = "../akfub/flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
-  // flagsLink[5] = "../akfub/flags/Texas.png";
-  // flagsLink[6] = "../akfub/flags/Hanover_(1837-1866).png";
-  // flagsLink[7] = "../akfub/flags/Golden_Horde_(1339).png";
-  // flagsLink[8] = "../akfub/flags/the_United_States_of_the_Ionian_Islands.png";
-  // //нужно сократить
-  // flagsName[1] = "Georgia (1918–1921)";
-  // flagsName[2] = "the Ottoman Empire";
-  // flagsName[3] = "Bavaria";
-  // flagsName[4] = "the Kingdom of the Two Sicilies (1816)";
-  // flagsName[5] = "Texas";
-  // flagsName[6] = "Hanover (1837-1866)";
-  // flagsName[7] = "Golden Horde (1339)";
-  // flagsName[8] = "the United States of the Ionian Islands";
-
-  // import {links, names} from "./dataBase";
-  // flagsLink = links;
-  // flagsName = names;
-
-  var arrayWithPos = Randomizer(4, 8, 1);
-  //alert(arrayWithPos); //<-- cheker
+  arrayWithPos = Randomizer(4, flagsLink.length - 1, 0);
   for(var i = 0; i < arrayWithPos.length; i++){
     flagsFinal[i] = flagsLink[arrayWithPos[i]];
     flagsFinalNames[i] = flagsName[arrayWithPos[i]];
   }
+  generateWin(); //<-- генерация флага, который нужно выбрать
+  nameEl.textContent = winName;
+  for(var i = 0; i < 4; i++){
+    flagsEl[i] = document.getElementById("_" + (i + 1));
+    flagsEl[i].addEventListener("click",clickFlag);
+    flagsEl[i].src = flagsFinal[i];
+  }
 }
 
-function clickFlag(){ //<-- нужно переписать весь метод
+
+
+function clickFlag(){
      if(this.id == ("_" + winPosition)){
-       alert("win");
+       winCounter++;
+       generalCounter++;
+       alert("Right answer!");
      } else {
-       alert("lose");
+       generalCounter++;
+       alert("Wrong answer!");
+     }
+     if(generalCounter >= maxWin){
+       alert(winCounter + "/" + maxWin);
+       window.location.href = "main.html";
+     } else {
+       autoFill();//<-- повторное заполнение
      }
 }
+
+
 
 function generateWin(){
      winPosition = Math.round(Math.random() * (4 - 1) + 1);
@@ -87,6 +81,8 @@ function generateWin(){
 
      }
 }
+
+
 
 function Randomizer(count, max, min){
   var numbers = [];
