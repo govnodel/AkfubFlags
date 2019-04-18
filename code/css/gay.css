@@ -35,11 +35,3 @@
   box-shadow: 0 0 10px black;
   margin: 2px;
 }
-@keyframes flagclick {
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
