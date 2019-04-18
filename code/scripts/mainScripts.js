@@ -4,6 +4,12 @@
 @я тут сижу и вдруг слышу, как гуси летят... или утки, хуй его знает
 */
 
+/* Список задач:
+    1) оптимизировать dataBase
+    2) убрать повторение флагов
+    3) добавить таймер (timeBar) <-- остался только Bar
+*/
+
 //<==========================================<метод main>============================================>
 var winPosition;
 var winName;
@@ -22,6 +28,8 @@ flagsName = window.names;
 var nameEl = document.getElementById("country"); //<-- элемент названия флага, который нужно выбрать
 var flagsEl = []; //<-- массив с элементами флагов
 autoFill();//<-- заполнение
+var timer = 0;
+setInterval(oneSec, 1000);
 //<==================================================================================================>
 
 
@@ -100,4 +108,14 @@ function Randomizer(count, max, min){
     }
   }
   return numbers;
+}
+
+function oneSec(){
+  timer++;
+  if(timer == 10){
+    timer = 0;
+    generalCounter++;
+    alert("Time out!");
+    autoFill();//<-- повторное заполнение
+  }
 }
