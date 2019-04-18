@@ -62,8 +62,10 @@ function clickFlag(){
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
+       timer = 0;
        window.location.href = "main.html";
      } else {
+       timer = 0;
        autoFill();//<-- повторное заполнение
      }
 }
