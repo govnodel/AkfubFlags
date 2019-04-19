@@ -1,7 +1,7 @@
 /*
 @как по мне ваня страдает хернёй
 @ага, возможно
-@я тут сижу и вдруг слышу, как гуси летят... или утки, хуй его знает
+ я тут сижу и вдруг слышу, как гуси летят... или утки, хуй его знает
 */
 
 /* Список задач:
@@ -15,7 +15,9 @@ var winPosition;
 var winName;
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
-var maxWin = 4; //<-- количество попыток
+var maxWin = 400; //<-- количество попыток
+var repeat = ["first"];
+var checker = true;
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
@@ -28,8 +30,9 @@ flagsName = window.names;
 var nameEl = document.getElementById("country"); //<-- элемент названия флага, который нужно выбрать
 var flagsEl = []; //<-- массив с элементами флагов
 autoFill();//<-- заполнение
+dom();
 var timer = 0;
-setInterval(oneSec, 1000);
+setInterval(oneSec, 10000);
 //<==================================================================================================>
 
 
@@ -41,12 +44,6 @@ function autoFill(){
     flagsFinalNames[i] = flagsName[arrayWithPos[i]];
   }
   generateWin(); //<-- генерация флага, который нужно выбрать
-  nameEl.textContent = winName;
-  for(var i = 0; i < 4; i++){
-    flagsEl[i] = document.getElementById("_" + (i + 1));
-    flagsEl[i].addEventListener("click",clickFlag);
-    flagsEl[i].src = flagsFinal[i];
-  }
 }
 
 
@@ -66,7 +63,10 @@ function clickFlag(){
        window.location.href = "main.html";
      } else {
        timer = 0;
-       autoFill();//<-- повторное заполнение
+       repeat[repeat.length] = winName;
+       checkRep();
+       if(checker){autoFill();}
+       dom();
      }
 }
 
@@ -119,5 +119,28 @@ function oneSec(){
     generalCounter++;
     alert("Time out!");
     autoFill();//<-- повторное заполнение
+    dom();
+  }
+}
+
+
+function checkRep(){
+  for (var i = 0; i < repeat.length; i++) {
+    if(flagsFinalNames[winPosition] == repeat[i]){
+      alert("repeat " + flagsFinalNames[winPosition]+"="+repeat[i]);
+      alert(repeat);
+      autoFill();
+      checker = false;
+      i = -1;
+    }
+  }
+}
+
+function dom(){
+  nameEl.textContent = winName;
+  for(var i = 0; i < 4; i++){
+    flagsEl[i] = document.getElementById("_" + (i + 1));
+    flagsEl[i].addEventListener("click",clickFlag);
+    flagsEl[i].src = flagsFinal[i];
   }
 }
