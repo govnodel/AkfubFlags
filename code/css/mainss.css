@@ -6,8 +6,6 @@ body {
 .parent {
   display: flex;
   width: 87%;
-  align-items: center;
-  justify-content: center;
 }
 svg {
   margin-left: 10%;

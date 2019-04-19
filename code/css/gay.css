@@ -1,7 +1,27 @@
+
+svg.kruglyash circle {
+  transform: rotate(-90deg);
+  stroke-width: 8px;
+  stroke: SteelBlue;
+  transition-property: stroke-dashoffset;
+  stroke-dasharray: 300%;
+  stroke-dashoffset: -187;
+  transition-timing-function: linear;
+  transition-duration: 11s;
+}
+svg.kruglyash text {
+  font-size: 1.3em;
+  font-family: fantasy;
+}
 .parent {
   width: 87%;
   margin: 5vw;
   padding: 0;
+}
+.kruglyash { /* этот класс говно, надо поменять, щас лень */
+  margin-left: auto;
+  opacity: 1;
+  position: absolute;
 }
 #country {
   font-family: fantasy;
@@ -9,8 +29,6 @@
   font-size: 40px;
   color: 	SteelBlue;
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 #flags {
   width: 520px;
