@@ -1,0 +1,17 @@
+.kruglyash { /* этот калсс говно, надо поменять, щас лень */
+  stroke-width: 8px;
+  stroke: SteelBlue;
+  margin: 0;
+  opacity: 1;
+  transform: rotate(-90deg);
+  position: absolute;
+}
+/*Коммент ради коммента  */
+/* но я тут пытался сделать анимацию.. */
+svg.kruglyash circle {
+  transition-property: stroke-dashoffset;
+  stroke-dasharray: 250%;
+  stroke-dashoffset: -187;
+  transition-timing-function: linear;
+  transition-duration: 10s;
+}

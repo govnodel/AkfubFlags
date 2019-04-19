@@ -9,32 +9,24 @@ body {
   margin: auto;
   padding: 0;
 }
-button {
-  margin-top: 40vh;
-  margin-left: 30vw;
-  background: none;
-  border: 2px double tan;
-  width: 260px;
-  height: 181px;
-  border-radius: 6px;
-  padding: 0;
-}
-button img {
-  border-radius: 4px;
-  margin: 0;
-}
-button:focus {
-  outline: none;
-  opacity: .5;
-}
 svg {
-  margin: 40vh;
+  margin-left: 8%;
+  margin-top: 180px;
 }
 svg text{
   font: 2em sans-serif;
   color: white;
   font-weight: bold;
-
   letter-spacing: .1em;
-
+}
+#_menu_log {
+  margin-left: 10px;
+  margin-top: 140px;
+  box-shadow: 0 0 3px;
+  border: 3px;
+  background: #E7F1F5;
+  width: 180px;
+  height: 200px;
+  font-family: sans-serif;
+  float: left;
 }
