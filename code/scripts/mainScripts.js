@@ -58,15 +58,15 @@ function clickFlag(){
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
-       timer = 10;
        window.location.href = "main.html";
      } else {
-       timer = 10;
        repeat[repeat.length] = winName;
        autoFill();
        checkRep();
        dom();
      }
+     timer = 10;
+     document.getElementById("").style.setProperty('--', timer);
 }
 
 
@@ -120,6 +120,8 @@ function oneSec(){
     autoFill();//<-- повторное заполнение
     dom();
   }
+  document.getElementById("").style.setProperty('--', timer);
+  document.getElementById("").style.setProperty('--', timer);
 }
 
 
