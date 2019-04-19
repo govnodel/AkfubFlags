@@ -6,11 +6,11 @@ body {
 .parent {
   display: flex;
   width: 87%;
-  margin: auto;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 svg {
-  margin-left: 8%;
+  margin-left: 10%;
   margin-top: 180px;
 }
 svg text{
@@ -19,7 +19,7 @@ svg text{
   font-weight: bold;
   letter-spacing: .1em;
 }
-#_menu_log {
+#_menu_log_reg {
   margin-left: 10px;
   margin-top: 140px;
   box-shadow: 0 0 3px;
@@ -29,4 +29,8 @@ svg text{
   height: 200px;
   font-family: sans-serif;
   float: left;
+}
+#_menu_log_reg > input {
+  margin: 6px;
+
 }
