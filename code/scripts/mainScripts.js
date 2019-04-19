@@ -30,7 +30,7 @@ var nameEl = document.getElementById("country"); //<-- элемент назва
 var flagsEl = []; //<-- массив с элементами флагов
 autoFill();//<-- заполнение
 dom();
-var timer = 0;
+var timer = 10;
 setInterval(oneSec, 10000);
 //<==================================================================================================>
 
@@ -58,10 +58,10 @@ function clickFlag(){
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
-       timer = 0;
+       timer = 10;
        window.location.href = "main.html";
      } else {
-       timer = 0;
+       timer = 10;
        repeat[repeat.length] = winName;
        autoFill();
        checkRep();
@@ -112,9 +112,9 @@ function Randomizer(count, max, min){
 }
 
 function oneSec(){
-  timer++;
-  if(timer == 10){
-    timer = 0;
+  timer--;
+  if(timer == 0){
+    timer = 10;
     generalCounter++;
     alert("Time out!");
     autoFill();//<-- повторное заполнение
