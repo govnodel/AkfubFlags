@@ -64,8 +64,11 @@ function clickFlag(){
      } else {
        timer = 0;
        repeat[repeat.length] = winName;
+       //alert("before " + checker);
        checkRep();
+       //alert("after " + checker);
        if(checker){autoFill();}
+       checker = true;
        dom();
      }
 }
