@@ -17,7 +17,6 @@ var winCounter = 0; //<-- количество правильных ответо
 var generalCounter = 0; //<-- счётчик попыток
 var maxWin = 400; //<-- количество попыток
 var repeat = ["first"];
-var checker = true;
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
@@ -64,11 +63,8 @@ function clickFlag(){
      } else {
        timer = 0;
        repeat[repeat.length] = winName;
-       //alert("before " + checker);
+       autoFill();
        checkRep();
-       //alert("after " + checker);
-       if(checker){autoFill();}
-       checker = true;
        dom();
      }
 }
@@ -129,11 +125,8 @@ function oneSec(){
 
 function checkRep(){
   for (var i = 0; i < repeat.length; i++) {
-    if(flagsFinalNames[winPosition] == repeat[i]){
-      alert("repeat " + flagsFinalNames[winPosition]+"="+repeat[i]);
-      alert(repeat);
+    if(flagsFinalNames[winPosition-1] == repeat[i]){
       autoFill();
-      checker = false;
       i = -1;
     }
   }
