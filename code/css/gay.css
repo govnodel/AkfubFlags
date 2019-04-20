@@ -3,55 +3,69 @@ svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
   stroke: SteelBlue;
-  transition-property: stroke-dashoffset;
   stroke-dasharray: 300%;
-  stroke-dashoffset: -187;
-  transition-timing-function: linear;
-  transition-duration: 11s;
+  animation: timer 11s linear;
+  -webkit-animation: timer 11s linear;
+}
+@keyframes timer {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -187
+  }
+}
+@-webkit-keyframes timer {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -187
+  }
 }
 svg.kruglyash text {
   font-size: 1.3em;
-  font-family: fantasy;
+  font-family: fantasy
 }
 .parent {
   width: 87%;
   margin: 5vw;
-  padding: 0;
+  padding: 0
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень */
   margin-left: auto;
   opacity: 1;
-  position: absolute;
+  position: absolute
 }
 #country {
   font-family: fantasy;
   font: impact;
   font-size: 40px;
   color: 	SteelBlue;
-  text-align: center;
+  text-align: center
 }
 #flags {
   width: 520px;
   margin-left: 28%;
-  align-content: center;
+  align-content: center
 }
 #_1 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
-  margin: 2px;
+  margin: 2px
 }
 #_2 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
-  margin: 2px;
+  margin: 2px
 }
 #_3 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
-  margin: 2px;
+  margin: 2px
 }
 #_4 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
-  margin: 2px;
+  margin: 2px
 }
