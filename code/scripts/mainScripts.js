@@ -15,7 +15,7 @@ var winPosition;
 var winName;
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
-var maxWin = 400; //<-- количество попыток
+var maxWin = 50; //<-- количество попыток
 var repeat = ["first"];
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
@@ -31,7 +31,7 @@ var flagsEl = []; //<-- массив с элементами флагов
 autoFill();//<-- заполнение
 dom();
 var timer = 10;
-setInterval(oneSec, 10000);
+setInterval(oneSec, 1000);
 //<==================================================================================================>
 
 
@@ -66,7 +66,7 @@ function clickFlag(){
        dom();
      }
      timer = 10;
-     document.getElementById("").style.setProperty('--', timer);
+     document.getElementById("timer_sec").textContent = timer;
 }
 
 
@@ -116,12 +116,12 @@ function oneSec(){
   if(timer == 0){
     timer = 10;
     generalCounter++;
-    alert("Time out!");
+    //alert("Time out!");
+    repAnim();
     autoFill();//<-- повторное заполнение
     dom();
   }
-  document.getElementById("").style.setProperty('--', timer);
-  document.getElementById("").style.setProperty('--', timer);
+  document.getElementById("timer_sec").textContent = timer;
 }
 
 
@@ -141,4 +141,12 @@ function dom(){
     flagsEl[i].addEventListener("click",clickFlag);
     flagsEl[i].src = flagsFinal[i];
   }
+}
+
+function repAnim(){
+  var elCirc = document.getElementById("");
+  elCirc.style.animationName = "timer";
+  elCirc.style.animationTimingFunction = "linear";
+  elCirc.style.animationDuration = "10s";
+
 }
