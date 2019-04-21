@@ -1,11 +1,13 @@
-
+body {
+  background-image: url(../akfub/otherimgs/Shapka.jpg);
+}
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
   stroke: SteelBlue;
   stroke-dasharray: 300%;
   animation: timer 10s linear;
-  -webkit-animation: timer 10s linear;
+  -webkit-animation: timer 10s linear
 }
 @keyframes timer {
   from {
@@ -49,6 +51,7 @@ svg.kruglyash text {
   margin-left: 28%;
   align-content: center
 }
+/* Нужно скоратить */
 #_1 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;

@@ -1,34 +1,49 @@
 body {
+  /* -Отступы */
   padding: 0;
   margin: 0;
   background: #E7F1F5;
+  /* Шапка */
+  background-image: url(../akfub/otherimgs/Shapka.jpg); /* <--- Эта дичь не работает */
+  background-attachment: fixed;
 }
+/* Задаём родительсский элемент для всей страницы */
 .parent {
   display: flex;
-  width: 87%;
+  width: 87%
 }
+/* Кнопка играца */
 svg {
   margin-left: 10%;
   margin-top: 180px;
+  opacity: .9
 }
 svg text{
   font: 2em sans-serif;
   color: white;
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: .1em
 }
+svg:hover {
+  opacity: 1
+}
+/* Оформление окна регисрации и входа */
 #_menu_log_reg {
   margin-left: 10px;
   margin-top: 140px;
+  /* Обозначение границ окошка */
   box-shadow: 0 0 3px;
   border: 3px;
-  background: #E7F1F5;
+  /* ========================= */
+  background: inherit;
   width: 180px;
   height: 200px;
+  /* Оформление текста внутри окна */
   font-family: sans-serif;
-  float: left;
+  /* ============================= */
+  float: left
 }
 #_menu_log_reg > input {
-  margin: 6px;
-
+  margin: 6px
 }
+/* <==================================> */
