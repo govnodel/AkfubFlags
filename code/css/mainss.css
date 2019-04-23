@@ -1,16 +1,64 @@
+/* Список задач:
+  1. Оптимизировать код
+  2. Сделать адаптивность
+  3. Убрать родительский элемент
+  4. Сделать нормальную позицию объектам
+  5. Сделать переключение кона логина и регистрации
+  6. Сделать кнопку профиля */
+
 body {
   /* -Отступы */
   padding: 0;
   margin: 0;
   background: #E7F1F5;
   /* Шапка */
-  background-image: url(../akfub/otherimgs/Shapka.jpg); /* <--- Эта дичь не работает */
+  /*background-image: url(../akfub/otherimgs/Shapka.jpg); /* <--- Эта дичь не работает */
   background-attachment: fixed;
 }
 /* Задаём родительсский элемент для всей страницы */
 .parent {
   display: flex;
-  width: 87%
+  width: 87%;
+}
+/* Блок описания  */
+/* Нужно исправить */
+.desc {
+  margin-top: 400px;
+  margin-left: 0;
+  /* Нужно поменять на единый параметр margin */
+  width: 40vw;
+  height: 27%;
+  box-shadow: 0 0 3px;
+  border: 3px;
+  border-radius: 2px;
+  background: white;
+}
+/* Временный макет шапки */
+.hat {
+  width: 100%;
+  height: 50px;
+  border-top: 2px LightSlateGrey dashed;
+  border-bottom: 2px LightSlateGrey dashed;
+  text-align: center;
+  font-family: sans-serif;
+  color: LightSlateGrey
+}
+/* Оформление рекламного банера */
+.ad {
+  border-radius: 3px;
+  border: 4px LightSlateGrey dashed;
+  width: 180px;
+  height: 500px;
+  margin-top: 4px;
+  margin-left: 6px;
+  baseline: center
+}
+  /* Временное оформление текста, при вставке рекламы убрать */
+.ad p {
+  text-align: center;
+  color: LightSlateGrey;
+  font-family: sans-serif;
+  vertical-align: middle;
 }
 /* Кнопка играца */
 svg {
@@ -34,6 +82,7 @@ svg:hover {
   /* Обозначение границ окошка */
   box-shadow: 0 0 3px;
   border: 3px;
+  border-radius: 2px;
   /* ========================= */
   background: inherit;
   width: 180px;
@@ -41,7 +90,6 @@ svg:hover {
   /* Оформление текста внутри окна */
   font-family: sans-serif;
   /* ============================= */
-  float: left
 }
 #_menu_log_reg > input {
   margin: 6px
