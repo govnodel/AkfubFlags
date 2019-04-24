@@ -15,15 +15,11 @@ body {
   /*background-image: url(../akfub/otherimgs/Shapka.jpg); /* <--- Эта дичь не работает */
   background-attachment: fixed;
 }
-/* Задаём родительсский элемент для всей страницы */
-.parent {
-  display: flex;
-  width: 87%;
-}
 /* Блок описания  */
 /* Нужно исправить */
 .desc {
-  margin-top: 400px;
+  margin-top: 50vh;
+  margin-left: 1vw;
   /* Нужно поменять на единый параметр margin */
   width: 60vw;
   min-height: 40vh;
@@ -31,6 +27,9 @@ body {
   border: 3px;
   border-radius: 2px;
   background: white;
+  position: relative;
+  top: 0;
+  left: 4px;
 }
 /* Временный макет шапки */
 .hat {

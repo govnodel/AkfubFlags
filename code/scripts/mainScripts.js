@@ -148,5 +148,4 @@ function repAnim(){
   elCirc.style.animationName = "timer";
   elCirc.style.animationTimingFunction = "linear";
   elCirc.style.animationDuration = "10s";
-
 }
