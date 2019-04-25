@@ -1,6 +1,3 @@
-body {
-  background-image: url(../akfub/otherimgs/Shapka.jpg);
-}
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
