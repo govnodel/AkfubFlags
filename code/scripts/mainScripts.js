@@ -33,7 +33,7 @@ var flagsEl = []; //<-- массив с элементами флагов
 autoFill();//<-- заполнение
 dom();
 var timer = 10;
-setInterval(oneSec, 1000);
+var interval = setInterval(oneSec, 1000);
 //<==================================================================================================>
 
 
@@ -58,7 +58,10 @@ function clickFlag(){
        alert(winCounter + "/" + maxWin);
        window.location.href = "main.html";
      } else {
+       clearInterval(interval);
        timer = 10;
+       document.getElementById("timer_sec").textContent = timer;
+       interval = setInterval(oneSec, 1000);
        repAnim();
        repeat[repeat.length] = winName;
        autoFill();
@@ -114,9 +117,11 @@ function oneSec(){
   if(timer == 0){
     timer = 10;
     generalCounter++;
+    repeat[repeat.length] = winName;
     //alert("Time out!");
     repAnim();
     autoFill();//<-- повторное заполнение
+    checkRep();
     dom();
   }
   document.getElementById("timer_sec").textContent = timer;
