@@ -17,6 +17,14 @@ svg.kruglyash circle {
     stroke-dashoffset: -187
   }
 }
+@keyframes timer2 {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -187
+  }
+}
 @-webkit-keyframes timer {
   from {
     stroke-dashoffset: 0

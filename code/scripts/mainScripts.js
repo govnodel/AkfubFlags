@@ -17,6 +17,8 @@ var winCounter = 0; //<-- количество правильных ответо
 var generalCounter = 0; //<-- счётчик попыток
 var maxWin = 50; //<-- количество попыток
 var repeat = ["first"];
+var anima = false;
+var elCirc = document.getElementById("krug");
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
@@ -48,25 +50,21 @@ function autoFill(){
 
 
 function clickFlag(){
+     generalCounter++;
      if(this.id == ("_" + winPosition)){
        winCounter++;
-       generalCounter++;
-       alert("Right answer!");
-     } else {
-       generalCounter++;
-       alert("Wrong answer!");
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
        window.location.href = "main.html";
      } else {
+       timer = 10;
+       repAnim();
        repeat[repeat.length] = winName;
        autoFill();
        checkRep();
        dom();
      }
-     timer = 10;
-     document.getElementById("timer_sec").textContent = timer;
 }
 
 
@@ -144,9 +142,10 @@ function dom(){
 }
 
 function repAnim(){
-  var elCirc = document.getElementById("");
-  elCirc.style.animationName = "timer";
-  elCirc.style.animationTimingFunction = "linear";
-  elCirc.style.animationDuration = "10s";
-
+  if(anima){
+    elCirc.style.animation = "timer 10s linear";
+  } else {
+    elCirc.style.animation = "timer2 10s linear";
+  }
+  anima = !anima;
 }
