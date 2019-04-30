@@ -1,3 +1,15 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
@@ -6,6 +18,9 @@ svg.kruglyash circle {
   animation: timer 10s linear;
   -webkit-animation: timer 10s linear
 }
+
+
+
 @keyframes timer {
   from {
     stroke-dashoffset: 0
@@ -14,6 +29,8 @@ svg.kruglyash circle {
     stroke-dashoffset: -187
   }
 }
+
+
 @keyframes timer2 {
   from {
     stroke-dashoffset: 0
@@ -22,6 +39,9 @@ svg.kruglyash circle {
     stroke-dashoffset: -187
   }
 }
+
+
+
 @-webkit-keyframes timer {
   from {
     stroke-dashoffset: 0
@@ -30,50 +50,91 @@ svg.kruglyash circle {
     stroke-dashoffset: -187
   }
 }
+
+
+
 svg.kruglyash text {
   font-size: 1.3em;
   font-family: fantasy
 }
+
+
+
 .parent {
   width: 87%;
   margin: 5vw;
   padding: 0
 }
+
+
+
 .kruglyash { /* этот класс говно, надо поменять, щас лень */
   margin-left: auto;
   opacity: 1;
-  position: absolute
+  position: absolute;
+  clear: right;
 }
+
+
+
 #country {
   font-family: fantasy;
   font: impact;
   font-size: 40px;
   color: 	SteelBlue;
-  text-align: center
+  text-align: center;
+  float: left;
+  position: relative;
+  left: 20%;
 }
+
+
+
 #flags {
   width: 520px;
   margin-left: 28%;
-  align-content: center
+  align-content: center;
+  clear: both
 }
+
+
+
 /* Нужно скоратить */
 #_1 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
   margin: 2px
 }
+
+
 #_2 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
   margin: 2px
 }
+
+
 #_3 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
   margin: 2px
 }
+
+
 #_4 {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
   margin: 2px
+}
+
+
+/* Коммент ради коммента */
+#lifes > img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  clear: right;
+  /* Делаю позицию, спорим, нихуя не получиться */
+  position: relative;
+  left: 60%;
 }
