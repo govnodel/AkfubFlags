@@ -134,7 +134,8 @@ svg.kruglyash text {
   height: 20px;
   float: left;
   clear: right;
-  /* Делаю позицию, спорим, нихуя не получиться */
+  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд) */
   position: relative;
   left: 60%;
+
 }
