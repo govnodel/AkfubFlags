@@ -118,7 +118,7 @@ function oneSec(){
     timer = 10;
     generalCounter++;
     repeat[repeat.length] = winName;
-    //alert("Time out!");
+    alert("Time out!");
     repAnim();
     autoFill();//<-- повторное заполнение
     checkRep();
