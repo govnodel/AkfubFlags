@@ -2,7 +2,6 @@
 @как по мне ваня страдает хернёй
 @ага, возможно
  я тут сижу и вдруг слышу, как гуси летят... или утки, хуй его знает
- @отсоси со своими майлами пидор
 */
 
 /* Список задач:
@@ -15,7 +14,7 @@ var winPosition;
 var winName;
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
-var maxWin = 50; //<-- количество попыток
+var maxWin = 10; //<-- количество попыток
 var repeat = ["first"];
 var anima = false;
 var elCirc = document.getElementById("krug");
@@ -25,8 +24,65 @@ var flagsFinalNames = []; //<-- массив с именами флагов, к�
 var flagsName; //<-- массив с именами флагов
 var flagsLink; //<-- массив с ссылками на флаги
 var arrayWithPos;
-flagsLink = window.links;
-flagsName = window.names;
+
+//<=============================================<БД>=================================================>
+// Бiльше флагов нада
+var names = []; //<-- массив с именами флагов
+var links = []; //<-- массив с ссылками на флаги
+
+links[0] = "../assets/images/flags/Georgia_(1918-1921).png";
+links[1] = "../assets/images/flags/the_Ottoman_Empire.png";
+links[2] = "../assets/images/flags/Bavaria.png";
+links[3] = "../assets/images/flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
+links[4] = "../assets/images/flags/Texas.png";
+links[5] = "../assets/images/flags/Hanover_(1837-1866).png";
+links[6] = "../assets/images/flags/Golden_Horde_(1339).png";
+links[7] = "../assets/images/flags/the_United_States_of_the_Ionian_Islands.png";
+links[8] = "../assets/images/flags/Taiping_Heavenly_Kingdom.png";
+links[9] = "../assets/images/flags/the_German_Empire.png";
+links[10] = "../assets/images/flags/US_26_Star_GreatStar_Flag.png";
+links[11] = "../assets/images/flags/Austria-Hungary_(1869-1918).png";
+links[12] = "../assets/images/flags/Transcaucasian_SFSR(1925-1936).png";
+links[13] = "../assets/images/flags/Scotland.png";
+links[14] = "../assets/images/flags/Rzeczpospolita.png";
+links[15] = "../assets/images/flags/Rwanda_(1959-1961).png";
+links[16] = "../assets/images/flags/Rhodesia_(1968-1979).png";
+links[17] = "../assets/images/flags/Republic_of_Maryland.png";
+links[18] = "../assets/images/flags/Napoleonic_Kingdom_of_Italy.png";
+links[19] = "../assets/images/flags/Merina_Kingdom.png";
+links[20] = "../assets/images/flags/German_Confederation.png";
+links[21] = "../assets/images/flags/Crimean_Khanate.png";
+links[22] = "../assets/images/flags/Cossack_Hetmanat.png";
+links[23] = "../assets/images/flags/Benin_Empire.png";
+
+names[0] = "Georgia (1918-1921)";
+names[1] = "the Ottoman Empire";
+names[2] = "Bavaria";
+names[3] = "the Kingdom of the Two Sicilies (1816)";
+names[4] = "Texas";
+names[5] = "Hanover (1837-1866)";
+names[6] = "Golden Horde (1339)";
+names[7] = "the United States of the Ionian Islands";
+names[8] = "Taiping Heavenly Kingdom";
+names[9] = "the German Empire";
+names[10] = "US 26 Star Flag";
+names[11] = "Austria-Hungary (1869-1918)";
+names[12] = "Transcaucasian SFSR (1925-1936)";
+names[13] = "Scotland";
+names[14] = "Rzeczpospolita";
+names[15] = "Rwanda (1959-1961)";
+names[16] = "Rhodesia (1968-1979)";
+names[17] = "Republic of Maryland";
+names[18] = "Napoleonic Kingdom of Italy";
+names[19] = "Merina Kingdom";
+names[20] = "German Confederation";
+names[21] = "Crimean Khanate";
+names[22] = "Cossack Hetmanat";
+names[23] = "Benin Empire";
+//<==================================================================================================>
+
+flagsLink = links;
+flagsName = names;
 //---------------------
 var nameEl = document.getElementById("country"); //<-- элемент названия флага, который нужно выбрать
 var flagsEl = []; //<-- массив с элементами флагов
@@ -35,7 +91,6 @@ dom();
 var timer = 10;
 var interval = setInterval(oneSec, 1000);
 //<==================================================================================================>
-
 
 
 function autoFill(){
@@ -48,7 +103,6 @@ function autoFill(){
 }
 
 
-
 function clickFlag(){
      generalCounter++;
      if(this.id == ("_" + winPosition)){
@@ -56,7 +110,7 @@ function clickFlag(){
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
-       window.location.href = "main.html";
+       window.location.href = "index.html";
      } else {
        clearInterval(interval);
        timer = 10;
@@ -69,7 +123,6 @@ function clickFlag(){
        dom();
      }
 }
-
 
 
 function generateWin(){
@@ -93,7 +146,6 @@ function generateWin(){
 }
 
 
-
 function Randomizer(count, max, min){
   var numbers = [];
   for(var i = 0; i < count; i++){
@@ -112,13 +164,14 @@ function Randomizer(count, max, min){
   return numbers;
 }
 
+
 function oneSec(){
   timer--;
   if(timer == 0){
     timer = 10;
     generalCounter++;
     repeat[repeat.length] = winName;
-    alert("Time out!");
+    //alert("Time out!");
     repAnim();
     autoFill();//<-- повторное заполнение
     checkRep();
@@ -137,6 +190,7 @@ function checkRep(){
   }
 }
 
+
 function dom(){
   nameEl.textContent = winName;
   for(var i = 0; i < 4; i++){
@@ -145,6 +199,7 @@ function dom(){
     flagsEl[i].src = flagsFinal[i];
   }
 }
+
 
 function repAnim(){
   if(anima){
