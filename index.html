@@ -1,6 +1,9 @@
 <!-- Список задач:
      1. Сделать меню профиля
-     2. Сделат подвал -->
+     2. Добавить шрифтов
+     3. Сделать подвал -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +11,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Flags</title>
-  <link rel="stylesheet" href="css/mainss.css">
+  <link rel="stylesheet" href="assets/css/mainss.css">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
 <body>
   <!-- Шапка на первое время -->
   <div id="hat">
-    Шапка
+    Hat
   </div>
   <!--Окно логина и регистрации-->
-    <div id = "_menu_log_reg">
-      <input type="text" placeholder="Login" from = 'log'>
-      <input type="password" placeholder="Password">
+    <form id = "_menu_log_reg" name="signup" action="assets/php/signup.php" method="post">
+      <input type="text" name="login" placeholder="Login" from = 'log'>
+      <input type="password" name="pass" placeholder="Password">
       <p>
-        <input type = "checkbox" value = "Remember me">Remember me
+        <input type = "checkbox" name="check" value = "Remember me">Remember me
       </p>
-      <input type="submit" name="Submit" value="Enter">
+      <input type="submit" name="done" value="Enter">
 
-    </div>
+    </form>
     <!-- Кнопка игры -->
   <a href="gayme.html">
     <svg x = "0" y = "0" width="300px" height="100px">
@@ -34,16 +38,16 @@
     </svg>
   </a>
   <!-- Профиль -->
-    <svg>
+  <svg>
 
-    </svg>
+  </svg>
   <!-- Рекламный банер -->
   <div id="ad">
-    РЕКЛАМА
+    ADVERT
   </div>
   <div id="desc">
-      <p class = "desctitle">Описание</p>
-      <p class = "nedotitle">На этом сайте вы сможете "потыкать" флаги, при чём не только нынешних стран, но и давно исчезнувших.</p>
+    <p class = "desctitle">Description</p>
+    <p class = "nedotitle">Text</p>
   </div>
 </body>
 </html>
