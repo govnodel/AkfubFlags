@@ -1,3 +1,13 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
@@ -42,19 +52,24 @@ svg.kruglyash text {
 .kruglyash { /* этот класс говно, надо поменять, щас лень */
   margin-left: auto;
   opacity: 1;
-  position: absolute
+  position: absolute;
+  clear: right;
 }
 #country {
   font-family: fantasy;
   font: impact;
   font-size: 40px;
   color: 	SteelBlue;
-  text-align: center
+  text-align: center;
+  float: left;
+  position: relative;
+  left: 20%;
 }
 #flags {
   width: 520px;
   margin-left: 28%;
-  align-content: center
+  align-content: center;
+  clear: both
 }
 /* Нужно скоратить */
 #_1 {
@@ -76,4 +91,13 @@ svg.kruglyash text {
   border-radius: 6px;
   box-shadow: 0 0 10px black;
   margin: 2px
+}
+#lifes > img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  clear: right;
+  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд) */
+  position: relative;
+  left: 60%;
 }
