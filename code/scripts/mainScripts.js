@@ -112,6 +112,8 @@ function Randomizer(count, max, min){
   return numbers;
 }
 
+
+
 function oneSec(){
   timer--;
   if(timer == 0){
@@ -128,6 +130,7 @@ function oneSec(){
 }
 
 
+
 function checkRep(){
   for (var i = 0; i < repeat.length; i++) {
     if(flagsFinalNames[winPosition-1] == repeat[i]){
@@ -137,6 +140,8 @@ function checkRep(){
   }
 }
 
+
+
 function dom(){
   nameEl.textContent = winName;
   for(var i = 0; i < 4; i++){
@@ -145,6 +150,8 @@ function dom(){
     flagsEl[i].src = flagsFinal[i];
   }
 }
+
+
 
 function repAnim(){
   if(anima){

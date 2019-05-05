@@ -135,9 +135,9 @@ svg text{
 svg:hover {
   opacity: 1
 }
-@media (min-width: 1254px) {
+/* @media (min-width: 1254px) {
   #_menu_log_reg {
     wwidth: 230px;
 
   }
-}
+} */
