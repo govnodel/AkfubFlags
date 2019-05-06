@@ -165,10 +165,6 @@ function Randomizer(count, max, min){
 }
 
 
-<<<<<<< HEAD:code/scripts/mainScripts.js
-
-=======
->>>>>>> 75028865569b616a465422b5a0f5b41b533a6e3a:assets/js/mainScripts.js
 function oneSec(){
   timer--;
   if(timer == 0){
@@ -196,10 +192,6 @@ function checkRep(){
 }
 
 
-<<<<<<< HEAD:code/scripts/mainScripts.js
-
-=======
->>>>>>> 75028865569b616a465422b5a0f5b41b533a6e3a:assets/js/mainScripts.js
 function dom(){
   nameEl.textContent = winName;
   for(var i = 0; i < 4; i++){
@@ -210,10 +202,6 @@ function dom(){
 }
 
 
-<<<<<<< HEAD:code/scripts/mainScripts.js
-
-=======
->>>>>>> 75028865569b616a465422b5a0f5b41b533a6e3a:assets/js/mainScripts.js
 function repAnim(){
   if(anima){
     elCirc.style.animation = "timer 10s linear";
