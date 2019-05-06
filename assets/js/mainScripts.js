@@ -30,30 +30,30 @@ var arrayWithPos;
 var names = []; //<-- массив с именами флагов
 var links = []; //<-- массив с ссылками на флаги
 
-links[0] = "../images/flags/Georgia_(1918-1921).png";
-links[1] = "../images/flags/the_Ottoman_Empire.png";
-links[2] = "../images/flags/Bavaria.png";
-links[3] = "../images/flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
-links[4] = "../images/flags/Texas.png";
-links[5] = "../images/flags/Hanover_(1837-1866).png";
-links[6] = "../images/flags/Golden_Horde_(1339).png";
-links[7] = "../images/flags/the_United_States_of_the_Ionian_Islands.png";
-links[8] = "../images/flags/Taiping_Heavenly_Kingdom.png";
-links[9] = "../images/flags/the_German_Empire.png";
-links[10] = "../images/flags/US_26_Star_GreatStar_Flag.png";
-links[11] = "../images/flags/Austria-Hungary_(1869-1918).png";
-links[12] = "../images/flags/Transcaucasian_SFSR(1925-1936).png";
-links[13] = "../images/flags/Scotland.png";
-links[14] = "../images/flags/Rzeczpospolita.png";
-links[15] = "../images/flags/Rwanda_(1959-1961).png";
-links[16] = "../images/flags/Rhodesia_(1968-1979).png";
-links[17] = "../images/flags/Republic_of_Maryland.png";
-links[18] = "../images/flags/Napoleonic_Kingdom_of_Italy.png";
-links[19] = "../images/flags/Merina_Kingdom.png";
-links[20] = "../images/flags/German_Confederation.png";
-links[21] = "../images/flags/Crimean_Khanate.png";
-links[22] = "../images/flags/Cossack_Hetmanat.png";
-links[23] = "../images/flags/Benin_Empire.png";
+links[0] = "assets/images/flags/Georgia_(1918-1921).png";
+links[1] = "assets/images/flags/the_Ottoman_Empire.png";
+links[2] = "assets/images/flags/Bavaria.png";
+links[3] = "assets/images/flags/the_Kingdom_of_the_Two_Sicilies_(1816).png";
+links[4] = "assets/images/flags/Texas.png";
+links[5] = "assets/images/flags/Hanover_(1837-1866).png";
+links[6] = "assets/images/flags/Golden_Horde_(1339).png";
+links[7] = "assets/images/flags/the_United_States_of_the_Ionian_Islands.png";
+links[8] = "assets/images/flags/Taiping_Heavenly_Kingdom.png";
+links[9] = "assets/images/flags/the_German_Empire.png";
+links[10] = "assets/images/flags/US_26_Star_GreatStar_Flag.png";
+links[11] = "assets/images/flags/Austria-Hungary_(1869-1918).png";
+links[12] = "assets/images/flags/Transcaucasian_SFSR(1925-1936).png";
+links[13] = "assets/images/flags/Scotland.png";
+links[14] = "assets/images/flags/Rzeczpospolita.png";
+links[15] = "assets/images/flags/Rwanda_(1959-1961).png";
+links[16] = "assets/images/flags/Rhodesia_(1968-1979).png";
+links[17] = "assets/images/flags/Republic_of_Maryland.png";
+links[18] = "assets/images/flags/Napoleonic_Kingdom_of_Italy.png";
+links[19] = "assets/images/flags/Merina_Kingdom.png";
+links[20] = "assets/images/flags/German_Confederation.png";
+links[21] = "assets/images/flags/Crimean_Khanate.png";
+links[22] = "assets/images/flags/Cossack_Hetmanat.png";
+links[23] = "assets/images/flags/Benin_Empire.png";
 
 names[0] = "Georgia (1918-1921)";
 names[1] = "the Ottoman Empire";
@@ -167,7 +167,7 @@ function Randomizer(count, max, min){
 
 function oneSec(){
   timer--;
-  if(timer == 0){
+  if(timer == 10000){//затычка<-----------------------------------------------------------------------------------
     timer = 10;
     generalCounter++;
     repeat[repeat.length] = winName;
