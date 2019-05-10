@@ -49,21 +49,24 @@ svg.kruglyash text {
   margin: 5vw;
   padding: 0
 }
-.kruglyash { /* этот класс говно, надо поменять, щас лень */
+.kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
   margin-left: auto;
   opacity: 1;
   position: absolute;
   clear: right;
 }
 #country {
+  display: flex;
   font-family: fantasy;
   font: impact;
   font-size: 40px;
   color: 	SteelBlue;
   text-align: center;
   float: left;
+  /* Позиционирование ебать */
   position: relative;
-  left: 20%;
+  left: 30%;
+  top: 50%
 }
 #flags {
   width: 520px;
@@ -97,7 +100,14 @@ svg.kruglyash text {
   height: 20px;
   float: left;
   clear: right;
-  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд) */
-  position: relative;
-  left: 60%;
+  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСТЬ Я СДЕЛАЛ) */
+  position: absolute;
+  left: 70%;
+}
+/* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..)*/
+#lifes > img:nth-child(2) {
+  transform: translateX(20px);
+}
+#lifes > img:nth-child(3) {
+  transform: translateX(40px);
 }

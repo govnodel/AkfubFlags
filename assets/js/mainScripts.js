@@ -110,7 +110,7 @@ function clickFlag(){
      }
      if(generalCounter >= maxWin){
        alert(winCounter + "/" + maxWin);
-       window.location.href = "index.html";
+       window.location.href = "winornot.html";
      } else {
        clearInterval(interval);
        timer = 10;
@@ -210,3 +210,6 @@ function repAnim(){
   }
   anima = !anima;
 }
+
+// Я тут поучу JS, ага
+document.write (winCounter)
