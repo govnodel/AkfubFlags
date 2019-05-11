@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Anton|IBM+Plex+Sans:700|Roboto+Slab:700|Baloo+Bhai');  /* Roboto | IBM plex sans | Roboto slab | Baloo Bhai */
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+/* УУ РЕКЛАМА АТПИСКА ПРАДАЛСЯ */
+#ad {
+  /* Текст на время отсутствия банера */
+  font-family: sans-serif;
+  text-align: center;
+  /* Гроница на первое время*/
+  border-radius: 3px;
+  border: 2px dashed gray;
+  /* Бля забыл размер указать сука(уже указал, всё хорошо) */
+  width: 14%;
+  height: 60%;
+  /* Ну чо пацаны, позиционирование */
+  position: relative;
+  clear: left;
+  top: 8vh;
+  left: 2px;
+  float: left;
+  /* КурсорчиииииииииииииИИиИИиииИИИииИиииииИИиИИИиииИИИиииииииииииИИк */
+  cursor: pointer;
+}
+
+#hat {
+  position: fixed;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid DarkSLateGray;
+  height: 5vh;
+
+}
+#hat > .title {
+  color: white;
+  text-shadow: 3px 3px 6px black;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  height: 2vh;
+  padding-top: 0;
+  margin: 0;
+}

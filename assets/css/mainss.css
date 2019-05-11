@@ -5,7 +5,7 @@
   4. Сделать сука нормальный вид объектам
   5. Добавить шрифтов */
   /* Шрифтики */
-@import url('https://fonts.googleapis.com/css?family=Roboto|IBM+Plex+Sans:700|Roboto+Slab:700');  /* Roboto | IBM plex sans | Roboto slab */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Anton|IBM+Plex+Sans:700|Roboto+Slab:700|Baloo+Bhai');  /* Roboto | IBM plex sans | Roboto slab | Baloo Bhai */
 body {
   width: 100%;
   height: 100vh;
@@ -64,8 +64,22 @@ body {
 }
 #hat {
   position: fixed;
-  border: 2px Lightslategray dashed;
-  width: 100%
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid DarkSLateGray;
+  height: 5vh;
+
+}
+#hat > .title {
+  color: white;
+  text-shadow: 3px 3px 6px black;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  height: 2vh;
+  padding-top: 0;
+  margin: 0;
 }
 /* Панель регистрации и входа */
 #_menu_log_reg {
@@ -73,7 +87,7 @@ body {
   box-shadow: 0 0 2px black;
   /* Мож и тут получиться позиционирование(Ебать оно получилось) */
   position: relative;
-  top: 6vh;
+  top: 10vh;
   left: 2px;
   width: 200px;
   height: 30vh;
@@ -134,9 +148,12 @@ svg text{
 svg:hover {
   opacity: 1
 }
-/* @media (min-width: 1254px) {
-  #_menu_log_reg {
-    width: 230px;
+@media (min-height: 1291px) {
+  #hat {
+    height: 4vh;
 
   }
-} */
+  #hat > .title {
+
+  }
+}
