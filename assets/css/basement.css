@@ -1,0 +1,21 @@
+html, body {
+  width: 100%;
+  height: 20vh;
+  padding: 4px;
+  margin: 0;
+  background: dimGray;
+  display: block;
+}
+a {
+  color: darkgray;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+a:visited {
+  color: lightgray;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+  color: lightgray;
+}

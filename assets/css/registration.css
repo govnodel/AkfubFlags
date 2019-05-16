@@ -46,3 +46,8 @@ body {
   padding-top: 0;
   margin: 0;
 }
+#reg_menu {
+  margin-top: 74px;
+  position: relative;
+  left: 4px;
+}
