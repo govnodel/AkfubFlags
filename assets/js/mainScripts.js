@@ -212,4 +212,4 @@ function repAnim(){
 }
 
 // Я тут поучу JS, ага
-document.write (winCounter)
+// document.write (winCounter)

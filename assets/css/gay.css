@@ -32,6 +32,14 @@ svg.kruglyash circle {
     stroke-dashoffset: -187
   }
 }
+@-webkit-keyframes timer2 {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -187
+  }
+}
 @-webkit-keyframes timer {
   from {
     stroke-dashoffset: 0
@@ -100,14 +108,54 @@ svg.kruglyash text {
   height: 20px;
   float: left;
   clear: right;
-  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСТЬ Я СДЕЛАЛ) */
+  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
   left: 70%;
 }
-/* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..)*/
+/* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..) */
 #lifes > img:nth-child(2) {
   transform: translateX(20px);
 }
 #lifes > img:nth-child(3) {
   transform: translateX(40px);
+}
+
+#nolifes > img{
+  width: 20px;
+  height: 20px;
+  float: left;
+  clear: right;
+  /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
+  position: absolute;
+  left: 70%;
+}
+#nolifes > img:nth-child(2) {
+  transform: translateX(20px);
+}
+#nolifes > img:nth-child(3) {
+  transform: translateX(40px);
+}
+/* Анимация ебаных сердец */
+@keyframes HuySosi {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+#nolifes img:nth-child(1){
+  animation: HuySosi 1s linear;
+}
+@keyframes HuySosiVanya {
+ 0% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   transform: scale(2.5);
+ }
+}
+#lifes img:nth-child(1){
+  animation: HuySosiVanya 1s linear;
 }
