@@ -109,7 +109,8 @@ function clickFlag(){
   if(this.id == ("_" + winPosition)){ //верный ответ
     winCounter++;
   } else lifeMinus(); //неверный ответ
-  refresh();
+  animationRem(false);
+  setTimeout(refresh, 800);
   loseornot();
   clearInterval(interval);
   document.getElementById("timer_sec").textContent = timer;
@@ -149,10 +150,7 @@ function Randomizer(count, max, min){
         if(numbers[i] == numbers[j]){
           i--;
           break;
-        }
-      }
-    }
-  }
+        }}}}
   return numbers;
 }
 
@@ -161,6 +159,8 @@ function oneSec(){
   timer--;
   if(timer == 0){
     lifeMinus();
+    animationRem(false);
+    setTimeout(refresh, 800);
     refresh();
     loseornot();
   }
@@ -206,12 +206,13 @@ function refresh(){
   autoFill();//<-- повторное заполнение
   checkRep();
   dom();
+  animationRem(true);
 }
 
 
 function loseornot(){ // всё ответил или проиграл
   if((generalCounter >= maxWin) || (life < 1)){
-    
+    animationRem(false);
     setTimeout(transition, 800);
     function transition(){
       alert(winCounter + "/" + maxWin);
@@ -221,19 +222,36 @@ function loseornot(){ // всё ответил или проиграл
 }
 
 
+function animationRem(bool){
+  if(bool){
+    flagsEl.forEach(function(element){
+      element.addEventListener("click",clickFlag);
+      element.style.animation = "flagApp 0.4s linear";
+      element.style.animationFillMode = "forwards";
+    });
+  } else{
+    flagsEl.forEach(function(element){
+      element.removeEventListener("click",clickFlag);
+      element.style.animation = "flagRem 0.4s linear";
+      element.style.animationFillMode = "forwards";
+    });
+  }
+}
+
+
 function lifeMinus(){
   life--;
   switch (life) {
     case 2:
-      lifesEl[1].style.animation = "life1 1s linear";
+      lifesEl[1].style.animation = "life 1s linear";
       lifesEl[1].style.animationFillMode = "forwards";
       break;
     case 1:
-      lifesEl[3].style.animation = "life2 1s linear";
+      lifesEl[3].style.animation = "life 1s linear";
       lifesEl[3].style.animationFillMode = "forwards";
       break;
     case 0:
-      lifesEl[5].style.animation = "life3 1s linear";
+      lifesEl[5].style.animation = "life 1s linear";
       lifesEl[5].style.animationFillMode = "forwards";
       break;
   }

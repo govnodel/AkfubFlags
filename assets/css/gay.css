@@ -136,7 +136,7 @@ svg.kruglyash text {
   transform: translateX(40px);
 }
 /* Анимация ебаных сердец */
-@keyframes life1  {
+@keyframes life  {
  0% {
    opacity: 1;
  }
@@ -145,21 +145,20 @@ svg.kruglyash text {
    transform: scale(2.5);
  }
 }
-@keyframes life2 {
+
+@keyframes flagRem  {
  0% {
    opacity: 1;
  }
  100% {
    opacity: 0;
-   transform: scale(2.5);
  }
 }
-@keyframes life3 {
+@keyframes flagApp  {
  0% {
-   opacity: 1;
+   opacity: 0;
  }
  100% {
-   opacity: 0;
-   transform: scale(2.5);
+   opacity: 1;
  }
 }
