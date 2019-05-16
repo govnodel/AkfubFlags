@@ -161,7 +161,6 @@ function oneSec(){
     lifeMinus();
     animationRem(false);
     setTimeout(refresh, 800);
-    refresh();
     loseornot();
   }
   document.getElementById("timer_sec").textContent = timer;
