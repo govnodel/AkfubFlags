@@ -18,6 +18,7 @@ var maxWin = 10; //<-- количество попыток
 var repeat = ["first"];
 var anima = false;
 var elCirc = document.getElementById("krug");
+var life = 3;
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
@@ -104,24 +105,14 @@ function autoFill(){
 
 
 function clickFlag(){
-     generalCounter++;
-     if(this.id == ("_" + winPosition)){
-       winCounter++;
-     }
-     if(generalCounter >= maxWin){
-       alert(winCounter + "/" + maxWin);
-       window.location.href = "winornot.html";
-     } else {
-       clearInterval(interval);
-       timer = 10;
-       document.getElementById("timer_sec").textContent = timer;
-       interval = setInterval(oneSec, 1000);
-       repAnim();
-       repeat[repeat.length] = winName;
-       autoFill();
-       checkRep();
-       dom();
-     }
+  if(this.id == ("_" + winPosition)){ //верный ответ
+    winCounter++;
+  } else life(); //неверный ответ
+  refresh();
+  loseornot();
+  clearInterval(interval);
+  document.getElementById("timer_sec").textContent = timer;
+  interval = setInterval(oneSec, 1000);
 }
 
 
@@ -167,19 +158,13 @@ function Randomizer(count, max, min){
 
 function oneSec(){
   timer--;
-  if(timer == 10000){//затычка<-----------------------------------------------------------------------------------
-    timer = 10;
-    generalCounter++;
-    repeat[repeat.length] = winName;
-    //alert("Time out!");
-    repAnim();
-    autoFill();//<-- повторное заполнение
-    checkRep();
-    dom();
+  if(timer == 0){
+    life();
+    refresh();
+    loseornot();
   }
   document.getElementById("timer_sec").textContent = timer;
 }
-
 
 
 function checkRep(){
@@ -211,5 +196,30 @@ function repAnim(){
   anima = !anima;
 }
 
-// Я тут поучу JS, ага
+
+function refresh(){
+  generalCounter++;
+  timer = 10;
+  repeat[repeat.length] = winName;
+  repAnim();
+  autoFill();//<-- повторное заполнение
+  checkRep();
+  dom();
+}
+
+
+function loseornot(){ // всё ответил или проиграл
+  if((generalCounter >= maxWin) || (life < 1)){
+    alert(winCounter + "/" + maxWin);
+    window.location.href = "winornot.html";
+  }
+}
+
+
+function life(){
+  life--;
+  //change anim
+}
+
+// // Я тут поучу JS, ага
 // document.write (winCounter)
