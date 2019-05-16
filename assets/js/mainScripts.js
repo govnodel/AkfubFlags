@@ -18,6 +18,7 @@ var maxWin = 10; //<-- количество попыток
 var repeat = ["first"];
 var anima = false;
 var elCirc = document.getElementById("krug");
+var lifesEl = document.getElementById("lifes").childNodes;
 var life = 3;
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
@@ -107,7 +108,7 @@ function autoFill(){
 function clickFlag(){
   if(this.id == ("_" + winPosition)){ //верный ответ
     winCounter++;
-  } else life(); //неверный ответ
+  } else lifeMinus(); //неверный ответ
   refresh();
   loseornot();
   clearInterval(interval);
@@ -159,7 +160,7 @@ function Randomizer(count, max, min){
 function oneSec(){
   timer--;
   if(timer == 0){
-    life();
+    lifeMinus();
     refresh();
     loseornot();
   }
@@ -210,15 +211,32 @@ function refresh(){
 
 function loseornot(){ // всё ответил или проиграл
   if((generalCounter >= maxWin) || (life < 1)){
-    alert(winCounter + "/" + maxWin);
-    window.location.href = "winornot.html";
+    
+    setTimeout(transition, 800);
+    function transition(){
+      alert(winCounter + "/" + maxWin);
+      window.location.href = "winornot.html";
+    }
   }
 }
 
 
-function life(){
+function lifeMinus(){
   life--;
-  //change anim
+  switch (life) {
+    case 2:
+      lifesEl[1].style.animation = "life1 1s linear";
+      lifesEl[1].style.animationFillMode = "forwards";
+      break;
+    case 1:
+      lifesEl[3].style.animation = "life2 1s linear";
+      lifesEl[3].style.animationFillMode = "forwards";
+      break;
+    case 0:
+      lifesEl[5].style.animation = "life3 1s linear";
+      lifesEl[5].style.animationFillMode = "forwards";
+      break;
+  }
 }
 
 // // Я тут поучу JS, ага

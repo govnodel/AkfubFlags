@@ -136,18 +136,7 @@ svg.kruglyash text {
   transform: translateX(40px);
 }
 /* Анимация ебаных сердец */
-@keyframes HuySosi {
- 0% {
-   opacity: 0;
- }
- 100% {
-   opacity: 1;
- }
-}
-#nolifes img:nth-child(1){
-  animation: HuySosi 1s linear;
-}
-@keyframes HuySosiVanya {
+@keyframes life1  {
  0% {
    opacity: 1;
  }
@@ -156,6 +145,21 @@ svg.kruglyash text {
    transform: scale(2.5);
  }
 }
-#lifes img:nth-child(1){
-  animation: HuySosiVanya 1s linear;
+@keyframes life2 {
+ 0% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   transform: scale(2.5);
+ }
+}
+@keyframes life3 {
+ 0% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   transform: scale(2.5);
+ }
 }
