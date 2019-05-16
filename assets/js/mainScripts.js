@@ -112,9 +112,6 @@ function clickFlag(){
   animationRem(false);
   setTimeout(refresh, 800);
   loseornot();
-  clearInterval(interval);
-  document.getElementById("timer_sec").textContent = timer;
-  interval = setInterval(oneSec, 1000);
 }
 
 
@@ -160,7 +157,7 @@ function oneSec(){
   if(timer == 0){
     lifeMinus();
     animationRem(false);
-    setTimeout(refresh, 800);
+    setTimeout(refresh, 400);
     loseornot();
   }
   document.getElementById("timer_sec").textContent = timer;
@@ -205,6 +202,9 @@ function refresh(){
   autoFill();//<-- повторное заполнение
   checkRep();
   dom();
+  clearInterval(interval);
+  document.getElementById("timer_sec").textContent = timer;
+  interval = setInterval(oneSec, 1000);
   animationRem(true);
 }
 
@@ -212,7 +212,7 @@ function refresh(){
 function loseornot(){ // всё ответил или проиграл
   if((generalCounter >= maxWin) || (life < 1)){
     animationRem(false);
-    setTimeout(transition, 800);
+    setTimeout(transition, 400);
     function transition(){
       alert(winCounter + "/" + maxWin);
       window.location.href = "winornot.html";
@@ -225,13 +225,13 @@ function animationRem(bool){
   if(bool){
     flagsEl.forEach(function(element){
       element.addEventListener("click",clickFlag);
-      element.style.animation = "flagApp 0.4s linear";
+      element.style.animation = "flagApp 0.3s linear";
       element.style.animationFillMode = "forwards";
     });
   } else{
     flagsEl.forEach(function(element){
       element.removeEventListener("click",clickFlag);
-      element.style.animation = "flagRem 0.4s linear";
+      element.style.animation = "flagRem 0.3s linear";
       element.style.animationFillMode = "forwards";
     });
   }
