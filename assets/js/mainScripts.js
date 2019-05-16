@@ -187,8 +187,10 @@ function dom(){
 function repAnim(){
   if(anima){
     elCirc.style.animation = "timer 10s linear";
+    elCirc.style.animationFillMode = "forwards";
   } else {
     elCirc.style.animation = "timer2 10s linear";
+    elCirc.style.animationFillMode = "forwards";
   }
   anima = !anima;
 }
@@ -242,16 +244,16 @@ function lifeMinus(){
   life--;
   switch (life) {
     case 2:
-      lifesEl[1].style.animation = "life 1s linear";
-      lifesEl[1].style.animationFillMode = "forwards";
+      lifesEl[5].style.animation = "life 1s linear";
+      lifesEl[5].style.animationFillMode = "forwards";
       break;
     case 1:
       lifesEl[3].style.animation = "life 1s linear";
       lifesEl[3].style.animationFillMode = "forwards";
       break;
     case 0:
-      lifesEl[5].style.animation = "life 1s linear";
-      lifesEl[5].style.animationFillMode = "forwards";
+      lifesEl[1].style.animation = "life 1s linear";
+      lifesEl[1].style.animationFillMode = "forwards";
       break;
   }
 }

@@ -14,7 +14,8 @@ svg.kruglyash circle {
   stroke: SteelBlue;
   stroke-dasharray: 300%;
   animation: timer 10s linear;
-  -webkit-animation: timer 10s linear
+  -webkit-animation: timer 10s linear;
+  animation-fill-mode: forwards;
 }
 @keyframes timer {
   from {
