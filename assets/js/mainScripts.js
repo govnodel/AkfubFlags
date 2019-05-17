@@ -23,8 +23,6 @@ var life = 3;
 //---нужно сократить---
 var flagsFinal = []; //<-- массив с флагами, которые будут в итоге
 var flagsFinalNames = []; //<-- массив с именами флагов, которые будут в итоге
-var flagsName; //<-- массив с именами флагов
-var flagsLink; //<-- массив с ссылками на флаги
 var arrayWithPos;
 
 //<=============================================<БД>=================================================>
@@ -109,7 +107,8 @@ function clickFlag(){
   if(this.id == ("_" + winPosition)){ //верный ответ
     winCounter++;
   } else lifeMinus(); //неверный ответ
-  animationRem(false);
+  flagsHide();
+  setTimeout(animationRem, 800, false);
   setTimeout(refresh, 800);
   loseornot();
 }
@@ -117,22 +116,7 @@ function clickFlag(){
 
 function generateWin(){
      winPosition = Math.round(Math.random() * (4 - 1) + 1);
-     switch(winPosition) {
-       case 1:
-         winName = flagsFinalNames[0];
-       break;
-       case 2:
-         winName = flagsFinalNames[1];
-       break;
-       case 3:
-         winName = flagsFinalNames[2];
-       break;
-       case 4:
-         winName = flagsFinalNames[3];
-       break;
-       default: alert("error");
-
-     }
+     winName = flagsFinalNames[winPosition - 1];
 }
 
 
@@ -257,6 +241,18 @@ function lifeMinus(){
       break;
   }
 }
+
+
+function flagsHide(){
+  flagsEl.forEach(function(element){
+    if(element != (winPosition - 1)){
+      element.removeEventListener("click",clickFlag);
+      element.style.animation = "flagHide 0.3s linear";
+      element.style.animationFillMode = "forwards";
+    }
+  });
+}
+
 
 // // Я тут поучу JS, ага
 // document.write (winCounter)
