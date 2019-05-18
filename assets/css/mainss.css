@@ -11,6 +11,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  background-color: #F4F6F7;
 }
 /* УУ РЕКЛАМА АТПИСКА ПРАДАЛСЯ */
 #ad {
@@ -20,16 +21,14 @@ body {
   /* Гроница на первое время*/
   border-radius: 3px;
   border: 2px dashed gray;
-  /* Бля забыл размер указать сука(уже указал, всё хорошо) */
   width: 14%;
   height: 60%;
-  /* Ну чо пацаны, позиционирование */
   position: relative;
   clear: left;
-  top: 8vh;
+  top: 12vh;
   left: 2px;
   float: left;
-  /* КурсорчиииииииииииииИИиИИиииИИИииИиииииИИиИИИиииИИИиииииииииииИИк */
+  /* Курсорчиииииииик */
   cursor: pointer;
 }
 #desc {
@@ -44,11 +43,10 @@ body {
   width: 60%;
   height: 60vh;
   color: #F0FFFF;
-  /* Позиционирование??? (Ахуеть получилось) */
   position: relative;
   top: 28px;
   left: 30px;
-  /* КурсорчиииииииииииииИИиИИиииИИИииИиииииИИиИИИиииИИИиииииииииииИИк */
+  /* Курсорчиииииииик */
   cursor: text;
 }
 #desc p.desctitle {
@@ -82,51 +80,51 @@ body {
   margin: 0;
 }
 /* Панель регистрации и входа */
-#_menu_log_reg {
+#log_menu {
   border-radius: 2px;
-  box-shadow: 0 0 2px black;
-  /* Мож и тут получиться позиционирование(Ебать оно получилось) */
+  box-shadow: 0 0 1.5px black;
   position: relative;
   top: 10vh;
   left: 2px;
   width: 200px;
   height: 30vh;
   float: left;
+  background-color: white;
   /* Шоб курсору жизнь малиной не казалась */
   cursor: pointer;
 }
 /* Поля для ввода */
-#_menu_log_reg > input:nth-child(1) {
+#log_menu > input:nth-child(1) {
   margin-left: 1vw;
   margin-top: 4px;
   border-radius: 2px;
   border: none;
   background: white;
-  box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 4px gray;
   outline: none;
 }
-#_menu_log_reg > input:nth-child(2) {
+#log_menu > input:nth-child(2) {
   margin-left: 1vw;
   margin-top: 4px;
   border-radius: 2px;
   border: none;
   background: white;
-  box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 4px gray;
   outline: none;
 }
-#_menu_log_reg > p > input {
+#log_menu > p > input {
   margin-left: 1vw;
   margin-top: 4px;
 }
-#_menu_log_reg > input:nth-child(4) {
+#log_menu > input:nth-child(4) {
   border-radius: 3px;
   border: none;
   background: white;
-  box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 4px gray;
   margin-left: 19%;
   width: 60%
 }
-#_menu_log_reg > p {
+#log_menu > p {
   font: .9em sans-serif;
 }
 /* Кнопка играца */
@@ -135,7 +133,6 @@ svg {
   margin-top: 17vh;
   opacity: .9;
   cursor: crosshair;
-  /* Пробую задать сука позицию Нихуя сибе, получилось..))*/
   position: relative;
   top: 4vh
 }
