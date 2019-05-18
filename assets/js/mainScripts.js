@@ -195,11 +195,11 @@ function lifeMinus(){
   life--;
   switch (life) {
     case 2:
-      lifesEl[5].style.animation = "life 1s linear";
+      lifesEl[5].style.animation = "life3 1s linear";
       lifesEl[5].style.animationFillMode = "forwards";
       break;
     case 1:
-      lifesEl[3].style.animation = "life 1s linear";
+      lifesEl[3].style.animation = "life2 1s linear";
       lifesEl[3].style.animationFillMode = "forwards";
       break;
     case 0:

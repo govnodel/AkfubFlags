@@ -7,7 +7,6 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
@@ -16,6 +15,16 @@ svg.kruglyash circle {
   animation: timer 10s linear;
   -webkit-animation: timer 10s linear;
   animation-fill-mode: forwards;
+}
+#upblock {
+  margin-top: 0;
+  padding: 0;
+  top: 6vh;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  border-bottom: 1px solid black;
+
 }
 @keyframes timer {
   from {
@@ -54,7 +63,7 @@ svg.kruglyash text {
   font-family: fantasy
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
-  margin-left: auto;
+  margin-left: 20px;
   opacity: 1;
   position: absolute;
   clear: right;
@@ -70,13 +79,17 @@ svg.kruglyash text {
   /* Позиционирование ебать */
   position: relative;
   left: 30%;
-  top: 50%
+  top: 25%;
 }
 #flags {
   width: 520px;
-  margin-left: 28%;
+  margin-left: 0;
+  top: 40vh;
+  position: absolute;
   align-content: center;
-  clear: both
+  clear: both;
+  justify-content: center;
+
 }
 /* Нужно скоратить */
 #_1 {
@@ -146,24 +159,19 @@ svg.kruglyash text {
  0% {
    opacity: 1;
  }
- 1% {
-   transform: translatex(20px);
- }
+
  100% {
    opacity: 0;
-   transform: scale(2.5)
+   transform: scale(2.5) translatex(8px);
  }
 }
 @keyframes life3  {
  0% {
    opacity: 1;
  }
- 1% {
-   transform: translatex(20px);
- }
  100% {
    opacity: 0;
-   transform: scale(2.5)
+   transform: scale(2.5) translatex(16px);
  }
 }
 @keyframes flagRem  {
