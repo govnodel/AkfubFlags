@@ -178,9 +178,9 @@ function animationRem(bool){//если true, то появляется, инач
       element.style.animationFillMode = "forwards";
     });
   } else{
-    document.getElementById("timer_sec").style.animation = "flagRem 0.3s linear";
+    document.getElementById("timer_sec").style.animation = "Rem 0.3s linear";
     document.getElementById("timer_sec").style.animationFillMode = "forwards";
-    nameEl.style.animation = "flagRem 0.3s linear";
+    nameEl.style.animation = "Rem 0.3s linear";
     nameEl.style.animationFillMode = "forwards";
     flagsEl.forEach(function(element){
       element.removeEventListener("click",clickFlag);

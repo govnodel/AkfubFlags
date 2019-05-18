@@ -149,7 +149,7 @@ svg.kruglyash text {
 
 @keyframes flagRem  {
  0% {
-   opacity: 1;
+   opacity: 0.5;
  }
  100% {
    opacity: 0;
@@ -169,5 +169,13 @@ svg.kruglyash text {
  }
  100% {
    opacity: 0.5;
+ }
+}
+@keyframes Rem  {
+ 0% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
  }
 }
