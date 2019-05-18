@@ -73,7 +73,7 @@ function clickFlag(){
   } else lifeMinus(); //неверный ответ
   flagsHide();
   setTimeout(animationRem, 800, false);
-  setTimeout(refresh, 800);
+  setTimeout(refresh, 1200);
   loseornot();
 }
 
@@ -84,7 +84,7 @@ function oneSec(){
     lifeMinus();
     flagsHide();
     setTimeout(animationRem, 800, false);
-    setTimeout(refresh, 800);
+    setTimeout(refresh, 1200);
     loseornot();
   }
   document.getElementById("timer_sec").textContent = timer;
@@ -168,12 +168,20 @@ function loseornot(){ // всё ответил или проиграл
 
 function animationRem(bool){//если true, то появляется, иначе пропадает
   if(bool){
+    document.getElementById("timer_sec").style.animation = "flagApp 0.3s linear";
+    document.getElementById("timer_sec").style.animationFillMode = "forwards";
+    nameEl.style.animation = "flagApp 0.3s linear";
+    nameEl.style.animationFillMode = "forwards";
     flagsEl.forEach(function(element){
       element.addEventListener("click",clickFlag);
       element.style.animation = "flagApp 0.3s linear";
       element.style.animationFillMode = "forwards";
     });
   } else{
+    document.getElementById("timer_sec").style.animation = "flagRem 0.3s linear";
+    document.getElementById("timer_sec").style.animationFillMode = "forwards";
+    nameEl.style.animation = "flagRem 0.3s linear";
+    nameEl.style.animationFillMode = "forwards";
     flagsEl.forEach(function(element){
       element.removeEventListener("click",clickFlag);
       element.style.animation = "flagRem 0.3s linear";
