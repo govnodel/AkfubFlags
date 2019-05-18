@@ -155,7 +155,7 @@ function refresh(){
 
 
 function loseornot(){ // всё ответил или проиграл
-  if((generalCounter >= maxWin) || (life < 1)){
+  if((generalCounter == maxWin - 1) || (life < 1)){
     animationRem(false);
     setTimeout(transition, 400);
     function transition(){
