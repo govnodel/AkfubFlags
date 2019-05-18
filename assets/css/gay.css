@@ -53,11 +53,6 @@ svg.kruglyash text {
   font-size: 1.3em;
   font-family: fantasy
 }
-.parent {
-  width: 87%;
-  margin: 5vw;
-  padding: 0
-}
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
   margin-left: auto;
   opacity: 1;
@@ -121,7 +116,7 @@ svg.kruglyash text {
   transform: translateX(40px);
 }
 
-#nolifes > img{
+#nolifes > img {
   width: 20px;
   height: 20px;
   float: left;
@@ -131,38 +126,44 @@ svg.kruglyash text {
   left: 70%;
 }
 #nolifes > img:nth-child(2) {
-  transform: translateX(20px);
+  padding-left: 20px;
 }
 #nolifes > img:nth-child(3) {
-  transform: translateX(40px);
+  padding-left: 40px;
 }
 /* Анимация ебаных сердец */
 @keyframes life  {
  0% {
    opacity: 1;
  }
+
  100% {
    opacity: 0;
-   transform: scale(2.5);
+   transform: scale(2.5)
  }
 }
 @keyframes life2  {
  0% {
    opacity: 1;
  }
+ 1% {
+   transform: translatex(20px);
+ }
  100% {
    opacity: 0;
-   transform: scale(2.5) translateX(-0px);
+   transform: scale(2.5)
  }
 }
 @keyframes life3  {
  0% {
    opacity: 1;
  }
+ 1% {
+   transform: translatex(20px);
+ }
  100% {
    opacity: 0;
-   transform: translateX(40px) scale(2.5);
-
+   transform: scale(2.5)
  }
 }
 @keyframes flagRem  {
