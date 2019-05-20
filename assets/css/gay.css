@@ -63,7 +63,7 @@ svg.kruglyash text {
   font-family: fantasy
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
-  margin-left: 20px;
+  margin-left: 20px    ;
   opacity: 1;
   position: absolute;
   clear: right;

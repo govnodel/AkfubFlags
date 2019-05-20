@@ -190,7 +190,6 @@ function animationRem(bool){//если true, то появляется, инач
   }
 }
 
-
 function lifeMinus(){
   life--;
   switch (life) {
