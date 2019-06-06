@@ -18,6 +18,7 @@ var nameEl = document.getElementById("country"); //<-- элемент назва
 var flagsFinal = []; //<-- массив с именами флагов, которые будут в итоге
 var flagsEl = []; //<-- массив с элементами флагов
 var arrayWithPos;
+var running = true;
 
 //<=============================================<БД>=================================================>
 // Бiльше флагов нада
@@ -71,6 +72,7 @@ function clickFlag(){
   if(this.id == ("_" + winPosition)){ //верный ответ
     winCounter++;
   } else lifeMinus(); //неверный ответ
+  running = false;
   flagsHide();
   setTimeout(animationRem, 800, false);
   setTimeout(refresh, 1200);
@@ -80,7 +82,7 @@ function clickFlag(){
 
 function oneSec(){
   timer--;
-  if(timer == 0){
+  if((timer == 0)&&(running)){
     lifeMinus();
     flagsHide();
     setTimeout(animationRem, 800, false);
@@ -142,6 +144,7 @@ function repAnim(){
 function refresh(){
   generalCounter++;
   timer = 10;
+  running = true;
   repeat[repeat.length] = winName;
   repAnim();
   autoFill();//<-- повторное заполнение
