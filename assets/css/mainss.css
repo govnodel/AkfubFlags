@@ -52,7 +52,7 @@ body {
   color: #F0FFFF;
   /* Позиционирование */
   position: relative;
-  top: 32vh;
+  top: 30vh;
   left: 15%;
   /* Курсорчиииииииик */
   cursor: text;
@@ -64,7 +64,7 @@ body {
   text-align: center;
   width: 100%
 }
-#desc p.nedotitle{
+#desc p.nedotitle   {
   font-size: 1.2em;
   list-style-type: none;
   font-family: 'Roboto',  sans-serif;
@@ -139,22 +139,24 @@ body {
   font: .9em sans-serif;
 }
 /* Кнопка играца */
-#button > svg {
+svg {
   opacity: .9;
   cursor: crosshair;
   position: relative;
   top: 21vh;
-  left: 20%
+  left: 30%
 }
-#button > svg text{
+svg text {
   font: 2em sans-serif;
   color: white;
   font-weight: bold;
   letter-spacing: .1em
 }
-#button > svg:hover {
+svg:hover {
   opacity: 1
 }
+/* Стили профиля */
+
 /* @media (min-height: 1291px) {
   #hat {
     height: 4vh;
