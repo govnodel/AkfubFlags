@@ -156,7 +156,7 @@ svg:hover {
   opacity: 1
 }
 /* Стили профиля */
-
+#profile
 /* @media (min-height: 1291px) {
   #hat {
     height: 4vh;
@@ -215,3 +215,4 @@ svg:hover {
     font: .9em sans-serif;
   }
 }
+/*  */
