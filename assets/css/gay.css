@@ -96,23 +96,19 @@ svg.kruglyash text {
 }
 /* Нужно скоратить */
 #_1 {
-  border-radius: 6px;
-  box-shadow: 0 0 10px #E7F1Fa;
+  border-radius: 6px
   margin: 2px
 }
 #_2 {
   border-radius: 6px;
-  box-shadow: 0 0 10px #E7F1Fa;
   margin: 2px
 }
 #_3 {
   border-radius: 6px;
-  box-shadow: 0 0 10px #E7F1Fa;
   margin: 2px
 }
 #_4 {
   border-radius: 6px;
-  box-shadow: 0 0 10px #E7F1Fa;
   margin: 2px
 }
 #lifes > img {
@@ -210,4 +206,9 @@ svg.kruglyash text {
  100% {
    opacity: 0;
  }
+}
+@media {
+  #flags {
+
+  }
 }
