@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 html, body {
   width: 100%;
   height: 100vh;
@@ -10,18 +11,46 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 #_2 {
-  background: midnightblue;
+  background: DarkSlateBlue;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
 #_1 > h1 {
-  width: 30%;
-  height: 20vh;
+  width: 28%;
   color: white;
-  font-size: 3em;
-  margin: 0;
+  font-size: 9em;
+  position: relative;
+  margin-top: 0;
+  top: 18vh;
+  left: 50%;
+  margin-left: -14%;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 200;
+}
+#_1 > h1:nth-child(2) {
+  margin-top: -6vh;
+  width: 34%;
+  margin-left: -17%;
+}
+#_1 > svg {
+  position: absolute;
+  top: 90vh;
+  left: 50%;
+  margin-left: -60px;
+  cursor: pointer;
+}
+#_1 > h6 {
+  color: Gainsboro;
+  font-family: 'Fjalla One', sans-serif;
+  
+}
+#_2 > svg {
+
 }
