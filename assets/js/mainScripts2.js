@@ -24,14 +24,14 @@ window.onscroll = function(){
 	if ((scrolled > 100)&&(up)&&(can)){
 		up = false;
 		can = false;
-		setTimeout(invert, 450);
+		setTimeout(invert, 510);
 		$('html, body').animate({
 			scrollTop: $('#second').offset().top
 		}, 500);
 	} else if ((scrolled < WIDTH * 2 - 100)&&(!up)&&(can)){
 		up = true;
 		can = false;
-		setTimeout(invert, 450);
+		setTimeout(invert, 510);
 		$('html, body').animate({
 			scrollTop: $('#first').offset().top
 		}, 500);
