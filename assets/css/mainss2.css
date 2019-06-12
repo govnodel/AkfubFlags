@@ -4,7 +4,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: darkslateblue
+  background-color: purple
 }
 #first {
   background: #9426e2;
@@ -50,12 +50,24 @@ html, body {
 #first > h6 {
   color: Gainsboro;
   font-family: 'Fjalla One', sans-serif;
-
+  position: relative;
+  top: 30vh;
+  left: 50%;
+  font-size: 3em;
+  width: 15%;
+  margin-left: -7.5%;
+  cursor: pointer;
+  /* text-decoration: underline; */
+  font-style: italic;
+}
+#_1 > h4:hover {
+  color: gainsboro;
+  text-decoration: underline;
+  font-style: italic;
 }
 #second > svg {
 
 }
-
 @keyframes into{
   0%{
     background-color: #9426e2
