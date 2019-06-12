@@ -55,11 +55,12 @@ html, body {
   top: 30vh;
   left: 50%;
   font-size: 3em;
+  font-weight:500;
   width: 12%;
   margin-left: -6%;
   cursor: pointer;
   /* text-decoration: underline; */
-  font-style: italic;
+  /* font-style: italic; */
 }
 #first > h4:hover {
   color: gainsboro;
