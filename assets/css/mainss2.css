@@ -42,10 +42,10 @@ html, body {
   margin-left: -17%;
 }
 #first > svg {
-  position: absolute;
-  top: 90vh;
-  left: 50%;
-  margin-left: -60px;
+  position: relative;
+  top: 28vh;
+  /* left: 50%; */
+  /* margin-left: -60px; */
   cursor: pointer;
 }
 #first > h4 {
