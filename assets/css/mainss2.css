@@ -47,8 +47,8 @@ html, body {
   margin-left: -60px;
   cursor: pointer;
 }
-#first > h6 {
-  color: Gainsboro;
+#first > h4 {
+  color: white;
   font-family: 'Fjalla One', sans-serif;
   position: relative;
   top: 30vh;
@@ -60,7 +60,7 @@ html, body {
   /* text-decoration: underline; */
   font-style: italic;
 }
-#_1 > h4:hover {
+#first > h4:hover {
   color: gainsboro;
   text-decoration: underline;
   font-style: italic;
