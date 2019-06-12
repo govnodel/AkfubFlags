@@ -4,7 +4,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: darkslateblue
+  background-color: purple
 }
 #_1 {
   background: #9426e2;
@@ -36,7 +36,7 @@ html, body {
   font-weight: 200;
 }
 #_1 > h1:nth-child(2) {
-  margin-top: -10vh;
+  margin-top: -6vh;
   width: 34%;
   margin-left: -17%;
 }
@@ -47,15 +47,31 @@ html, body {
   margin-left: -60px;
   cursor: pointer;
 }
-#_1 > h6 {
-  color: Gainsboro;
+#_1 > h4 {
+  color: white;
   font-family: 'Fjalla One', sans-serif;
-
+  position: relative;
+  top: 30vh;
+  left: 50%;
+  font-size: 3em;
+  width: 15%;
+  margin-left: -7.5%;
+  cursor: pointer; 
+  /* text-decoration: underline; */
+  font-style: italic;
+}
+#_1 > h4:hover {
+  color: gainsboro;
+  text-decoration: underline;
+  font-style: italic;
 }
 #_2 > svg {
-
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -225px;
+  margin-top: -225px;
 }
-
 @keyframes into{
   0%{
     background-color: #9426e2
