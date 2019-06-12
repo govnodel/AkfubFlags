@@ -131,11 +131,9 @@ function dom(){
 
 function repAnim(){
   if(anima){
-    elCirc.style.animation = "timer 10s linear";
-    elCirc.style.animationFillMode = "forwards";
+    elCirc.style.animation = "timer 10s linear forwards";
   } else {
-    elCirc.style.animation = "timer2 10s linear";
-    elCirc.style.animationFillMode = "forwards";
+    elCirc.style.animation = "timer2 10s linear forwards";
   }
   anima = !anima;
 }
@@ -171,24 +169,18 @@ function loseornot(){ // всё ответил или проиграл
 
 function animationRem(bool){//если true, то появляется, иначе пропадает
   if(bool){
-    document.getElementById("timer_sec").style.animation = "flagApp 0.3s linear";
-    document.getElementById("timer_sec").style.animationFillMode = "forwards";
-    nameEl.style.animation = "flagApp 0.3s linear";
-    nameEl.style.animationFillMode = "forwards";
+    document.getElementById("timer_sec").style.animation = "flagApp 0.3s linear forwards";
+    nameEl.style.animation = "flagApp 0.3s linear forwards";
     flagsEl.forEach(function(element){
       element.addEventListener("click",clickFlag);
-      element.style.animation = "flagApp 0.3s linear";
-      element.style.animationFillMode = "forwards";
+      element.style.animation = "flagApp 0.3s linear forwards";
     });
   } else{
-    document.getElementById("timer_sec").style.animation = "Rem 0.3s linear";
-    document.getElementById("timer_sec").style.animationFillMode = "forwards";
-    nameEl.style.animation = "Rem 0.3s linear";
-    nameEl.style.animationFillMode = "forwards";
+    document.getElementById("timer_sec").style.animation = "Rem 0.3s linear forwards";
+    nameEl.style.animation = "Rem 0.3s linear forwards";
     flagsEl.forEach(function(element){
       element.removeEventListener("click",clickFlag);
-      element.style.animation = "flagRem 0.3s linear";
-      element.style.animationFillMode = "forwards";
+      element.style.animation = "flagRem 0.3s linear forwards";
     });
   }
 }
@@ -197,16 +189,13 @@ function lifeMinus(){
   life--;
   switch (life) {
     case 2:
-      lifesEl[5].style.animation = "life3 1s linear";
-      lifesEl[5].style.animationFillMode = "forwards";
+      lifesEl[5].style.animation = "life3 1s linear forwards";
       break;
     case 1:
-      lifesEl[3].style.animation = "life2 1s linear";
-      lifesEl[3].style.animationFillMode = "forwards";
+      lifesEl[3].style.animation = "life2 1s linear forwards";
       break;
     case 0:
-      lifesEl[1].style.animation = "life 1s linear";
-      lifesEl[1].style.animationFillMode = "forwards";
+      lifesEl[1].style.animation = "life 1s linear forwards";
       break;
   }
 }
@@ -216,8 +205,7 @@ function flagsHide(){
   flagsEl.forEach(function(element){
     if(element.id != ("_" + winPosition)){
       element.removeEventListener("click",clickFlag);
-      element.style.animation = "flagHide 0.3s linear";
-      element.style.animationFillMode = "forwards";
+      element.style.animation = "flagHide 0.3s linear forwards";
     }
   });
 }
