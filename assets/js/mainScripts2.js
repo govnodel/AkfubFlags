@@ -21,17 +21,17 @@ window.onscroll = function(){
     was = false;
 	}
 
-	if ((scrolled > 100)&&(up)&&(can)){
+	if ((scrolled > 10)&&(up)&&(can)){
 		up = false;
 		can = false;
-		setTimeout(invert, 510);
+		setTimeout(invert, 550);
 		$('html, body').animate({
 			scrollTop: $('#second').offset().top
 		}, 500);
-	} else if ((scrolled < WIDTH * 2 - 100)&&(!up)&&(can)){
+	} else if ((scrolled < WIDTH * 2 - 10)&&(!up)&&(can)){
 		up = true;
 		can = false;
-		setTimeout(invert, 510);
+		setTimeout(invert, 550);
 		$('html, body').animate({
 			scrollTop: $('#first').offset().top
 		}, 500);
@@ -43,7 +43,9 @@ function invert() {
 }
 
 function slowScroll(){
+	can = false;
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
+	setTimeout(invert, 550);
 }
