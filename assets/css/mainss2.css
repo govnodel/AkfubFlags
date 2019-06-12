@@ -4,6 +4,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: darkslateblue
 }
 #_1 {
   background: #9426e2;
@@ -35,7 +36,7 @@ html, body {
   font-weight: 200;
 }
 #_1 > h1:nth-child(2) {
-  margin-top: -6vh;
+  margin-top: -10vh;
   width: 34%;
   margin-left: -17%;
 }
