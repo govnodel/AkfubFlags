@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: purple;
-  overflow: hidden
+  /* overflow: hidden */
 }
 #first {
   background: #9426e2;
@@ -55,8 +55,8 @@ html, body {
   top: 30vh;
   left: 50%;
   font-size: 3em;
-  width: 15%;
-  margin-left: -7.5%;
+  width: 12%;
+  margin-left: -6%;
   cursor: pointer;
   /* text-decoration: underline; */
   font-style: italic;
@@ -66,7 +66,7 @@ html, body {
   text-decoration: underline;
   font-style: italic;
 }
-#second > svg {
+#second > #buttonplay {
   position: relative;
   top: 50%;
   left: 50%;
@@ -74,8 +74,15 @@ html, body {
   margin-top: -225px;
   cursor: pointer;
 }
+#second > #buttonprofile {
+  margin-left: 0;
+  position: relative;
+  left: 0;
+  /* top: 150%; */
+  margin-top: -50px;
+}
 @keyframes into{
-  0%{
+  0% {
     background-color: #9426e2
   }
   100% {
@@ -83,7 +90,7 @@ html, body {
   }
 }
 @keyframes outto{
-  0%{
+  0% {
     background-color: #3257db
   }
   100% {
