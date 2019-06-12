@@ -37,7 +37,7 @@ html, body {
   font-weight: 200;
 }
 #first > h1:nth-child(2) {
-  margin-top: -10vh;
+  margin-top: -6vh;
   width: 34%;
   margin-left: -17%;
 }
@@ -67,19 +67,24 @@ html, body {
   font-style: italic;
 }
 #second > svg {
-
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -225px;
+  margin-top: -225px;
+  cursor: pointer;
 }
 @keyframes into{
   0%{
     background-color: #9426e2
   }
   100% {
-    background-color: #3672d1
+    background-color: #3257db
   }
 }
 @keyframes outto{
   0%{
-    background-color: #3672d1
+    background-color: #3257db
   }
   100% {
     background-color: #9426e2
