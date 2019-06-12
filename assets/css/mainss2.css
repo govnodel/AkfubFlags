@@ -4,9 +4,9 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: darkslateblue
 }
 #_1 {
-  background: DarkSlateBlue;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -16,7 +16,6 @@ html, body {
   justify-content: center;
 }
 #_2 {
-  background: DarkSlateBlue;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -35,7 +34,7 @@ html, body {
   font-weight: 200;
 }
 #_1 > h1:nth-child(2) {
-  margin-top: -6vh;
+  margin-top: -10vh;
   width: 34%;
   margin-left: -17%;
 }
@@ -49,7 +48,7 @@ html, body {
 #_1 > h6 {
   color: Gainsboro;
   font-family: 'Fjalla One', sans-serif;
-  
+
 }
 #_2 > svg {
 
