@@ -10,6 +10,7 @@ var WIDTH = document.documentElement.clientHeight / 2;
 
 window.onscroll = function(){
 	scrolled = window.pageYOffset;
+	// alert(scrolled);
 	if (scrolled > WIDTH) {
     document.documentElement.clientWidth
     first.style.animation = into;
@@ -22,16 +23,18 @@ window.onscroll = function(){
 	}
 
 	if ((scrolled > 10)&&(up)&&(can)){
+		// alert("down");
 		up = false;
 		can = false;
-		setTimeout(invert, 550);
+		setTimeout(invert, 510);
 		$('html, body').animate({
 			scrollTop: $('#second').offset().top
 		}, 500);
 	} else if ((scrolled < WIDTH * 2 - 10)&&(!up)&&(can)){
+		// alert("up");
 		up = true;
 		can = false;
-		setTimeout(invert, 550);
+		setTimeout(invert, 510);
 		$('html, body').animate({
 			scrollTop: $('#first').offset().top
 		}, 500);
@@ -43,9 +46,10 @@ function invert() {
 }
 
 function slowScroll(){
+	alert("slowScroll");
 	can = false;
+	setTimeout(invert, 510);
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
-	setTimeout(invert, 550);
 }
