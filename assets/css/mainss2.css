@@ -6,7 +6,7 @@ html, body {
   padding: 0;
   background-color: purple
 }
-#_1 {
+#first {
   background: #9426e2;
   width: 100%;
   height: 100vh;
@@ -16,14 +16,14 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-#_2 {
+#second {
   background: #9426e2;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
-#_1 > h1 {
+#first > h1 {
   width: 28%;
   color: white;
   font-size: 9em;
@@ -35,20 +35,20 @@ html, body {
   font-family: 'Fjalla One', sans-serif;
   font-weight: 200;
 }
-#_1 > h1:nth-child(2) {
-  margin-top: -6vh;
+#first > h1:nth-child(2) {
+  margin-top: -10vh;
   width: 34%;
   margin-left: -17%;
 }
-#_1 > svg {
+#first > svg {
   position: absolute;
   top: 90vh;
   left: 50%;
   margin-left: -60px;
   cursor: pointer;
 }
-#_1 > h4 {
-  color: white;
+#first > h6 {
+  color: Gainsboro;
   font-family: 'Fjalla One', sans-serif;
   position: relative;
   top: 30vh;
@@ -56,7 +56,7 @@ html, body {
   font-size: 3em;
   width: 15%;
   margin-left: -7.5%;
-  cursor: pointer; 
+  cursor: pointer;
   /* text-decoration: underline; */
   font-style: italic;
 }
@@ -65,24 +65,20 @@ html, body {
   text-decoration: underline;
   font-style: italic;
 }
-#_2 > svg {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin-left: -225px;
-  margin-top: -225px;
+#second > svg {
+
 }
 @keyframes into{
   0%{
     background-color: #9426e2
   }
   100% {
-    background-color: #3257db
+    background-color: #3672d1
   }
 }
 @keyframes outto{
   0%{
-    background-color: #3257db
+    background-color: #3672d1
   }
   100% {
     background-color: #9426e2

@@ -8,23 +8,23 @@
   <link rel="stylesheet" href="assets/css/mainss2.css">
 </head>
 <body>
-  <div id="_1">
+  <div id="first">
     <h1>WELCOME</h1>
     <h1>to HisFlags</h1>
     <h4>How to play</h4>
     <!-- Кнопка скролла -->
-    <svg id = "buttonscroll" width="120px" height="100px">
+    <svg id = "buttonscroll" width="120px" height="100px" onclick = "slowScroll()">
       <polyline points="2,25 55,70 112,25" stroke="white" stroke-width="6" fill = "none">
     </svg>
   </div>
-  <div id="_2">
+  <div id="second">
     <!-- Кнопка играть -->
   <svg id="buttonplay" x = "0" y = "0" width="450px" height="450px">
     <circle cx = "225" cy = "225" r = "210" fill="none" stroke="white" stroke-width="30"/>
     <polygon points="156,335 156,95 364,215" fill = "none" stroke="white" stroke-width="30"/>
   </svg>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/mainScripts2.js"></script>
 </body>
 </html>
