@@ -25,7 +25,6 @@ function pushMenu(){
 		$('#buttonprofile').animate({
 			left: '0px'
 		}, 500);
-		$('#profilemenu').delay(500);
 		$('#profilemenu').animate({
 			left: '-30%'
 		}, 200);
