@@ -86,7 +86,8 @@ html, body {
   position: absolute;
   width: 30%;
   height: 100vh;
-  left: -30%
+  left: -30%;
+  transition-duration: 1s;
 }
 @keyframes into{
   0% {
@@ -102,5 +103,13 @@ html, body {
   }
   100% {
     background-color: #9426e2
+  }
+}
+@keyframes push {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translatex(30%);
   }
 }
