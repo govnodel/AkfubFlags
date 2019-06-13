@@ -105,11 +105,3 @@ html, body {
     background-color: #9426e2
   }
 }
-@keyframes push {
-  0% {
-    transform: none;
-  }
-  100% {
-    transform: translatex(30%);
-  }
-}
