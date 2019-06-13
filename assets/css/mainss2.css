@@ -55,18 +55,16 @@ html, body {
   top: 30vh;
   left: 50%;
   font-size: 3em;
-  font-weight:500;
   width: 12%;
   margin-left: -6%;
   cursor: pointer;
   /* text-decoration: underline; */
-  /* font-style: italic; */
 }
-#first > h4:hover {
+/* #first > h4:hover {
   color: gainsboro;
   text-decoration: underline;
   font-style: italic;
-}
+} */
 #second > #buttonplay {
   position: relative;
   top: 50%;
@@ -77,10 +75,18 @@ html, body {
 }
 #second > #buttonprofile {
   margin-left: 0;
-  position: relative;
+  position: absolute;
   left: 0;
-  /* top: 150%; */
-  margin-top: -50px;
+  top: 150%;
+  margin-top: -75px
+}
+#second > #profilemenu {
+  margin: 0;
+  background: white;
+  position: absolute;
+  width: 30%;
+  height: 100vh;
+  left: -30%
 }
 @keyframes into{
   0% {

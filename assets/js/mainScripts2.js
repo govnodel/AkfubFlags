@@ -46,7 +46,7 @@ function invert() {
 }
 
 function slowScroll(){
-	alert("slowScroll");
+	// alert("slowScroll");
 	can = false;
 	setTimeout(invert, 510);
 	$('html, body').animate({
