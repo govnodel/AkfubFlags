@@ -119,7 +119,7 @@ html, body {
     transform: none;
   }
   100% {
-    transform: translatex(437px) rotatey(180deg);
+    transform: rotatey(180deg);
   }
 }
 @keyframes pull {
@@ -132,10 +132,10 @@ html, body {
 }
 @keyframes pullButton {
   0% {
-    transform: none;
+    transform: rotatey(180deg);
   }
   100% {
-    transform: translatex(-437px) rotatey(180deg);
+    transform: rotatey(0deg);
   }
 }
 @keyframes chlen {

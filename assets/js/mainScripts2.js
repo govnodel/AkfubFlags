@@ -17,12 +17,23 @@ $('#buttonplay').bind("click", startGame);
 
 function pushMenu(){
 	if (pushed){
-		profile.style.animation = 'push 2s ease forwards';
-    button.style.animation = 'pushButton 2s ease forwards';
+		$('#profilemenu').animate({
+			left: '0px'
+		}, 500);
+		//$('#buttonprofile').delay(200);
+		$('#buttonprofile').animate({
+			left: '25%'
+		}, 800);
+		button.style.animation = "pushButton 0.8s linear forwards";
 		pushed = false;
 	} else {
-		profile.style.animation = 'pull 2s ease forwards';
-		button.style.animation = 'pullButton 2s ease forwards';
+		$('#buttonprofile').animate({
+			left: '0px'
+		}, 500);
+		button.style.animation = "pullButton 0.8s linear forwards";
+		$('#profilemenu').animate({
+			left: '-30%'
+		}, 800);
 		pushed = true;
 	}
 }
