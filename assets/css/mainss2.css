@@ -47,6 +47,8 @@ html, body {
   /* left: 50%; */
   /* margin-left: -60px; */
   cursor: pointer;
+  animation-iteration-count: infinite;
+  animation
 }
 #first > h4 {
   color: white;
@@ -78,7 +80,9 @@ html, body {
   position: absolute;
   left: 0;
   top: 150%;
-  margin-top: -75px
+  margin-top: -75px;
+  animation: pushButton 10s ease;
+  animation-fill-mode: forwards;
 }
 #second > #profilemenu {
   margin: 0;
@@ -87,7 +91,8 @@ html, body {
   width: 30%;
   height: 100vh;
   left: -30%;
-  transition-duration: 1s;
+  animation: push 10s ease;
+  animation-fill-mode: forwards;
 }
 @keyframes into{
   0% {
@@ -103,5 +108,48 @@ html, body {
   }
   100% {
     background-color: #9426e2
+  }
+}
+@keyframes push {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translatex(100%);
+  }
+}
+@keyframes pushButton {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translatex(437px) rotatey(180deg);
+  }
+}
+@keyframes pull {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translatex(-100%);
+  }
+}
+@keyframes pullButton {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translatex(-437px) rotatey(180deg);
+  }
+}
+@keyframes chlen {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(5%)
+  }
+  100% {
+    transform: none;
   }
 }
