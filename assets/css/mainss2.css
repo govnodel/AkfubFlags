@@ -1,3 +1,5 @@
+/* А брат вани чёткий */
+
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 html, body {
   width: 100%;
@@ -43,12 +45,13 @@ html, body {
 }
 #first > svg {
   position: relative;
-  top: 28vh;
-  /* left: 50%; */
-  /* margin-left: -60px; */
+  top: 26vh;
   cursor: pointer;
   animation-iteration-count: infinite;
-  /* animation */
+  animation-name: strelkaJumping;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-timing-function: linear;;  /*cubic-bezier(.37,.31,.25,1.12); */
 }
 #first > h4 {
   color: white;
@@ -60,13 +63,8 @@ html, body {
   width: 12%;
   margin-left: -6%;
   cursor: pointer;
-  /* text-decoration: underline; */
 }
-/* #first > h4:hover {
-  color: gainsboro;
-  text-decoration: underline;
-  font-style: italic;
-} */
+
 #second > #buttonplay {
   position: relative;
   top: 50%;
@@ -74,6 +72,7 @@ html, body {
   margin-left: -225px;
   margin-top: -225px;
   cursor: pointer;
+  border-radius: 250px;
 }
 #second > #buttonprofile {
   margin-left: 0;
@@ -89,6 +88,13 @@ html, body {
   width: 30%;
   height: 100vh;
   left: -30%;
+  font-family: 'Fjalla One', sans-serif;
+}
+#buttonplay:hover {
+  animation-duration: 1.2s;
+  animation-delay: .8s;
+  animation-iteration-count: infinite;
+  animation-name: playButton;
 }
 @keyframes into{
   0% {
@@ -106,28 +112,12 @@ html, body {
     background-color: #9426e2
   }
 }
-@keyframes push {
-  0% {
-    transform: none;
-  }
-  100% {
-    transform: translatex(100%);
-  }
-}
 @keyframes pushButton {
   0% {
     transform: none;
   }
   100% {
     transform: rotatey(180deg);
-  }
-}
-@keyframes pull {
-  0% {
-    transform: none;
-  }
-  100% {
-    transform: translatex(-100%);
   }
 }
 @keyframes pullButton {
@@ -138,14 +128,62 @@ html, body {
     transform: rotatey(0deg);
   }
 }
-@keyframes chlen {
+@keyframes strelkaJumping {
   0% {
     transform: none;
   }
-  50% {
-    transform: translateY(5%)
+  20% {
+    transform: translateY(15%)
   }
   100% {
     transform: none;
   }
+}
+@keyframes playButton {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Стилизиуем срань ну всмысле коммент ради коммента я знаю что коменты тоже весят отстань ваня*/
+#logRegMenu {
+  margin: 0;
+  width: 100%;
+  height: 15%;
+  position: relative;
+  border-bottom: 12px solid #2a5eb2;
+  align-items: center;
+  color: #2a5eb2;
+  justify-content: center;
+  text-align: center;
+
+}
+#logRegMenu > h1 {
+  font-size: 4em;
+  letter-spacing: .08em;
+}
+#logRegMenu > h2 {
+  margin-top: -2vh;
+  letter-spacing: .08em;
+}
+#avatr {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 30%;
+  float: left;
+}
+.emptyText {
+  margin-top: 9%;
+  color: #333232;
+  font-size: 1.4em;
+  text-align: center;
+}
+#profilemenu > h1 {
+  font-size: 5em;
+  margin: 10vh 0 0 0;
+  color: #333232;
+  text-align: center;
+  clear: left;
 }
