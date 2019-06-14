@@ -13,6 +13,7 @@ var arrow = document.getElementById('proArrow');
 var HEIGHT = document.documentElement.clientHeight / 2;
 
 $('#buttonprofile').bind("click", pushMenu);
+$('#buttonplay').bind("click", startGame);
 
 function pushMenu(){
 	if (pushed){
@@ -59,6 +60,10 @@ window.onscroll = function(){
 
 function invert() {
   can = true;
+}
+
+function startGame(){
+	window.location.href = "gayme.html";
 }
 
 function slowScroll(){
