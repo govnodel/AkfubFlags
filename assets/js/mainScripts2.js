@@ -3,6 +3,7 @@ var was = false;
 var up = true;
 var can = true;
 var pushed = true;
+var stopColoring = false;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
 var profile = document.getElementById('profilemenu');
@@ -20,7 +21,6 @@ function pushMenu(){
 		$('#profilemenu').animate({
 			left: '0px'
 		}, 500);
-		//$('#buttonprofile').delay(200);
 		$('#buttonprofile').animate({
 			left: '25%'
 		}, 550);
@@ -39,33 +39,45 @@ function pushMenu(){
 }
 
 window.onscroll = function(){
-	scrolled = window.pageYOffset;
-	if (scrolled > HEIGHT) {
-    first.style.animation = into;
-    second.style.animation = into;
-		arrow.style.animation = into;
-    was = true;
-	} else if(was){
-    first.style.animation = outto;
-    second.style.animation = outto;
-		arrow.style.animation = outto;
-    was = false;
-	}
+	if(!stopColoring){
+		scrolled = window.pageYOffset;
+		if (scrolled > HEIGHT) {
+	    first.style.animation = into;
+	    second.style.animation = into;
+			arrow.style.animation = into;
+	    was = true;
+		} else if(was){
+	    first.style.animation = outto;
+	    second.style.animation = outto;
+			arrow.style.animation = outto;
+	    was = false;
+		}
 
-	if ((scrolled > 10)&&(up)&&(can)){
-		up = false;
-		can = false;
-		setTimeout(invert, 510);
-		$('html, body').animate({
-			scrollTop: $('#second').offset().top
-		}, 500);
-	} else if ((scrolled < HEIGHT * 2 - 10)&&(!up)&&(can)){
-		up = true;
-		can = false;
-		setTimeout(invert, 510);
-		$('html, body').animate({
-			scrollTop: $('#first').offset().top
-		}, 500);
+		if ((scrolled > 10)&&(up)&&(can)){
+			up = false;
+			can = false;
+			setTimeout(invert, 510);
+			$('html, body').animate({
+				scrollTop: $('#second').offset().top
+			}, 500);
+		} else if ((scrolled < HEIGHT * 2 - 10)&&(!up)&&(can)){
+			up = true;
+			can = false;
+			setTimeout(invert, 510);
+			if(!pushed){
+				$('#buttonprofile').animate({
+					left: '0px'
+				}, 250);
+				button.style.animation = "pullButton 0.4s linear forwards";
+				$('#profilemenu').animate({
+					left: '-30%'
+				}, 400);
+				pushed = true;
+			}
+			$('html, body').animate({
+				scrollTop: $('#first').offset().top
+			}, 500);
+		}
 	}
 }
 
@@ -74,7 +86,11 @@ function invert() {
 }
 
 function startGame(){
-	window.location.href = "gayme.html";
+	stopColoring = true;
+	$("#second *, #first").fadeOut();
+	setTimeout(function () {
+		window.location.href = "gayme.html";
+	}, 600);
 }
 
 function slowScroll(){
