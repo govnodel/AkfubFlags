@@ -23,7 +23,7 @@ function pushMenu(){
 		//$('#buttonprofile').delay(200);
 		$('#buttonprofile').animate({
 			left: '25%'
-		}, 800);
+		}, 550);
 		button.style.animation = "pushButton 0.8s linear forwards";
 		pushed = false;
 	} else {
