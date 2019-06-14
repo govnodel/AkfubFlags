@@ -15,28 +15,26 @@ function pushMenu(){
 	if (pushed){
 		$('#profilemenu').animate({
 			left: '0px'
-		}, 200);
-		$('#buttonprofile').delay(500);
+		}, {duration: 200, easing: "linear" });
+		$('#buttonprofile').delay(200);
 		$('#buttonprofile').animate({
-			left: '25%'
-		}, 500);
+			left: '30%'
+		}, {duration: 500, easing: "linear" });
 		pushed = false;
 	} else {
 		$('#buttonprofile').animate({
 			left: '0px'
-		}, 500);
+		}, {duration: 500, easing: "linear" });
 		$('#profilemenu').animate({
 			left: '-30%'
-		}, 200);
+		}, {duration: 200, easing: "linear" });
 		pushed = true;
 	}
 }
 
 window.onscroll = function(){
 	scrolled = window.pageYOffset;
-	// alert(scrolled);
 	if (scrolled > HEIGHT) {
-    document.documentElement.clientWidth
     first.style.animation = into;
     second.style.animation = into;
     was = true;
