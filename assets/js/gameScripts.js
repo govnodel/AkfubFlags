@@ -160,8 +160,14 @@ function loseornot(){ // всё ответил или проиграл
     animationRem(false);
     setTimeout(transition, 400);
     function transition(){
-      alert(winCounter + "/" + maxWin);
-      window.location.href = "winornot.html";
+      // alert(winCounter + "/" + maxWin);
+      if(life < 1){
+        stat(false);
+      } else {
+        stat(true);
+      }
+      alert("winornot.php?stat=" + str);
+      // window.location.href = "winornot.php?stat=" + str;
     }
   }
 }
@@ -208,4 +214,14 @@ function flagsHide(){
       element.style.animation = "flagHide 0.3s linear forwards";
     }
   });
+}
+
+
+function stat(qWin){//количество правильных, количество сыгранных игр и побед
+  str = winCounter + "";
+  if (qWin){
+    str = str + "I1";
+  } else {
+    str = str + "I0";
+  }
 }

@@ -94,7 +94,7 @@ function signUp(event){
 	if(event.data.index == 1){
 		// window.location.href = "login.html";
 	} else {
-		window.location.href = "registration.php";
+		window.location.href = "regPage.php";
 	}
 }
 
