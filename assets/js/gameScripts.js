@@ -160,13 +160,11 @@ function loseornot(){ // всё ответил или проиграл
     animationRem(false);
     setTimeout(transition, 400);
     function transition(){
-      // alert(winCounter + "/" + maxWin);
       if(life < 1){
         stat(false);
       } else {
         stat(true);
       }
-      alert("winornot.php?stat=" + str);
       window.location.href = "winornot.php?stat=" + str;
     }
   }
