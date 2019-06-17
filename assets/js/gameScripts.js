@@ -167,7 +167,7 @@ function loseornot(){ // всё ответил или проиграл
         stat(true);
       }
       alert("winornot.php?stat=" + str);
-      // window.location.href = "winornot.php?stat=" + str;
+      window.location.href = "winornot.php?stat=" + str;
     }
   }
 }
