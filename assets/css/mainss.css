@@ -74,13 +74,13 @@ html, body {
   border-radius: 250px;
 }
 #second > #buttonprofile {
-  margin-left: 0;
+  margin-left: 0; /*30px для 1920*1080 */
   position: absolute;
   left: 0;
   top: 150%;
   margin-top: -75px;
 }
-#second > #profilemenu {
+#profilemenu {
   margin: 0;
   background: white;
   position: absolute;
@@ -161,11 +161,11 @@ html, body {
 }
 #logRegMenu > h1 {
   font-size: 4em;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
 }
 #logRegMenu > h2 {
   margin-top: -2vh;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
 }
 #avatr {
   margin-top: 5%;
@@ -175,14 +175,14 @@ html, body {
 }
 .emptyText {
   margin-top: 9%;
-  color: #333232;
-  font-size: 1.4em;
+  color: #666666;
+  font-size: 2.6em;
   text-align: center;
 }
 #profilemenu > h1 {
   font-size: 5em;
-  margin: 10vh 0 0 0;
-  color: #333232;
+  margin: 12vh 0 0 0;
+  color: #666666;
   text-align: center;
   clear: left;
 }
