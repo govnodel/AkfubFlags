@@ -50,8 +50,7 @@ html, body {
   animation-iteration-count: infinite;
   animation-name: strelkaJumping;
   animation-duration: 1s;
-  animation-delay: 0.9s;
-  animation-timing-function: linear;;  /*cubic-bezier(.37,.31,.25,1.12); */
+  animation-timing-function: cubic-bezier(.89,.06,.37,.96);
 }
 #first > h4 {
   color: white;
@@ -132,7 +131,7 @@ html, body {
   0% {
     transform: none;
   }
-  20% {
+  50% {
     transform: translateY(15%)
   }
   100% {
@@ -186,4 +185,8 @@ html, body {
   color: #333232;
   text-align: center;
   clear: left;
+}
+/* Ща попробуем адаптивность запилить */
+@media (min-width: 1440px) {
+  /* Ну да ага триста раз */
 }
