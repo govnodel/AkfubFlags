@@ -213,8 +213,9 @@ svg.kruglyash text {
 
   }
 }
-svg#poloska {
+#poloska {
   width: 100%;
-  position: absolute;
+  height: 10px;
+  position: relative;
   top: 13vh;
 }
