@@ -1,7 +1,6 @@
 /* Список задач:
     1)
 */
-
 //<==========================================<метод main>============================================>
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
@@ -151,6 +150,7 @@ function refresh(){
   clearInterval(interval);
   document.getElementById("timer_sec").textContent = timer;
   interval = setInterval(oneSec, 1000);
+  progressBar();
   animationRem(true);
 }
 
@@ -222,4 +222,11 @@ function stat(qWin){//количество правильных, количес�
   } else {
     str = str + "I0";
   }
+}
+
+
+function progressBar(){
+  $('#poloska > rect').animate({
+    width: generalCounter * 10 + "%"
+  }, 500);
 }
