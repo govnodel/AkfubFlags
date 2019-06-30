@@ -10,7 +10,7 @@ html, body {
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
-  stroke: SteelBlue;
+  stroke: white;
   stroke-dasharray: 300%;
   animation: timer 10s linear;
   -webkit-animation: timer 10s linear;
@@ -21,8 +21,11 @@ svg.kruglyash circle {
   padding: 0;
   position: fixed;
   width: 100%;
-  height: 8vh;
-  background:
+  height: 14vh;
+  display: flex;
+  background: #2a5eb2;
+  align-items: center;
+  justify-content: center;
 }
 @keyframes timer {
   from {
@@ -58,24 +61,21 @@ svg.kruglyash circle {
 }
 svg.kruglyash text {
   font-size: 1.3em;
-  font-family: fantasy
+  font-family: fantasy;
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
-  margin-left: 2%   ;
+  margin-left: -46%   ;
   opacity: 1;
   position: absolute;
-  clear: right;
-  margin-top: 1vh;
 }
 #country {
   font-family: fantasy;
   font: impact;
+  color: white;
   font-size: 3.4em;
-  color: 	SteelBlue;
   float: left;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4vh;
   /* Позиционирование ебать */
   position: relative;
 }
@@ -96,7 +96,7 @@ svg.kruglyash text {
 }
 /* Нужно скоратить */
 #_1 {
-  border-radius: 6px
+  border-radius: 6px;
   margin: 2px
 }
 #_2 {
@@ -115,11 +115,11 @@ svg.kruglyash text {
   width: 40px;
   height: 40px;
   float: left;
-  clear: right;
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
   left: 80%;
-  top: 4vh;
+  top: 7vh;
+  margin-top: -20px;
 }
 /* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..) */
 #lifes > img:nth-child(2) {
@@ -137,7 +137,8 @@ svg.kruglyash text {
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
   left: 80%;
-  top: 4vh;
+  top: 7  vh;
+  margin-top: -20px;
 }
 #nolifes > img:nth-child(2) {
   padding-left: 40px;
@@ -211,4 +212,9 @@ svg.kruglyash text {
   #flags {
 
   }
+}
+svg#poloska {
+  width: 100%;
+  position: absolute;
+  top: 13vh;
 }

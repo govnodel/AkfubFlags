@@ -82,7 +82,7 @@ function clickFlag(){
 
 function oneSec(){
   timer--;
-  if((timer == 0)&&(running)){
+  if((timer == 11)&&(running)){
     lifeMinus();
     flagsHide();
     setTimeout(animationRem, 800, false);

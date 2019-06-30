@@ -57,12 +57,12 @@ html, body {
   color: white;
   font-family: 'Fjalla One', sans-serif;
   position: relative;
+  letter-spacing: 3px;
   top: 30vh;
   left: 50%;
   font-size: 3em;
-  width: 12%;
-  margin-left: -6%;
-  cursor: pointer;
+  width: 14%;
+  margin-left: -7%;
 }
 
 #second > #buttonplay {
@@ -117,15 +117,15 @@ html, body {
     transform: none;
   }
   100% {
-    transform: rotatey(180deg);
+    transform: rotatey(180deg)
   }
 }
 @keyframes pullButton {
   0% {
-    transform: rotatey(180deg);
+    transform: rotatey(180deg)
   }
   100% {
-    transform: rotatey(0deg);
+    transform: rotatey(0deg)
   }
 }
 @keyframes strelkaJumping {
@@ -144,7 +144,7 @@ html, body {
     transform: none;
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
 /* Стилизиуем срань ну всмысле коммент ради коммента я знаю что коменты тоже весят отстань ваня*/
@@ -186,4 +186,15 @@ html, body {
   color: #666666;
   text-align: center;
   clear: left;
+}
+/* Ща попробуем адаптивность запилить */
+@media (max-width: 426px) {
+  #first {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  #first > h1 {
+
+  }
 }
