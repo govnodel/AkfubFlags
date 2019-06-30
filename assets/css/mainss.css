@@ -147,6 +147,22 @@ html, body {
     transform: rotate(360deg)
   }
 }
+@keyframes profileButtonInto {
+  0% {
+    stroke: #9426e2
+  }
+  100% {
+    stroke: #2a5eb2
+  }
+}
+@keyframes profileButtonOutto {
+  0% {
+    stroke: #9426e2
+  }
+  100% {
+    stroke: #2a5eb2
+  }
+}
 /* Стилизиуем срань ну всмысле коммент ради коммента я знаю что коменты тоже весят отстань ваня*/
 #logRegMenu {
   margin: 0;

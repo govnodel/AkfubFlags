@@ -6,6 +6,8 @@ var pushed = true;
 var stopColoring = false;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
+var profInto = "profileButtonInto 1s linear forwards";
+var profOutto = "profileButtonOutto 1s linear forwards";
 var profile = document.getElementById('profilemenu');
 var button = document.getElementById('buttonprofile');
 var first = document.getElementById('first');
@@ -49,12 +51,12 @@ window.onscroll = function(){
 		if (scrolled > HEIGHT) {
 	    first.style.animation = into;
 	    second.style.animation = into;
-			arrow.style.animation = into;
+			arrow.style.animation = profInto;
 	    was = true;
 		} else if(was){
 	    first.style.animation = outto;
 	    second.style.animation = outto;
-			arrow.style.animation = outto;
+			arrow.style.animation = profOutto;
 	    was = false;
 		}
 
