@@ -226,7 +226,7 @@ function stat(qWin){//количество правильных, количес�
 
 
 function progressBar(){
-  $('#poloska > rect').animate({
+  $('#poloskap:nth-of-type(1)').animate({
     width: generalCounter * 10 + "%"
   }, 500);
 }
