@@ -1,5 +1,5 @@
+var reload;
 var pushed = true;
-var was = false;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
 var profInto = "profileButtonInto 1s linear forwards";
@@ -42,7 +42,14 @@ function pushMenu(){
 }
 
 $(function() {
-	checkScroll();
+	reload = sessionStorage.getItem("reload");
+	if(reload == "1"){
+		first.style.animation = outto;
+		second.style.animation = outto;
+		arrow.style.animation = profOutto;
+		reload = "0";
+		sessionStorage.setItem("reload", reload);
+	}
 	$('html, body').animate({
 		scrollTop: $('#first').offset().top
 	}, 500);
@@ -58,26 +65,15 @@ $(function() {
 	// }
 });
 
-function checkScroll(){
-	scrolled = window.pageYOffset;
-	if (scrolled > 10) {
-	  first.style.animation = into;
-	  second.style.animation = into;
-		arrow.style.animation = profInto;
-	  was = true;
-	} else if (was) {
-	  first.style.animation = outto;
-	  second.style.animation = outto;
-		arrow.style.animation = profOutto;
-	  was = false;
-	}
-}
-
 function slowScroll(){
-	checkScroll();
+	first.style.animation = into;
+	second.style.animation = into;
+	arrow.style.animation = profInto;
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
+	reload = "1";
+	sessionStorage.setItem("reload", reload);
 }
 
 function signUp(event){
