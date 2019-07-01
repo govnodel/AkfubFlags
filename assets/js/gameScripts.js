@@ -224,9 +224,9 @@ function stat(qWin){//количество правильных, количес�
   }
 }
 
-
+// Ваня писька
 function progressBar(){
-  $('#poloska > rect').animate({
+  $('#whitepoloska').animate({
     width: generalCounter * 10 + "%"
   }, 500);
 }

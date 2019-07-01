@@ -213,9 +213,14 @@ svg.kruglyash text {
 
   }
 }
-#poloska {
+#vsyapoloska {
   width: 100%;
   height: 10px;
   position: relative;
   top: 13vh;
+}
+#whitepoloska {
+  width: 0%;
+  height: 10px;
+  top:
 }
