@@ -67,6 +67,8 @@ svg.kruglyash text {
   margin-left: -46%   ;
   opacity: 1;
   position: absolute;
+  align-items: center;
+  /* text-align: center; */
 }
 #country {
   font-family: fantasy;
