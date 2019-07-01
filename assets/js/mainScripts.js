@@ -21,6 +21,10 @@ $('#login').bind("click", {index: 1}, signUp);
 $('#register').bind("click", {index: 2}, signUp);
 $("#profilemenu *:not(#logRegMenu)").fadeOut(100);
 
+$(function() {
+	upPage();
+});
+
 function pushMenu(){
 	if (pushed){
 		$("#profilemenu *:not(#logRegMenu)").fadeIn(500);
@@ -68,24 +72,28 @@ window.onscroll = function(){
 				scrollTop: $('#second').offset().top
 			}, 500);
 		} else if ((scrolled < HEIGHT * 2 - 10)&&(!up)&&(can)){
-			up = true;
-			can = false;
-			setTimeout(invert, 510);
-			if(!pushed){
-				$('#buttonprofile').animate({
-					left: '0px'
-				}, 250);
-				button.style.animation = "pullButton 0.4s linear forwards";
-				$('#profilemenu').animate({
-					left: '-30%'
-				}, 400);
-				pushed = true;
-			}
-			$('html, body').animate({
-				scrollTop: $('#first').offset().top
-			}, 500);
+			upPage();
 		}
 	}
+}
+
+function upPage(){
+	up = true;
+	can = false;
+	setTimeout(invert, 550);
+	// if(!pushed){
+	// 	$('#buttonprofile').animate({
+	// 		left: '0px'
+	// 	}, 250);
+	// 	button.style.animation = "pullButton 0.4s linear forwards";
+	// 	$('#profilemenu').animate({
+	// 		left: '-30%'
+	// 	}, 400);
+	// 	pushed = true;
+	// }
+	$('html, body').animate({
+		scrollTop: $('#first').offset().top
+	}, 500);
 }
 
 function invert() {
