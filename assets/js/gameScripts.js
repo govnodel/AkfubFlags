@@ -74,6 +74,7 @@ function clickFlag(){
   running = false;
   flagsHide();
   setTimeout(animationRem, 800, false);
+  checkImages();
   setTimeout(refresh, 1200);
   loseornot();
 }
@@ -221,6 +222,20 @@ function stat(qWin){//количество правильных, количес�
     str = str + "I1";
   } else {
     str = str + "I0";
+  }
+}
+
+
+function checkImages(){
+  var load1 = false;
+  var load2 = false;
+  var load3 = false;
+  var load4 = false;
+  while ((!load1)&&(!load2)&&(!load3)&&(!load4)) {
+    var load1 = document.getElementById("_1").complete;
+    var load2 = document.getElementById("_2").complete;
+    var load3 = document.getElementById("_3").complete;
+    var load4 = document.getElementById("_4").complete;
   }
 }
 
