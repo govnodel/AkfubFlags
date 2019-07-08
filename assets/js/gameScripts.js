@@ -74,8 +74,8 @@ function clickFlag(){
   running = false;
   flagsHide();
   setTimeout(animationRem, 800, false);
-  setTimeout(checkImages, 800);
   setTimeout(refresh, 1200);
+  $("#_4").on('load', function(){animationRem(true)});
   loseornot();
 }
 
@@ -227,16 +227,17 @@ function stat(qWin){//количество правильных, количес�
 
 
 function checkImages(){
-  var load1 = false;
-  var load2 = false;
-  var load3 = false;
-  var load4 = false;
-  while ((!load1)||(!load2)||(!load3)||(!load4)) {
-    var load1 = document.getElementById("_1").complete;
-    var load2 = document.getElementById("_2").complete;
-    var load3 = document.getElementById("_3").complete;
-    var load4 = document.getElementById("_4").complete;
-  }
+  // var load1 = false;
+  // var load2 = false;
+  // var load3 = false;
+  // var load4 = false;
+  // $("#_1").on('load', function(){load1 = true});
+  // $("#_2").on('load', function(){load2 = true});
+  // $("#_3").on('load', function(){load3 = true});
+  // $("#_4").on('load', function(){load4 = true});
+  // while ((!load1)||(!load2)||(!load3)||(!load4)){
+  // }
+
 }
 
 // Ваня писька
