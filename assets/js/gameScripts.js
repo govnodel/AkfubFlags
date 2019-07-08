@@ -74,7 +74,7 @@ function clickFlag(){
   running = false;
   flagsHide();
   setTimeout(animationRem, 800, false);
-  checkImages();
+  setTimeout(checkImages, 800);
   setTimeout(refresh, 1200);
   loseornot();
 }
