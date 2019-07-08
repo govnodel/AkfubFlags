@@ -231,7 +231,7 @@ function checkImages(){
   var load2 = false;
   var load3 = false;
   var load4 = false;
-  while ((!load1)&&(!load2)&&(!load3)&&(!load4)) {
+  while ((!load1)||(!load2)||(!load3)||(!load4)) {
     var load1 = document.getElementById("_1").complete;
     var load2 = document.getElementById("_2").complete;
     var load3 = document.getElementById("_3").complete;
