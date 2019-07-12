@@ -18,6 +18,12 @@ var flagsFinal = []; //<-- массив с именами флагов, кото
 var flagsEl = []; //<-- массив с элементами флагов
 var arrayWithPos;
 var running = true;
+var flagLoad1 = false;
+var flagLoad2 = false;
+var flagLoad3 = false;
+var flagLoad4 = false;
+var first = true;
+
 
 //<=============================================<БД>=================================================>
 // Бiльше флагов нада
@@ -56,6 +62,11 @@ dom();
 var interval = setInterval(oneSec, 1000);
 //<==================================================================================================>
 
+$("#_1").on('load', function(){flagLoad1 = true; checkImages()});
+$("#_2").on('load', function(){flagLoad2 = true; checkImages()});
+$("#_3").on('load', function(){flagLoad3 = true; checkImages()});
+$("#_4").on('load', function(){flagLoad4 = true; checkImages()});
+
 
 function autoFill(){
   arrayWithPos = Randomizer(4, flagsName.length - 1, 0);
@@ -71,11 +82,11 @@ function clickFlag(){
   if(this.id == ("_" + winPosition)){ //верный ответ
     winCounter++;
   } else lifeMinus(); //неверный ответ
+  first = false;
   running = false;
   flagsHide();
   setTimeout(animationRem, 800, false);
   setTimeout(refresh, 1200);
-  $("#_4").on('load', function(){animationRem(true)});
   loseornot();
 }
 
@@ -152,7 +163,6 @@ function refresh(){
   document.getElementById("timer_sec").textContent = timer;
   interval = setInterval(oneSec, 1000);
   progressBar();
-  animationRem(true);
 }
 
 
@@ -227,17 +237,13 @@ function stat(qWin){//количество правильных, количес�
 
 
 function checkImages(){
-  // var load1 = false;
-  // var load2 = false;
-  // var load3 = false;
-  // var load4 = false;
-  // $("#_1").on('load', function(){load1 = true});
-  // $("#_2").on('load', function(){load2 = true});
-  // $("#_3").on('load', function(){load3 = true});
-  // $("#_4").on('load', function(){load4 = true});
-  // while ((!load1)||(!load2)||(!load3)||(!load4)){
-  // }
-
+  if((flagLoad1) && (flagLoad2) && (flagLoad3) && (flagLoad4) && (!first)){
+    flagLoad1 = false;
+    flagLoad2 = false;
+    flagLoad3 = false;
+    flagLoad4 = false;
+    animationRem(true);
+  }
 }
 
 // Ваня писька
