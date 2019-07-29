@@ -197,6 +197,10 @@ body {
   font-size: 2.6em;
   text-align: center;
 }
+.emptyText > svg, rect {
+  width: 60%;
+  height: 5%;
+}
 #profilemenu > h1 {
   font-size: 5em;
   margin: 12vh 0 0 0;
@@ -204,14 +208,31 @@ body {
   text-align: center;
   clear: left;
 }
-/* Ща попробуем адаптивность запилить */
-@media (max-width: 426px) {
-  #first {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
+
+label.HochuCursor {
+  cursor: pointer;
+}
+
+@media (max-width: 1441px) {
   #first > h1 {
+    font-size: 7em;
 
   }
+  #first > h4 {
+    font-size: 2.3em;
+  }
+  /* #buttonplay:hover {
+    animation-duration: 1.2s;
+    animation-delay: .8s;
+    animation-iteration-count: infinite;
+    animation-name: playButton;
+  }
+  @keyframes playButton {
+    from {
+      transform: none;
+    }
+    to {
+      transform: rotate(360deg)
+    }
+  } */
 }

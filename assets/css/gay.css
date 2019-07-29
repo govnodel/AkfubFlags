@@ -210,11 +210,6 @@ svg.kruglyash text {
    opacity: 0;
  }
 }
-@media {
-  #flags {
-
-  }
-}
 #vsyapoloska {
   width: 100%;
   height: 10px;
@@ -225,4 +220,11 @@ svg.kruglyash text {
   width: 0%;
   height: 10px;
   top:
+}
+
+
+@media (max-width: 1441px) {
+  #flags {
+    margin-top: -120px;
+  }
 }
