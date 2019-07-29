@@ -10,6 +10,8 @@ var first = document.getElementById('first');
 var second = document.getElementById('second');
 var arrow = document.getElementById('proArrow');
 var HEIGHT = document.documentElement.clientHeight / 2;
+var WIDTH = document.documentElement.clientWidth;
+alert(WIDTH);
 
 $('#buttonprofile').bind("click", pushMenu);
 $('#buttonplay').bind("click", startGame);
