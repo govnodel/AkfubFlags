@@ -33,9 +33,16 @@
     $error = true;
   }
   if (!$error){
-    // $query = mysql_query("SELECT * FROM usertbl WHEREusername='".$username."'");
-    // $numrows = mysql_num_rows($query);
-    header("Location: welcome.php");
+    $query = mysql_query("SELECT * FROM usertbl WHEREusername='".$username."'");
+    $numrows = mysql_num_rows($query);
+    if($numrows==0){
+      $sql="INSERT INTO usertbl(full_name, email, username,password)
+      VALUES('$full_name','$email', '$username', '$password')";
+      $result=mysql_query($sql);
+      header("Location: welcome.php");
+    } else {
+      $error_login = "That username already exists";
+    }
     exit;
   }
  }
