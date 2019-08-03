@@ -30,7 +30,7 @@
       $error_verif="Passwords not the same";
     }
     $error_pass="Enter password";
-    $error = false;
+    $error = true;
   }
   if (!$error){
     // $query = mysql_query("SELECT * FROM usertbl WHEREusername='".$username."'");
