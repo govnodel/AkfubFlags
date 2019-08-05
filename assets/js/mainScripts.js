@@ -56,16 +56,6 @@ $(function() {
 	$('html, body').animate({
 		scrollTop: $('#first').offset().top
 	}, 500);
-	// if(!pushed){
-	// 	$('#buttonprofile').animate({
-	// 		left: '0px'
-	// 	}, 250);
-	// 	button.style.animation = "pullButton 0.4s linear forwards";
-	// 	$('#profilemenu').animate({
-	// 		left: '-30%'
-	// 	}, 400);
-	// 	pushed = true;
-	// }
 });
 
 function slowScroll(){
@@ -83,7 +73,7 @@ function signUp(event){
 	if(event.data.index == 1){
 		// window.location.href = "login.html";
 	} else {
-		window.location.href = "regPage.php";
+		window.location.href = "upload.php";
 	}
 }
 

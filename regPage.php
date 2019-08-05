@@ -1,4 +1,5 @@
 <?php
+  // require_once("includes/connection.php");
   session_start();
   require "assets/php/registration.php";
  ?>
