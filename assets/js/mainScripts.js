@@ -11,7 +11,8 @@ var second = document.getElementById('second');
 var arrow = document.getElementById('proArrow');
 var HEIGHT = document.documentElement.clientHeight / 2;
 var WIDTH = document.documentElement.clientWidth;
-alert(WIDTH);
+// alert(WIDTH);
+// alert(HEIGHT);
 
 $('#buttonprofile').bind("click", pushMenu);
 $('#buttonplay').bind("click", startGame);

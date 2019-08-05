@@ -19,6 +19,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 #second {
   background: #2a5eb2;
@@ -26,6 +27,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  z-index: -3;
 }
 #first > h1 {
   width: 28%;
@@ -65,8 +67,20 @@ body {
   width: 14%;
   margin-left: -7%;
 }
-
+.veryupblock {
+  left: 50%;
+  margin-left: -35%;
+  width: 70%;
+  height: 100vh;
+  background: #E7F1F5;
+  display: block;
+  position: absolute;
+  opacity: 1;
+  z-index: -2;
+}
 #second > #buttonplay {
+  width: 450px;
+  height: 450px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -74,6 +88,8 @@ body {
   margin-top: -225px;
   cursor: pointer;
   border-radius: 250px;
+  stroke-width: 30px;
+
 }
 #second > #buttonprofile {
   margin-left: 0; /*30px для 1920*1080 */
@@ -221,18 +237,32 @@ label.HochuCursor {
   #first > h4 {
     font-size: 2.3em;
   }
-  /* #buttonplay:hover {
-    animation-duration: 1.2s;
-    animation-delay: .8s;
-    animation-iteration-count: infinite;
-    animation-name: playButton;
+}
+@media (max-width: 1025px) {
+  #first > h1 {
+    width: 32%;
+    margin-left: -16%;
+    font-size: 5.5em;
+    top: 25vh;
   }
-  @keyframes playButton {
-    from {
-      transform: none;
-    }
-    to {
-      transform: rotate(360deg)
-    }
-  } */
+  #first > h1:nth-child(2) {
+    width: 50%;
+    margin-left: -25%;
+    font-size: 5.5em;
+
+  }
+  #first > h4 {
+    width: 24%;
+    top: 45vh;
+    margin-left: -12%;
+    font-size: 2em;
+  }
+  #first > svg {
+    top: 38vh;
+  }
+  #second > #buttonplay {
+    width: 300px;
+    height: 300px;
+    stroke-width:
+  }
 }
