@@ -33,7 +33,8 @@
     $error = true;
   }
   if (!$error){
-    $query = pg_query($connect, "SELECT * FROM ourusers WHERE name = '".$login."'");
+    $str = "SELECT * FROM ourusers WHERE name = " . $login;
+    $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
     //   $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
