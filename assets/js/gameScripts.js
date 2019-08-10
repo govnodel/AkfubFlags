@@ -1,6 +1,3 @@
-/* Список задач:
-    1)
-*/
 //<==========================================<метод main>============================================>
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
@@ -24,39 +21,6 @@ var flagLoad3 = false;
 var flagLoad4 = false;
 var first = true;
 
-
-//<=============================================<БД>=================================================>
-// Бiльше флагов нада
-// Скорее нужно убрать это отсюда нахер
-var names = []; //<-- массив с именами флагов
-
-names[0] = "Georgia (1918-1921)";
-names[1] = "the Ottoman Empire";
-names[2] = "Bavaria";
-names[3] = "the Kingdom of the Two Sicilies (1816)";
-names[4] = "Texas";
-names[5] = "Hanover (1837-1866)";
-names[6] = "Golden Horde (1339)";
-names[7] = "the United States of the Ionian Islands";
-names[8] = "Taiping Heavenly Kingdom";
-names[9] = "the German Empire";
-names[10] = "US 26 Star Flag";
-names[11] = "Austria-Hungary (1869-1918)";
-names[12] = "Transcaucasian SFSR (1925-1936)";
-names[13] = "Scotland";
-names[14] = "Rzeczpospolita";
-names[15] = "Rwanda (1959-1961)";
-names[16] = "Rhodesia (1968-1979)";
-names[17] = "Republic of Maryland";
-names[18] = "Napoleonic Kingdom of Italy";
-names[19] = "Merina Kingdom";
-names[20] = "German Confederation";
-names[21] = "Crimean Khanate";
-names[22] = "Cossack Hetmanat";
-names[23] = "Benin Empire";
-
-flagsName = names;
-//<==================================================================================================>
 autoFill();//<-- заполнение
 dom();
 var interval = setInterval(oneSec, 1000);
@@ -69,9 +33,9 @@ $("#_4").on('load', function(){flagLoad4 = true; checkImages()});
 
 
 function autoFill(){
-  arrayWithPos = Randomizer(4, flagsName.length - 1, 0);
+  arrayWithPos = Randomizer(4, names.length - 1, 0);
   for(var i = 0; i < arrayWithPos.length; i++){
-    flagsFinal[i] = flagsName[arrayWithPos[i]];
+    flagsFinal[i] = names[arrayWithPos[i]];
   }
   winPosition = Math.round(Math.random() * (4 - 1) + 1);
   winName = flagsFinal[winPosition - 1];
@@ -246,7 +210,7 @@ function checkImages(){
   }
 }
 
-// Ваня писька
+
 function progressBar(){
   $('#whitepoloska').animate({
     width: generalCounter * 10 + "%"
