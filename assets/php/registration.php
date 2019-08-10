@@ -33,7 +33,7 @@
     $error = true;
   }
   if (!$error){
-    $str = "SELECT * FROM ourusers WHERE login = " . $login;
+    $str = "SELECT * FROM ourusers WHERE login = 'hi'";
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
