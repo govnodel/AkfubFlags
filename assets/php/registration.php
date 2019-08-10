@@ -34,7 +34,7 @@
   }
   if (!$error){
     echo $login;
-    $str = "SELECT * FROM ourusers WHERE name = " . $login;
+    $str = "SELECT * FROM ourusers WHERE name = 'hihi'";
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     echo "Возвращено строк: " . $numrows . ".\n";
