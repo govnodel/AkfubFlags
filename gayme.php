@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <?php
+require "assets/php/connection.php";
 
-$conn = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
-if (!$conn) {
-  echo "Error\n";
-  exit;
-}
+$result = pg_query($connect, "SELECT name FROM flags");
 
-$result = pg_query($conn, "SELECT name FROM flags");
 if (!$result) {
   echo "Error\n";
   exit;

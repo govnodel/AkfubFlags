@@ -33,12 +33,12 @@
     $error = true;
   }
   if (!$error){
-    $query = mysql_query("SELECT * FROM usertbl WHEREusername='".$username."'");
-    $numrows = mysql_num_rows($query);
-    if($numrows==0){
-      $sql="INSERT INTO usertbl(full_name, email, username,password)
-      VALUES('$full_name','$email', '$username', '$password')";
-      $result=mysql_query($sql);
+    require "assets/php/connection.php";
+    $query = pg_query($connect, "SELECT * FROM ourusers WHERE name = '".$login."'");
+    $numrows = pg_num_rows($query);
+    if($numrows == 0){
+      $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
+      VALUES('$login','$pass', '$email', 'hi')");
       header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";
