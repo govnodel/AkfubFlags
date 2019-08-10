@@ -12,6 +12,7 @@
 <body>
   <script type="text/javascript">
     var lol = "<?php echo $lol ?>"
+    alert(lol);
   </script>
 </body>
 </html>
