@@ -33,16 +33,13 @@
     $error = true;
   }
   if (!$error){
-    echo $login;
     $str = "SELECT * FROM ourusers WHERE login = 'hihi'";
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
-    echo "Возвращено строк: " . $numrows . ".\n";
     if($numrows == 0){
-    //   $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
-    //   VALUES('$login','$pass', '$email', 'hi')");
-    //   header("Location: welcome.php");
-    echo "success";
+      $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
+      VALUES('$login','$pass', '$email', 'hi')");
+      header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";
     }
