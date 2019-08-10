@@ -73,7 +73,7 @@ function signUp(event){
 	if(event.data.index == 1){
 		// window.location.href = "login.html";
 	} else {
-		window.location.href = "upload.php";
+		window.location.href = "test.php";
 	}
 }
 
