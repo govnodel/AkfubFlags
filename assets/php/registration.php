@@ -37,7 +37,7 @@
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
-      $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
+      $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
       VALUES('$login','$pass', '$email', 'hi')");
       header("Location: welcome.php");
     } else {
