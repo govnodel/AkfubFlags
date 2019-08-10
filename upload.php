@@ -10,7 +10,7 @@
   <form action=assets/php/upload.php method=post enctype=multipart/form-data>
     <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
     <input type=file name=uploadfile>
-    <input type=submit value=Загрузить>
+    <input type=submit name="upsubmit" value=Загрузить>
   </form>
 </body>
 </html>

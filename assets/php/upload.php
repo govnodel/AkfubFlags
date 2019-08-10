@@ -1,17 +1,31 @@
 <?php
-$uploaddir = '/home/govnodel/AkfubFlags/uploads';
-$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+$uploadDir = '/home/govnodel/AkfubFlags/uploads';
+$uploadFile = $uploadDir.basename($_FILES['uploadfile']['name']);
 
-echo '<pre>';
-echo $uploadfile;
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    echo "Файл корректен и был успешно загружен.\n";
-} else {
-    echo "Возможная атака с помощью файловой загрузки!\n";
+echo $uploadFile;
+
+$flag = true;
+$imageType = strtolower(pathinfo($uploadFile,PATHINFO_EXTENSION));
+
+if(isset($_POST["upsubmit"])){
+    if(getimagesize($_FILES["uploadfile"]["tmp_name"]) === false) {
+      echo "File is not an image";
+      $flag = false;
+    }
 }
 
-echo 'Некоторая отладочная информация:';
-print_r($_FILES);
+if (file_exists($target_file)){
+    echo "Sorry, file already exists.";
+    $flag = false;
+}
 
-print "</pre>";
+if (!$flag){
+    echo "Sorry, your file was not uploaded.";
+} else {
+    if (move_uploaded_file($_FILES["uploadfile"]["tmp_name"], $target_file)) {
+        echo "The file has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
 ?>
