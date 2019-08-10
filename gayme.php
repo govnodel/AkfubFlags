@@ -54,7 +54,7 @@ if (!$result) {
   var names = [];
   <?php
   while ($row = pg_fetch_row($result)) {
-    echo "names[names.length] =  $row[0];";
+    echo "names[names.length] =  '$row[0]';";
   }
   ?>
   // names[0] = "Georgia (1918-1921)";
