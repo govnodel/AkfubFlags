@@ -39,6 +39,7 @@
     //   $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
     //   VALUES('$login','$pass', '$email', 'hi')");
     //   header("Location: welcome.php");
+    echo "success";
     } else {
       $error_login = "That username already exists";
     }
