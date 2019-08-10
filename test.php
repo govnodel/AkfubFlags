@@ -1,5 +1,7 @@
 <?php
-  $lol = "gol";
+  session_start();
+  $lol = "hi";
+  $_SESSION["lol"]=$lol;
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +12,6 @@
   <title>Document</title>
 </head>
 <body>
-  <script type="text/javascript">
-    var lol = "<?php echo $lol ?>"
-    alert(lol);
-  </script>
+  <script src="assets/js/test.js"></script>
 </body>
 </html>
