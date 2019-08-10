@@ -201,13 +201,14 @@ function stat(qWin){//количество правильных, количес�
 
 
 function checkImages(){
-  if((flagLoad1) && (flagLoad2) && (flagLoad3) && (flagLoad4) && (!first)){
-    flagLoad1 = false;
-    flagLoad2 = false;
-    flagLoad3 = false;
-    flagLoad4 = false;
+  // if((flagLoad1) && (flagLoad2) && (flagLoad3) && (flagLoad4) && (!first)){
+  //   flagLoad1 = false;
+  //   flagLoad2 = false;
+  //   flagLoad3 = false;
+  //   flagLoad4 = false;
     animationRem(true);
-  }
+  // }
+  alert("hello");
 }
 
 
