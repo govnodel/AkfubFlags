@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <?php
 require "assets/php/connection.php";
-
 $result = pg_query($connect, "SELECT name FROM flags");
-
 if (!$result) {
   echo "Error\n";
   exit;

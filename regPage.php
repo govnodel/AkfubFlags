@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require "assets/php/connection.php";
   require "assets/php/registration.php";
  ?>
 <!DOCTYPE html>
