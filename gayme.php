@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+
+$conn = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
+if (!$conn) {
+  echo "Error\n";
+  exit;
+}
+
+$result = pg_query($conn, "SELECT name FROM flags");
+if (!$result) {
+  echo "Error\n";
+  exit;
+}
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -38,30 +52,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   var names = [];
-  names[0] = "Georgia (1918-1921)";
-  names[1] = "the Ottoman Empire";
-  names[2] = "Bavaria";
-  names[3] = "the Kingdom of the Two Sicilies (1816)";
-  names[4] = "Texas";
-  names[5] = "Hanover (1837-1866)";
-  names[6] = "Golden Horde (1339)";
-  names[7] = "the United States of the Ionian Islands";
-  names[8] = "Taiping Heavenly Kingdom";
-  names[9] = "the German Empire";
-  names[10] = "US 26 Star Flag";
-  names[11] = "Austria-Hungary (1869-1918)";
-  names[12] = "Transcaucasian SFSR (1925-1936)";
-  names[13] = "Scotland";
-  names[14] = "Rzeczpospolita";
-  names[15] = "Rwanda (1959-1961)";
-  names[16] = "Rhodesia (1968-1979)";
-  names[17] = "Republic of Maryland";
-  names[18] = "Napoleonic Kingdom of Italy";
-  names[19] = "Merina Kingdom";
-  names[20] = "German Confederation";
-  names[21] = "Crimean Khanate";
-  names[22] = "Cossack Hetmanat";
-  names[23] = "Benin Empire";
+  <?php
+  while ($row = pg_fetch_row($result)) {
+    echo "names[names.length] =  $row[0]";
+  }
+  ?>
+  // names[0] = "Georgia (1918-1921)";
+  // names[1] = "the Ottoman Empire";
+  // names[2] = "Bavaria";
+  // names[3] = "the Kingdom of the Two Sicilies (1816)";
+  // names[4] = "Texas";
+  // names[5] = "Hanover (1837-1866)";
+  // names[6] = "Golden Horde (1339)";
+  // names[7] = "the United States of the Ionian Islands";
+  // names[8] = "Taiping Heavenly Kingdom";
+  // names[9] = "the German Empire";
+  // names[10] = "US 26 Star Flag";
+  // names[11] = "Austria-Hungary (1869-1918)";
+  // names[12] = "Transcaucasian SFSR (1925-1936)";
+  // names[13] = "Scotland";
+  // names[14] = "Rzeczpospolita";
+  // names[15] = "Rwanda (1959-1961)";
+  // names[16] = "Rhodesia (1968-1979)";
+  // names[17] = "Republic of Maryland";
+  // names[18] = "Napoleonic Kingdom of Italy";
+  // names[19] = "Merina Kingdom";
+  // names[20] = "German Confederation";
+  // names[21] = "Crimean Khanate";
+  // names[22] = "Cossack Hetmanat";
+  // names[23] = "Benin Empire";
 </script>
 <script src = "assets/js/gameScripts.js"></script>
     </body>
