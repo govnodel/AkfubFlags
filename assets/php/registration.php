@@ -33,8 +33,9 @@
     $error = true;
   }
   if (!$error){
-    // $query = pg_query($connect, "SELECT * FROM ourusers WHERE name = '".$login."'");
-    // $numrows = pg_num_rows($query);
+    $query = pg_query($connect, "SELECT * FROM ourusers WHERE name = '".$login."'");
+    $numrows = pg_num_rows($query);
+    echo $numrows;
     // if($numrows == 0){
     //   $result = mysql_query("INSERT INTO ourusers(login, password, mail, stats)
     //   VALUES('$login','$pass', '$email', 'hi')");
@@ -43,7 +44,7 @@
     //   $error_login = "That username already exists";
     // }
     // exit;
-    header("Location: welcome.php");
+    // header("Location: welcome.php");
   }
  }
  ?>
