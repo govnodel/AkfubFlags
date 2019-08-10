@@ -1,5 +1,4 @@
 <?php
-  // require_once("includes/connection.php");
   session_start();
   require "assets/php/registration.php";
  ?>
@@ -20,6 +19,8 @@
       <p><?=$error_login?></p>
       <input type="password" name="pass" placeholder="Password">
       <p><?=$error_pass?></p>
+      <input type="password" name="verif" placeholder="Repeat password">
+      <p><?=$error_verif?></p>
       <input type="submit" name="done" value="Enter">
     </form>
 </body>
