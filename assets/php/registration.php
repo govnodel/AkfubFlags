@@ -33,7 +33,7 @@
     $error = true;
   }
   if (!$error){
-    $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = 'hello'");
+    $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = 'notok'");
 
     $numrows = pg_num_rows($query);
     $error_login = $numrows;
