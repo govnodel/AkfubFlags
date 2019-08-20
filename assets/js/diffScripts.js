@@ -11,9 +11,16 @@ $(".pol2").animate({
 $( "body" ).on( "click", function() {
   $(".upblock").animate({
     height: '100%'
-  }, 700, redir)
+  }, 700, function(){
+    setTimeout(redir, 200);
+  })
 });
 
 function redir(){
-  window.location.href = "gayme.php";
+  $(".upblock").animate({
+    height: '14vh'
+  }, 600);
+  setTimeout(function(){
+    window.location.href = "gayme.php";
+  }, 600);
 }

@@ -1,4 +1,5 @@
 //<==========================================<метод main>============================================>
+$('*').fadeOut();
 var winCounter = 0; //<-- количество правильных ответов
 var generalCounter = 0; //<-- счётчик попыток
 var maxWin = 10; //<-- сколько нужно ответить
@@ -23,7 +24,9 @@ var first = true;
 
 autoFill();//<-- заполнение
 dom();
-var interval = setInterval(oneSec, 1000);
+$('*').fadeIn('200', function(){
+  var interval = setInterval(oneSec, 1000);
+});
 //<==================================================================================================>
 
 $("#_1").on('load', function(){flagLoad1 = true; checkImages()});
