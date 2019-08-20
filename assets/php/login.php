@@ -26,7 +26,7 @@
         if($row[1] == $pass){
           header("Location: welcome.php");
         } else {
-          $error_passIn = "Wrong password"
+          $error_passIn = "Wrong password";
         }
       }
       $error_loginIn = "succ";
