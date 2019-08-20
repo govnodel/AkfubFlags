@@ -16,7 +16,7 @@ if (!$result) {
   <link rel="stylesheet" href="assets/css/gay.css">
 </head>
 <body bgcolor = "#E7F1F5">
-  <div id="upblock" class = "onlyForFade">
+  <div id="upblock">
     <svg class="kruglyash" width="70" height="70" fill = 'none'>
       <circle id = "krug" cx = "-34" cy = "34" r = "30"/>
       <text id="timer_sec" x = "26" y = "42" fill = "white" >10</text>

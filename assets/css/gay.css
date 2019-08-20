@@ -7,7 +7,7 @@ html, body {
   /* align-items: center;
   justify-content: center; */
 }
-body:not([position="fixed"]){
+body *:not([position="fixed"]){
   opacity: 0;
 }
 svg.kruglyash circle {
