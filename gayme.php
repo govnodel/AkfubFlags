@@ -17,9 +17,9 @@ if (!$result) {
 </head>
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
-    <svg class="kruglyash" width="70" height="70" fill = 'none'>
-      <circle id = "krug" cx = "-34" cy = "34" r = "30"/>
-      <text id="timer_sec" x = "26" y = "42" fill = "white" >10</text>
+    <svg class="kruglyash" width="90" height="90" fill = 'none'>
+      <circle id = "krug" cx = "-44" cy = "44" r = "40"/>
+      <text id="timer_sec" x = "46" y = "62" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
     <div id="nolifes">

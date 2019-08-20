@@ -87,7 +87,7 @@ svg.kruglyash text {
 #flags {
   width: 650px;
   left: 50%;
-  top: 50vh;
+  top: 60vh;
   position: absolute;
   margin-left: -325px;
   margin-top: -200px;
@@ -123,7 +123,7 @@ svg.kruglyash text {
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
   left: 80%;
-  top: 7vh;
+  top: 8vh;
   margin-top: -20px;
 }
 /* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..) */
@@ -142,7 +142,7 @@ svg.kruglyash text {
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
   left: 80%;
-  top: 7  vh;
+  top: 8vh;
   margin-top: -20px;
 }
 #nolifes > img:nth-child(2) {
