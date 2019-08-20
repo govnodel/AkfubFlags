@@ -36,6 +36,7 @@
     $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = 'hello'");
     if(!$query){
       $error_login = "helpPLZ"
+      exit;
     }
     $numrows = pg_num_rows($query);
     if($numrows == 0){
