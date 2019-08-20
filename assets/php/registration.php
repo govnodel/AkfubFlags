@@ -34,20 +34,17 @@
   }
   if (!$error){
     $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = 'hello'");
-    // if(!$query){
-    //   $error_login = "helpPLZ"
-    //   exit;
-    // }
-    $numrows = pg_num_rows($query);
-    $error_login = $numrows;
-    exit;
-    if($numrows == 0){
-      $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
-      VALUES('$login','$pass', '$email', 'hi')");
-      // header("Location: welcome.php");
-    } else {
-      $error_login = "That username already exists";
+    if(!$query){
+      $error_login = "helpPLZ";
     }
+    // $numrows = pg_num_rows($query);
+    // if($numrows == 0){
+    //   $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
+    //   VALUES('$login','$pass', '$email', 'hi')");
+    //   // header("Location: welcome.php");
+    // } else {
+    //   $error_login = "That username already exists";
+    // }
     // exit;
   }
  }
