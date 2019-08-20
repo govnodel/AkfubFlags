@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
   session_start();
   require "assets/php/connection.php";
   require "assets/php/.php";
- ?>
+ ?> -->
 <html>
 <head>
   <meta charset="UTF-8">
