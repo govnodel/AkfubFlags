@@ -34,10 +34,9 @@
   }
   if (!$error){
     $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = 'hello'");
-    if(!$query){
-      $error_login = "helpPLZ";
-    }
-    // $numrows = pg_num_rows($query);
+
+    $numrows = pg_num_rows($query);
+    $error_login = $numrows;
     // if($numrows == 0){
     //   $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
     //   VALUES('$login','$pass', '$email', 'hi')");
