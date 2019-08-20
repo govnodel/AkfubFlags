@@ -22,3 +22,6 @@ body, html {
 .flack > svg > polygon {
   position: absolute;
 }
+#tr1{
+  left: -30%
+}
