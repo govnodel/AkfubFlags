@@ -22,14 +22,10 @@ var flagLoad4 = false;
 var first = true;
 autoFill();//<-- заполнение
 dom();
-setTimeout(function(){
-  var interval = setInterval(oneSec, 1000);
-}, 300);
+setTimeout(setInt, 300);
 $("body *:not(#upblock)").animate({
   opacity: 1
-}, 300, function(){
-
-});
+}, 300);
 //<==================================================================================================>
 
 $("#_1").on('load', function(){flagLoad1 = true; checkImages()});
@@ -37,6 +33,9 @@ $("#_2").on('load', function(){flagLoad2 = true; checkImages()});
 $("#_3").on('load', function(){flagLoad3 = true; checkImages()});
 $("#_4").on('load', function(){flagLoad4 = true; checkImages()});
 
+function setInt(){
+  var interval = setInterval(oneSec, 1000);
+}
 
 function autoFill(){
   arrayWithPos = Randomizer(4, names.length - 1, 0);
@@ -131,9 +130,7 @@ function refresh(){
   dom();
   clearInterval(interval);
   document.getElementById("timer_sec").textContent = timer;
-  alert("hi1");
   interval = setInterval(oneSec, 1000);
-  alert("hi2");
   progressBar();
 }
 
