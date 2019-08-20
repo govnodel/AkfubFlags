@@ -38,10 +38,10 @@ if (!$result) {
     <rect id = "whitepoloska"  x="0" y="0" width="0%" height="10px" fill="#ffffff"/>
   </svg>
   <div id = "flags">
-    <img id="_1" alt="oops" >
-    <img id="_2" alt="oops" >
-    <img id="_3" alt="oops" >
-    <img id="_4" alt="oops" >
+    <img id="_1" alt="" >
+    <img id="_2" alt="" >
+    <img id="_3" alt="" >
+    <img id="_4" alt="" >
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">

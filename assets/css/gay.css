@@ -7,6 +7,9 @@ html, body {
   /* align-items: center;
   justify-content: center; */
 }
+body:not(#upblock) {
+  opacity: 0;
+}
 svg.kruglyash circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
