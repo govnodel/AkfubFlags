@@ -14,6 +14,10 @@ if (!$result) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Game</title>
   <link rel="stylesheet" href="assets/css/gay.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('body *:not(#upblock)').fadeOut();
+  </script>
 </head>
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
@@ -43,7 +47,6 @@ if (!$result) {
     <img id="_3" alt="oops" >
     <img id="_4" alt="oops" >
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   var names = [];
   <?php
