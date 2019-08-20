@@ -218,6 +218,7 @@ function checkImages(){
 
 
 function progressBar(){
+  alert("hi");
   $('#whitepoloska').animate({
     width: generalCounter * 10 + "%"
   }, 500);
