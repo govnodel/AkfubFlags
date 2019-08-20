@@ -35,7 +35,7 @@ function pushMenu(){
 		$("#profilemenu *:not(#logRegMenu)").fadeOut(800);
 		$('#buttonprofile').animate({
 			left: '0px'
-		}, 500);
+		}, 700);
 		button.style.animation = "pullButton 0.8s linear forwards";
 		$('#profilemenu').animate({
 			left: '-30%'
@@ -81,6 +81,6 @@ function startGame(){
 	stopColoring = true;
 	$("#second *, #first").fadeOut();
 	setTimeout(function () {
-		window.location.href = "gayme.php";
+		window.location.href = "difficuty.html";
 	}, 600);
 }
