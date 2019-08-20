@@ -131,7 +131,9 @@ function refresh(){
   dom();
   clearInterval(interval);
   document.getElementById("timer_sec").textContent = timer;
+  alert("hi1");
   interval = setInterval(oneSec, 1000);
+  alert("hi2");
   progressBar();
 }
 
