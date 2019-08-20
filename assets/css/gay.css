@@ -7,7 +7,7 @@ html, body {
   /* align-items: center;
   justify-content: center; */
 }
-body:not(#upblock) {
+body:not(.onlyForFade) {
   opacity: 0;
 }
 svg.kruglyash circle {
