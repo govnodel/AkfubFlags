@@ -60,7 +60,7 @@ function clickFlag(){
 
 function oneSec(){
   timer--;
-  if((timer == 11)&&(running)){
+  if((timer == 0)&&(running)){
     lifeMinus();
     flagsHide();
     setTimeout(animationRem, 800, false);
@@ -126,8 +126,8 @@ function refresh(){
   autoFill();//<-- повторное заполнение
   checkRep();
   dom();
-  clearInterval(interval);
   document.getElementById("timer_sec").textContent = timer;
+  clearInterval(interval);
   interval = setInterval(oneSec, 1000);
   progressBar();
 }
