@@ -21,12 +21,16 @@ var flagLoad3 = false;
 var flagLoad4 = false;
 var first = true;
 var interval;
+var firstInt = true;
 autoFill();//<-- заполнение
 dom();
 $("body *:not(#upblock)").animate({
   opacity: 1
 }, 300, function(){
-  interval = setInterval(oneSec, 1000);
+  if(firstInt){
+    interval = setInterval(oneSec, 1000);
+    firstInt = false;
+  }
 });
 //<==================================================================================================>
 
@@ -60,7 +64,7 @@ function clickFlag(){
 
 function oneSec(){
   timer--;
-  if((timer == 0)&&(running)){
+  if((timer == 11)&&(running)){
     lifeMinus();
     flagsHide();
     setTimeout(animationRem, 800, false);
