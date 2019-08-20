@@ -24,7 +24,7 @@ svg.kruglyash circle {
   padding: 0;
   position: fixed;
   width: 100%;
-  height: 14vh;
+  height: 16vh;
   display: flex;
   background: #2a5eb2;
   align-items: center;
@@ -217,12 +217,11 @@ svg.kruglyash text {
   width: 100%;
   height: 10px;
   position: relative;
-  top: 13vh;
+  top: 16vh;
 }
 #whitepoloska {
   width: 0%;
   height: 10px;
-  top:
 }
 
 
