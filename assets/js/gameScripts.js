@@ -20,22 +20,20 @@ var flagLoad2 = false;
 var flagLoad3 = false;
 var flagLoad4 = false;
 var first = true;
+var interval;
 autoFill();//<-- заполнение
 dom();
-setTimeout(setInt, 300);
 $("body *:not(#upblock)").animate({
   opacity: 1
-}, 300);
+}, 300, function(){
+  interval = setInterval(oneSec, 1000);
+});
 //<==================================================================================================>
 
 $("#_1").on('load', function(){flagLoad1 = true; checkImages()});
 $("#_2").on('load', function(){flagLoad2 = true; checkImages()});
 $("#_3").on('load', function(){flagLoad3 = true; checkImages()});
 $("#_4").on('load', function(){flagLoad4 = true; checkImages()});
-
-function setInt(){
-  var interval = setInterval(oneSec, 1000);
-}
 
 function autoFill(){
   arrayWithPos = Randomizer(4, names.length - 1, 0);
