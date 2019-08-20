@@ -22,10 +22,13 @@ var flagLoad4 = false;
 var first = true;
 autoFill();//<-- заполнение
 dom();
+setTimeout(function(){
+  var interval = setInterval(oneSec, 1000);
+}, 300);
 $("body *:not(#upblock)").animate({
   opacity: 1
 }, 300, function(){
-  var interval = setInterval(oneSec, 1000);
+
 });
 //<==================================================================================================>
 
