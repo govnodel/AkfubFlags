@@ -16,18 +16,18 @@
     $error = true;
   }
   if (!$error){
-    $str = "SELECT * FROM ourusers WHERE login = ".$login;
+    $str = "SELECT login, password FROM ourusers WHERE login = ".$login;
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
       $error_login = "User does not exist";
     } else {
-      while($row = pg_fetch_assoc($query)){
-        // if($row['password'] == $pass){
-        //   header("Location: welcome.php");
-        // } else {
+      while($row = pg_fetch_row($query)){
+        if($row[1] == $pass){
+          header("Location: welcome.php");
+        } else {
           $error_passIn = "Wrong password"
-        // }
+        }
       }
     }
   }
