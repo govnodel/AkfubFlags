@@ -38,7 +38,7 @@
     if($numrows == 0){
       $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
       VALUES('$login','$pass', '$email', 'hi')");
-      // header("Location: welcome.php");
+      header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";
     }

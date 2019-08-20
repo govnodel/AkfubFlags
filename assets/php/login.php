@@ -16,7 +16,7 @@
     $error = true;
   }
   if (!$error){
-    $str = "SELECT login, password FROM ourusers WHERE login = ".$login;
+    $str = "SELECT login, password FROM ourusers WHERE login = '".$login."'";
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
