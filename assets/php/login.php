@@ -22,13 +22,13 @@
     if($numrows == 0){
       $error_loginIn = "User does not exist";
     } else {
-      // while($row = pg_fetch_row($query)){
-      //   if($row[1] == $pass){
-      //     header("Location: welcome.php");
-      //   } else {
-      //     $error_passIn = "Wrong password"
-      //   }
-      // }
+      while($row = pg_fetch_row($query)){
+        // if($row[1] == $pass){
+        //   header("Location: welcome.php");
+        // } else {
+        //   $error_passIn = "Wrong password"
+        // }
+      }
       $error_loginIn = "succ";
     }
   }
