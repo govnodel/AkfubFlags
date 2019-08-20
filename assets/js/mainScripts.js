@@ -81,6 +81,6 @@ function startGame(){
 	stopColoring = true;
 	$("#second *, #first").fadeOut();
 	setTimeout(function () {
-		window.location.href = "gayme.php";
+		window.location.href = "difficuty.html";
 	}, 600);
 }
