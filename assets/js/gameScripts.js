@@ -20,7 +20,6 @@ var flagLoad2 = false;
 var flagLoad3 = false;
 var flagLoad4 = false;
 var first = true;
-
 autoFill();//<-- заполнение
 dom();
 var interval = setInterval(oneSec, 1000);

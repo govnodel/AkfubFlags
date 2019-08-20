@@ -43,7 +43,7 @@ if (!$result) {
     <img id="_3" alt="" >
     <img id="_4" alt="" >
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   var names = [];
   <?php
