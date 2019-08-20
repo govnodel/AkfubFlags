@@ -33,15 +33,13 @@
     $error = true;
   }
   if (!$error){
-    $str = "SELECT * FROM ourusers WHERE login = ".$login;
+    $str = "SELECT * FROM ourusers WHERE login = ".$login.";";
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
       $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
       VALUES('$login','$pass', '$email', 'hi')");
-      if (!$result) {
-        $error_login="Enter login";
-      }
+      header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";
     }
