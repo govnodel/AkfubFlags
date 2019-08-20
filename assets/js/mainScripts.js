@@ -82,5 +82,5 @@ function startGame(){
 	$("#second *, #first").fadeOut();
 	setTimeout(function () {
 		window.location.href = "difficuty.html";
-	}, 600);
+	}, 200);
 }
