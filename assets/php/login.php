@@ -29,7 +29,6 @@
           $error_passIn = "Wrong password";
         }
       }
-      $error_loginIn = "succ";
     }
   }
  }
