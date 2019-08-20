@@ -20,7 +20,7 @@
     $query = pg_query($connect, $str);
     $numrows = pg_num_rows($query);
     if($numrows == 0){
-      $error_login = "User does not exist";
+      $error_loginIn = "User does not exist";
     } else {
       // while($row = pg_fetch_row($query)){
       //   if($row[1] == $pass){
@@ -29,7 +29,7 @@
       //     $error_passIn = "Wrong password"
       //   }
       // }
-      echo "succ";
+      $error_loginIn = "succ";
     }
   }
  }
