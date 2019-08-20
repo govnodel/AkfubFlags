@@ -22,7 +22,11 @@ var flagLoad4 = false;
 var first = true;
 autoFill();//<-- заполнение
 dom();
-var interval = setInterval(oneSec, 1000);
+$("body *:not(#upblock)").animate({
+  opacity: 1
+}, 300, function(){
+  var interval = setInterval(oneSec, 1000);
+});
 //<==================================================================================================>
 
 $("#_1").on('load', function(){flagLoad1 = true; checkImages()});
