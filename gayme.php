@@ -19,7 +19,7 @@ if (!$result) {
   <div id="upblock">
     <svg class="kruglyash" width="91" height="91" fill = 'none'>
       <circle id = "krug" cx = "-45" cy = "45" r = "40"/>
-      <text id="timer_sec" x = "36" y = "52" fill = "white" >10</text>
+      <text id="timer_sec" x = "36" y = "54" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
     <div id="nolifes">
