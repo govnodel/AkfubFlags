@@ -25,7 +25,7 @@ $( document ).ready(function() {
 
 function redir(){
   $(".upblock").animate({
-    height: '18vh'
+    height: '16vh'
   }, 600);
   setTimeout(function(){
     window.location.href = "gayme.php?regime=" + regime;
