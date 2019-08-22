@@ -7,7 +7,7 @@ switch ($_GET["regime"]) {
         $modern = "true";
         break;
 }
-$result = pg_query($connect, "SELECT name FROM flags WHERE modern = true".$modern);
+$result = pg_query($connect, "SELECT name FROM flags WHERE modern = ".$modern);
 if (!$result) {
   echo "Error\n";
   exit;
