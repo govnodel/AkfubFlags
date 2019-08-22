@@ -14,13 +14,13 @@ switch ($regime) {
     break;
 }
 
-switch ($continent) {
-  case "o":
-    break;
-  case "a":
-    $query = $query.", continent = 'Africa'";
-    break;
-}
+// switch ($continent) {
+//   case "o":
+//     break;
+//   case "a":
+//     $query = $query.", continent = 'Africa'";
+//     break;
+// }
 
 $result = pg_query($connect, $query);
 if (!$result) {
