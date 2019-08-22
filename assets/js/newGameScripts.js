@@ -17,13 +17,15 @@
 //check final or not?
     //exit if lose
 //refresh
-
 var names = [];
+var repeat = [];
 var winPos;
 var winName;
 var interval;
 var start = true;
 var seconds = 10;
+var lives = 3;
+var counter = 0;
 
 start();
 
@@ -56,10 +58,9 @@ function setFlags(){
     }
   }
 
-  for(let i = 0; i < 4; i++){
-    let flag = document.getElementById("flag" + i);
-    flag.addEventListener("click", clickFlag);
-    flag.src = "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png";
+  for(let i = 0; i < 4; i++){//rename flags' id
+    $("#flag" + i).bind("click", clickFlag);
+    $("#flag" + i).attr("src", "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png");
   }
 
   winPos = Math.round(Math.random() * 3);
@@ -68,14 +69,84 @@ function setFlags(){
   $("#country").text(winName);
 }
 
-function passSec(){
+function passSec(){//win
   seconds--;
-  if((seconds == 0)&&(running)){
-    minusLife();
-    flagsHide();
-    setTimeout(animationRem, 800, false);
-    setTimeout(refresh, 1200);
-    loseornot();
+  if(seconds < 0){
+    lifeDecrease();
+    if((win) || (life =< 0)){
+      exit();
+    }
   }
   $("timer_sec").text(seconds);
+}
+
+function lifeDecrease(){//rename lifes to lives
+  lives--;
+  let life = document.getElementById("lives").childNodes[lives * 2 + 1];
+  life.style.animation = "life" + (lives + 1) + " 1s linear forwards";
+}
+
+function exit(){
+  stat();
+  refresh(true);
+}
+
+function refresh(exit){//rename krug
+  for (var i = 0; i < 4; i++) {
+    if (i != winPos) {
+      $('#flag' + i).animate({
+        opacity: 0.2
+      }, 300);
+    }
+    $('#flag' + i).unbind();
+  }
+
+  setTimeout(function(){
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+      opacity: 0
+    }, 300);
+  }, 800);
+
+  if (exit) {
+    //exit
+  } else {
+    setTimeout(function(){
+      $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+        opacity: 1
+      }, 300);
+    }, 1200);
+
+    counter++;
+    seconds = 10;
+    repeat[repeat.length] = winName;
+
+    let circleEl = document.getElementById("circle");
+    if(circleEl.style.animationName == "timer2"){
+      circleEl.style.animation = "timer 10s linear forwards";
+    } else {
+      circleEl.style.animation = "timer2 10s linear forwards";
+    }
+
+    let endFlag = true;
+    do {
+      setFlags();
+      for (var i = 0; i < repeat.length; i++) {
+        if (winName == repeat[i]) {
+          break;
+        } else {
+          if (i == repeat.length - 1) {
+            endFlag = false;
+          }
+        }
+      }
+    } while (endFlag);
+
+    $("timer_sec").text(seconds);
+    $('#whitepoloska').animate({
+      width: generalCounter * 10 + "%"
+    }, 500);
+
+    clearInterval(interval);
+    interval = setInterval(oneSec, 1000);
+  }
 }
