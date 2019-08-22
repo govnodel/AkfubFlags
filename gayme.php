@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <?php
 require "assets/php/connection.php";
-$modern = "false";
 switch ($_GET["regime"]) {
-    case "m":
-        $modern = "true";
-        break;
+  case "m":
+    $modern = "true";
+    break;
+  case "h":
+    $modern = "false";
+    break;
 }
 $result = pg_query($connect, "SELECT name FROM flags WHERE modern = ".$modern);
 if (!$result) {
