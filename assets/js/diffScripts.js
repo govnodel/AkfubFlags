@@ -13,21 +13,28 @@ $( document ).ready(function() {
     document.body.style.animation = "white 0.1s linear forwards";
   });
 
-  $( "#modern" ).on( "click", function() {
+  $("#historical").on("click", function() {
+    regime = "h";
+    redir();
+  });
+
+  $("#modern").on("click", function() {
     regime = "m";
-    $(".upblock").animate({
-      height: '100%'
-    }, 700, function(){
-      setTimeout(redir, 200);
-    });
+    redir();
   });
 });
 
 function redir(){
   $(".upblock").animate({
-    height: '16vh'
-  }, 600);
-  setTimeout(function(){
-    window.location.href = "gayme.php?regime=" + regime;
-  }, 600);
+    height: '100%'
+  }, 700, function(){
+    setTimeout(function(){
+      $(".upblock").animate({
+        height: '16vh'
+      }, 600);
+      setTimeout(function(){
+        window.location.href = "gayme.php?regime=" + regime;
+      }, 600);
+    }, 200);
+  });
 }
