@@ -3,9 +3,9 @@
 require "assets/php/connection.php";
 
 $query = "SELECT name FROM flags WHERE modern = ";
-list($regime, $continent) = split(':', $_GET["op"]);
+$options = explode(':', $_GET["op"]);
 
-switch ($regime) {
+switch ($options[0]) {
   case "m":
     $query = $query."true";
     break;
