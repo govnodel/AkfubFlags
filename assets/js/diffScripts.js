@@ -14,12 +14,12 @@ $( document ).ready(function() {
   });
 
   $("#historical").on("click", function() {
-    regime = "h";
+    regime = "h:o";
     redir();
   });
 
   $("#modern").on("click", function() {
-    regime = "m";
+    regime = "m:o";
     redir();
   });
 });
@@ -33,7 +33,7 @@ function redir(){
         height: '16vh'
       }, 600);
       setTimeout(function(){
-        window.location.href = "gayme.php?regime=" + regime;
+        window.location.href = "gayme.php?op=" + regime;
       }, 600);
     }, 200);
   });

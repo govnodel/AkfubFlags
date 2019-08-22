@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <?php
 require "assets/php/connection.php";
-switch ($_GET["regime"]) {
+
+$query = "SELECT name FROM flags WHERE modern = ";
+list($regime, $continent) = split(':', $_GET["op"]);
+
+switch ($regime) {
   case "m":
-    $modern = "true";
+    $query = $query."true";
     break;
   case "h":
-    $modern = "false";
+    $query = $query."false";
     break;
 }
-$result = pg_query($connect, "SELECT name FROM flags WHERE modern = ".$modern);
+
+switch ($continent) {
+  case "o":
+    break;
+  case "a":
+    $query = $query.", continent = 'Africa'";
+    break;
+}
+
+$result = pg_query($connect, $query);
 if (!$result) {
   echo "Error\n";
   exit;
