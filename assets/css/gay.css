@@ -12,7 +12,7 @@ body *:not(#upblock){
 }
 svg.kruglyash circle {
   transform: rotate(-90deg);
-  stroke-width: 8px;
+  stroke-width: 10px;
   stroke: white;
   stroke-dasharray: 300%;
   animation: timer 10s linear;
@@ -63,12 +63,11 @@ svg.kruglyash circle {
   }
 }
 svg.kruglyash text {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-family: fantasy;
 }
-.kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт */
-  margin-left: -46%   ;
-  opacity: 1;
+.kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт @Не ну теперь идиальна*/
+  margin-left: -46%;
   position: absolute;
   align-items: center;
   /* text-align: center; */
