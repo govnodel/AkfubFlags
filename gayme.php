@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <?php
 require "assets/php/connection.php";
-switch ($_GET["regime"]) {
-    case "m":
-        $result = pg_query($connect, "SELECT name FROM flags");
-        if (!$result) {
-          echo "Error\n";
-          exit;
-        }
-        break;
+// $modern = false;
+// switch ($_GET["regime"]) {
+//     case "m":
+//         $modern = true;
+//         break;
+// }
+$result = pg_query($connect, "SELECT name FROM flags WHERE modern = true");
+if (!$result) {
+  echo "Error\n";
+  exit;
 }
 ?>
 <html lang="en">
