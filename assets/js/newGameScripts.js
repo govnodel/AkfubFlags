@@ -19,9 +19,26 @@
 //refresh
 
 var names = [];
-var flags = [];
 var winPos;
 var winName;
+var interval;
+var start = true;
+var seconds = 10;
+
+start();
+
+function start(){
+  setFlags();
+  $("body *:not(#upblock)").animate({
+    opacity: 1
+  }, 300, function(){
+    if(start){
+      interval = setInterval(passSec, 1000);
+      start = false;
+    }
+  });
+
+}
 
 function setFlags(){
   let numbers = [];
@@ -39,16 +56,26 @@ function setFlags(){
     }
   }
 
-  for(let i = 0; i < numbers.length; i++){
-    flags[i] = names[numbers[i]];
+  for(let i = 0; i < 4; i++){
+    let flag = document.getElementById("flag" + i);
+    flag.addEventListener("click", clickFlag);
+    flag.src = "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png";
   }
-  winPos = Math.round(Math.random() * 3);
-  winName = flags[winPosition];
 
-  nameEl.textContent = winName;
-  for(var i = 0; i < 4; i++){
-    flagsEl[i] = document.getElementById("_" + (i + 1));
-    flagsEl[i].addEventListener("click",clickFlag);
-    flagsEl[i].src = "assets/images/flags/" + flagsFinal[i].replace(/ /g, "_") + ".png";
+  winPos = Math.round(Math.random() * 3);
+  winName = names[numbers[winPosition]];
+
+  $("#country").text(winName);
+}
+
+function passSec(){
+  seconds--;
+  if((seconds == 0)&&(running)){
+    minusLife();
+    flagsHide();
+    setTimeout(animationRem, 800, false);
+    setTimeout(refresh, 1200);
+    loseornot();
   }
+  $("timer_sec").text(seconds);
 }
