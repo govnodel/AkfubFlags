@@ -133,7 +133,7 @@ svg.kruglyash text {
     stroke-dashoffset: 0
   }
   to {
-    stroke-dashoffset: -200
+    stroke-dashoffset: -287
   }
 }
 @keyframes timer2 {
