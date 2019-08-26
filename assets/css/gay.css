@@ -30,40 +30,8 @@ svg.kruglyash circle {
   align-items: center;
   justify-content: center;
 }
-@keyframes timer {
-  from {
-    stroke-dashoffset: 0
-  }
-  to {
-    stroke-dashoffset: -187
-  }
-}
-@keyframes timer2 {
-  from {
-    stroke-dashoffset: 0
-  }
-  to {
-    stroke-dashoffset: -187
-  }
-}
-@-webkit-keyframes timer2 {
-  from {
-    stroke-dashoffset: 0
-  }
-  to {
-    stroke-dashoffset: -187
-  }
-}
-@-webkit-keyframes timer {
-  from {
-    stroke-dashoffset: 0
-  }
-  to {
-    stroke-dashoffset: -187
-  }
-}
 svg.kruglyash text {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-family: fantasy;
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт @Не ну теперь идиальна*/
@@ -76,7 +44,7 @@ svg.kruglyash text {
   font-family: fantasy;
   font: impact;
   color: white;
-  font-size: 3.4em;
+  font-size: 3.8em;
   float: left;
   margin-left: auto;
   margin-right: auto;
@@ -150,6 +118,49 @@ svg.kruglyash text {
 #nolifes > img:nth-child(3) {
   padding-left: 80px;
 }
+#vsyapoloska {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  top: 16vh;
+}
+#whitepoloska {
+  width: 0%;
+  height: 10px;
+}
+@keyframes timer {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -200
+  }
+}
+@keyframes timer2 {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -200
+  }
+}
+@-webkit-keyframes timer2 {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -200
+  }
+}
+@-webkit-keyframes timer {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: -200
+  }
+}
+
 /* Анимация ебаных сердец */
 @keyframes life  {
  0% {
@@ -212,16 +223,7 @@ svg.kruglyash text {
    opacity: 0;
  }
 }
-#vsyapoloska {
-  width: 100%;
-  height: 10px;
-  position: relative;
-  top: 16vh;
-}
-#whitepoloska {
-  width: 0%;
-  height: 10px;
-}
+
 
 
 @media (max-width: 1441px) {
