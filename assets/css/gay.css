@@ -133,7 +133,7 @@ svg.kruglyash text {
     stroke-dashoffset: 0
   }
   to {
-    stroke-dashoffset: -287
+    stroke-dashoffset: -257
   }
 }
 @keyframes timer2 {
@@ -141,7 +141,7 @@ svg.kruglyash text {
     stroke-dashoffset: 0
   }
   to {
-    stroke-dashoffset: -287
+    stroke-dashoffset: -257
   }
 }
 @-webkit-keyframes timer2 {
@@ -149,7 +149,7 @@ svg.kruglyash text {
     stroke-dashoffset: 0
   }
   to {
-    stroke-dashoffset: -287
+    stroke-dashoffset: -257
   }
 }
 @-webkit-keyframes timer {
@@ -157,7 +157,7 @@ svg.kruglyash text {
     stroke-dashoffset: 0
   }
   to {
-    stroke-dashoffset: -287
+    stroke-dashoffset: -257
   }
 }
 
