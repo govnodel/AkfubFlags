@@ -73,7 +73,7 @@ function passSec(){//win
   seconds--;
   if(seconds < 0){
     lifeDecrease();
-    if((win) || (life =< 0)){
+    if((false) || (life =< 0)){
       exit();
     }
   }
