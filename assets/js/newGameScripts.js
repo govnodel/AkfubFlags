@@ -27,9 +27,9 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-start();
+// start();
 
-function start(){
+// function start(){
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
@@ -39,8 +39,7 @@ function start(){
       start = false;
     }
   });
-
-}
+// }
 
 function setFlags(){
   let numbers = [];
