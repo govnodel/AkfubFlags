@@ -43,7 +43,7 @@ var counter = 0;
 
 function setFlags(){
   let numbers = [];
-  for (let i = 0; i < count; i++){
+  for (let i = 0; i < 4; i++){
     numbers[i] = Math.round(Math.random() * (names.length - 1));
     for (let j = 0; j < numbers.length; j++) {
       if(i == j){
