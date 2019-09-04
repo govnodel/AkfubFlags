@@ -67,19 +67,7 @@ svg.kruglyash text {
   height: 180px
 }
 /* Нужно скоратить */
-#_1 {
-  border-radius: 6px;
-  margin: 2px
-}
-#_2 {
-  border-radius: 6px;
-  margin: 2px
-}
-#_3 {
-  border-radius: 6px;
-  margin: 2px
-}
-#_4 {
+#flag0, #flag1, #flag2, #flag3{
   border-radius: 6px;
   margin: 2px
 }

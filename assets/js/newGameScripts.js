@@ -26,9 +26,9 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-start();
+startGame();
 
-function start(){
+function startGame(){
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
