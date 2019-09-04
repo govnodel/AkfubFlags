@@ -43,7 +43,7 @@ var counter = 0;
 // }
 
 function setFlags(){
-  alert(names.length);
+  alert(names.length + " lol");
   let numbers = [];
   for (let i = 0; i < 4; i++){
     numbers[i] = Math.round(Math.random() * (names.length - 1));
