@@ -56,7 +56,7 @@ function setFlags(){
     }
   }
 
-  for(let i = 0; i < 4; i++){//rename flags' id
+  for(let i = 0; i < 4; i++){
     $("#flag" + i).bind("click", clickFlag);
     $("#flag" + i).attr("src", "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png");
   }
@@ -69,13 +69,13 @@ function setFlags(){
 
 function passSec(){//win
   seconds--;
+  $("timer_sec").text(seconds);
   if(seconds < 0){
     liveDecrease();
     if((false) || (lives <= 0)){
       exit();
     }
   }
-  $("timer_sec").text(seconds);
 }
 
 function liveDecrease(){//rename lifes to lives
@@ -87,6 +87,10 @@ function liveDecrease(){//rename lifes to lives
 function exit(){
   stat();
   refresh(true);
+}
+
+function stat(){
+
 }
 
 function refresh(exit){//rename krug and exit
