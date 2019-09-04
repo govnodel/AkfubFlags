@@ -65,7 +65,7 @@ function setFlags(){
   }
 
   winPos = Math.round(Math.random() * 3);
-  winName = names[numbers[winPosition]];
+  winName = names[numbers[winPos]];
 
   $("#country").text(winName);
 }
@@ -158,5 +158,5 @@ function nonExit(){
 }
 
 function clickFlag(){
-  
+
 }
