@@ -27,9 +27,9 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-start();
+// start();
 
-function start(){
+// function start(){
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
@@ -39,8 +39,7 @@ function start(){
       start = false;
     }
   });
-
-}
+// }
 
 function setFlags(){
   let numbers = [];
@@ -73,7 +72,7 @@ function passSec(){//win
   seconds--;
   if(seconds < 0){
     lifeDecrease();
-    if((win) || (life =< 0)){
+    if((false) || (life <= 0)){
       exit();
     }
   }
@@ -91,7 +90,7 @@ function exit(){
   refresh(true);
 }
 
-function refresh(exit){//rename krug
+function refresh(exit){//rename krug and exit
   for (var i = 0; i < 4; i++) {
     if (i != winPos) {
       $('#flag' + i).animate({
@@ -108,45 +107,50 @@ function refresh(exit){//rename krug
   }, 800);
 
   if (exit) {
-    //exit
+    window.location.href = "fggg";
   } else {
-    setTimeout(function(){
-      $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
-        opacity: 1
-      }, 300);
-    }, 1200);
+    nonExit();
+  }
+}
 
-    counter++;
-    seconds = 10;
-    repeat[repeat.length] = winName;
+function nonExit(){
+  counter++;
+  seconds = 10;
+  repeat[repeat.length] = winName;
 
-    let circleEl = document.getElementById("circle");
-    if(circleEl.style.animationName == "timer2"){
-      circleEl.style.animation = "timer 10s linear forwards";
-    } else {
-      circleEl.style.animation = "timer2 10s linear forwards";
-    }
+  let circleEl = document.getElementById("circle");
+  if(circleEl.style.animationName == "timer2"){
+    circleEl.style.animation = "timer 10s linear forwards";
+  } else {
+    circleEl.style.animation = "timer2 10s linear forwards";
+  }
 
-    let endFlag = true;
-    do {
-      setFlags();
-      for (var i = 0; i < repeat.length; i++) {
-        if (winName == repeat[i]) {
-          break;
-        } else {
-          if (i == repeat.length - 1) {
-            endFlag = false;
-          }
+  let endFlag = true;
+  do {
+    setFlags();
+    for (var i = 0; i < repeat.length; i++) {
+      if (winName == repeat[i]) {
+        break;
+      } else {
+        if (i == repeat.length - 1) {
+          endFlag = false;
         }
       }
-    } while (endFlag);
+    }
+  } while (endFlag);
 
-    $("timer_sec").text(seconds);
-    $('#whitepoloska').animate({
-      width: generalCounter * 10 + "%"
-    }, 500);
+  $("timer_sec").text(seconds);
 
-    clearInterval(interval);
-    interval = setInterval(oneSec, 1000);
-  }
+  setTimeout(function(){
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+      opacity: 1
+    }, 300, function(){
+      $('#progressBar').animate({
+        width: generalCounter * 10 + "%"
+      }, 500);
+    });
+  }, 1200);
+
+  // clearInterval(interval);
+  // interval = setInterval(oneSec, 1000);
 }
