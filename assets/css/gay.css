@@ -71,7 +71,7 @@ svg.kruglyash text {
   border-radius: 6px;
   margin: 2px
 }
-#lifes > img {
+#lives > img {
   width: 40px;
   height: 40px;
   float: left;
@@ -82,14 +82,14 @@ svg.kruglyash text {
   margin-top: -20px;
 }
 /* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..) */
-#lifes > img:nth-child(2) {
+#lives > img:nth-child(2) {
   transform: translateX(40px);
 }
-#lifes > img:nth-child(3) {
+#lives > img:nth-child(3) {
   transform: translateX(80px);
 }
 
-#nolifes > img {
+#nolives > img {
   width: 40px;
   height: 40px;
   float: left;
@@ -100,10 +100,10 @@ svg.kruglyash text {
   top: 8vh;
   margin-top: -20px;
 }
-#nolifes > img:nth-child(2) {
+#nolives > img:nth-child(2) {
   padding-left: 40px;
 }
-#nolifes > img:nth-child(3) {
+#nolives > img:nth-child(3) {
   padding-left: 80px;
 }
 #vsyapoloska {
@@ -150,7 +150,7 @@ svg.kruglyash text {
 }
 
 /* Анимация ебаных сердец */
-@keyframes life  {
+@keyframes live1  {
  0% {
    opacity: 1;
  }
@@ -160,7 +160,7 @@ svg.kruglyash text {
    transform: scale(2.5)
  }
 }
-@keyframes life2  {
+@keyframes live2  {
  0% {
    opacity: 1;
  }
@@ -170,7 +170,7 @@ svg.kruglyash text {
    transform: scale(2.5) translatex(16px);
  }
 }
-@keyframes life3  {
+@keyframes live3  {
  0% {
    opacity: 1;
  }

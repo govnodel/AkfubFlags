@@ -70,18 +70,18 @@ function setFlags(){
 function passSec(){//win
   seconds--;
   if(seconds < 0){
-    lifeDecrease();
-    if((false) || (life <= 0)){
+    liveDecrease();
+    if((false) || (live <= 0)){
       exit();
     }
   }
   $("timer_sec").text(seconds);
 }
 
-function lifeDecrease(){//rename lifes to lives
+function liveDecrease(){//rename lifes to lives
   lives--;
-  let life = document.getElementById("lives").childNodes[lives * 2 + 1];
-  life.style.animation = "life" + (lives + 1) + " 1s linear forwards";
+  let live = document.getElementById("lives").childNodes[lives * 2 + 1];
+  live.style.animation = "live" + (lives + 1) + " 1s linear forwards";
 }
 
 function exit(){

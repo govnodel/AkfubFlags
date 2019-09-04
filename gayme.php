@@ -18,12 +18,12 @@ require "assets/php/gameSet.php"
       <text id="timer_sec" x = "36" y = "56" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
-    <div id="nolifes">
+    <div id="nolives">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
     </div>
-    <div id="lifes">
+    <div id="lives">
       <img src="assets/images/otherimgs/1life.png" alt="nothing here">
       <img src="assets/images/otherimgs/1life.png" alt="nothing here">
       <img src="assets/images/otherimgs/1life.png" alt="nothing here">
