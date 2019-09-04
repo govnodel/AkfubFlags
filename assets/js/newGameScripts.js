@@ -17,7 +17,6 @@
 //check final or not?
     //exit if lose
 //refresh
-var names = [];
 var repeat = [];
 var winPos;
 var winName;
