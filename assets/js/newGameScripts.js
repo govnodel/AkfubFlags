@@ -26,11 +26,10 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-// start();
+start();
 
-// function start(){
+function start(){
   setFlags();
-  alert("gi");
   $("body *:not(#upblock)").animate({
     opacity: 1
   }, 300, function(){
@@ -39,14 +38,12 @@ var counter = 0;
       start = false;
     }
   });
-// }
+}
 
 function setFlags(){
-  alert(names.length + " lol");
   let numbers = [];
   for (let i = 0; i < 4; i++){
     numbers[i] = Math.round(Math.random() * (names.length - 1));
-    alert(numbers[i]);
     for (let j = 0; j < numbers.length; j++) {
       if(i == j){
         continue;
