@@ -156,3 +156,7 @@ function nonExit(){
   // clearInterval(interval);
   // interval = setInterval(oneSec, 1000);
 }
+
+function clickFlag(){
+  
+}
