@@ -31,6 +31,7 @@ var counter = 0;
 
 // function start(){
   setFlags();
+  alert("gi");
   $("body *:not(#upblock)").animate({
     opacity: 1
   }, 300, function(){
