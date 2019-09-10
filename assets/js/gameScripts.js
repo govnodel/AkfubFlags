@@ -151,7 +151,6 @@ function nonExit(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 1
     }, 300, function(){
-      alert(counter);
       $('#progressBar').animate({
         width: counter * 10 + "%"
       }, 500);

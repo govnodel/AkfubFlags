@@ -31,7 +31,7 @@ require "assets/php/gameSet.php"
   </div>
   <svg id = "vsyapoloska" >
     <rect x="0" y="0" width="100%" height="10px" fill="#00236B"/>
-    <rect id = "whitepoloska"  x="0" y="0" width="0%" height="10px" fill="#ffffff"/>
+    <rect id = "progressBar"  x="0" y="0" width="0%" height="10px" fill="#ffffff"/>
   </svg>
   <div id = "flags">
     <img id="flag0" alt="" >
