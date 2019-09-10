@@ -74,6 +74,8 @@ function passSec(){//win
     liveDecrease();
     if((false) || (lives <= 0)){
       exit();
+    } else {
+      refresh(false);
     }
   }
 }
