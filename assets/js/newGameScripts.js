@@ -70,7 +70,7 @@ function setFlags(){
 function passSec(){//win
   seconds--;
   $("#timer_sec").text(seconds + "");
-  if(seconds > 11){
+  if(seconds < 0){
     liveDecrease();
     if((false) || (lives <= 0)){
       exit();
