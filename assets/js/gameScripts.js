@@ -1,225 +1,165 @@
-//<==========================================<метод main>============================================>
-var winCounter = 0; //<-- количество правильных ответов
-var generalCounter = 0; //<-- счётчик попыток
-var maxWin = 10; //<-- сколько нужно ответить
-var life = 3; //<-- количество попыток
-var timer = 10; //<-- время, за которое нужно ответить
-var winPosition;
+//fill flags first time
+    //1) choose 4 random flags from list
+    //2) set random position
+    //3) set name of country
+    //4) add event listeners
+    //5) set timer
+//set all elements' opacity to 1
+//start timer
+//waiting clicks ========================
+//check answer
+    //1) right or not?
+    //2) final or not?
+        //exit if lose
+//refresh
+//waiting timer ========================
+//decrease lives
+//check final or not?
+    //exit if lose
+//refresh
+var repeat = [];
+var winPos;
 var winName;
-var anima = false;
-var repeat = ["first"];
-var elCirc = document.getElementById("krug");
-var lifesEl = document.getElementById("lifes").childNodes;
-var nameEl = document.getElementById("country"); //<-- элемент названия флага
-var flagsFinal = []; //<-- массив с именами флагов, которые будут в итоге
-var flagsEl = []; //<-- массив с элементами флагов
-var arrayWithPos;
-var running = true;
-var flagLoad1 = false;
-var flagLoad2 = false;
-var flagLoad3 = false;
-var flagLoad4 = false;
-var first = true;
 var interval;
-var firstInt = true;
-autoFill();//<-- заполнение
-dom();
-$("body *:not(#upblock)").animate({
-  opacity: 1
-}, 300, function(){
-  if(firstInt){
-    interval = setInterval(oneSec, 1000);
-    firstInt = false;
-  }
-});
-//<==================================================================================================>
+var start = true;
+var seconds = 9;
+var lives = 3;
+var counter = 0;
 
-$("#_1").on('load', function(){flagLoad1 = true; checkImages()});
-$("#_2").on('load', function(){flagLoad2 = true; checkImages()});
-$("#_3").on('load', function(){flagLoad3 = true; checkImages()});
-$("#_4").on('load', function(){flagLoad4 = true; checkImages()});
+startGame();
 
-function autoFill(){
-  arrayWithPos = Randomizer(4, names.length - 1, 0);
-  for(var i = 0; i < arrayWithPos.length; i++){
-    flagsFinal[i] = names[arrayWithPos[i]];
-  }
-  winPosition = Math.round(Math.random() * (4 - 1) + 1);
-  winName = flagsFinal[winPosition - 1];
+function startGame(){
+  setFlags();
+  $("body *:not(#upblock)").animate({
+    opacity: 1
+  }, 300, function(){
+    if(start){
+      interval = setInterval(passSec, 1000);
+      start = false;
+    }
+  });
 }
 
-
-function clickFlag(){
-  if(this.id == ("_" + winPosition)){ //верный ответ
-    winCounter++;
-  } else lifeMinus(); //неверный ответ
-  first = false;
-  running = false;
-  flagsHide();
-  setTimeout(animationRem, 800, false);
-  setTimeout(refresh, 1200);
-  loseornot();
-}
-
-
-function oneSec(){
-  timer--;
-  if((timer == 11)&&(running)){
-    lifeMinus();
-    flagsHide();
-    setTimeout(animationRem, 800, false);
-    setTimeout(refresh, 1200);
-    loseornot();
-  }
-  document.getElementById("timer_sec").textContent = timer;
-}
-
-
-function Randomizer(count, max, min){
-  var numbers = [];
-  for(var i = 0; i < count; i++){
-    numbers[i] = Math.round(Math.random() * (max - min) + min);
-    for (var j = 0; j < numbers.length; j++) {
+function setFlags(){
+  let numbers = [];
+  for (let i = 0; i < 4; i++){
+    numbers[i] = Math.round(Math.random() * (names.length - 1));
+    for (let j = 0; j < numbers.length; j++) {
       if(i == j){
         continue;
       } else {
         if(numbers[i] == numbers[j]){
           i--;
           break;
-        }}}}
-  return numbers;
-}
-
-
-function checkRep(){
-  for (var i = 0; i < repeat.length; i++) {
-    if(flagsFinal[winPosition-1] == repeat[i]){
-      autoFill();
-      i = -1;
-    }
-  }
-}
-
-
-function dom(){
-  nameEl.textContent = winName;
-  for(var i = 0; i < 4; i++){
-    flagsEl[i] = document.getElementById("_" + (i + 1));
-    flagsEl[i].addEventListener("click",clickFlag);
-    flagsEl[i].src = "assets/images/flags/" + flagsFinal[i].replace(/ /g, "_") + ".png";
-  }
-}
-
-
-function repAnim(){
-  if(anima){
-    elCirc.style.animation = "timer 10s linear forwards";
-  } else {
-    elCirc.style.animation = "timer2 10s linear forwards";
-  }
-  anima = !anima;
-}
-
-
-function refresh(){
-  generalCounter++;
-  timer = 10;
-  running = true;
-  repeat[repeat.length] = winName;
-  repAnim();
-  autoFill();//<-- повторное заполнение
-  checkRep();
-  dom();
-  document.getElementById("timer_sec").textContent = timer;
-  clearInterval(interval);
-  interval = setInterval(oneSec, 1000);
-  progressBar();
-}
-
-
-function loseornot(){ // всё ответил или проиграл
-  if((generalCounter == maxWin - 1) || (life < 1)){
-    animationRem(false);
-    setTimeout(transition, 400);
-    function transition(){
-      if(life < 1){
-        stat(false);
-      } else {
-        stat(true);
+        }
       }
-      window.location.href = "winornot.php?stat=" + str;
+    }
+  }
+
+  for(let i = 0; i < 4; i++){
+    $("#flag" + i).bind("click", clickFlag);
+    $("#flag" + i).attr("src", "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png");
+  }
+
+  winPos = Math.round(Math.random() * 3);
+  winName = names[numbers[winPos]];
+
+  $("#country").text(winName);
+}
+
+function passSec(){//win
+  seconds--;
+  $("#timer_sec").text(seconds);
+  if(seconds == 0){
+    liveDecrease();
+    if((false) || (lives <= 0)){
+      exit();
+    } else {
+      refresh(false);
     }
   }
 }
 
-
-function animationRem(bool){//если true, то появляется, иначе пропадает
-  if(bool){
-    document.getElementById("timer_sec").style.animation = "flagApp 0.3s linear forwards";
-    nameEl.style.animation = "flagApp 0.3s linear forwards";
-    flagsEl.forEach(function(element){
-      element.addEventListener("click",clickFlag);
-      element.style.animation = "flagApp 0.3s linear forwards";
-    });
-  } else{
-    document.getElementById("timer_sec").style.animation = "Rem 0.3s linear forwards";
-    nameEl.style.animation = "Rem 0.3s linear forwards";
-    flagsEl.forEach(function(element){
-      element.removeEventListener("click",clickFlag);
-      element.style.animation = "flagRem 0.3s linear forwards";
-    });
-  }
+function liveDecrease(){
+  lives--;
+  let live = document.getElementById("lives").childNodes[lives * 2 + 1];
+  live.style.animation = "live" + (lives + 1) + " 1s linear forwards";
 }
 
-function lifeMinus(){
-  life--;
-  switch (life) {
-    case 2:
-      lifesEl[5].style.animation = "life3 1s linear forwards";
-      break;
-    case 1:
-      lifesEl[3].style.animation = "life2 1s linear forwards";
-      break;
-    case 0:
-      lifesEl[1].style.animation = "life 1s linear forwards";
-      break;
-  }
+function exit(){
+  stat();
+  refresh(true);
 }
 
+function stat(){
 
-function flagsHide(){
-  flagsEl.forEach(function(element){
-    if(element.id != ("_" + winPosition)){
-      element.removeEventListener("click",clickFlag);
-      element.style.animation = "flagHide 0.3s linear forwards";
+}
+
+function refresh(exit){//rename krug
+  clearInterval(interval);
+  for (var i = 0; i < 4; i++) {
+    if (i != winPos) {
+      $('#flag' + i).animate({
+        opacity: 0.2
+      }, 300);
     }
-  });
-}
+    $('#flag' + i).unbind();
+  }
 
+  setTimeout(function(){
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+      opacity: 0
+    }, 300);
+  }, 800);
 
-function stat(qWin){//количество правильных, количество сыгранных игр и побед
-  str = winCounter + "";
-  if (qWin){
-    str = str + "I1";
+  if (exit) {
+    window.location.href = "fggg";
   } else {
-    str = str + "I0";
+    nonExit();
   }
 }
 
+function nonExit(){
+  counter++;
+  seconds = 10;
+  repeat[repeat.length] = winName;
 
-function checkImages(){
-  if((flagLoad1) && (flagLoad2) && (flagLoad3) && (flagLoad4) && (!first)){
-    flagLoad1 = false;
-    flagLoad2 = false;
-    flagLoad3 = false;
-    flagLoad4 = false;
-    animationRem(true);
+  let circleEl = document.getElementById("krug");
+  if(circleEl.style.animationName == "timer2"){
+    circleEl.style.animation = "timer 10s linear forwards";
+  } else {
+    circleEl.style.animation = "timer2 10s linear forwards";
   }
+
+  let endFlag = true;
+  do {
+    setFlags();
+    for (var i = 0; i < repeat.length; i++) {
+      if (winName == repeat[i]) {
+        break;
+      } else {
+        if (i == repeat.length - 1) {
+          endFlag = false;
+        }
+      }
+    }
+  } while (endFlag);
+
+  $("#timer_sec").text(seconds);
+
+  setTimeout(function(){
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+      opacity: 1
+    }, 300, function(){
+      $('#progressBar').animate({
+        width: counter * 10 + "%"
+      }, 500);
+    });
+  }, 1200);
+
+  interval = setInterval(passSec, 1000);
 }
 
+function clickFlag(){
 
-function progressBar(){
-  $('#whitepoloska').animate({
-    width: generalCounter * 10 + "%"
-  }, 500);
 }

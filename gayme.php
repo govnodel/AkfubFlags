@@ -48,6 +48,6 @@ require "assets/php/gameSet.php"
   }
   ?>
 </script>
-<script src = "assets/js/newGameScripts.js"></script>
+<script src = "assets/js/gameScripts.js"></script>
     </body>
 </html>
