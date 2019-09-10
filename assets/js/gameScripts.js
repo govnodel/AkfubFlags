@@ -106,17 +106,17 @@ function refresh(exit){//rename krug
     $('#flag' + i).unbind();
   }
 
-  setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
-      opacity: 0
-    }, 300);
-  }, 800);
-
-  if (exit) {
-    window.location.href = "fggg";
-  } else {
-    nonExit();
-  }
+  // setTimeout(function(){
+  //   $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+  //     opacity: 0
+  //   }, 300);
+  // }, 800);
+  //
+  // if (exit) {
+  //   window.location.href = "fggg";
+  // } else {
+  //   nonExit();
+  // }
 }
 
 function nonExit(){
