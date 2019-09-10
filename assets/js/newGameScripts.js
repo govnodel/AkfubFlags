@@ -63,7 +63,7 @@ function setFlags(){
 
   winPos = Math.round(Math.random() * 3);
   winName = names[numbers[winPos]];
-
+  
   $("#country").text(winName);
 }
 
