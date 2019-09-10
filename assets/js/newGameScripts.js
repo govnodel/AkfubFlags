@@ -96,6 +96,7 @@ function stat(){
 }
 
 function refresh(exit){//rename krug and exit
+  clearInterval(interval);
   for (var i = 0; i < 4; i++) {
     if (i != winPos) {
       $('#flag' + i).animate({
@@ -156,8 +157,7 @@ function nonExit(){
     });
   }, 1200);
 
-  // clearInterval(interval);
-  // interval = setInterval(oneSec, 1000);
+  interval = setInterval(oneSec, 1000);
 }
 
 function clickFlag(){
