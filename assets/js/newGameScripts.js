@@ -69,7 +69,7 @@ function setFlags(){
 
 function passSec(){//win
   seconds--;
-  $("timer_sec").text(seconds);
+  $("#timer_sec").text(seconds + "");
   if(seconds > 11){
     liveDecrease();
     if((false) || (lives <= 0)){
@@ -142,7 +142,7 @@ function nonExit(){
     }
   } while (endFlag);
 
-  $("timer_sec").text(seconds);
+  $("#timer_sec").text(seconds);
 
   setTimeout(function(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
