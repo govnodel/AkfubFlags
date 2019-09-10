@@ -63,14 +63,14 @@ function setFlags(){
 
   winPos = Math.round(Math.random() * 3);
   winName = names[numbers[winPos]];
-  
+
   $("#country").text(winName);
 }
 
 function passSec(){//win
   seconds--;
   $("timer_sec").text(seconds);
-  if(seconds < 0){
+  if(seconds > 11){
     liveDecrease();
     if((false) || (lives <= 0)){
       exit();
