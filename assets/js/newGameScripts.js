@@ -151,7 +151,7 @@ function nonExit(){
       opacity: 1
     }, 300, function(){
       $('#progressBar').animate({
-        width: generalCounter * 10 + "%"
+        width: counter * 10 + "%"
       }, 500);
     });
   }, 1200);
