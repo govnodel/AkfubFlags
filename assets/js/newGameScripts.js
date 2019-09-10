@@ -22,7 +22,7 @@ var winPos;
 var winName;
 var interval;
 var start = true;
-var seconds = 10;
+var seconds = 9;
 var lives = 3;
 var counter = 0;
 
