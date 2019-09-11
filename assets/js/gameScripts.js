@@ -146,6 +146,6 @@ function nonExit(){
 
 function clickFlag(){
   if(this.id != ("flag" + winPos)){
-    lifeMinus();
+    liveDecrease();
   }
 }
