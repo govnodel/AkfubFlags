@@ -56,7 +56,7 @@ function setFlags(){
 function passSec(){
   seconds--;
   $("#timer_sec").text(seconds);
-  if(seconds == 0){
+  if(seconds > 100){
     liveDecrease();
   }
 }
@@ -69,8 +69,8 @@ function liveDecrease(){
   checkEnd();
 }
 
-function checkEnd(){//make win branch counter >= 9
-  if((false) || (lives <= 0)){
+function checkEnd(){//make win branch
+  if((counter >= 9) || (lives <= 0)){
     exit();
   } else {
     refresh(false);
