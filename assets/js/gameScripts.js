@@ -125,13 +125,6 @@ function nonExit(){
   seconds = 10;
   repeat[repeat.length] = winName;
 
-  let circleEl = document.getElementById("krug");
-  if(circleEl.style.animationName == "timer2"){
-    circleEl.style.animation = "timer 10s linear forwards";
-  } else {
-    circleEl.style.animation = "timer2 10s linear forwards";
-  }
-
   let endFlag = true;
   do {
     setFlags();
@@ -146,16 +139,23 @@ function nonExit(){
     }
   } while (endFlag);
 
-  $("#timer_sec").text(seconds);
-
   setTimeout(function(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 1
-    }, 300);
+    }, 500);
     $('#progressBar').animate({
       width: counter * 10 + "%"
     }, 500);
-  }, 1200);
+  }, 600);
+
+  $("#timer_sec").text(seconds);
+
+  let circleEl = document.getElementById("krug");
+  if(circleEl.style.animationName == "timer2"){
+    circleEl.style.animation = "timer 10s linear forwards";
+  } else {
+    circleEl.style.animation = "timer2 10s linear forwards";
+  }
 
   interval = setInterval(passSec, 1000);
 }
