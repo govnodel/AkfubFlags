@@ -125,6 +125,8 @@ function nonExit(){
   seconds = 10;
   repeat[repeat.length] = winName;
 
+  $("#timer_sec").text(seconds);
+
   let endFlag = true;
   do {
     setFlags();
@@ -146,8 +148,6 @@ function nonExit(){
     $('#progressBar').animate({
       width: counter * 10 + "%"
     }, 500, function(){
-      $("#timer_sec").text(seconds);
-
       let circleEl = document.getElementById("krug");
       if(circleEl.style.animationName == "timer2"){
         circleEl.style.animation = "timer 10s linear forwards";
