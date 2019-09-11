@@ -1,5 +1,6 @@
 //make stat
 //make win branch
+//rename krug
 var repeat = [];
 var winPos;
 var winName;
@@ -58,11 +59,15 @@ function passSec(){
   }
 }
 
-function liveDecrease(){//make win branch
+function liveDecrease(){
   lives--;
   let live = document.getElementById("lives").childNodes[lives * 2 + 1];
   live.style.animation = "live" + (lives + 1) + " 1s linear forwards";
 
+  checkEnd();
+}
+
+function checkEnd(){//make win branch
   if((false) || (lives <= 0)){
     exit();
   } else {
@@ -79,7 +84,7 @@ function stat(){
 
 }
 
-function refresh(exit){//rename krug
+function refresh(exit){
   clearInterval(interval);
   for (var i = 0; i < 4; i++) {
     if (i != winPos) {
@@ -104,7 +109,7 @@ function refresh(exit){//rename krug
   }, 1300);
 }
 
-function nonExit(){
+function nonExit(){//rename krug
   counter++;
   seconds = 10;
   repeat[repeat.length] = winName;
@@ -132,7 +137,7 @@ function nonExit(){
     $('#progressBar').animate({
       width: counter * 10 + "%"
     }, 500, function(){
-      let circleEl = document.getElementById("krug");
+      let circleEl = document.getElementById("circle");
       if(circleEl.style.animationName == "timer2"){
         circleEl.style.animation = "timer 10s linear forwards";
       } else {
@@ -147,5 +152,7 @@ function nonExit(){
 function clickFlag(){
   if(this.id != ("flag" + winPos)){
     liveDecrease();
+  } else {
+    checkEnd();
   }
 }
