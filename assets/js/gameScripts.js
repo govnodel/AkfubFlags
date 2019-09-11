@@ -109,6 +109,9 @@ function refresh(exit){
     }, 300);
     setTimeout(function(){
       if (exit) {
+        $("#upblock").animate({
+          
+        }, 400);
         window.location.href = "winornot.php";
       } else {
         nonExit();
