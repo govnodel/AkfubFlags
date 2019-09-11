@@ -67,7 +67,7 @@ function liveDecrease(){
 }
 
 function checkEnd(){//make win branch
-  if((counter >= 10) || (lives <= 0)){
+  if((counter >= 9) || (lives <= 0)){
     exit();
   } else {
     refresh(false);
@@ -145,7 +145,7 @@ function nonExit(){
 
       interval = setInterval(passSec, 1000);
     });
-  }, 400);
+  }, 200);
 }
 
 function clickFlag(){
