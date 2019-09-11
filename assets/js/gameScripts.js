@@ -1,11 +1,5 @@
-//waiting clicks ========================
-//check answer
-    //1) right or not?
-    //2) final or not?
-        //exit if lose
-//refresh
-
 //make stat
+//make win branch
 var repeat = [];
 var winPos;
 var winName;
@@ -56,23 +50,24 @@ function setFlags(){
   $("#country").text(winName);
 }
 
-function passSec(){//win
+function passSec(){
   seconds--;
   $("#timer_sec").text(seconds);
   if(seconds == 0){
     liveDecrease();
-    if((false) || (lives <= 0)){
-      exit();
-    } else {
-      refresh(false);
-    }
   }
 }
 
-function liveDecrease(){
+function liveDecrease(){//make win branch
   lives--;
   let live = document.getElementById("lives").childNodes[lives * 2 + 1];
   live.style.animation = "live" + (lives + 1) + " 1s linear forwards";
+
+  if((false) || (lives <= 0)){
+    exit();
+  } else {
+    refresh(false);
+  }
 }
 
 function exit(){
@@ -101,7 +96,7 @@ function refresh(exit){//rename krug
     }, 300);
     setTimeout(function(){
       if (exit) {
-        window.location.href = "fggg";
+        window.location.href = "winornot.php";
       } else {
         nonExit();
       }
@@ -150,5 +145,7 @@ function nonExit(){
 }
 
 function clickFlag(){
-  alert("hi");
+  if(this.id != ("flag" + winPos)){
+    lifeMinus();
+  }
 }
