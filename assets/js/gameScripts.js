@@ -1,5 +1,6 @@
 //make stat
-//make win branch
+//make circle opacity animation
+
 var repeat = [];
 var winPos;
 var winName;
@@ -87,6 +88,12 @@ function stat(){
 
 function refresh(exit){
   clearInterval(interval);
+
+  counter++;
+  $('#progressBar').animate({
+    width: counter * 10 + "%"
+  }, 500);
+
   for (var i = 0; i < 4; i++) {
     if (i != winPos) {
       $('#flag' + i).animate({
@@ -107,11 +114,10 @@ function refresh(exit){
         nonExit();
       }
     }, 600)
-  }, 1300);
+  }, 900);
 }
 
 function nonExit(){
-  counter++;
   seconds = 10;
   repeat[repeat.length] = winName;
 
@@ -135,9 +141,7 @@ function nonExit(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 1
     }, 500);
-    $('#progressBar').animate({
-      width: counter * 10 + "%"
-    }, 500, function(){
+    setTimeout(function(){
       for(let i = 0; i < 4; i++){
         $("#flag" + i).bind("click", clickFlag);
       }
@@ -149,8 +153,8 @@ function nonExit(){
       }
 
       interval = setInterval(passSec, 1000);
-    });
-  }, 200);
+    }, 500);
+  }, 150);
 }
 
 function clickFlag(){
