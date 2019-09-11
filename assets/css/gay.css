@@ -68,6 +68,13 @@ svg.kruglyash text {
 }
 /* Нужно скоратить */
 #flag0, #flag1, #flag2, #flag3{
+  -moz-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-drag: none;
+  -ms-user-select: none;
+
   border-radius: 6px;
   margin: 2px
 }

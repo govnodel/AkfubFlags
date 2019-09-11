@@ -69,7 +69,7 @@ function liveDecrease(){
 }
 
 function checkEnd(){//make win branch
-  if((false) || (lives <= 0)){
+  if((counter >= 9) || (lives <= 0)){
     exit();
   } else {
     refresh(false);
