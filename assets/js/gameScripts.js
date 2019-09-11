@@ -109,15 +109,15 @@ function refresh(exit){//rename krug
   setTimeout(function(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 0
-    }, 300);
-  }, 1800, function(){
-    if (exit) {
-      window.location.href = "fggg";
-    } else {
-      alert("hi");
-      nonExit();
-    }
-  });
+    }, 300, function(){
+      if (exit) {
+        window.location.href = "fggg";
+      } else {
+        alert("hi");
+        nonExit();
+      }
+    });
+  }, 1300);
 }
 
 function nonExit(){
