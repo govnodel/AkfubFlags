@@ -110,10 +110,11 @@ function refresh(exit){//rename krug
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 0
     }, 300, function(){
+      alert("hi");
       if (exit) {
         window.location.href = "fggg";
       } else {
-        alert("hi");
+
         nonExit();
       }
     });
