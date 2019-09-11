@@ -109,10 +109,11 @@ function refresh(exit){
     }, 300);
     setTimeout(function(){
       if (exit) {
-        $("#upblock").animate({
-          
-        }, 400);
-        window.location.href = "winornot.php";
+        $("#upblock, #vsyapoloska").animate({
+          marginTop: "-16vh"
+        }, 400, function(){
+          window.location.href = "winornot.php";
+        });
       } else {
         nonExit();
       }
