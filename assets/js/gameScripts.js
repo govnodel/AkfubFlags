@@ -114,6 +114,7 @@ function refresh(exit){//rename krug
     if (exit) {
       window.location.href = "fggg";
     } else {
+      alert("hi");
       nonExit();
     }
   });
