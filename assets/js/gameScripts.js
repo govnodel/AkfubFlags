@@ -1,6 +1,5 @@
 //make stat
 //make win branch
-//rename krug
 var repeat = [];
 var winPos;
 var winName;
@@ -68,7 +67,7 @@ function liveDecrease(){
 }
 
 function checkEnd(){//make win branch
-  if((false) || (lives <= 0)){
+  if((counter >= 10) || (lives <= 0)){
     exit();
   } else {
     refresh(false);
@@ -109,7 +108,7 @@ function refresh(exit){
   }, 1300);
 }
 
-function nonExit(){//rename krug
+function nonExit(){
   counter++;
   seconds = 10;
   repeat[repeat.length] = winName;
