@@ -17,6 +17,9 @@ function startGame(){
     opacity: 1
   }, 300, function(){
     if(start){
+      for(let i = 0; i < 4; i++){
+        $("#flag" + i).bind("click", clickFlag);
+      }
       interval = setInterval(passSec, 1000);
       start = false;
     }
