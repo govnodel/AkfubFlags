@@ -110,7 +110,7 @@ function refresh(exit){
     setTimeout(function(){
       if (exit) {
         $("#upblock, #vsyapoloska").animate({
-          marginTop: "-16vh"
+          marginTop: "-17vh"
         }, 400, function(){
           window.location.href = "winornot.php";
         });
