@@ -40,7 +40,6 @@ function setFlags(){
   }
 
   for(let i = 0; i < 4; i++){
-    $("#flag" + i).bind("click", clickFlag);
     $("#flag" + i).attr("src", "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png");
   }
 
@@ -67,7 +66,7 @@ function liveDecrease(){
 }
 
 function checkEnd(){//make win branch
-  if((counter >= 10) || (lives <= 0)){
+  if((false) || (lives <= 0)){
     exit();
   } else {
     refresh(false);
@@ -136,6 +135,9 @@ function nonExit(){
     $('#progressBar').animate({
       width: counter * 10 + "%"
     }, 500, function(){
+      for(let i = 0; i < 4; i++){
+        $("#flag" + i).bind("click", clickFlag);
+      }
       let circleEl = document.getElementById("circle");
       if(circleEl.style.animationName == "timer2"){
         circleEl.style.animation = "timer 10s linear forwards";
