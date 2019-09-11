@@ -145,19 +145,19 @@ function nonExit(){
     }, 500);
     $('#progressBar').animate({
       width: counter * 10 + "%"
-    }, 500);
-  }, 600);
+    }, 500, function(){
+      $("#timer_sec").text(seconds);
 
-  $("#timer_sec").text(seconds);
+      let circleEl = document.getElementById("krug");
+      if(circleEl.style.animationName == "timer2"){
+        circleEl.style.animation = "timer 10s linear forwards";
+      } else {
+        circleEl.style.animation = "timer2 10s linear forwards";
+      }
 
-  let circleEl = document.getElementById("krug");
-  if(circleEl.style.animationName == "timer2"){
-    circleEl.style.animation = "timer 10s linear forwards";
-  } else {
-    circleEl.style.animation = "timer2 10s linear forwards";
-  }
-
-  interval = setInterval(passSec, 1000);
+      interval = setInterval(passSec, 1000);
+    });
+  }, 400);
 }
 
 function clickFlag(){
