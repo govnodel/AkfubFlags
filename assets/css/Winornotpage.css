@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 body, html {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
+  background-color: #E7F1F5;
 }
 .title {
   font-family: fantasy;
   color: steelblue;
   text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 200;
 }
