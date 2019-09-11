@@ -154,7 +154,7 @@ function nonExit(){
 
       interval = setInterval(passSec, 1000);
     }, 500);
-  }, 150);
+  }, 100);
 }
 
 function clickFlag(){

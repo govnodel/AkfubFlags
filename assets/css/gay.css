@@ -20,7 +20,7 @@ svg.kruglyash circle {
   animation-fill-mode: forwards;
 }
 #upblock {
-  margin-top: 0;
+  margin-top: -10;
   padding: 0;
   position: fixed;
   width: 100%;
