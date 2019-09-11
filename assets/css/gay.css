@@ -32,8 +32,8 @@ svg.kruglyash circle {
   justify-content: center;
 }
 svg.kruglyash text {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 2.4em;
+  font-weight: 100;
   font-family: 'Oswald', sans-serif;
 }
 .kruglyash { /* этот класс говно, надо поменять, щас лень @Хотя похуй, и так сойдёт @Не ну теперь идиальна*/
