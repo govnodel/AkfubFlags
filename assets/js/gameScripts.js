@@ -151,11 +151,10 @@ function nonExit(){
   setTimeout(function(){
     $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 1
-    }, 300, function(){
-      $('#progressBar').animate({
-        width: counter * 10 + "%"
-      }, 500);
-    });
+    }, 300);
+    $('#progressBar').animate({
+      width: counter * 10 + "%"
+    }, 500);
   }, 1200);
 
   interval = setInterval(passSec, 1000);
