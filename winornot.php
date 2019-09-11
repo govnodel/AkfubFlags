@@ -7,6 +7,6 @@
   <link rel="stylesheet" href="assets/css/Winornotpage.css">
 </head>
 <body>
-  <h1 class="title">Ну Дарова, пебедитель</h1>
+  <h1 class="title">TEST</h1>
 </body>
 </html>
