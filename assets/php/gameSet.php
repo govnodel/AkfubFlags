@@ -17,11 +17,11 @@ switch ($continent) {
   case "o":
     break;
   case "a":
-    $query = $query.", continent = 'Africa'";
+    $query = $query."AND continent = 'Africa'";
     break;
 }
 
-$query = $query.", difficulty = '1'";
+$query = $query."AND difficulty = 1";
 
 $result = pg_query($connect, $query);
 if (!$result) {
