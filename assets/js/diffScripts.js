@@ -36,6 +36,6 @@ function redir(){
       setTimeout(function(){
         window.location.href = "gayme.php?op=" + regime;
       }, 600);
-    }, 200);
+    }, 2000);
   });
 }
