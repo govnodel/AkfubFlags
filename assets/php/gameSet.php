@@ -21,7 +21,7 @@ switch ($continent) {
     break;
 }
 
-$query = $query."AND difficulty = 1";
+$query = $query." AND difficulty = 1";
 
 $result = pg_query($connect, $query);
 if (!$result) {
