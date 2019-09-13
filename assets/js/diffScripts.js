@@ -25,10 +25,10 @@ $( document ).ready(function() {
 });
 
 function redir(){
-  // $("body *:not(.flack, .upblock)").fadeOut(600);
   $(".upblock").animate({
     height: '100%'
   }, 700, function(){
+    $(".chooseArea").fadeOut(1);
     setTimeout(function(){
       $(".upblock").animate({
         height: '16vh'
