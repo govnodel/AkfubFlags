@@ -26,15 +26,16 @@ $( document ).ready(function() {
 
 function redir(){
   $(".upblock").animate({
-    height: '100%'
-  }, 700, function(){
+    height: '100vh'
+  }, 500, function(){
+    $(".chooseArea").css("opacity", "0");
     setTimeout(function(){
       $(".upblock").animate({
         height: '16vh'
-      }, 600);
+      }, 460);
       setTimeout(function(){
         window.location.href = "gayme.php?op=" + regime;
-      }, 600);
-    }, 200);
+      }, 460);
+    }, 140);
   });
 }
