@@ -26,7 +26,7 @@ $( document ).ready(function() {
 
 function redir(){
   $(".upblock").animate({
-    height: '100%'
+    height: '100vh'
   }, 700, function(){
     $(".chooseArea").fadeOut(1);
     setTimeout(function(){
