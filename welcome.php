@@ -7,6 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  welcome
+  <?=$_SESSION["loginIn"]?>
 </body>
 </html>
