@@ -13,7 +13,7 @@
 </body>
 <script type="text/javascript">
   setTimeout(function(){
-    window.location.href = "";
+    window.location.href = "http://flags.alfa-omega.pro";
   }, 3400);
 </script>
 </html>
