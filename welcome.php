@@ -9,6 +9,11 @@
   <title>Document</title>
 </head>
 <body>
-  <?php echo $_SESSION["loginIn"]; ?>
+  Welcome <?php echo $_SESSION["loginIn"]; ?>
 </body>
+<script type="text/javascript">
+  setTimeout(function(){
+    window.location.href = "http://flags.alfa-omega.pro";
+  }, 3400);
+</script>
 </html>
