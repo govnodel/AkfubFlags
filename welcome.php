@@ -11,4 +11,9 @@
 <body>
   Welcome <?php echo $_SESSION["loginIn"]; ?>
 </body>
+<script type="text/javascript">
+  setTimout(function(){
+    window.location.href = "index.php";
+  }, 3400);
+</script>
 </html>
