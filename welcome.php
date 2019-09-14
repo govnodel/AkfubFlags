@@ -9,6 +9,6 @@
   <title>Document</title>
 </head>
 <body>
-  <?php echo $_SESSION["loginIn"]; ?>
+  Welcome <?php echo $_SESSION["loginIn"]; ?>
 </body>
 </html>
