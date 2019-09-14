@@ -7,6 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  <?=$_SESSION["loginIn"]?>
+  <?php echo $_SESSION["loginIn"]; ?>
 </body>
 </html>
