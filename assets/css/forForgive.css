@@ -36,6 +36,7 @@ body, html {
   z-index: 4
 }
 .chooseArea {
+  padding: 0;
   position: relative;
   left: 50%;
   margin-left: -20%;
@@ -43,12 +44,10 @@ body, html {
   margin-top: -15vh;
   width: 40%;
   /* box-shadow: -8px 0 13px 2px black; */
-  box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
   height: 30vh;
   border-radius: 7px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background: white;
   z-index: 2;
 
@@ -64,13 +63,24 @@ body, html {
 }
 .chooseArea > button {
   width: 30%;
-  height: 10vh;
+  height: 7vh;
   border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -15%;
+  margin-top: -3.5vh;
   border: none;
   background: none;
   cursor: pointer;
   outline: none;
 
+}
+.choooseArea > #topArrow, #bottomArrow {
+  width: 100%;
+  height: 4%;
+  background: black;
+  margin: 1%;
+  color: white;
 }
 .chooseArea > button > p {
   font-family: fantasy;
