@@ -13,7 +13,7 @@
 </head>
 <body>
     <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
-      <input type="text" name="loginIn" placeholder="Login" value="<?=$_SESSION["login"]?>">
+      <input type="text" name="loginIn" placeholder="Login" value="<?=$_SESSION["loginIn"]?>">
       <p><?=$error_loginIn?></p>
       <input type="password" name="passIn" placeholder="Password">
       <p><?=$error_passIn?></p>
