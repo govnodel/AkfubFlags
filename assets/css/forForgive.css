@@ -54,31 +54,51 @@ body, html {
 
   /* box-shadow: 0 0 8px #d3dde0; */
 }
+.topArrow {
+  position: absolute;
+  top: 1vh;
+
+}
+.bottomArrow {
+  position: absolute;
+  top: 22vh;
+}
 .chooseArea > .lvl {
     font-size: 1.5em;
     font-family: fantasy;
     color: #b9c1c4;
-    margin: 5%;
+    margin: 8%;
     position: relative;
-    top: 0.8vh;
+}
+.leftLevelArrow, .rightLevelArrow, .bottomArrow, .topArrow {
+  position: absolute;
+  cursor: pointer;
+}
+.leftLevelArrow {
+  left: 42%;
+}
+.rightLevelArrow {
+  right: 40%;
 }
 .chooseArea > button {
+    text-align: center;
+    padding:0;
     width: 30%;
     height: 10vh;
     border-radius: 20px;
-    border: none;
     background: none;
     cursor: pointer;
     outline: none;
-
+    overflow: hidden;
 }
 .chooseArea > button > p {
+  margin: auto;
   font-family: fantasy;
   font-size: 2.5em;
   color: #66a8e3;
 }
 
-@keyframes white{
+@keyframes white {
   0% {
     background-color: #2a5eb2
   }
