@@ -46,17 +46,19 @@ body {
   width: 42%;
   margin-left: -21%;
 }
-#first > object {
+#first > label > #buttonscroll {
   top: 17vh;
   width: 200px;
   height: 200px;
   position: relative;
-  cursor: pointer;
   animation-iteration-count: infinite;
   animation-name: strelkaJumping;
   animation-duration: 1s;
   animation-delay: 0.9s;
   animation-timing-function: linear;
+}
+#first > label:hover {
+  animation: none;
 }
 #first > h4 {
   color: white;
