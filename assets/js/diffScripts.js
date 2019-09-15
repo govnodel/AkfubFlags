@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
   var currentX = '';
   var currentY = '';
-  var movementConstant = .035;
+  var movementConstant = .05;
   $(document).mousemove(function(e) {
 
     if(currentX == '') currentX = e.pageX;

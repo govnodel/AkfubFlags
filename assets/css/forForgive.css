@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 body, html {
   width: 100%;
   height: 100vh;
@@ -8,15 +9,14 @@ body, html {
 }
 .flack {
   width: 100%;
-  height: 100%;
   height: 100vh;
   opacity: 0;
   position: absolute;
   /* background-image: url(../images/otherimgs/test.png); */
 }
 .flack img {
-  width: 105%;
-  height: 110vh;
+  width: 110%;
+  height: 120vh;
   margin-top: -5%;
   margin-left: -5%;
 }
@@ -27,22 +27,6 @@ body, html {
   opacity: 0;
   position: absolute;
   background-color: black;
-}
-.flack > .pol1, .pol2 {
-  position: absolute;
-  background: #E7F1F5;
-  width: 100%;
-  height: 100vh;
-}
-.pol1 {
-  margin-right: -60%;
-  margin-top: -60%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-}
-.pol2 {
-  margin-left: -50%;
-  margin-top: 150%;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 .upblock {
   position: relative; /* <---- это ваня, он тут не должен быть, но он есть */
@@ -82,7 +66,7 @@ body, html {
 }
 .chooseArea > .lvl {
     font-size: 1.5em;
-    font-family: fantasy;
+    font-family: 'Oswald', sans-serif;
     color: #b9c1c4;
     margin: 8%;
     position: relative;
@@ -111,16 +95,7 @@ body, html {
 }
 .chooseArea > button > p {
   margin: auto;
-  font-family: fantasy;
-  font-size: 2.5em;
-  color: #66a8e3;
-}
-
-@keyframes white {
-  0% {
-    background-color: #2a5eb2
-  }
-  100% {
-    background-color: #E7F1F5
-  }
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5em;
+  color: white;
 }
