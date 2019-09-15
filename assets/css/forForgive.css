@@ -76,6 +76,7 @@ body, html {
 }
 .leftLevelArrow {
   left: 42%;
+  /* transform: rotate(45); */
 }
 .rightLevelArrow {
   right: 40%;
