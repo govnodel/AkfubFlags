@@ -49,7 +49,8 @@ function redir(){
   $(".upblock").animate({
     height: '100vh'
   }, 500, function(){
-    $(".chooseArea").css("opacity", "0");
+    $(".chooseArea, .flack, .cover").css("opacity", "0");
+    document.body.style.backgroundColor = "#E7F1F5";
     setTimeout(function(){
       $(".upblock").animate({
         height: '16vh'
