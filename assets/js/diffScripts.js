@@ -1,47 +1,48 @@
 var regime;
 
 $( document ).ready(function() {
+  setTimeout(function(){
+    $(".flack, .chooseArea *").animate({
+      opacity: 1
+    }, 800);
 
-  $(".flack").animate({
-    opacity: 1
-  }, 800);
+    $(".cover").animate({
+      opacity: 0.7
+    }, 800);
 
-  $(".cover").animate({
-    opacity: 0.7
-  }, 800);
+    var currentX = '';
+    var currentY = '';
+    const movConst = .04;
+    $(document).mousemove(function(e) {
 
-  var currentX = '';
-  var currentY = '';
-  const movConst = .04;
-  $(document).mousemove(function(e) {
+      if(currentX == '') currentX = e.pageX;
+      var xDiff = e.pageX - currentX;
+      currentX = e.pageX;
 
-    if(currentX == '') currentX = e.pageX;
-    var xDiff = e.pageX - currentX;
-    currentX = e.pageX;
+      if(currentY == '') currentY = e.pageY;
+      var yDiff = e.pageY - currentY;
+      currentY = e.pageY;
 
-    if(currentY == '') currentY = e.pageY;
-    var yDiff = e.pageY - currentY;
-    currentY = e.pageY;
-
-    $('.flack').each(function(i, el) {
-      var movX = xDiff * movConst;
-	    var movY = yDiff * movConst;
-      var newX = $(el).position().left - movX;
-	    var newY = $(el).position().top - movY;
-      $(el).css('left', newX + 'px');
-	    $(el).css('top', newY + 'px');
+      $('.flack').each(function(i, el) {
+        var movX = xDiff * movConst;
+  	    var movY = yDiff * movConst;
+        var newX = $(el).position().left - movX;
+  	    var newY = $(el).position().top - movY;
+        $(el).css('left', newX + 'px');
+  	    $(el).css('top', newY + 'px');
+      });
     });
-  });
 
-  $("#historical").on("click", function() {
-    regime = "h:o";
-    redir();
-  });
+    $("#historical").on("click", function() {
+      regime = "h:o";
+      redir();
+    });
 
-  $("#modern").on("click", function() {
-    regime = "m:o";
-    redir();
-  });
+    $("#modern").on("click", function() {
+      regime = "m:o";
+      redir();
+    });
+  }, 300)
 });
 
 function redir(){

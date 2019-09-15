@@ -43,8 +43,6 @@ body, html {
     top: 50vh;
     margin-top: -15vh;
     width: 40%;
-    /* box-shadow: -8px 0 13px 2px black; */
-    /* box-shadow: 0px 10px 5px #888, 0px -10px 5px #888; */
     height: 30vh;
     border-radius: 7px;
     display: flex;
@@ -52,8 +50,9 @@ body, html {
     justify-content: center;
     background: none;
     z-index: 2;
-
-  /* box-shadow: 0 0 8px #d3dde0; */
+}
+.chooseArea * {
+  opacity: 0;
 }
 .topArrow {
   position: absolute;
