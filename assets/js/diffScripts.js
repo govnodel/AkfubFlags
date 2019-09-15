@@ -12,22 +12,22 @@ $( document ).ready(function() {
 
   var currentX = '';
   var currentY = '';
-  var movementConstant = .05;
+  const movConst = .04;
   $(document).mousemove(function(e) {
 
     if(currentX == '') currentX = e.pageX;
-    var xdiff = e.pageX - currentX;
+    var xDiff = e.pageX - currentX;
     currentX = e.pageX;
 
     if(currentY == '') currentY = e.pageY;
-    var ydiff = e.pageY - currentY;
+    var yDiff = e.pageY - currentY;
     currentY = e.pageY;
 
     $('.flack').each(function(i, el) {
-      var movement = (i + 1) * (xdiff * movementConstant);
-	    var movementy = (i + 1) * (ydiff * movementConstant);
-      var newX = $(el).position().left + movement;
-	    var newY = $(el).position().top + movementy;
+      var movX = xDiff * movConst;
+	    var movY = yDiff * movConst;
+      var newX = $(el).position().left - movX;
+	    var newY = $(el).position().top - movY;
       $(el).css('left', newX + 'px');
 	    $(el).css('top', newY + 'px');
     });
