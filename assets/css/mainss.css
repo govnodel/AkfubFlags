@@ -43,12 +43,14 @@ body {
 }
 #first > h1:nth-child(2) {
   margin-top: -6vh;
-  width: 34%;
-  margin-left: -17%;
+  width: 42%;
+  margin-left: -21%;
 }
-#first > svg {
+#first > object {
+  top: 17vh;
+  width: 200px;
+  height: 200px;
   position: relative;
-  top: 26vh;
   cursor: pointer;
   animation-iteration-count: infinite;
   animation-name: strelkaJumping;
