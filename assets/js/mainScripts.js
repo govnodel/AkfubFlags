@@ -2,8 +2,6 @@ var reload;
 var pushed = true;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
-var profInto = "profileButtonInto 1s linear forwards";
-var profOutto = "profileButtonOutto 1s linear forwards";
 var profile = document.getElementById('profilemenu');
 var button = document.getElementById('buttonprofile');
 var first = document.getElementById('first');
@@ -27,15 +25,15 @@ function pushMenu(){
 			left: '0px'
 		}, 500);
 		$('#buttonprofile').animate({
-			left: '25%'
-		}, 550);
+			left: '29%'
+		}, 500);
 		button.style.animation = "pushButton 0.8s linear forwards";
 		pushed = false;
 	} else {
 		$("#profilemenu *:not(#logRegMenu)").fadeOut(800);
 		$('#buttonprofile').animate({
 			left: '0px'
-		}, 700);
+		}, 800);
 		button.style.animation = "pullButton 0.8s linear forwards";
 		$('#profilemenu').animate({
 			left: '-30%'
@@ -49,7 +47,6 @@ $(function() {
 	if(reload == "1"){
 		first.style.animation = outto;
 		second.style.animation = outto;
-		arrow.style.animation = profOutto;
 		reload = "0";
 		sessionStorage.setItem("reload", reload);
 	}
@@ -61,7 +58,6 @@ $(function() {
 function slowScroll(){
 	first.style.animation = into;
 	second.style.animation = into;
-	arrow.style.animation = profInto;
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
