@@ -1,5 +1,6 @@
 var regime;
-
+var diff = 1;
+const maxDiff = 2;
 $( document ).ready(function() {
   setTimeout(function(){
     $(".flack, .chooseArea *").animate({
@@ -42,8 +43,55 @@ $( document ).ready(function() {
       regime = "m:o";
       redir();
     });
+
+    $(".rightLevelArrow").bind("click", right);
+
+    $(".leftLevelArrow").on("click", left);
+
   }, 300)
 });
+
+function right(){
+  $('.rightLevelArrow').unbind();
+  diff++;
+  if(diff > maxDiff){
+    diff = 1;
+  }
+  document.getElementsByClassName("lvl")[0].style.animation = "forward 0.4s linear forwards";
+  $(".lvl").animate({
+    left: "+=3%"
+  }, 400, function(){
+    $(".lvl").text("lv. " + diff);
+    $(".lvl").css("left", "-=6%");
+    document.getElementsByClassName("lvl")[0].style.animation = "back 0.4s linear forwards";
+    $(".lvl").animate({
+      left: "+=3%"
+    }, 400, function(){
+      $(".rightLevelArrow").bind("click", right);
+    });
+  });
+}
+
+function left(){
+  $('.leftLevelArrow').unbind();
+  diff--;
+  if(diff < 1){
+    diff = maxDiff;
+  }
+  document.getElementsByClassName("lvl")[0].style.animation = "forward 0.4s linear forwards";
+  $(".lvl").animate({
+    left: "-=3%"
+  }, 400, function(){
+    $(".lvl").text("lv. " + diff);
+    $(".lvl").css("left", "+=6%");
+    document.getElementsByClassName("lvl")[0].style.animation = "back 0.4s linear forwards";
+    $(".lvl").animate({
+      left: "-=3%"
+    }, 400, function(){
+      $(".leftLevelArrow").bind("click", left);
+    });
+  });
+}
 
 function redir(){
   $(".upblock").animate({
@@ -56,7 +104,7 @@ function redir(){
         height: '16vh'
       }, 460);
       setTimeout(function(){
-        window.location.href = "gayme.php?op=" + regime;
+        window.location.href = "gayme.php?op=" + regime + ":" + diff;
       }, 460);
     }, 140);
   });

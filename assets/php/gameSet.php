@@ -2,7 +2,7 @@
 $query = "SELECT name FROM flags WHERE modern = ";
 $options = explode(':', $_GET["op"]);
 
-$diff = 1;
+$diff = $options[2];
 
 switch ($options[0]) {
   case "m":
