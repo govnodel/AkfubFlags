@@ -64,10 +64,10 @@ body, html {
   top: 22vh;
 }
 .chooseArea > .lvl {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-family: 'Oswald', sans-serif;
     color: #b9c1c4;
-    margin: 8%;
+    margin: 15%;
     position: relative;
 }
 .leftLevelArrow, .rightLevelArrow, .bottomArrow, .topArrow {
@@ -76,10 +76,11 @@ body, html {
 }
 .leftLevelArrow {
   left: 42%;
+
   /* transform: rotate(45); */
 }
 .rightLevelArrow {
-  right: 40%;
+  right: 42%;
 }
 .chooseArea > button {
     text-align: center;
@@ -88,7 +89,6 @@ body, html {
     height: 10vh;
     border-radius: 20px;
     background: none;
-    border: none;
     cursor: pointer;
     outline: none;
     overflow: hidden;
