@@ -52,9 +52,9 @@ svg.kruglyash text {
   position: relative;
 }
 #flags {
-  width: 650px;
-  left: 50%;
-  top: 60vh;
+  width: 780px;
+  left: 47%;
+  top: 52vh;
   position: absolute;
   margin-left: -325px;
   margin-top: -200px;
@@ -63,8 +63,8 @@ svg.kruglyash text {
   justify-content: center;
 }
 #flags > img {
-  width: 300px;
-  height: 180px
+  width: 380px;
+  height: 240px
 }
 /* Нужно скоратить */
 #flag0, #flag1, #flag2, #flag3{
