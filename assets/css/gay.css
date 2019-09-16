@@ -9,7 +9,7 @@ html, body {
 body *:not(#upblock){
   opacity: 0;
 }
-svg.kruglyash circle {
+#circle {
   transform: rotate(-90deg);
   stroke-width: 8px;
   stroke: white;
@@ -18,7 +18,7 @@ svg.kruglyash circle {
   -webkit-animation: timer 10s linear;
   animation-fill-mode: forwards;
 }
-#circle2 {
+#innerCircle {
   stroke: red;
   stroke-width: 5px;
 }
