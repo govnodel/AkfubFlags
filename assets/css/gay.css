@@ -20,7 +20,7 @@ body *:not(#upblock){
 }
 #innerCircle {
   transform: rotate(-90deg);
-  stroke: red;
+  stroke: #00236B;
   stroke-width: 5px;
 }
 #upblock {
