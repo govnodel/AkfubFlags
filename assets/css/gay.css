@@ -43,7 +43,7 @@ svg.kruglyash text {
 #country {
   font-family: 'Oswald', sans-serif;
   font-weight: 1;
-  font-size: 4.5em;
+  font-size: 6.5em;
   color: white;
   float: left;
   margin-left: auto;
@@ -79,8 +79,8 @@ svg.kruglyash text {
   margin: 2px
 }
 #lives > img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   float: left;
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
   position: absolute;
@@ -90,15 +90,15 @@ svg.kruglyash text {
 }
 /* Чекай вот это оптимизированное решение я придумал (АХАХАХАХАХАХА срабатало сука))..) */
 #lives > img:nth-child(2) {
-  transform: translateX(40px);
+  transform: translateX(80px);
 }
 #lives > img:nth-child(3) {
-  transform: translateX(80px);
+  transform: translateX(160px);
 }
 
 #nolives > img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   float: left;
   clear: right;
   /* Делаю позицию, спорим, нихуя не получиться (ну собсна, чтд @ АГА САСАТЬ Я СДЕЛАЛ) */
@@ -108,10 +108,10 @@ svg.kruglyash text {
   margin-top: -20px;
 }
 #nolives > img:nth-child(2) {
-  padding-left: 40px;
+  padding-left: 80px;
 }
 #nolives > img:nth-child(3) {
-  padding-left: 80px;
+  padding-left: 160px;
 }
 #vsyapoloska {
   width: 100%;
