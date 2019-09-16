@@ -53,7 +53,7 @@ body {
   animation-name: strelkaJumping;
   animation-duration: 1s;
   animation-delay: 0.9s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
 #first > h4 {
   color: white;
@@ -148,8 +148,8 @@ body {
   0% {
     transform: none;
   }
-  20% {
-    transform: translateY(15%)
+  40% {
+    transform: translateY(30%)
   }
   100% {
     transform: none;
