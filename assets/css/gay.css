@@ -170,7 +170,7 @@ svg.kruglyash text {
 
  100% {
    opacity: 0;
-   transform: scale(2.5) translatex(16px);
+   transform: scale(2.5) translatex(26px);
  }
 }
 @keyframes live3  {
@@ -179,7 +179,7 @@ svg.kruglyash text {
  }
  100% {
    opacity: 0;
-   transform: scale(2.5) translatex(32px);
+   transform: scale(2.5) translatex(46px);
  }
 }
 
