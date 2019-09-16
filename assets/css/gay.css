@@ -11,12 +11,16 @@ body *:not(#upblock){
 }
 svg.kruglyash circle {
   transform: rotate(-90deg);
-  stroke-width: 10px;
+  stroke-width: 8px;
   stroke: white;
   stroke-dasharray: 300%;
   animation: timer 10s linear;
   -webkit-animation: timer 10s linear;
   animation-fill-mode: forwards;
+}
+#circle2 {
+  stroke: red;
+  stroke-width: 5px;
 }
 #upblock {
   margin-top: 0;
