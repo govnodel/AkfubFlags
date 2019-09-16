@@ -15,9 +15,9 @@ require "assets/php/gameSet.php"
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
     <svg class="kruglyash" width="91" height="91" fill = 'none'>
+      <circle id = "innerCircle" cx = "-45" cy = "45" r = "40"/>
       <circle id = "circle" cx = "-45" cy = "45" r = "40"/>
       <text id="timer_sec" x = "36" y = "56" fill = "white" >10</text>
-      <circle id = "innerCircle" cx = "-45" cy = "45" r = "40"/>
     </svg>
     <p id = "country">Lubava</p>
     <div id="nolives">
