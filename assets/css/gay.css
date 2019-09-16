@@ -179,7 +179,7 @@ svg.kruglyash text {
  }
  100% {
    opacity: 0;
-   transform: scale(2.5) translatex(46px);
+   transform: scale(2.5) translatex(56px);
  }
 }
 
