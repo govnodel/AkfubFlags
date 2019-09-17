@@ -53,6 +53,7 @@ $( document ).ready(function() {
 
 function right(){
   $('.rightLevelArrow').unbind();
+  $('.leftLevelArrow').unbind();
   diff++;
   if(diff > maxDiff){
     diff = 1;
@@ -68,11 +69,13 @@ function right(){
       left: "+=3%"
     }, 400, function(){
       $(".rightLevelArrow").bind("click", right);
+      $(".leftLevelArrow").bind("click", left);
     });
   });
 }
 
 function left(){
+  $('.rightLevelArrow').unbind();
   $('.leftLevelArrow').unbind();
   diff--;
   if(diff < 1){
@@ -88,6 +91,7 @@ function left(){
     $(".lvl").animate({
       left: "-=3%"
     }, 400, function(){
+      $(".rightLevelArrow").bind("click", right);
       $(".leftLevelArrow").bind("click", left);
     });
   });
