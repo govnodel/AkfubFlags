@@ -92,6 +92,7 @@ body, html {
     cursor: pointer;
     outline: none;
     overflow: hidden;
+    border: none;
 }
 .chooseArea > button > p {
   margin: auto;
