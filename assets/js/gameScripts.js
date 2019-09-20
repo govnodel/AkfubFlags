@@ -145,7 +145,7 @@ function nonExit(){
   } while (endFlag);
 
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
       opacity: 1
     }, 500);
     setTimeout(function(){
@@ -158,7 +158,9 @@ function nonExit(){
       } else {
         circleEl.style.animation = "timer2 10s linear forwards";
       }
-
+      $("#circle").animate({
+        opacity: 1
+      }, 120);
       interval = setInterval(passSec, 1000);
     }, 500);
   }, 100);
