@@ -13,7 +13,7 @@ var counter = 0;
 startGame();
 
 function startGame(){
-  document.getElementById("timer_sec").setAttributeNS(null, 'x', 48);
+  document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
@@ -56,6 +56,7 @@ function setFlags(){
 
 function passSec(){
   seconds--;
+  document.getElementById("timer_sec").setAttributeNS(null, 'x', 36);
   // $("#timer_sec").text(seconds);
   if(seconds > 100){
     liveDecrease();
@@ -126,6 +127,7 @@ function nonExit(){
   seconds = 10;
   repeat[repeat.length] = winName;
 
+  document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   $("#timer_sec").text(seconds);
 
   let endFlag = true;
