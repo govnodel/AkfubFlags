@@ -2,7 +2,6 @@ var regime;
 var diff = 1;
 const maxDiff = 2;
 $( document ).ready(function() {
-  document.getElementById("timer_sec").setAttributeNS(null, 'x', 48);
   setTimeout(function(){
     $(".flack, .chooseArea *").animate({
       opacity: 1

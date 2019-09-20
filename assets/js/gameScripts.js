@@ -13,6 +13,7 @@ var counter = 0;
 startGame();
 
 function startGame(){
+  document.getElementById("timer_sec").setAttributeNS(null, 'x', 48);
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
