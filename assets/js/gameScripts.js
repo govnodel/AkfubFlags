@@ -160,7 +160,7 @@ function nonExit(){
       }
       $("#circle").animate({
         opacity: 1
-      }, 120);
+      }, 320);
       interval = setInterval(passSec, 1000);
     }, 500);
   }, 100);
