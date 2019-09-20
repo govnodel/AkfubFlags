@@ -55,7 +55,7 @@ function setFlags(){
 
 function passSec(){
   seconds--;
-  $("#timer_sec").text(seconds);
+  // $("#timer_sec").text(seconds);
   if(seconds > 100){
     liveDecrease();
   }
@@ -104,7 +104,7 @@ function refresh(exit){
   }
 
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle").animate({
       opacity: 0
     }, 300);
     setTimeout(function(){
@@ -142,7 +142,7 @@ function nonExit(){
   } while (endFlag);
 
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle").animate({
       opacity: 1
     }, 500);
     setTimeout(function(){
