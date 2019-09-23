@@ -112,6 +112,14 @@ body {
   animation-iteration-count: infinite;
   animation-name: playButton;
 }
+#regime {
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  color: white;
+  opacity: 1;
+  left: 72em;
+  margin-top: -3em;
+}
 @keyframes into{
   0% {
     background-color: #9426e2

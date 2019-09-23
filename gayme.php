@@ -14,13 +14,13 @@ require "assets/php/gameSet.php"
 </head>
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
-    <p>TEST</p>
     <svg class="kruglyash" width="91" height="91" fill = 'none'>
       <circle id = "innerCircle" cx = "-45" cy = "45" r = "40"/>
       <circle id = "circle" cx = "-45" cy = "45" r = "40"/>
       <text id="timer_sec" x = "36" y = "58" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
+    <p id = "regime">MODERN|EASY</p>
     <div id="nolives">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
