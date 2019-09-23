@@ -51,7 +51,7 @@ svg.kruglyash text {
   font-size: 5.5em;
   color: white;
   float: left;
-  margin-left: auto;
+  margin-left: 44vw;
   margin-right: auto;
   /* Позиционирование ебать */
   position: relative;
@@ -128,9 +128,9 @@ svg.kruglyash text {
   font-family: 'Oswald', sans-serif;
   position: relative;
   color: white;
-  opacity: 1;
-  left: 72em;
-  margin-top: -3em;
+  left: -3.2em;
+  margin-top: -1em;
+  font-size: 3em;
 }
 @keyframes timer {
   from {
