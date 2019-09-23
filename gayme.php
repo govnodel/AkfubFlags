@@ -14,6 +14,7 @@ require "assets/php/gameSet.php"
 </head>
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
+    <p>TEST</p>
     <svg class="kruglyash" width="91" height="91" fill = 'none'>
       <circle id = "innerCircle" cx = "-45" cy = "45" r = "40"/>
       <circle id = "circle" cx = "-45" cy = "45" r = "40"/>
