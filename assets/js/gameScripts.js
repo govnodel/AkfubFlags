@@ -1,6 +1,7 @@
 //make stat
 
 var repeat = [];
+var right = [];
 var winPos;
 var winName;
 var interval;
@@ -79,10 +80,15 @@ function checkEnd(){
 }
 
 function stat(){
+  let rightStr = '';
+  for (var i = 0; i < right.length; i++) {
+    rightStr += ':' + right[i];
+  }
   let stats = {
     victory: '',
     counter: (counter + ''),
-    right: (7 + lives + '')
+    right: (7 + lives + ''),
+    rightNames: rightStr
   };
   if (lives <= 0) {
     stats.victory = '0'
@@ -92,17 +98,17 @@ function stat(){
   return stats;
 }
 
-// function ajaxStats(stats){
-//   $.ajax({
-//     type:'POST',
-//     url:'winornot.php',
-//     dataType:'json',
-//     data:"stats = " + JSON.stringify(stats),
-//     success:function() {
-//       alert("success");
-//     }
-//   });
-// }
+/*function ajaxStats(stats){
+  $.ajax({
+    type:'POST',
+    url:'winornot.php',
+    dataType:'json',
+    data:"stats = " + JSON.stringify(stats),
+    success:function() {
+      alert("success");
+    }
+  });
+}*/
 
 function refresh(flag, stats){
   clearInterval(interval);
@@ -188,6 +194,7 @@ function clickFlag(){
   if(this.id != ("flag" + winPos)){
     liveDecrease();
   } else {
+    right[right.length] = winName;
     checkEnd();
   }
 }
