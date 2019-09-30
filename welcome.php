@@ -9,7 +9,7 @@
   <title>Document</title>
 </head>
 <body>
-  Welcome <?php echo $_SESSION["loginIn"]; ?>
+  Welcome <?php echo $_SESSION["loginInFlags"]; ?>
 </body>
 <script type="text/javascript">
   setTimeout(function(){

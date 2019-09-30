@@ -1,9 +1,9 @@
 <?php
- if (isset($_POST["doneIn"])){
+ if (isset($_POST["doneInFlags"])){
   $login = htmlspecialchars($_POST["loginIn"]);
   $pass = htmlspecialchars($_POST["passIn"]);
-  $_SESSION["loginIn"]=$login;
-  $_SESSION["passIn"]=$pass;
+  $_SESSION["loginInFlags"]=$login;
+  $_SESSION["passInFlags"]=$pass;
   $error=false;
   $error_loginIn="";
   $error_passIn="";

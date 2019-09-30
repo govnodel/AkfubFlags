@@ -4,10 +4,10 @@
   $login = htmlspecialchars($_POST["login"]);
   $pass = htmlspecialchars($_POST["pass"]);
   $verif = htmlspecialchars($_POST["verif"]);
-  $_SESSION["email"]=$email;
-  $_SESSION["login"]=$login;
-  $_SESSION["pass"]=$pass;
-  $_SESSION["verif"]=$verif;
+  $_SESSION["emailInFlags"]=$email;
+  $_SESSION["loginInFlags"]=$login;
+  $_SESSION["passInFlags"]=$pass;
+  $_SESSION["verifInFlags"]=$verif;
   $error=false;
   $error_email="";
   $error_login="";
@@ -36,8 +36,8 @@
     $query = pg_query($connect, "SELECT * FROM ourusers WHERE login = '".$login."'");
     $numrows = pg_num_rows($query);
     if($numrows == 0){
-      $result = pg_query("INSERT INTO ourusers(login, password, mail, stats)
-      VALUES('$login','$pass', '$email', 'hi')");
+      $result = pg_query("INSERT INTO ourusers(login, password, mail)
+      VALUES('$login','$pass', '$email')");
       header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";

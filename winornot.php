@@ -1,3 +1,6 @@
+<<?php
+  require "assets/php/statistic.php"
+ ?>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">

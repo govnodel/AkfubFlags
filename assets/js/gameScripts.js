@@ -73,22 +73,40 @@ function liveDecrease(){
 
 function checkEnd(){//make win branch
   if((counter >= 9) || (lives <= 0)){
-    exit();
+    refresh(true, stat());
   } else {
-    refresh(false);
+    refresh(false, "");
   }
 }
 
-function exit(){
-  stat();
-  refresh(true);
+function stat(){//victory, ansProcent, ansQuantity
+  let str = counter + "";
+
+  if (lives <= 0) {
+    str += ":f";
+  } else {
+    str += ":t";
+  }
+  return str;
+
+
 }
 
-function stat(){
+function test(){
+  let ob = {'id':3};
 
+  $.ajax({
+    type:'POST',
+    url:'winornot.php',
+    dataType:'json',
+    data:"stats=" + JSON.stringify(ob),
+    success:function() {
+      alert("success");
+    }
+  });
 }
 
-function refresh(exit){
+function refresh(flag, str){
   clearInterval(interval);
 
   counter++;
@@ -110,7 +128,7 @@ function refresh(exit){
       opacity: 0
     }, 300);
     setTimeout(function(){
-      if (exit) {
+      if (flag) {
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
@@ -167,6 +185,7 @@ function nonExit(){
 }
 
 function clickFlag(){
+  test();
   if(this.id != ("flag" + winPos)){
     liveDecrease();
   } else {
