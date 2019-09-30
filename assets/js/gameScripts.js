@@ -1,5 +1,4 @@
 //make stat
-//make circle opacity animation
 
 var repeat = [];
 var winPos;
@@ -71,7 +70,7 @@ function liveDecrease(){
   checkEnd();
 }
 
-function checkEnd(){//make win branch
+function checkEnd(){
   if((counter >= 9) || (lives <= 0)){
     refresh(true, stat());
   } else {
@@ -79,34 +78,33 @@ function checkEnd(){//make win branch
   }
 }
 
-function stat(){//victory, ansProcent, ansQuantity
-  let str = counter + "";
-
+function stat(){
+  let stats = {
+    victory: '',
+    counter: (counter + ''),
+    right: (7 + lives + '')
+  };
   if (lives <= 0) {
-    str += ":f";
+    stats.victory = '0'
   } else {
-    str += ":t";
+    stats.victory = '1'
   }
-  return str;
-
-
+  return stats;
 }
 
-function test(){
-  let ob = {'id':3};
+// function ajaxStats(stats){
+//   $.ajax({
+//     type:'POST',
+//     url:'winornot.php',
+//     dataType:'json',
+//     data:"stats = " + JSON.stringify(stats),
+//     success:function() {
+//       alert("success");
+//     }
+//   });
+// }
 
-  $.ajax({
-    type:'POST',
-    url:'winornot.php',
-    dataType:'json',
-    data:"stats=" + JSON.stringify(ob),
-    success:function() {
-      alert("success");
-    }
-  });
-}
-
-function refresh(flag, str){
+function refresh(flag, stats){
   clearInterval(interval);
 
   counter++;
@@ -132,6 +130,7 @@ function refresh(flag, str){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
+          //ajaxStats(stats);
           window.location.href = "winornot.php";
         });
       } else {
