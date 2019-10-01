@@ -1,4 +1,4 @@
-$("#test").bind("click", createCookie);
+$("#button").bind("click", createCookie);
 
 function createCookie() {
   let date = new Date(Date.now() + 86400e3);
