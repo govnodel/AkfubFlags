@@ -1,3 +1,4 @@
 <?php
-    echo $_COOKIE["stats"]; 
+echo "hi";
+    echo $_COOKIE["stats"];
 ?>
