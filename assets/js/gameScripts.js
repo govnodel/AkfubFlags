@@ -98,21 +98,12 @@ function stat(){
   return stats;
 }
 
+function sendStats(stats) {
+  let date = new Date(Date.now() + 86400e3);
+  date = date.toUTCString();
 
-
-// function sendStats(stats){
-//   let http = new XMLHttpRequest();
-//   http.open('POST', 'winornot.php', true);
-//
-//   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//
-//   http.onreadystatechange = function() {//Call a function when the state changes.
-//     if(http.readyState == 4 && http.status == 200) {
-//       alert(http.responseText);
-//     }
-//   }
-//   http.send('stats=' + stats);
-// }
+  document.cookie = "stats=" + encodeURIComponent(stats) + "; path=/";
+}
 
 function refresh(flag, stats){
   clearInterval(interval);
@@ -140,7 +131,7 @@ function refresh(flag, stats){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
-          //ajaxStats(stats);
+          sendStats(stats);
           window.location.href = "winornot.php";
         });
       } else {
