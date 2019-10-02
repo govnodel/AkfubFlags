@@ -1,5 +1,7 @@
 <<?php
-  require "assets/php/statistic.php"
+  $test = $_COOKIE["statsT"];
+  echo "stats:".$test;
+  unset($_COOKIE["stats"]);
  ?>
 <html lang="ru">
 <head>

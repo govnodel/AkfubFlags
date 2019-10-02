@@ -102,7 +102,7 @@ function sendStats(stats) {
   let date = new Date(Date.now() + 86400e3);
   date = date.toUTCString();
 
-  document.cookie = "stats=" + encodeURIComponent(stats) + "; path=/";
+  document.cookie = "statsT=" + encodeURIComponent(stats) + "; path=/";
 }
 
 function refresh(flag, stats){
