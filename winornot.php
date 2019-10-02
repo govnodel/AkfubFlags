@@ -1,8 +1,4 @@
-<<?php
-  $test = $_COOKIE["statsT"];
-  echo "statsT:";
-  unset($_COOKIE["stats"]);
- ?>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -13,5 +9,10 @@
 </head>
 <body>
   <h1 class="title">TEST</h1>
+  <?php
+    $test = $_COOKIE["statsT"];
+    echo "statsT:".$test;
+    unset($_COOKIE["stats"]);
+   ?>
 </body>
 </html>
