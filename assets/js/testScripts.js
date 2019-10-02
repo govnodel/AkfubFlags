@@ -1,4 +1,4 @@
-document.getElementById().addEventListener("click", sendStats);
+document.getElementById("button").addEventListener("click", sendStats);
 
 function sendStats() {
   // let date = new Date(Date.now() + 86400e3);
