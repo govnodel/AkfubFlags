@@ -1,6 +1,4 @@
-<?php
-  setcookie("test", "kol", time() + (86400 * 30), "/");
-  ?>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
