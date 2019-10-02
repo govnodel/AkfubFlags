@@ -80,29 +80,27 @@ function checkEnd(){
 }
 
 function stat(){
+  let stats;
   let rightStr = '';
   for (var i = 0; i < right.length; i++) {
     rightStr += ':' + right[i];
   }
-  let stats = {
-    victory: '',
-    counter: (counter + ''),
-    right: (7 + lives + ''),
-    rightNames: rightStr
-  };
+
   if (lives <= 0) {
-    stats.victory = '0'
+    stats = '0'
   } else {
-    stats.victory = '1'
+    stats = '1'
   }
+  stats += ":" + counter + ":" + (7 + lives) + rightStr;
+
   return stats;
 }
 
 function sendStats(stats) {
-  let date = new Date(Date.now() + 86400e3);
-  date = date.toUTCString();
+  // let date = new Date(Date.now() + 86400e3);
+  // date = date.toUTCString();
 
-  document.cookie = "statsT=" + encodeURIComponent(stats) + "; path=/";
+  document.cookie = "stats=" + encodeURIComponent(stats) + "; path=/";
 }
 
 function refresh(flag, stats){

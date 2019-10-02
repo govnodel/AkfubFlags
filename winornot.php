@@ -10,8 +10,7 @@
 <body>
   <h1 class="title">TEST</h1>
   <?php
-    setcookie("test", "kol", time() + (86400 * 30), "/");
-    echo "statsT:" . htmlspecialchars($_COOKIE["test"]);
+    echo "stats:" . $_COOKIE["stats"];
    ?>
 </body>
 </html>
