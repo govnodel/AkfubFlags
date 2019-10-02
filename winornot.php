@@ -1,6 +1,6 @@
 <<?php
   $test = $_COOKIE["statsT"];
-  echo "stats:".$test;
+  echo "stats:";
   unset($_COOKIE["stats"]);
  ?>
 <html lang="ru">
