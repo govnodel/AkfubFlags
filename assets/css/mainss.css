@@ -47,7 +47,7 @@ body {
   margin-left: -21%;
 }
 #buttonscroll {
-  top: 26vh;
+  top: 45vh;
   width: 120px;
   height: 47px;
   position: relative;
@@ -241,15 +241,7 @@ label.HochuCursor {
   margin-left: -12%;
   font-size: 2em;
 }
-#first > svg {
-  top: 38vh;
-}
-#second > #buttonplay {
-  width: 300px;
-  height: 300px;
-  stroke-width:
-}
-@media (max-width: 1441px) {
+/* @media (max-width: 1441px) {
   #first > h1 {
     font-size: 7em;
 
@@ -265,8 +257,8 @@ label.HochuCursor {
     font-size: 5.5em;
     top: 25vh;
   }
-}
-@media (max-width: 2561px) {
+} */
+/* @media (max-width: 2561px) {
     #first > h1 {
       top: 25vh;
       width: 45%;
@@ -285,4 +277,4 @@ label.HochuCursor {
     height: 58px;
     top: 35vh;
   }
-}
+} */
