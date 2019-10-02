@@ -48,6 +48,8 @@ body {
 }
 #buttonscroll {
   top: 26vh;
+  width: 120px;
+  height: 47px;
   position: relative;
   animation-iteration-count: infinite;
   animation-name: strelkaJumping;
@@ -227,7 +229,26 @@ body {
 label.HochuCursor {
   cursor: pointer;
 }
+#first > h1:nth-child(2) {
+  width: 50%;
+  margin-left: -25%;
+  font-size: 5.5em;
 
+}
+#first > h4 {
+  width: 24%;
+  top: 45vh;
+  margin-left: -12%;
+  font-size: 2em;
+}
+#first > svg {
+  top: 38vh;
+}
+#second > #buttonplay {
+  width: 300px;
+  height: 300px;
+  stroke-width:
+}
 @media (max-width: 1441px) {
   #first > h1 {
     font-size: 7em;
@@ -244,24 +265,24 @@ label.HochuCursor {
     font-size: 5.5em;
     top: 25vh;
   }
+}
+@media (max-width: 2561px) {
+    #first > h1 {
+      top: 25vh;
+      width: 45%;
+      margin-left: -22.5%;
+      font-size: 11em;
+  }
   #first > h1:nth-child(2) {
-    width: 50%;
-    margin-left: -25%;
-    font-size: 5.5em;
-
+    font-size: 12em;
   }
   #first > h4 {
-    width: 24%;
-    top: 45vh;
-    margin-left: -12%;
-    font-size: 2em;
+    top: 40vh;
+    font-size: 5em;
   }
   #first > svg {
-    top: 38vh;
-  }
-  #second > #buttonplay {
-    width: 300px;
-    height: 300px;
-    stroke-width:
+    width: 150px;
+    height: 58px;
+    top: 35vh;
   }
 }

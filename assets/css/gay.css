@@ -51,8 +51,7 @@ svg.kruglyash text {
   font-size: 5.5em;
   color: white;
   float: left;
-  margin-left: 44vw;
-  margin-right: auto;
+  margin: auto;
   /* Позиционирование ебать */
   position: relative;
 }
@@ -126,9 +125,9 @@ svg.kruglyash text {
 }
 #regime {
   font-family: 'Oswald', sans-serif;
-  position: relative;
+  position: absolute;
   color: white;
-  left: -3.2em;
+  left: 79%;
   margin-top: -1em;
   font-size: 3em;
 }
