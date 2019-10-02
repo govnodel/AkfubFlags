@@ -1,3 +1,5 @@
 <?php
-  echo $_COOKIE["stats"];
+  $test = $_COOKIE["stats"];
+  echo "stats:".$test;
+  unset($_COOKIE["stats"]);
  ?>

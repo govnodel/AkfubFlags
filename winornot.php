@@ -1,6 +1,4 @@
-<<?php
-  require "assets/php/statistic.php"
- ?>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -11,5 +9,8 @@
 </head>
 <body>
   <h1 class="title">TEST</h1>
+  <?php
+    echo "stats:" . $_COOKIE["stats"];
+   ?>
 </body>
 </html>
