@@ -1,6 +1,5 @@
 <?php
-  setcookie("test","hi");
-  $test = $_COOKIE["test"];
-  echo $test;
+  $test = $_COOKIE["stats"];
+  echo "stats:".$test;
   unset($_COOKIE["stats"]);
  ?>
