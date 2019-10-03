@@ -5,9 +5,9 @@
 
 
   function insertStats($newStats){
-    $nquery = pg_query($connect, "SELECT victories FROM ourusers WHERE id = '3'");//.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
+    $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = '3';");//.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = '".$login."'");
-    if (!$nquery) {   //D
+    if (!$query) {   //D
       echo "falseSS";  //D
     } else {         //D
       echo "true";   //D
