@@ -1,5 +1,6 @@
 <?php
   if ($_COOKIE["userIdInFlags"] != "") {
+    echo "yes cookie";     //D
     insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
   }
 
