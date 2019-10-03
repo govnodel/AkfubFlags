@@ -5,7 +5,7 @@
 
 
   function insertStats($newStats){
-    $query = pg_query($connect, "SELECT victories, games, answersProcent, answersQuantity, score FROM ourusers WHERE id = '".$_COOKIE["userIdInFlags"]."'");
+    $query = pg_query($connect, "SELECT victories, games, answersProcent, answersQuantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"]);
 
     if (!$query) {
       echo "false";
