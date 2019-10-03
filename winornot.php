@@ -1,4 +1,5 @@
 <?php
+  require "assets/php/connection.php";
   require "assets/php/insertStats.php";
  ?>
 <html lang="ru">

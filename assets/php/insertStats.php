@@ -1,13 +1,12 @@
 <?php
   if ($_COOKIE["userIdInFlags"] != "") {
-    echo "yes cookie";     //D
     insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
   }
 
 
   function insertStats($newStats){
     $query = pg_query($connect, "SELECT victories, games, answersProcent, answersQuantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"]);
-
+    // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = '".$login."'");
     if (!$query) {   //D
       echo "false";  //D
     } else {         //D
