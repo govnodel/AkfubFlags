@@ -7,13 +7,14 @@
   function insertStats($newStats){
     $query = pg_query($connect, "SELECT victories, games, answersProcent, answersQuantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"]);
 
-    if (!$query) {
-      echo "false";
-    } else {
-      echo "true";
-    }
+    if (!$query) {   //D
+      echo "false";  //D
+    } else {         //D
+      echo "true";   //D
+    }                //D
 
     while($row = pg_fetch_row($query)){
+      echo "hi";     //D
       $victories = $row[0];
       $games = $row[1];
       $ansProc = $row[2];
