@@ -96,13 +96,6 @@ function stat(){
   return stats;
 }
 
-function sendStats(stats) {
-  // let date = new Date(Date.now() + 86400e3);
-  // date = date.toUTCString();
-
-  document.cookie = "stats=" + encodeURIComponent(stats) + "; path=/";
-}
-
 function refresh(flag, stats){
   clearInterval(interval);
 
@@ -129,7 +122,7 @@ function refresh(flag, stats){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
-          sendStats(stats);
+          document.cookie = "statsInFlags=" + encodeURIComponent(stats) + "; path=/";
           window.location.href = "winornot.php";
         });
       } else {

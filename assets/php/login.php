@@ -16,14 +16,14 @@
     $error = true;
   }
   if (!$error){
-    $str = "SELECT login, password FROM ourusers WHERE login = '".$login."'";
-    $query = pg_query($connect, $str);
+    $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = '".$login."'");
     $numrows = pg_num_rows($query);
     if($numrows == 0){
       $error_loginIn = "User does not exist";
     } else {
       while($row = pg_fetch_row($query)){
         if($row[1] == $pass){
+          setcookie("userIdInFlags", $row[0]);
           header("Location: welcome.php");
         } else {
           $error_passIn = "Wrong password";
