@@ -13,11 +13,11 @@
 </head>
 <body>
     <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
-      <input type="text" name="loginIn" placeholder="Login" value="<?=$_SESSION["loginIn"]?>">
-      <p><?=$error_loginIn?></p>
-      <input type="password" name="passIn" placeholder="Password">
-      <p><?=$error_passIn?></p>
-      <input type="submit" name="doneIn" value="Enter">
+      <input type="text" name="loginInFlags" placeholder="Login" value="<?=$_SESSION["loginInFlags"]?>">
+      <p><?=$error_loginInFlags?></p>
+      <input type="password" name="passInFlags" placeholder="Password">
+      <p><?=$error_passInFlags?></p>
+      <input type="submit" name="doneInFlags" value="Enter">
     </form>
 </body>
 </html>
