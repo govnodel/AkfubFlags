@@ -5,7 +5,7 @@
 
 
   function insertStats($newStats){
-    $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = '3';");//.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
+    $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");//.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = '".$login."'");
     if (!$query) {   //D
       echo "falseSS";  //D
