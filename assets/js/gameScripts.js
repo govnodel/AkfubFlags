@@ -91,7 +91,7 @@ function stat(){
   } else {
     stats = '1'
   }
-  stats += ":" + counter + ":" + (7 + lives) + rightStr;
+  stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
 
   return stats;
 }
