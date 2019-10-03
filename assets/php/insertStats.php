@@ -1,5 +1,8 @@
 <?php
-  insertStats($_COOKIE["statsInFlags"]);//0:4:3:Spain
+  if ($_COOKIE["userIdInFlags"] != "") {
+    insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
+  }
+
 
   function insertStats($newStats){
     $query = pg_query($connect, "SELECT victories, games, answersProcent, answersQuantity, score FROM ourusers WHERE id = '".$_COOKIE["userIdInFlags"]."'");
@@ -20,9 +23,11 @@
 
     $games++;
 
-    //ansProc
-
     $ansQua += ($stats[1] - $stats[2]);
+
+    $ansProc = (($ansProc * ($games - 1)) + $ansQua * 10) / $games;
+
+    $score += ($ansQua * 10);
 
     if (count($stats) > 3) {
       for ($i = 3; $i < count($stats); $i++) {
@@ -31,15 +36,12 @@
           $rating = $row[0];
         }
         $rating++;
-        pg_query($connect, "UPDATE flags SET rating = ".." WHERE id = 1;");
+        pg_query($connect, "UPDATE flags SET rating = ".$rating." WHERE name = '".$stats[$i]."'");
       }
-    } else {
-
     }
 
-    //"INSERT INTO ourusers(login, password, mail) VALUES ('$login','$pass', '$email')"
-
-    $result = pg_query($connect, "UPDATE ourusers SET victories = , games = , answersProcent = , answersQuantity = , score =  WHERE id = 1;");
+    $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories.", games = ".$games.", answersProcent = ".$ansProc.",
+        answersQuantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
   }
 
