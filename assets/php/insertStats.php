@@ -11,7 +11,9 @@
 
   function insertStats($newStats){
     //.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
-    $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
+    // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
+    $id = 3;
+    $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = ".$id.";");
     while ($row = pg_fetch_row($query)) {
       echo $row[0];
     }
