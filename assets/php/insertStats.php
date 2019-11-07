@@ -1,23 +1,24 @@
 <?php
-$query = pg_query($connect, "SELECT login FROM ourusers WHERE id = 3;");
-if (!$query) {
-  echo "Error\n";
-  exit;
-}
-while ($row = pg_fetch_row($query)) {
-  echo $row[0];
-}
-  if (true) {//$_COOKIE["userIdInFlags"] != ""
+insertStats();
+  //if (true) {//$_COOKIE["userIdInFlags"] != ""
     // $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");
     // while ($row = pg_fetch_row($query)) {
     //   echo $row[0];
     // }
-    insertStats();//$_COOKIE["statsInFlags"]//example 0:4:3:(score):Spain
-  }
+  //  insertStats();//$_COOKIE["statsInFlags"]//example 0:4:3:(score):Spain
+  //}
 
 
 
   function insertStats(){//$newStats
+    $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = 3;");
+    if (!$query) {
+      echo "Error\n";
+      exit;
+    }
+    while ($row = pg_fetch_row($query)) {
+      echo $row[0];
+    }
     //.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
 
@@ -64,6 +65,6 @@ while ($row = pg_fetch_row($query)) {
     // $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories.", games = ".$games.", answersProcent = ".$ansProc.",
     //     answersQuantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
-  }
+ }
 
  ?>
