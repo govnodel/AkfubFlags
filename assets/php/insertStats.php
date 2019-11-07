@@ -24,7 +24,7 @@
     //   $games = $row[1];
     //   $ansProc = $row[2];
     //   $ansQua = $row[3];
-      $score = $row[4];
+      $score = $row[3];
     }
     echo $victories;
     echo $score;
