@@ -1,5 +1,13 @@
 <?php
-insertStats();
+$id = 3;
+$query = pg_query($connect, "SELECT login FROM ourusers WHERE id = ".$id.";");
+if (!$query) {
+  echo "Error\n";
+  exit;
+}
+while ($row = pg_fetch_row($query)) {
+  echo $row[0];
+}
   //if (true) {//$_COOKIE["userIdInFlags"] != ""
     // $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");
     // while ($row = pg_fetch_row($query)) {
@@ -10,15 +18,8 @@ insertStats();
 
 
 
-  function insertStats(){//$newStats
-    $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = 3;");
-    if (!$query) {
-      echo "Error\n";
-      exit;
-    }
-    while ($row = pg_fetch_row($query)) {
-      echo $row[0];
-    }
+//$newStats
+
     //.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
 
@@ -64,7 +65,5 @@ insertStats();
     //
     // $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories.", games = ".$games.", answersProcent = ".$ansProc.",
     //     answersQuantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
-
- }
 
  ?>
