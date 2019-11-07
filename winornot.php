@@ -13,7 +13,7 @@
 <body>
   <h1 class="title">TEST</h1>
   <?php
-    echo "stats:" . $_COOKIE["statsInFlags"] . $_COOKIE["userIdInFlags"];
+    //echo "stats:" . $_COOKIE["statsInFlags"] . $_COOKIE["userIdInFlags"];
    ?>
 </body>
 </html>

@@ -1,7 +1,18 @@
 <?php
+$query = "SELECT name FROM flags";
+$result = pg_query($connect, $query);
+if (!$result) {
+  echo "Error\n";
+  exit;
+}
+while ($row = pg_fetch_row($result)) {
+  echo $row[0];
+}
   if ($_COOKIE["userIdInFlags"] != "") {
-    insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
+    //insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
+
   }
+
 
 
   function insertStats($newStats){
