@@ -1,22 +1,33 @@
 <?php
-$id = 3;
-$query = pg_query($connect, "SELECT login FROM ourusers WHERE id = ".$id.";");
-if (!$query) {
-  echo "Error\n";
-  exit;
-}
-while ($row = pg_fetch_row($query)) {
-  echo $row[0];
-}
-  //if (true) {//$_COOKIE["userIdInFlags"] != ""
-    // $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");
-    // while ($row = pg_fetch_row($query)) {
-    //   echo $row[0];
-    // }
-  //  insertStats();//$_COOKIE["statsInFlags"]//example 0:4:3:(score):Spain
+// $id = 3;
+// $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = ".$id.";");
+// if (!$query) {
+//   echo "Error\n";
+//   exit;
+// }
+// while ($row = pg_fetch_row($query)) {
+//   echo $row[0];
+// }
+
+
+
+
+  //if ($_COOKIE["userIdInFlags"] != "") {
+    $id = 3;//$_COOKIE["userIdInFlags"]; //example 0:4:3:(score):Spain
+    $query = pg_query($connect, "SELECT victories, games, ansProc, ansQua, score FROM ourusers WHERE id = ".$id.";");
+    while($row = pg_fetch_row($query)){
+      $victories = $row[0];
+      $games = $row[1];
+      $ansProc = $row[2];
+      $ansQua = $row[3];
+      $score = $row[4];
+    }
+    echo $victories;
+    echo $games;
+    echo $ansProc;
+    echo $ansQua;
+    echo $score;
   //}
-
-
 
 //$newStats
 
