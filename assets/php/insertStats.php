@@ -4,16 +4,16 @@
     // while ($row = pg_fetch_row($query)) {
     //   echo $row[0];
     // }
-    insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
+    insertStats();//$_COOKIE["statsInFlags"]//example 0:4:3:(score):Spain
   }
 
 
 
-  function insertStats($newStats){
+  function insertStats(){//$newStats
     //.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
     $id = 3;
-    $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = ".$id.";");
+    $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = 3;");
     while ($row = pg_fetch_row($query)) {
       echo $row[0];
     }
