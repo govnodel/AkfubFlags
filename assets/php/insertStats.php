@@ -19,13 +19,15 @@
       echo "error";
       exit;
     }
-    // while($row = pg_fetch_row($query)){
-    //   $victories = $row[0];
+    while($row = pg_fetch_row($query)){
+      $victories = $row[0];
     //   $games = $row[1];
     //   $ansProc = $row[2];
     //   $ansQua = $row[3];
-    //   $score = $row[4];
-    // }
+      $score = $row[1];
+    }
+    echo $victories;
+    echo $score;
     // echo $victories;
     // echo $games;
     // echo $ansProc;
