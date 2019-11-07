@@ -1,22 +1,28 @@
 <?php
-$query = "SELECT name FROM flags";
-$result = pg_query($connect, $query);
-if (!$result) {
-  echo "Error\n";
-  exit;
-}
-while ($row = pg_fetch_row($result)) {
-  echo $row[0];
-}
-  if ($_COOKIE["userIdInFlags"] != "") {
-    //insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
+// $query = "SELECT name FROM flags";
+// $result = pg_query($connect, $query);
+// if (!$result) {
+//   echo "Error\n";
+//   exit;
+// }
+// while ($row = pg_fetch_row($result)) {
+//   echo $row[0];
+// }
 
+
+
+  if (true) {$_COOKIE["userIdInFlags"] != ""
+    $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");
+    while ($row = pg_fetch_row($query)) {
+      echo $row[0];
+    }
+    //insertStats($_COOKIE["statsInFlags"]);//example 0:4:3:(score):Spain
   }
 
 
 
   function insertStats($newStats){
-    // $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");//.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
+    //.$_COOKIE["userIdInFlags"] | , games, answersProcent, answersQuantity, score
     $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
     if (!$query) {   //D
       echo "falseSS";  //D
