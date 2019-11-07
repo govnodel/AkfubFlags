@@ -11,7 +11,7 @@
 
 
 
-  if (true) {$_COOKIE["userIdInFlags"] != ""
+  if (true) {//$_COOKIE["userIdInFlags"] != ""
     $query = pg_query($connect, "SELECT victories FROM ourusers WHERE id = 3;");
     while ($row = pg_fetch_row($query)) {
       echo $row[0];
