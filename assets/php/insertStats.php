@@ -14,6 +14,10 @@
     // $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");
     $id = 3;
     $query = pg_query($connect, "SELECT login FROM ourusers WHERE id = 3;");
+    if (!$result) {
+      echo "Error\n";
+      exit;
+    }
     while ($row = pg_fetch_row($query)) {
       echo $row[0];
     }
