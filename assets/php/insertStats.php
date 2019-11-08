@@ -14,25 +14,23 @@
 
   //if ($_COOKIE["userIdInFlags"] != "") {
     $id = 3;//$_COOKIE["userIdInFlags"]; //example 0:4:3:(score):Spain
-    $query = pg_query($connect, "SELECT victories, games, quantity, score FROM ourusers WHERE id = ".$id.";");//,
+    $query = pg_query($connect, "SELECT victories, games, quantity, percent, score FROM ourusers WHERE id = ".$id.";");//,
     if (!$query) {
       echo "errorR";
       exit;
     }
     while($row = pg_fetch_row($query)){
       $victories = $row[0];
-    //   $games = $row[1];
-    //   $ansProc = $row[2];
-    //   $ansQua = $row[3];
-      $score = $row[3];
+      $games = $row[1];
+      $ansProc = $row[2];
+      $ansQua = $row[3];
+      $score = $row[4];
     }
     echo $victories;
+    echo $games;
+    echo $ansProc;
+    echo $ansQua;
     echo $score;
-    // echo $victories;
-    // echo $games;
-    // echo $ansProc;
-    // echo $ansQua;
-    // echo $score;
   //}
 
 
