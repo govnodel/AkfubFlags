@@ -25,7 +25,7 @@
 
     $ansQua += ($stats[1] - $stats[2]);
 
-    $ansProc = (($ansProc * ($games - 1)) + $ansQua * 10) / $games;
+    $ansProc = ($ansQua / ($games * 10)) * 100;
 
     $score += ($ansQua * 10);
 
@@ -47,10 +47,5 @@
       echo "error";
       exit;
     }
-    // echo $victories;
-    // echo $games;
-    // echo $ansProc;
-    // echo $ansQua;
-    // echo $score;
   }
  ?>
