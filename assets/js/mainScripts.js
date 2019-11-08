@@ -65,10 +65,9 @@ function slowScroll(){
 
 function signUp(event){
 	if(event.data.index == 1){
-		window.location.href = "test.php";
-		// window.location.href = "test.php";
+		window.location.href = "logPage.php";
 	} else {
-		window.location.href = "test.php";
+		window.location.href = "regPage.php";
 	}
 }
 
