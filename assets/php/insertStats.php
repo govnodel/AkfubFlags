@@ -1,7 +1,7 @@
 <?php
   if ($_COOKIE["userIdInFlags"] != "") {
     //example 0:4:3:(score):Spain
-    $query = pg_query($connect, "SELECT victories, games, quantity, percent, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+    $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
     if (!$query) {
       echo "error";
       exit;
