@@ -14,6 +14,9 @@
       $score = $row[4];
     }
 
+    echo $ansQua;
+    echo "   ";
+
     $stats = explode(':', $_COOKIE["statsInFlags"]);
 
     if ($stats[0] == 1) {
@@ -21,6 +24,8 @@
     }
 
     $games++;
+
+    echo ($stats[1] - $stats[2]);
 
     $ansQua += ($stats[1] - $stats[2]);
 
