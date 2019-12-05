@@ -127,6 +127,7 @@ function refresh(flag, stats){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
+          alert(stats);
           document.cookie = "statsInFlags=" + encodeURIComponent(stats) + "; path=/";
           window.location.href = "winornot.php";
         });
