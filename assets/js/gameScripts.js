@@ -124,7 +124,6 @@ function refresh(flag, stats){
     setTimeout(function(){
       if (flag) {
         repeat[repeat.length] = winName;
-        alert(repeat.length);
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
