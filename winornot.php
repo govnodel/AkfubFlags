@@ -13,6 +13,7 @@
 <body>
   <h1 class="title">TEST</h1>
   <?php
+    echo $_COOKIE["statsInFlags"]."</br>";
     for ($i = 0; $i < count($stats); $i++) {
       echo $stats[$i]." ";
     }
