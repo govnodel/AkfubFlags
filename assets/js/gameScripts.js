@@ -73,9 +73,9 @@ function liveDecrease(){
 
 function checkEnd(){
   if((counter >= 9) || (lives <= 0)){
-    refresh(true, stat());
+    refresh(true);
   } else {
-    refresh(false, "");
+    refresh(false);
   }
 }
 
@@ -97,13 +97,10 @@ function stat(){
     stats += ":" + repeat[i];
   }
 
-  alert(stats);
-  alert(repeat[repeat.length - 1]);
-
   return stats;
 }
 
-function refresh(flag, stats){
+function refresh(flag){
   clearInterval(interval);
 
   counter++;
@@ -130,7 +127,7 @@ function refresh(flag, stats){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
-          document.cookie = "statsInFlags=" + encodeURIComponent(stats) + "; path=/";
+          document.cookie = "statsInFlags=" + encodeURIComponent(stat()) + "; path=/";
           window.location.href = "winornot.php";
         });
       } else {
