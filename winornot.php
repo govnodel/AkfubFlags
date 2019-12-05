@@ -13,7 +13,9 @@
 <body>
   <h1 class="title">TEST</h1>
   <?php
-    //echo "stats:" . $_COOKIE["statsInFlags"] . $_COOKIE["userIdInFlags"];
+    for ($i = $edge + 1; $i < count($stats); $i++) {
+      echo $stats[$i];
+    }
    ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
   if ($_COOKIE["userIdInFlags"] != "") {
-    //example 0:4:3:(score):Spain
+    //example 0:4:3:(score):Spain:France:Geramny
     $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
     if (!$query) {
       echo "error";
@@ -29,8 +29,16 @@
 
     $score += ($ansQua * 10);
 
+    $edge = count($stats);
+
+    for ($i = 0; $i < count($stats); $i++) {
+      if ($stats[$i] == "#") {
+        $edge = $i;
+      }
+    }
+
     if (count($stats) > 3) {
-      for ($i = 3; $i < count($stats); $i++) {
+      for ($i = 3; $i < $edge; $i++) {
         $flagQuery = pg_query($connect, "SELECT rating FROM flags WHERE name = '".$stats[$i]."'");
         while($row = pg_fetch_row($flagQuery)){
           $rating = $row[0];

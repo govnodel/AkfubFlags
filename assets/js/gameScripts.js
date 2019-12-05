@@ -91,7 +91,11 @@ function stat(){
   } else {
     stats = '1'
   }
-  stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
+  stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr + ":#";
+
+  for (var i = 0; i < repeat.length; i++) {
+    stats += ":" + repeat[i];
+  }
 
   return stats;
 }
