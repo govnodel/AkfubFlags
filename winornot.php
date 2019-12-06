@@ -15,10 +15,13 @@
 
   <?php
     for ($i = $edge + 1; $i < count($stats); $i++) {
-      echo $stats[$i]." ";
+
       $parsed = str_replace(" ", "_", $stats[$i]);
 
+      echo "<div class='he'>";
       echo "<img class='flag' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
+      echo "<p>".$stats[$i]."</p>";
+      echo "</div>";
     }
    ?>
 </body>
