@@ -12,11 +12,13 @@
 </head>
 <body>
   <h1 class="title">TEST</h1>
-  <img src="assets/images/flags/Algeria.png" alt="nothing here">
+
   <?php
-    echo "";
     for ($i = $edge + 1; $i < count($stats); $i++) {
       echo $stats[$i]." ";
+      $parsed = str_replace("_", " ", $stats[$i]);
+
+      echo "<img src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
     }
    ?>
 </body>
