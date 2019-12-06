@@ -52,7 +52,7 @@
         quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
     if (!$result) {
-      echo "error";
+      echo "errorEnd";
       exit;
     }
   }
