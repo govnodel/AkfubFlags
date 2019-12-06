@@ -7,27 +7,27 @@
       exit;
     }
     while($row = pg_fetch_row($query)){
-      $victories = $row[0];
-      $games = $row[1];
-      $ansProc = $row[2];
-      $ansQua = $row[3];
-      $score = $row[4];
+      $victoriesOld = $row[0];
+      $gamesOld = $row[1];
+      $ansProcOld = $row[2];
+      $ansQuaOld = $row[3];
+      $scoreOld = $row[4];
     }
 
 
     $stats = explode(':', $_COOKIE["statsInFlags"]);
 
     if ($stats[0] == 1) {
-      $victories++;
+      $victories = $victoriesOld + 1;
     }
 
-    $games++;
+    $games = $gamesOld + 1;
 
-    $ansQua += ($stats[1] - $stats[2]);
+    $ansQua = $ansQuaOld + ($stats[1] - $stats[2]);
 
     $ansProc = ($ansQua / ($games * 10)) * 100;
 
-    $score += ($ansQua * 10);
+    $score = $scoreOld + ($ansQua * 10);
 
     $edge = count($stats);
 

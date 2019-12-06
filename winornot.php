@@ -12,6 +12,20 @@
 </head>
 <body>
   <h1 class="title">TEST</h1>
+  <table>
+    <tr>
+      <td>SCORE</td><td><?=$scoreOld?></td><td>+200</td><td><?=$score?></td>
+    </tr>
+    <tr>
+      <td>ACCURACY</td><td><?=$ansProcOld?></td><td>-5</td><td><?=$ansProc?></td>
+    </tr>
+    <tr>
+      <td>GAMES</td><td><?=$gamesOld?></td><td>+1</td><td><?=$games?></td>
+    </tr>
+    <tr>
+      <td>PLACE</td><td>10297</td><td>+142</td><td>10155</td>
+    </tr>
+  </table>
 
   <?php
     for ($i = $edge + 1; $i < count($stats); $i++) {
