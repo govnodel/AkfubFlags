@@ -13,3 +13,7 @@ body, html {
   font-family: 'Fjalla One', sans-serif;
   font-weight: 200;
 }
+.flag{
+  width: 20px;
+  height: 20px;
+}

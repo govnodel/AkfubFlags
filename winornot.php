@@ -18,7 +18,7 @@
       echo $stats[$i]." ";
       $parsed = str_replace(" ", "_", $stats[$i]);
 
-      echo "<img src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
+      echo "<img class='flag' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
     }
    ?>
 </body>
