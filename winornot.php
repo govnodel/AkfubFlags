@@ -14,13 +14,19 @@
   <h1 class="title">TEST</h1>
   <table>
     <tr>
-      <td>SCORE</td><td><?=$scoreOld?></td><td><?=$score - $scoreOld?></td><td><?=$score?></td>
+      <td>SCORE</td><td><?=$scoreOld?></td><td><?php
+      if ($score - $scoreOld) {echo "+".$score - $scoreOld;}
+      ?></td><td><?=$score?></td>
     </tr>
     <tr>
-      <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?=$ansProc - $ansProcOld?></td><td><?=$ansProc?></td>
+      <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?php
+      if ($ansProc - $ansProcOld) {echo "+".$ansProc - $ansProcOld;}
+      ?></td><td><?=$ansProc?></td>
     </tr>
     <tr>
-      <td>GAMES</td><td><?=$gamesOld?></td><td><?=$games - $gamesOld?></td><td><?=$games?></td>
+      <td>GAMES</td><td><?=$gamesOld?></td><td><?php
+      if ($games - $gamesOld) {echo "+".$games - $gamesOld;}
+      ?></td><td><?=$games?></td>
     </tr>
     <tr>
       <td>PLACE</td><td>100</td><td>0</td><td>100</td>
