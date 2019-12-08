@@ -15,7 +15,7 @@
   <table>
     <tr>
       <td>SCORE</td><td><?=$scoreOld?></td><td><?php
-      if ($score - $scoreOld > 0) {$bla = $score - $scoreOld; echo $bla;} else {echo $score - $scoreOld;}
+      if ($score - $scoreOld > 0) {$bla = $score - $scoreOld; echo "sssssss".$bla;} else {echo $score - $scoreOld;}
       ?></td><td><?=$score?></td>
     </tr>
     <tr>
