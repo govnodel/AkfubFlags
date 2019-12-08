@@ -25,7 +25,7 @@
     </tr>
     <tr>
       <td>GAMES</td><td><?=$gamesOld?></td><td><?php
-      if ($games - $gamesOld > 0) {$bla = $games - $gamesOld; echo "+".$bla} else {echo $games - $gamesOld;}
+      if ($games - $gamesOld > 0) {$bla = $games - $gamesOld;} else {echo $games - $gamesOld;}
       ?></td><td><?=$games?></td>
     </tr>
     <tr>
