@@ -14,16 +14,16 @@
   <h1 class="title">TEST</h1>
   <table>
     <tr>
-      <td>SCORE</td><td><?=$scoreOld?></td><td>+200</td><td><?=$score?></td>
+      <td>SCORE</td><td><?=$scoreOld?></td><td><?=$scoreOld - $score?></td><td><?=$score?></td>
     </tr>
     <tr>
-      <td>ACCURACY</td><td><?=$ansProcOld?></td><td>-5</td><td><?=$ansProc?></td>
+      <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?=$ansProcOld - $ansProc?></td><td><?=$ansProc?></td>
     </tr>
     <tr>
-      <td>GAMES</td><td><?=$gamesOld?></td><td>+1</td><td><?=$games?></td>
+      <td>GAMES</td><td><?=$gamesOld?></td><td><?=$gamesOld - $games?></td><td><?=$games?></td>
     </tr>
     <tr>
-      <td>PLACE</td><td>10297</td><td>+142</td><td>10155</td>
+      <td>PLACE</td><td>100</td><td>0</td><td>100</td>
     </tr>
   </table>
 
