@@ -15,17 +15,17 @@
   <table>
     <tr>
       <td>SCORE</td><td><?=$scoreOld?></td><td><?php
-      if ($score - $scoreOld > 0) {$bla = $score - $scoreOld;} else {echo $score - $scoreOld;}
+      if ($score - $scoreOld > 0) {$bla = $score - $scoreOld; echo "'+'".$bla} else {echo $score - $scoreOld;}
       ?></td><td><?=$score?></td>
     </tr>
     <tr>
       <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?php
-      if ($ansProc - $ansProcOld > 0) {$bla = $ansProc - $ansProcOld;} else {echo $ansProc - $ansProcOld;}
+      if ($ansProc - $ansProcOld > 0) {$bla = $ansProc - $ansProcOld; echo "'+'".$bla} else {echo $ansProc - $ansProcOld;}
       ?></td><td><?=$ansProc?></td>
     </tr>
     <tr>
       <td>GAMES</td><td><?=$gamesOld?></td><td><?php
-      if ($games - $gamesOld > 0) {$bla = $games - $gamesOld;} else {echo $games - $gamesOld;}
+      if ($games - $gamesOld > 0) {$bla = $games - $gamesOld; echo "'+'".$bla} else {echo $games - $gamesOld;}
       ?></td><td><?=$games?></td>
     </tr>
     <tr>
