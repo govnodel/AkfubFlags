@@ -24,9 +24,7 @@
       ?></td><td><?=$ansProc?></td>
     </tr>
     <tr>
-      <td>GAMES</td><td><?=$gamesOld?></td><td><?php
-      if ($games - $gamesOld > 0) {$bla = $games - $gamesOld; echo "+".$bla;} else {echo $games - $gamesOld;}
-      ?></td><td><?=$games?></td>
+      <td>GAMES</td><td><?=$gamesOld?></td><td>+1</td><td><?=$games?></td>
     </tr>
     <tr>
       <td>PLACE</td><td>100</td><td>0</td><td>100</td>
