@@ -17,6 +17,8 @@
 
     $stats = explode(':', $_COOKIE["statsInFlags"]);
 
+    setcookie("statsInFlags", "", time() - 3600);
+
     if ($stats[0] == 1) {
       $victories = $victoriesOld + 1;
     }
