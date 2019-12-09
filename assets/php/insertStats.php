@@ -45,8 +45,9 @@
         pg_query($connect, "UPDATE flags SET rating = ".$rating." WHERE name = '".$stats[$i]."'");
       }
     }
-    $pattern = "UPDATE ourusers SET victories = ".$victories." , games = ".$games." WHERE id = ".$_COOKIE["userIdInFlags"];
-    $result = pg_query($connect, $pattern);//, percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score."
+
+    $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
+    percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
     if (!$result) {
       echo "errorEnd";
