@@ -32,7 +32,7 @@
   </table>
 
   <?php
-    for ($i = 0; $i < count($answered); $i++) {
+    for ($i = 1; $i < count($answered); $i++) {
 
       $parsed = str_replace(" ", "_", $answered[$i]);
 
