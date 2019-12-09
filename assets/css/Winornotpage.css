@@ -18,7 +18,10 @@ body, html {
   height: 120px
 }
 .table{
-  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  color: steelblue;
+}
+.flagName{
   font-family: 'Fjalla One', sans-serif;
   color: steelblue;
 }

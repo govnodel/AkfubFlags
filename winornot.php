@@ -38,7 +38,7 @@
 
       echo "<div class='he'>";
       echo "<img class='flag' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
-      echo "<p>".$answered[$i]."</p>";
+      echo "<p class='flagName'>".$answered[$i]."</p>";
       echo "</div>";
     }
    ?>
