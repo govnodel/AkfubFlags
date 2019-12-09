@@ -32,13 +32,13 @@
   </table>
 
   <?php
-    for ($i = $edge + 1; $i < count($stats); $i++) {
+    for ($i = 0; $i < count($answered); $i++) {
 
-      $parsed = str_replace(" ", "_", $stats[$i]);
+      $parsed = str_replace(" ", "_", $answered[$i]);
 
       echo "<div class='he'>";
       echo "<img class='flag' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
-      echo "<p>".$stats[$i]."</p>";
+      echo "<p>".$answered[$i]."</p>";
       echo "</div>";
     }
    ?>

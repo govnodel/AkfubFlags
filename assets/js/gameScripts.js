@@ -79,22 +79,27 @@ function checkEnd(){
   }
 }
 
-function stat(){
+function stat(flag){
   let stats;
-  let rightStr = '';
-  for (var i = 0; i < right.length; i++) {
-    rightStr += ':' + right[i];
+  if (flag) {
+    let rightStr = '';
+    for (var i = 0; i < right.length; i++) {
+      rightStr += ':' + right[i];
+    }
+
+    if (lives <= 0) {
+      stats = '0'
+    } else {
+      stats = '1'
+    }
+    stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
   }
 
-  if (lives <= 0) {
-    stats = '0'
-  } else {
-    stats = '1'
-  }
-  stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr + ":#";
-
-  for (var i = 0; i < repeat.length; i++) {
-    stats += ":" + repeat[i];
+  if (!flag) {
+    for (var i = 0; i < repeat.length; i++) {
+      stats += ":" + repeat[i];
+    }
+    stats.substring(1, stats.length);
   }
 
   return stats;
@@ -127,7 +132,8 @@ function refresh(flag){
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
-          document.cookie = "statsInFlags=" + encodeURIComponent(stat()) + "; path=/";
+          document.cookie = "statsInFlags=" + encodeURIComponent(stat(true)) + "; path=/";
+          document.cookie = "answeredInFlags=" + encodeURIComponent(stat(false)) + "; path=/";
           window.location.href = "winornot.php";
         });
       } else {

@@ -17,6 +17,8 @@
 
     $stats = explode(':', $_COOKIE["statsInFlags"]);
 
+    $answered = explode(':', $_COOKIE["answeredInFlags"]);
+
     setcookie("statsInFlags", "", time() - 3600);
 
     if ($stats[0] == 1) {
@@ -31,16 +33,8 @@
 
     $score = $scoreOld + ($ansQua * 10);
 
-    $edge = count($stats);
-
-    for ($i = 0; $i < count($stats); $i++) {
-      if ($stats[$i] == "#") {
-        $edge = $i;
-      }
-    }
-
     if (count($stats) > 3) {
-      for ($i = 3; $i < $edge; $i++) {
+      for ($i = 3; $i < count($stats); $i++) {
         $flagQuery = pg_query($connect, "SELECT rating FROM flags WHERE name = '".$stats[$i]."'");
         while($row = pg_fetch_row($flagQuery)){
           $rating = $row[0];
