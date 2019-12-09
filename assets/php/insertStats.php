@@ -47,9 +47,9 @@
     $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories.", games = ".$games.", percent = ".$ansProc.",
         quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
-    // if (!$result) {
-    //   echo "errorEnd";
-    //   exit;
-    // }
+    if (!$result) {
+      echo "errorEnd";
+      exit;
+    }
   }
  ?>
