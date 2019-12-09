@@ -21,6 +21,8 @@
 
     setcookie("statsInFlags", "", time() - 3600);
 
+    $victories = $victoriesOld;
+
     if ($stats[0] == 1) {
       $victories = $victoriesOld + 1;
     }
@@ -43,7 +45,7 @@
         pg_query($connect, "UPDATE flags SET rating = ".$rating." WHERE name = '".$stats[$i]."'");
       }
     }
-    $pattern = "UPDATE ourusers SET victories = 1 , games = ".$games." WHERE id = ".$_COOKIE["userIdInFlags"];
+    $pattern = "UPDATE ourusers SET victories = ".$victories." , games = ".$games." WHERE id = ".$_COOKIE["userIdInFlags"];
     $result = pg_query($connect, $pattern);//, percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score."
 
     if (!$result) {
