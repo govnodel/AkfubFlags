@@ -47,13 +47,13 @@
     if ($_COOKIE["statsInFlags"] != "") {
       $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
       percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
+
+      if (!$result) {
+        echo "errorEnd";
+        exit;
+      }
     }
 
     setcookie("statsInFlags", "", time() - 3600);
-
-    if (!$result) {
-      echo "errorEnd";
-      exit;
-    }
   }
  ?>
