@@ -1,4 +1,5 @@
 <?php
+  echo $_COOKIE["statsInFlags"];
   if ($_COOKIE["userIdInFlags"] != "") {
     //example 0:4:3:(score):Spain:France:Geramny
     $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
