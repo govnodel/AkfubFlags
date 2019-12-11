@@ -1,6 +1,5 @@
 <?php
-  echo $_COOKIE["statsInFlags"];
-  if ($_COOKIE["userIdInFlags"] != "") {
+  if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")) {) {
     //example 0:4:3:(score):Spain:France:Geramny
     $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
     if (!$query) {
@@ -45,14 +44,12 @@
       }
     }
 
-    if ($_COOKIE["statsInFlags"] != "") {
-      $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
-      percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
+    $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
+    percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
-      if (!$result) {
-        echo "errorEnd";
-        exit;
-      }
+    if (!$result) {
+      echo "errorEnd";
+      exit;
     }
 
     setcookie("statsInFlags", "", time() - 3600);
