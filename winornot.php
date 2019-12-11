@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?php
-      if ($ansProc - $ansProcOld > 0) {$bla = round($ansProc - $ansProcOld); echo "+".$bla;} else {echo round($ansProc - $ansProcOld);}
+      if ($ansProc - $ansProcOld > 0) {$bla = round($ansProc - $ansProcOld, 2); echo "+".$bla;} else {echo round($ansProc - $ansProcOld, 2);}
       ?></td><td><?=round($ansProc, 2)?></td>
     </tr>
     <tr>
