@@ -20,8 +20,8 @@
     </tr>
     <tr>
       <td>ACCURACY</td><td><?=$ansProcOld?></td><td><?php
-      if ($ansProc - $ansProcOld > 0) {$bla = $ansProc - $ansProcOld; echo "+".$bla;} else {echo $ansProc - $ansProcOld;}
-      ?></td><td><?=$ansProc?></td>
+      if ($ansProc - $ansProcOld > 0) {$bla = round($ansProc - $ansProcOld); echo "+".$bla;} else {echo round($ansProc - $ansProcOld);}
+      ?></td><td><?=round($ansProc, 2)?></td>
     </tr>
     <tr>
       <td>GAMES</td><td><?=$gamesOld?></td><td>+1</td><td><?=$games?></td>
