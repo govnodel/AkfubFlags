@@ -19,8 +19,6 @@
 
     $answered = explode(':', $_COOKIE["answeredInFlags"]);
 
-    setcookie("statsInFlags", "", time() - 3600);
-
     $victories = $victoriesOld;
 
     if ($stats[0] == 1) {
@@ -46,8 +44,12 @@
       }
     }
 
-    $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
-    percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
+    if ($_COOKIE["statsInFlags"] != "") {
+      $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
+      percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
+    }
+
+    setcookie("statsInFlags", "", time() - 3600);
 
     if (!$result) {
       echo "errorEnd";
