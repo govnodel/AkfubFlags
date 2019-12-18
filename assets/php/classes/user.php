@@ -18,7 +18,6 @@ class User{
   }
 
   function signIn(){
-    echo "hi";
     $login = htmlspecialchars($_POST["loginInFlags"]);
     $pass = htmlspecialchars($_POST["passInFlags"]);
     $_SESSION["loginInFlags"]=$login;

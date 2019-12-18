@@ -4,7 +4,7 @@
   $connect = setConnection();
   require "assets/php/classes/user.php";
   $user = new User;
-  $user->signIn();
+  if ($_POST["doneInFlags"] != null) $user->signIn();
  ?>
 <html>
 <head>
