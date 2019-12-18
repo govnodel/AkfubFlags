@@ -3,8 +3,8 @@
   require "assets/php/functions/setConnection.php";
   $connect = setConnection();
   require "assets/php/classes/user.php";
-  // $user = new User;
-  // $user->signIn();
+  $user = new User;
+  $user->signIn();
  ?>
 <html>
 <head>
