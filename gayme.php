@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
-session_start();
-require "assets/php/functions/connection.php";
-$connect = setConnection();
-require "assets/php/gameSet.php"
+  session_start();
+  require "assets/php/functions/setConnection.php";
+  $connect = setConnection();
+  require "assets/php/gameSet.php"
 ?>
 <html lang="en">
 <head>

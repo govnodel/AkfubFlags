@@ -1,5 +1,5 @@
 <?php
-  require "assets/php/functions/connection.php";
+  require "assets/php/functions/setConnection.php";
   $connect = setConnection();
   require "assets/php/insertStats.php";
  ?>

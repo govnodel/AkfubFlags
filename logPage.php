@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require "assets/php/functions/connection.php";
+  require "assets/php/functions/setConnection.php";
   $connect = setConnection();
   require "assets/php/classes/user.php";
   $user = new User;
