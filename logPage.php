@@ -2,9 +2,9 @@
   session_start();
   require "assets/php/functions/setConnection.php";
   $connect = setConnection();
-  // require "assets/php/classes/user.php";
+  require "assets/php/classes/user.php";
   // $user = new User;
-  // $user -> signIn();
+  // $user->signIn();
  ?>
 <html>
 <head>
