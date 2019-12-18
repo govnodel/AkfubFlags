@@ -1,5 +1,6 @@
 <?php
-  require "assets/php/connection.php";
+  require "assets/php/functions/connection.php";
+  $connect = setConnection();
   require "assets/php/insertStats.php";
  ?>
 <html lang="ru">
