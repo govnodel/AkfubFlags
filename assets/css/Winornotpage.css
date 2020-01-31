@@ -6,10 +6,34 @@ body, html {
   height: 100vh;
   background-color: #E7F1F5;
 }
-.title {
-  font-family: fantasy;
-  color: steelblue;
+#profile > #name {
+  display: inline-block;
+  width: 25%;
+  height: 100px;
+  top: 9%;
+  left: 45.1%;
+  padding: 10px;
+  font-size: 3em;
+  background: white;
   text-align: center;
   font-family: 'Fjalla One', sans-serif;
   font-weight: 200;
+  color: black;
+  position: absolute;
+}
+#profile > #ava {
+  border: 20px solid white;
+  top: 5%;
+  left: 35%;
+  position: absolute;
+  width: 8.35%;
+  height: 15.35%;
+  display: block;
+  overflow:hidden;
+  background-size: 100% 100%;
+  border-radius: 100px;
+}
+#profile {
+  width: 8.35%;
+  height: 15.35%;
 }
