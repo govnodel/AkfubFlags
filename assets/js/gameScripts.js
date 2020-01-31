@@ -73,37 +73,39 @@ function liveDecrease(){
 
 function checkEnd(){
   if((counter >= 9) || (lives <= 0)){
-    refresh(true, stat());
+    refresh(true);
   } else {
-    refresh(false, "");
+    refresh(false);
   }
 }
 
-function stat(){
+function stat(flag){
   let stats;
-  let rightStr = '';
-  for (var i = 0; i < right.length; i++) {
-    rightStr += ':' + right[i];
+  if (flag) {
+    let rightStr = '';
+    for (var i = 0; i < right.length; i++) {
+      rightStr += ':' + right[i];
+    }
+
+    if (lives <= 0) {
+      stats = '0'
+    } else {
+      stats = '1'
+    }
+    stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
   }
 
-  if (lives <= 0) {
-    stats = '0'
-  } else {
-    stats = '1'
+  if (!flag) {
+    for (var i = 0; i < repeat.length; i++) {
+      stats += ":" + repeat[i];
+    }
+    stats.substring(1, stats.length);
   }
-  stats += ":" + counter + ":" + (7 + lives) + rightStr;
 
   return stats;
 }
 
-function sendStats(stats) {
-  // let date = new Date(Date.now() + 86400e3);
-  // date = date.toUTCString();
-
-  document.cookie = "stats=" + encodeURIComponent(stats) + "; path=/";
-}
-
-function refresh(flag, stats){
+function refresh(flag){
   clearInterval(interval);
 
   counter++;
@@ -126,10 +128,12 @@ function refresh(flag, stats){
     }, 300);
     setTimeout(function(){
       if (flag) {
+        repeat[repeat.length] = winName;
         $("#upblock, #vsyapoloska").animate({
           marginTop: "-17vh"
         }, 400, function(){
-          sendStats(stats);
+          document.cookie = "statsInFlags=" + encodeURIComponent(stat(true)) + "; path=/";
+          document.cookie = "answeredInFlags=" + encodeURIComponent(stat(false)) + "; path=/";
           window.location.href = "winornot.php";
         });
       } else {

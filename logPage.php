@@ -1,7 +1,10 @@
 <?php
   session_start();
-  require "assets/php/connection.php";
-  require "assets/php/login.php";
+  require "assets/php/functions/setConnection.php";
+  $connect = setConnection();
+  require "assets/php/classes/user.php";
+  $user = new User;
+  if ($_POST["doneInFlags"] != null) $user->signIn();
  ?>
 <html>
 <head>
@@ -13,11 +16,11 @@
 </head>
 <body>
     <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
-      <input type="text" name="loginIn" placeholder="Login" value="<?=$_SESSION["loginIn"]?>">
-      <p><?=$error_loginIn?></p>
-      <input type="password" name="passIn" placeholder="Password">
-      <p><?=$error_passIn?></p>
-      <input type="submit" name="doneIn" value="Enter">
+      <input type="text" name="loginInFlags" placeholder="Login" value="<?=$_SESSION["loginInFlags"]?>">
+      <p><?="hi"?></p><!-- $user->$error_loginInFlags -->
+      <input type="password" name="passInFlags" placeholder="Password">
+      <p><?=$user->$error_passInFlags?></p>
+      <input type="submit" name="doneInFlags" value="Enter">
     </form>
 </body>
 </html>

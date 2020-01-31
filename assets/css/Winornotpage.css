@@ -37,3 +37,15 @@ body, html {
   width: 8.35%;
   height: 15.35%;
 }
+.flag{
+  width: 190px;
+  height: 120px
+}
+.table{
+  font-family: 'Fjalla One', sans-serif;
+  color: steelblue;
+}
+.flagName{
+  font-family: 'Fjalla One', sans-serif;
+  color: steelblue;
+}

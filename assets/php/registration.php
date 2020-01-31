@@ -38,6 +38,10 @@
     if($numrows == 0){
       $result = pg_query("INSERT INTO ourusers(login, password, mail)
       VALUES('$login','$pass', '$email')");
+      $query = pg_query($connect, "SELECT id FROM ourusers WHERE login = '".$login."'");
+      while($row = pg_fetch_row($query)){
+        setcookie("userIdInFlags", $row[0]);
+      }
       header("Location: welcome.php");
     } else {
       $error_login = "That username already exists";
