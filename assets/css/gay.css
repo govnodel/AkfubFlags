@@ -131,6 +131,22 @@ svg.kruglyash text {
   margin-top: -1em;
   font-size: 3em;
 }
+#pop {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  color: white;
+  left: 79%;
+  margin-top: -1em;
+  font-size: 3em;
+}
+#cap {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  color: white;
+  left: 79%;
+  margin-top: -1em;
+  font-size: 3em;
+}
 @keyframes timer {
   from {
     stroke-dashoffset: 0
