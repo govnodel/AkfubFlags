@@ -51,7 +51,7 @@ function setFlags(){
 
   $("#country").text(winName);
   $("#pop").text(pops[numbers[winPos]].slice(0, pops[numbers[winPos]].length - 4) + "k");
-  // $("#cap").text("CAP " + caps[numbers[winPos]]);
+  $("#cap").text(capitals[numbers[winPos]]);
 }
 
 function passSec(){
