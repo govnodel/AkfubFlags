@@ -53,6 +53,7 @@
       echo "<img width='190px' height='120px' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
       echo "<p>".$answered[$i]."</p>";
       echo "</div>";
+      echo "</div>";
     }
    ?>
 </body>
