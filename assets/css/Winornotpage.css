@@ -50,10 +50,11 @@ body, html {
   color: steelblue;
 }
 .anss {
+  display: absolute;
   width: 90%;
   margin: auto;
   padding: 0;
-  
+
 }
 
 .ans {
