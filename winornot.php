@@ -12,15 +12,15 @@
   <link rel="stylesheet" href="assets/css/Winornotpage.css">
 </head>
 <body>
-  <div id = "profile">
+  <!-- <div id = "profile">
     <div id="ava">
         <img src="assets/images/otherimgs/example.jpg" >
 
     </div>
-    <!-- <div id="name">
+   <div id="name">
       Name
-    </div> -->
-  </div>
+    </div>
+  </div> -->
   <!-- <?php
     echo "stats:" . $_COOKIE["stats"];
    ?> -->
@@ -48,10 +48,10 @@
     for ($i = 1; $i < count($answered); $i++) {
 
       $parsed = str_replace(" ", "_", $answered[$i]);
-
-      echo "<div class='he'>";
-      echo "<img class='flag' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
-      echo "<p class='flagName'>".$answered[$i]."</p>";
+      echo "<div class='anss'>"
+      echo "<div class='ans'>";
+      echo "<img width='190px' height='120px' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
+      echo "<p>".$answered[$i]."</p>";
       echo "</div>";
     }
    ?>
