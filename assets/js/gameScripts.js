@@ -42,7 +42,7 @@ function setFlags(){
         }
       }
     }
-  }a
+  }
 
   for(let i = 0; i < 4; i++){
     $("#flag" + i).attr("src", "assets/images/flags/" + names[numbers[i]].replace(/ /g, "_") + ".png");

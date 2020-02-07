@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="assets/css/Winornotpage.css">
 </head>
 <body>
-<<<<<<< HEAD:winornot.html
   <div id = "profile">
     <div id="ava">
         <img src="assets/images/otherimgs/example.jpg" >
@@ -25,8 +24,6 @@
   <!-- <?php
     echo "stats:" . $_COOKIE["stats"];
    ?> -->
-
-=======
   <h1 class="title">TEST</h1>
   <table class="table">
     <tr>
@@ -58,6 +55,5 @@
       echo "</div>";
     }
    ?>
->>>>>>> 1cc977f49d45736ce1c13a443c50f7f9a7c458e4:winornot.php
 </body>
 </html>
