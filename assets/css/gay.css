@@ -123,29 +123,31 @@ svg.kruglyash text {
   position: relative;
   top: 15vh;
 }
-#regime {
+.data {
   font-family: 'Oswald', sans-serif;
   position: absolute;
   color: white;
+  font-size: 3em;
+}
+#regime {
   left: 79%;
   margin-top: -1em;
-  font-size: 3em;
 }
-#pop {
-  font-family: 'Oswald', sans-serif;
-  position: absolute;
-  color: white;
+#popW {
   left: 8%;
   margin-top: -1em;
-  font-size: 3em;
 }
-#cap {
-  font-family: 'Oswald', sans-serif;
-  position: absolute;
-  color: white;
+#pop {
+  left: 12%;
+  margin-top: -1em;
+}
+#capW {
   left: 8%;
   margin-top: 0.5em;
-  font-size: 3em;
+}
+#cap {
+  left: 12%;
+  margin-top: 0.5em;
 }
 @keyframes timer {
   from {

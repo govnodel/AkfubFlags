@@ -21,9 +21,11 @@
       <text id="timer_sec" x = "36" y = "58" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
-    <p id = "pop">POP 10m</p>
-    <p id = "cap">CAP Ubuntu</p>
-    <p id = "regime">MODERN|EASY</p>
+    <p class="data" id="popW">POP</p>
+    <p class="data" id="pop"></p>
+    <p class="data" id="capW">POP</p>
+    <p class="data" id="cap">Ubuntu</p>
+    <p class="data" id="regime">MODERN|EASY</p>
     <div id="nolives">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
