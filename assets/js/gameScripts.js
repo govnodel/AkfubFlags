@@ -17,6 +17,7 @@ function startGame (){
     opacity: 1
   }, 300, function(){
     if(start){
+      setRegimeText();
       for(let i = 0; i < 4; i++){
         $("#flag" + i).bind("click", clickFlag);
       }
@@ -77,6 +78,25 @@ function checkEnd(){
   } else {
     refresh(false);
   }
+}
+
+function setRegimeText() {
+  let res = "MODERN";
+
+  if (modern != "h")
+    res = "MODERN"
+
+  res += "|";
+
+  switch (diff) {
+    case 1:
+      res += "EASY";
+      break;
+    default:
+      res += "EASY";
+  }
+
+  $("#regime").text(res);
 }
 
 function stat(flag){
