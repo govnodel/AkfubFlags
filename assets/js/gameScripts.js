@@ -50,7 +50,7 @@ function setFlags(){
   winName = names[numbers[winPos]];
 
   $("#country").text(winName);
-  $("#pop").text("POP " + pops[numbers[winPos]].slice(pops[numbers[winPos]].length - 3, pops[numbers[winPos]].length) + "k");
+  $("#pop").text("POP " + pops[numbers[winPos]].slice(0, pops[numbers[winPos]].length - 4) + "k");
   // $("#cap").text("CAP " + caps[numbers[winPos]]);
 }
 
