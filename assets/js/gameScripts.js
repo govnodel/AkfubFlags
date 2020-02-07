@@ -1,5 +1,3 @@
-//make stat
-
 var repeat = [];
 var right = [];
 var winPos;
@@ -10,9 +8,7 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-startGame();
-
-function startGame(){
+document.onload = function (){
   document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   setFlags();
   $("body *:not(#upblock)").animate({
@@ -52,6 +48,8 @@ function setFlags(){
   winName = names[numbers[winPos]];
 
   $("#country").text(winName);
+  $("#pop").text(pops[numbers[winPos]]);
+  $("#cap").text(pops[numbers[winPos]]);
 }
 
 function passSec(){
