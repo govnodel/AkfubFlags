@@ -48,7 +48,7 @@
     for ($i = 1; $i < count($answered); $i++) {
 
       $parsed = str_replace(" ", "_", $answered[$i]);
-      echo "<div class='anss'>"
+      echo "<div class='anss'>";
       echo "<div class='ans'>";
       echo "<img width='190px' height='120px' src='assets/images/flags/".$parsed.".png' alt='nothing here'>";
       echo "<p>".$answered[$i]."</p>";
