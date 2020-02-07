@@ -123,7 +123,7 @@ function refresh(flag){
   }
 
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle, #pop, #cap").animate({
       opacity: 0
     }, 300);
     setTimeout(function(){
@@ -165,7 +165,7 @@ function nonExit(){
   } while (endFlag);
 
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #pop, #cap").animate({
       opacity: 1
     }, 500);
     setTimeout(function(){
