@@ -23,7 +23,7 @@
     <p id = "country">Lubava</p>
     <p class="data" id="popW">POP</p>
     <p class="data" id="pop"></p>
-    <p class="data" id="capW">POP</p>
+    <p class="data" id="capW">CAP</p>
     <p class="data" id="cap">Ubuntu</p>
     <p class="data" id="regime">MODERN|EASY</p>
     <div id="nolives">
