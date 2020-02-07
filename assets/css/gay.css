@@ -127,7 +127,7 @@ svg.kruglyash text {
   font-family: 'Oswald', sans-serif;
   position: absolute;
   color: white;
-  left: 79%;
+  left: 8%;
   margin-top: -1em;
   font-size: 3em;
 }
@@ -135,7 +135,7 @@ svg.kruglyash text {
   font-family: 'Oswald', sans-serif;
   position: absolute;
   color: white;
-  left: 79%;
+  left: 8%;
   margin-top: -1em;
   font-size: 3em;
 }
@@ -143,8 +143,8 @@ svg.kruglyash text {
   font-family: 'Oswald', sans-serif;
   position: absolute;
   color: white;
-  left: 79%;
-  margin-top: -1em;
+  left: 8%;
+  margin-top: 0.5em;
   font-size: 3em;
 }
 @keyframes timer {
