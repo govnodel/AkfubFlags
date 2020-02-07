@@ -138,7 +138,7 @@ svg.kruglyash text {
   margin-top: -0.9em;
 }
 #pop {
-  left: 12%;
+  left: 12.5%;
   margin-top: -0.9em;
 }
 #capW {
@@ -146,7 +146,7 @@ svg.kruglyash text {
   margin-top: 0.5em;
 }
 #cap {
-  left: 12%;
+  left: 12.5%;
   margin-top: 0.5em;
 }
 @keyframes timer {
