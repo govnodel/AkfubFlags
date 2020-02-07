@@ -49,13 +49,13 @@
 <script type="text/javascript">
   var names = [];
   var pops = [];
-  var capitals = [];
+  var caps = [];
 
   <?php
   while ($row = pg_fetch_row($result)) {
     echo "names[names.length] =  '$row[0]';";
     echo "pops[pops.length] =  '$row[1]';";
-    echo "capitals[capitals.length] =  '$row[2]';";
+    echo "caps[capitals.length] =  '$row[2]';";
   }
   ?>
 </script>
