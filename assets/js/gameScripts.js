@@ -88,13 +88,7 @@ function setRegimeText() {
 
   res += "|";
 
-  switch (diff) {
-    case 1:
-      res += "EASY";
-      break;
-    default:
-      res += "EASY";
-  }
+  res += "LVL" + diff;
 
   $("#regime").text(res);
 }
