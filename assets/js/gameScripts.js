@@ -8,7 +8,9 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-document.onload = function (){
+startGame(); //<-------------------change-this----------------------
+
+function startGame (){
   document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   setFlags();
   $("body *:not(#upblock)").animate({
