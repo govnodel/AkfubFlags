@@ -54,7 +54,7 @@
 
     setcookie("statsInFlags", "", time() - 3600);
 
-    $data = array($score, $scoreOld, $ansProc, $ansProcOld, $games, $gamesOld)
+    $data = array($score, $scoreOld, $ansProc, $ansProcOld, $games, $gamesOld);
     echo "TEST2 ".$data[4]." ".$games;
   }
  ?>
