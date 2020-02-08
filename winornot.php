@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +7,15 @@
   <link rel="stylesheet" href="assets/css/Winornotpage.css">
 </head>
 <body>
+  <!-- <div id = "profile">
+    <div id="ava">
+        <img src="assets/images/otherimgs/example.jpg" >
+
+    </div>
+   <div id="name">
+      Name
+    </div>
+  </div> -->
   
 </body>
 </html>
