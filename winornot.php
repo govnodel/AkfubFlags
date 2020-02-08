@@ -16,7 +16,7 @@
       Name
     </div>
   </div> -->
-  <h1 class="title">TEST</h1>
+  <!-- <h1 class="title">TEST</h1>
   <table class="table">
     <tr>
       <td>SCORE</td>
@@ -81,6 +81,6 @@
       echo "</div>";
       echo "</div>";
     }
-   ?>
+   ?> -->
 </body>
 </html>
