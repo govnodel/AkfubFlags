@@ -25,37 +25,37 @@
   <table class="table">
     <tr>
       <td>SCORE</td>
-      <td><?=$data[1]?></td>
+      <td><?=$_COOKIE["dataInFlags"][1]?></td>
       <td>
         <?php
-          if ($data[0] - $data[1] > 0){
-            echo "+".($data[0] - $data[1]);
+          if ($_COOKIE["dataInFlags"][0] - $_COOKIE["dataInFlags"][1] > 0){
+            echo "+".($_COOKIE["dataInFlags"][0] - $_COOKIE["dataInFlags"][1]);
           }else{
-            echo $data[0] - $data[1];
+            echo $_COOKIE["dataInFlags"][0] - $_COOKIE["dataInFlags"][1];
           }
         ?>
       </td>
-      <td><?=$data[0]?></td>
+      <td><?=$_COOKIE["dataInFlags"][0]?></td>
     </tr>
     <tr>
       <td>ACCURACY</td>
-      <td><?=$data[3]?></td>
+      <td><?=$_COOKIE["dataInFlags"][3]?></td>
       <td>
         <?php
-          if ($data[2] - $data[3] > 0){
-            echo "+".round($data[2] - $data[3], 2);
+          if ($_COOKIE["dataInFlags"][2] - $_COOKIE["dataInFlags"][3] > 0){
+            echo "+".round($_COOKIE["dataInFlags"][2] - $_COOKIE["dataInFlags"][3], 2);
           }else{
-            echo round($data[2] - $data[3], 2);
+            echo round($_COOKIE["dataInFlags"][2] - $_COOKIE["dataInFlags"][3], 2);
           }
         ?>
       </td>
-      <td><?=round($data[2], 2)?></td>
+      <td><?=round($_COOKIE["dataInFlags"][2], 2)?></td>
     </tr>
     <tr>
       <td>GAMES</td>
-      <td><?=$data[5]?></td>
+      <td><?=$_COOKIE["dataInFlags"][5]?></td>
       <td>+1</td>
-      <td><?=$data[4]?></td>
+      <td><?=$_COOKIE["dataInFlags"][4]?></td>
     </tr>
     <tr>
       <td>PLACE</td>
