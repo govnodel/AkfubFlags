@@ -1,10 +1,4 @@
 <?php
-setcookie("ansProcInFlag", "", time() + 7200);
-setcookie("ansProcOldInFlag", "", time() + 7200);
-setcookie("scoreInFlag", "", time() + 7200);
-setcookie("scoreOldInFlag", "", time() + 7200);
-setcookie("gamesInFlag", "", time() + 7200);
-setcookie("gamesOldInFlag", "", time() + 7200);
   $answered = explode(':', $_COOKIE["answeredInFlags"]);
   if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")){
     echo "TEST1";
@@ -59,12 +53,8 @@ setcookie("gamesOldInFlag", "", time() + 7200);
     }
 
     setcookie("statsInFlags", "", time() - 3600);
-    setcookie("ansProcInFlag", $ansProc, time() + 7200);
-    setcookie("ansProcOldInFlag", $ansProcOld, time() + 7200);
-    setcookie("scoreInFlag", $score, time() + 7200);
-    setcookie("scoreOldInFlag", $scoreOld, time() + 7200);
-    setcookie("gamesInFlag", $games, time() + 7200);
-    setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
-    echo "TEST2 ".$_COOKIE["gamesInFlag"]." ".$games;
+
+    $data = array($score, $scoreOld, $ansProc, $ansProcOld, $games, $gamesOld)
+    echo "TEST2 ".$data[4]." ".$games;
   }
  ?>
