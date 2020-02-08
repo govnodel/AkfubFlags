@@ -62,8 +62,8 @@
         setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
       }
 
-      header("Location: http://flags.alfa-omega.pro/winornot.php");
-      exit();
+      // header("Location: http://flags.alfa-omega.pro/winornot.php");
+      // exit();
      ?>
   </body>
 </html>
