@@ -59,8 +59,8 @@
       <td>100</td>
     </tr>
   </table>
-
   <?php
+    $answered = explode(':', $_COOKIE["answeredInFlags"]);
     for ($i = 1; $i < count($answered); $i++) {
       echo "<div class='anss'>";
       echo "<div class='ans'>";
