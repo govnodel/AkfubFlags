@@ -7,7 +7,7 @@ setcookie("gamesInFlag", "", time() + 7200);
 setcookie("gamesOldInFlag", "", time() + 7200);
   $answered = explode(':', $_COOKIE["answeredInFlags"]);
   if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")){
-    echo "TESTSSSSSSSS";
+    echo "TEST1";
     //example 0:4:3:(score):Spain:France:Geramny
     $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
     if (!$query) {
@@ -65,5 +65,6 @@ setcookie("gamesOldInFlag", "", time() + 7200);
     setcookie("scoreOldInFlag", $scoreOld, time() + 7200);
     setcookie("gamesInFlag", $games, time() + 7200);
     setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
+    echo "TEST2";
   }
  ?>
