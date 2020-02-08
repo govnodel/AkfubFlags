@@ -1,4 +1,10 @@
 <?php
+setcookie("ansProcInFlag", "", time() + 7200);
+setcookie("ansProcOldInFlag", "", time() + 7200);
+setcookie("scoreInFlag", "", time() + 7200);
+setcookie("scoreOldInFlag", "", time() + 7200);
+setcookie("gamesInFlag", "", time() + 7200);
+setcookie("gamesOldInFlag", "", time() + 7200);
   $answered = explode(':', $_COOKIE["answeredInFlags"]);
   if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")){
     //example 0:4:3:(score):Spain:France:Geramny
