@@ -52,11 +52,11 @@
     }
 
     setcookie("statsInFlags", "", time() - 3600);
-    setcookie("ansProcInFlag", $ansProc, time() - 3600);
-    setcookie("ansProcOldInFlag", $ansProcOld, time() - 3600);
-    setcookie("scoreInFlag", $score, time() - 3600);
-    setcookie("scoreOldInFlag", $scoreOld, time() - 3600);
-    setcookie("gamesInFlag", $games, time() - 3600);
-    setcookie("gamesOldInFlag", $gamesOld, time() - 3600);
+    setcookie("ansProcInFlag", $ansProc, time() + 7200);
+    setcookie("ansProcOldInFlag", $ansProcOld, time() + 7200);
+    setcookie("scoreInFlag", $score, time() + 7200);
+    setcookie("scoreOldInFlag", $scoreOld, time() + 7200);
+    setcookie("gamesInFlag", $games, time() + 7200);
+    setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
   }
  ?>
