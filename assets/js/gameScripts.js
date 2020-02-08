@@ -157,7 +157,7 @@ function refresh(flag){
         }, 400, function(){
           document.cookie = "statsInFlags=" + encodeURIComponent(stat(true)) + "; path=/";
           document.cookie = "answeredInFlags=" + encodeURIComponent(stat(false)) + "; path=/";
-          window.location.href = "winornot.php";
+          window.location.href = "stats.php";
         });
       } else {
         nonExit();
