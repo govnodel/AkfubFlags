@@ -65,6 +65,6 @@ setcookie("gamesOldInFlag", "", time() + 7200);
     setcookie("scoreOldInFlag", $scoreOld, time() + 7200);
     setcookie("gamesInFlag", $games, time() + 7200);
     setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
-    echo "TEST2".$_COOKIE["gamesInFlag"];
+    echo "TEST2 ".$_COOKIE["gamesInFlag"]." ".$games;
   }
  ?>
