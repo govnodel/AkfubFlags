@@ -24,6 +24,7 @@ class User{
     // $_SESSION["passInFlags"]=$pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
+      $connect = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
       $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE id = 3;");//".$login."
       if (!$query) {
         echo pg_last_error($connect);
