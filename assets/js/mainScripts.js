@@ -1,5 +1,6 @@
 var reload;
 var pushed = true;
+var login = false;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
 var profile = document.getElementById('profilemenu');
@@ -16,7 +17,7 @@ $('#login').bind("click", {index: 1}, signUp);
 $('#register').bind("click", {index: 2}, signUp);
 $("#profilemenu *:not(#logRegMenu)").fadeOut(100);
 
-function pushMenu(login){
+function pushMenu(){
 	if (pushed){
 		$("#profilemenu *:not(#logRegMenu)").fadeIn(500);
 		$('#profilemenu').animate({
@@ -71,7 +72,8 @@ function slowScroll(){
 }
 
 function signUp(event){
-	pushMenu(true);
+	login = true;
+	pushMenu();
 	$('#buttonplay').fadeOut(800, function(){
 		if(event.data.index == 1){
 			window.location.href = "logPage.php";
