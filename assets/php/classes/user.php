@@ -27,6 +27,7 @@ class User{
       $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE id = 3;");//".$login."
       if (!$query) {
         echo pg_last_error($connect);
+        echo "final";
         exit();
       }
       $numrows = pg_num_rows($query);
