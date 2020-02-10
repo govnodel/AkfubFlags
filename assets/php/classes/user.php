@@ -2,6 +2,11 @@
 class User{
   var $error_loginInFlags;
   var $error_passInFlags;
+  var $connect;
+
+  function __construct($con) {
+       $this->$connect = $con;
+   }
 
   function validateLogin($l){
     if(strlen($l)==0){
@@ -24,11 +29,9 @@ class User{
     // $_SESSION["passInFlags"]=$pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
-      $connect = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
       $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE id = 3;");//".$login."
       if (!$query) {
-        echo pg_last_error($connect);
-        echo "final";
+        echo "error";
         exit();
       }
       $numrows = pg_num_rows($query);
@@ -37,12 +40,12 @@ class User{
       } else {
         while($row = pg_fetch_row($query)){
           echo $row[0];
-          // if($row[1] == $pass){
-          //   setcookie("userIdInFlags", $row[0]);
-          //   header("Location: welcome.php");
-          // } else {
-          //   $this->$error_passInFlags = "Wrong password";
-          // }
+          if($row[1] == $pass){
+            setcookie("userIdInFlags", $row[0]);
+            header("Location: welcome.php");
+          } else {
+            $this->$error_passInFlags = "Wrong password";
+          }
         }
       }
     }
