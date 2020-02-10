@@ -24,7 +24,7 @@ class User{
     // $_SESSION["passInFlags"]=$pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
-      $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");//".$login."
+      $query = pg_query($connect, "SELECT name FROM flags WHERE id = 1");//".$login." //id, password //
       if (!$query) {
         echo pg_last_error($connect);
         exit();
@@ -34,12 +34,13 @@ class User{
         $this->$error_loginInFlags = "User does not exist ".$login;
       } else {
         while($row = pg_fetch_row($query)){
-          if($row[1] == $pass){
-            setcookie("userIdInFlags", $row[0]);
-            header("Location: welcome.php");
-          } else {
-            $this->$error_passInFlags = "Wrong password";
-          }
+          echo $row[0];
+          // if($row[1] == $pass){
+          //   setcookie("userIdInFlags", $row[0]);
+          //   header("Location: welcome.php");
+          // } else {
+          //   $this->$error_passInFlags = "Wrong password";
+          // }
         }
       }
     }
