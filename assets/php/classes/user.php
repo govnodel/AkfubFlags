@@ -27,7 +27,7 @@ class User{
       $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");//".$login."
       if (!$query) {
         echo pg_last_error();
-        exit();
+        // exit();
       }
       $numrows = pg_num_rows($query);
       if($numrows == 0){
