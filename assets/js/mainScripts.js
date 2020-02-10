@@ -64,11 +64,14 @@ function slowScroll(){
 }
 
 function signUp(event){
-	if(event.data.index == 1){
-		window.location.href = "logPage.php";
-	} else {
-		window.location.href = "regPage.php";
-	}
+	pushMenu();
+	$('#buttonprofile, #buttonplay').fadeOut(400, function(){
+		if(event.data.index == 1){
+			window.location.href = "logPage.php";
+		} else {
+			window.location.href = "regPage.php";
+		}
+	});
 }
 
 function startGame(){
