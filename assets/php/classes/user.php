@@ -26,7 +26,7 @@ class User{
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
       $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE login = 'Kaiku'");//".$login."
       if (!$query) {
-        echo "error";
+        echo pg_last_error();
         exit();
       }
       $numrows = pg_num_rows($query);
