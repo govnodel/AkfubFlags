@@ -65,8 +65,8 @@ function slowScroll(){
 
 function signUp(event){
 	pushMenu();
-	$('#buttonprofile').fadeOut(500);
-	$('#buttonplay').fadeOut(500, function(){
+	$('#buttonprofile').fadeOut(600);
+	$('#buttonplay').fadeOut(600, function(){
 		if(event.data.index == 1){
 			window.location.href = "logPage.php";
 		} else {
