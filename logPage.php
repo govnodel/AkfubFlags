@@ -17,7 +17,7 @@
 <body>
     <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
       <input type="text" name="loginInFlags" placeholder="Login" value="<?=$_SESSION["loginInFlags"]?>">
-      <p><?="hi"?></p><!-- $user->$error_loginInFlags -->
+      <p><?=$user->$error_loginInFlags?></p>
       <input type="password" name="passInFlags" placeholder="Password">
       <p><?=$user->$error_passInFlags?></p>
       <input type="submit" name="doneInFlags" value="Enter">
