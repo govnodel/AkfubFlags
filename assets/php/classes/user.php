@@ -24,7 +24,7 @@ class User{
     // $_SESSION["passInFlags"]=$pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
-      $query = pg_query($connect, "SELECT name FROM flags WHERE id = 1");//".$login." //id, password //
+      $query = pg_query($connect, "SELECT id, password FROM ourusers WHERE id = 3;");//".$login."
       if (!$query) {
         echo pg_last_error($connect);
         exit();
