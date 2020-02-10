@@ -16,7 +16,7 @@ $('#login').bind("click", {index: 1}, signUp);
 $('#register').bind("click", {index: 2}, signUp);
 $("#profilemenu *:not(#logRegMenu)").fadeOut(100);
 
-function pushMenu(){
+function pushMenu(login){
 	if (pushed){
 		$("#profilemenu *:not(#logRegMenu)").fadeIn(500);
 		$('#profilemenu').animate({
@@ -29,9 +29,16 @@ function pushMenu(){
 		pushed = false;
 	} else {
 		$("#profilemenu *:not(#logRegMenu)").fadeOut(800);
-		$('#buttonprofile').animate({
-			left: '0px'
-		}, 800);
+		if (login) {
+			$('#buttonprofile').animate({
+				left: '0px',
+				opacity: '0'
+			}, 800);
+		} else {
+			$('#buttonprofile').animate({
+				left: '0px'
+			}, 800);
+		}
 		button.style.animation = "pullButton 0.8s linear forwards";
 		$('#profilemenu').animate({
 			left: '-30%'
@@ -64,10 +71,7 @@ function slowScroll(){
 }
 
 function signUp(event){
-	pushMenu();
-	$('#buttonprofile').animate({
-		opacity: 0
-	}, 800);
+	pushMenu(true);
 	$('#buttonplay').fadeOut(800, function(){
 		if(event.data.index == 1){
 			window.location.href = "logPage.php";
