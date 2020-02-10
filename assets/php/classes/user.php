@@ -4,8 +4,9 @@ class User{
   var $error_passInFlags;
   var $connect;
 
-  function __construct($con) {
-       $this->$connect = $con;
+  function __construct() {
+       $this->$connect = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
+       echo "created";
    }
 
   function validateLogin($l){
