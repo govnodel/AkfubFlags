@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+body{
+  background-color: #2a5eb2;
+}
+
+#text{
+  opacity: 0;
+}
