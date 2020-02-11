@@ -1,10 +1,8 @@
 $(function() {
-  let name = "enterAttempInFlags";
-  alert(document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  )));
-	$('div').animate({
-		marginTop: '12vh',
-    opacity: 1
-	}, 700);
+  if (document.cookie.replace(/(?:(?:^|.*;\s*)enterAttempInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != 1) {
+    $('div').animate({
+  		marginTop: '12vh',
+      opacity: 1
+  	}, 700);
+  }
 });
