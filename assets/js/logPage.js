@@ -5,7 +5,7 @@ $(function() {
       opacity: 1
   	}, 700);
   } else {
-    document.cookie = "enterAttempInFlags=;";
+    document.cookie = "enterAttempInFlags=1;";
     $('div').animate({
   		marginTop: '12vh',
       opacity: 1
