@@ -17,10 +17,10 @@
       <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
         <p class="label">Login</p>
         <input class="inp" type="text" name="loginInFlags" placeholder="" value="<?=$_SESSION["loginInFlags"]?>">
-        <p class="error"><?=$user->error_loginInFlags?></p>
+        <p class="error"><?=$user->error_loginInFlags?>&nbsp;</p>
         <p class="label" id="labPas">Password</p>
         <input class="inp" type="password" name="passInFlags" placeholder="">
-        <p class="error"><?=$user->error_passInFlags?></p>
+        <p class="error"><?=$user->error_passInFlags?>&nbsp;</p>
         <input id="subm" type="submit" name="doneInFlags" value="Enter">
       </form>
     </div>
