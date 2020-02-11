@@ -41,13 +41,12 @@ class User{
         $this->error_loginInFlags = "User does not exist ".$login;
       } else {
         while($row = pg_fetch_row($query)){
-          echo $row[0];
-          // if($row[1] == $pass){
-          //   setcookie("userIdInFlags", $row[0]);
-          //   header("Location: welcome.php");
-          // } else {
-          //   $this->error_passInFlags = "Wrong password";
-          // }
+          if($row[1] == $pass){
+            setcookie("userIdInFlags", $row[0]);
+            header("Location: welcome.php");
+          } else {
+            $this->error_passInFlags = "Wrong password";
+          }
         }
       }
     }
