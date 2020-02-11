@@ -4,5 +4,9 @@ body{
 }
 
 #text{
+  color: white;
   opacity: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 1;
+  font-size: 1.4em;
 }

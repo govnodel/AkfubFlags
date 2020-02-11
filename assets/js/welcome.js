@@ -3,7 +3,7 @@ $(function() {
     opacity: 1
   }, 500);
 
-  setTimeout(function(){
-    window.location.href = "http://flags.alfa-omega.pro";
-  }, 3000);
+  // setTimeout(function(){
+  //   window.location.href = "http://flags.alfa-omega.pro";
+  // }, 3000);
 });
