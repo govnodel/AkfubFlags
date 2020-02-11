@@ -26,10 +26,9 @@ class User{
     $login = htmlspecialchars($_POST["loginInFlags"]);
     $pass = htmlspecialchars($_POST["passInFlags"]);
     $_SESSION["loginInFlags"] = $login;
-    // $_SESSION["passInFlags"] = $pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
-      $query = pg_query($this->connect, "SELECT password FROM ourusers WHERE id = 3;");//".$login."// id,
+      $query = pg_query($this->connect, "SELECT id, password FROM ourusers WHERE login = '".$login."';");
 
       if (!$query) {
         echo pg_last_error($this->connect);
