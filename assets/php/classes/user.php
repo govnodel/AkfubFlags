@@ -44,7 +44,7 @@ class User{
         while($row = pg_fetch_row($query)){
           if($row[1] == $pass){
             setcookie("userIdInFlags", $row[0]);
-            setcookie("enterAttempInFlags", "");
+            setcookie("enterAttempInFlags", "0");
             header("Location: welcome.php");
           } else {
             $this->error_passInFlags = "Wrong password";
