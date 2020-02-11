@@ -3,7 +3,7 @@
   require "assets/php/functions/setConnection.php";
   $connect = setConnection();
   require "assets/php/classes/user.php";
-  $user = new User($connect);
+  $user = new User;
   if ($_POST["doneInFlags"] != null) $user->signIn();
  ?>
 <html>
