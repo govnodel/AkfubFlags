@@ -1,23 +1,23 @@
 <?php
 class User{
-  var $error_loginInFlags;
-  var $error_passInFlags;
-  var $connect = pg_pconnect("host=localhost dbname=flags user=postgres password=KLeAGFpn");
+  public $error_loginInFlags;
+  public $error_passInFlags;
+  public $connect;
 
-  // function __construct($con) {
-  //      $this->$connect = $con;
-  //  }
+  function __construct($con) {
+       $this->connect = $con;
+   }
 
   function validateLogin($l){
     if(strlen($l)==0){
-      $this->$error_loginInFlags="Enter login";
+      $this->error_loginInFlags="Enter login";
       return false;
     } else return true;
   }
 
   function validatePassword($p){
     if (strlen($p)==0){
-      $this->$error_passInFlags="Enter password";
+      $this->error_passInFlags="Enter password";
       return false;
     } else return true;
   }
@@ -25,21 +25,21 @@ class User{
   function signIn(){
     $login = htmlspecialchars($_POST["loginInFlags"]);
     $pass = htmlspecialchars($_POST["passInFlags"]);
-    $_SESSION["loginInFlags"]=$login;
-    // $_SESSION["passInFlags"]=$pass;
+    $_SESSION["loginInFlags"] = $login;
+    // $_SESSION["passInFlags"] = $pass;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login)){
-      $query = pg_query($connect, "SELECT password FROM ourusers WHERE id = 3;");//".$login."// id,
+      $query = pg_query($this->connect, "SELECT password FROM ourusers WHERE id = 3;");//".$login."// id,
 
       if (!$query) {
-        echo pg_last_error($connect);
+        echo pg_last_error($this->connect);
         echo "final error";
         exit();
       }
 
       $numrows = pg_num_rows($query);
       if($numrows == 0){
-        $this->$error_loginInFlags = "User does not exist ".$login;
+        $this->error_loginInFlags = "User does not exist ".$login;
       } else {
         while($row = pg_fetch_row($query)){
           echo $row[0];
@@ -47,7 +47,7 @@ class User{
           //   setcookie("userIdInFlags", $row[0]);
           //   header("Location: welcome.php");
           // } else {
-          //   $this->$error_passInFlags = "Wrong password";
+          //   $this->error_passInFlags = "Wrong password";
           // }
         }
       }
