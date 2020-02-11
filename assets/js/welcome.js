@@ -9,5 +9,5 @@ $(function() {
     }, 400, function(){
       window.location.href = "http://flags.alfa-omega.pro";
     });
-  }, 3000);
+  }, 1800);
 });
