@@ -23,6 +23,7 @@ class User{
   }
 
   function signIn(){
+    setcookie("enterAttempInFlags", "1");
     $login = htmlspecialchars($_POST["loginInFlags"]);
     $pass = htmlspecialchars($_POST["passInFlags"]);
     $_SESSION["loginInFlags"] = $login;
@@ -43,6 +44,7 @@ class User{
         while($row = pg_fetch_row($query)){
           if($row[1] == $pass){
             setcookie("userIdInFlags", $row[0]);
+            setcookie("enterAttempInFlags", "");
             header("Location: welcome.php");
           } else {
             $this->error_passInFlags = "Wrong password";
