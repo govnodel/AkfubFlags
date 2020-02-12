@@ -51,10 +51,9 @@ function pushMenu(){
 $(function() {
 	reload = sessionStorage.getItem("reload");
 	if(reload == "1"){
-		// first.style.animation = outto;
+		first.style.animation = outto;
 		second.style.animation = outto;
-		reload = "0";
-		sessionStorage.setItem("reload", reload);
+		sessionStorage.setItem("reload", "0");
 	}
 	$('html, body').animate({
 		scrollTop: $('#first').offset().top
@@ -67,8 +66,7 @@ function slowScroll(){
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
-	reload = "1";
-	sessionStorage.setItem("reload", reload);
+	sessionStorage.setItem("reload", "1");
 }
 
 function signUp(event){
