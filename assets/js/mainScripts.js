@@ -51,7 +51,7 @@ function pushMenu(){
 $(function() {
 	reload = sessionStorage.getItem("reload");
 	if(reload == "1"){
-		first.style.animation = outto;
+		// first.style.animation = outto;
 		second.style.animation = outto;
 		reload = "0";
 		sessionStorage.setItem("reload", reload);
