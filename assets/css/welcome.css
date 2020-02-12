@@ -12,3 +12,12 @@ body{
   margin-left: 25%;
   margin-top: 36vh;
 }
+
+@keyframes end{
+  0% {
+    background-color: #2a5eb2
+  }
+  100% {
+    background-color: #9426e2
+  }
+}

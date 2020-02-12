@@ -4,6 +4,7 @@ $(function() {
   }, 500);
 
   setTimeout(function(){
+    document.body.style.animation = "end .4s linear forwards";
     $('#text').animate({
       opacity: 0
     }, 400, function(){
