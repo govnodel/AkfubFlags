@@ -63,7 +63,9 @@ class User{
       $numrows = pg_num_rows($query);
 
       if($numrows == 0){
-        $result = pg_query($connect, "INSERT INTO ourusers(login, password, mail) VALUES ('".$login."', '".$pass."', '".$email."');");
+        $hash = password_hash($pass, PASSWORD_DEFAULT);
+
+        $result = pg_query($connect, "INSERT INTO ourusers(login, password, mail) VALUES ('".$login."', '".$hash."', '".$email."');");
         $query = pg_query($connect, "SELECT id FROM ourusers WHERE login = '".$login."';");
 
         while($row = pg_fetch_row($query)){
@@ -100,7 +102,7 @@ class User{
         $this->error_loginInFlags = "User does not exist ".$login;
       } else {
         while($row = pg_fetch_row($query)){
-          if($row[1] == $pass){
+          if(password_verify($pass, $row[1])){
             setcookie("userIdInFlags", $row[0]);
             setcookie("enterAttempInFlags", "0");
             header("Location: welcome.php");
