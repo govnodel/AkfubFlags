@@ -65,8 +65,8 @@ class User{
       if($numrows == 0){
         $hash = password_hash($pass, PASSWORD_DEFAULT);
 
-        $result = pg_query($connect, "INSERT INTO ourusers(login, password, mail) VALUES ('$login', '$hash', '$email');");
-        $query = pg_query($connect, "SELECT id FROM ourusers WHERE login = '".$login."';");
+        $result = pg_query($this->connect, "INSERT INTO ourusers(login, password, mail) VALUES ('".$login."', '".$hash."', '".$email."');");
+        $query = pg_query($this->connect, "SELECT id FROM ourusers WHERE login = '".$login."';");
 
         while($row = pg_fetch_row($query)){
           setcookie("userIdInFlags", $row[0]);
