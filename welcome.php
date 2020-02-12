@@ -10,7 +10,13 @@
   <title>Welcome</title>
 </head>
 <body>
-  <p id="text">Welcome back, <?=$_SESSION["loginInFlags"]?></p>
+  <?php 
+    if (strlen($_SESSION["loginInFlags"]) == 0) {
+      echo "<p id='text'>Welcome, ".$_SESSION["loginRegInFlags"]."</p>";
+    } else {
+      echo "<p id='text'>Welcome back, ".$_SESSION["loginInFlags"]."</p>";
+    }
+   ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="assets/js/welcome.js"></script>

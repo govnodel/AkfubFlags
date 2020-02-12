@@ -72,7 +72,7 @@ class User{
         setcookie("enterAttempInFlags", "0");
         header("Location: welcome.php");
       } else {
-        $this->error_loginInFlags = "That username already exists";
+        $this->error_loginInFlags = "Such username already exists";
       }
     }
 
