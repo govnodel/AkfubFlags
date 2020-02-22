@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,30 +23,31 @@
   <div id="second">
     <div id="profilemenu">
       <div id="logRegMenu">
-        <!-- $_COOKIE["userIdInFlags"] != "" -->
+        <!-- $_COOKIE["userIdInFlags"] != ""
+        <h1 id = "login">Log in</h1>
+        <h2 id = "register">or <label for="nothing" class = "HochuCursor">REGISTER</label> now</h2>
+      -->
         <?php
           if (false) {
 
           } else {
-            echo "
-              <h1 id = "login">Log in</h1>
-              <h2 id = "register">or <label for="nothing" class = "HochuCursor">REGISTER</label> now</h2>";
+            echo "";
           }
         ?>
       </div>
       <?php if (true) {
-        echo "
-        <div id="stats">
-          <p id="place">Place <label>0</label></p>
-          <p id="games">Games <label>0</label></p>
-          <p id="victories">Victories <label>0</label></p>
-          <p id="accuracy">Accuracy <label>0</label>%</p>
-          <p id="score">Score <label>0</label></p>
-        </div>";
+        echo "";
       } else {
 
       }
       ?>
+      <div id="stats">
+        <p id="place">Place <label>0</label></p>
+        <p id="games">Games <label>0</label></p>
+        <p id="victories">Victories <label>0</label></p>
+        <p id="accuracy">Accuracy <label>0</label>%</p>
+        <p id="score">Score <label>0</label></p>
+      </div>
     </div>
     <svg id="buttonprofile" x = "0" y = "0" width="90px" height="150px">
       <polyline id = "proArrow" points="30,50 55,75 30,100" stroke="white" stroke-width="10" fill = "none">
