@@ -209,8 +209,6 @@ body {
 }
 
 #stats > p{
-  margin-top: 2vh;
-  margin-bottom: 0vh;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -218,19 +216,19 @@ body {
 }
 
 #place{
-  
+  top: 16%;
 }
 #games{
-
+  top: 16%;
 }
 #victories{
-
+  top: 16%;
 }
 #accuracy{
-
+  top: 16%;
 }
 #score{
-
+  top: 16%;
 }
 
 .emptyText {
