@@ -24,18 +24,18 @@
   <div id="second">
     <div id="profilemenu">
       <div id="logRegMenu">
-        <!-- <?php
+        <?php
           if ($_COOKIE["userIdInFlags"] != "") {
 
           } else {
-            echo " -->
+            echo "
               <h1 id = "login">Log in</h1>
               <h2 id = "register">or <label for="nothing" class = "HochuCursor">REGISTER</label> now</h2>";
-          <!-- }
-          ?> -->
+          }
+          ?>
 
       </div>
-      <!-- <?php
+      <?php
         if ($_COOKIE["userIdInFlags"] != "") {
           echo "
             <div id="stats">
@@ -48,7 +48,7 @@
         } else {
 
         }
-       ?> -->
+       ?>
 
     </div>
     <svg id="buttonprofile" x = "0" y = "0" width="90px" height="150px">
