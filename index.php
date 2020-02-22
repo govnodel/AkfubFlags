@@ -29,18 +29,18 @@
           if (false) {
 
           } else {
-            echo "<h1 id = "login">Log in</h1>";
-            echo "<h2 id = "register">or <label for="nothing" class = "HochuCursor">REGISTER</label> now</h2>";
+            echo "<h1 id = 'login'>Log in</h1>";
+            echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>REGISTER</label> now</h2>";
           }
         ?>
       </div>
       <?php if (true) {
-        echo "<div id="stats">";
-          echo "<p id="place">Place <label>0</label></p>";
-          echo "<p id="games">Games <label>0</label></p>";
-          echo "<p id="victories">Victories <label>0</label></p>";
-          echo "<p id="accuracy">Accuracy <label>0</label>%</p>";
-          echo "<p id="score">Score <label>0</label></p>";
+        echo "<div id='stats'>";
+          echo "<p id='place'>Place <label>0</label></p>";
+          echo "<p id='games'>Games <label>0</label></p>";
+          echo "<p id='victories'>Victories <label>0</label></p>";
+          echo "<p id='accuracy'>Accuracy <label>0</label>%</p>";
+          echo "<p id='score'>Score <label>0</label></p>";
         echo "</div>";
       } else {
 
