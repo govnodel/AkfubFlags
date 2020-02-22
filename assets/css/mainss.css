@@ -209,9 +209,28 @@ body {
 }
 
 #stats > p{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  margin-top: 2vh;
+  margin-bottom: 0vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 6vh;
+}
+
+#place{
+  
+}
+#games{
+
+}
+#victories{
+
+}
+#accuracy{
+
+}
+#score{
+
 }
 
 .emptyText {
