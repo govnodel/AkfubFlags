@@ -87,8 +87,8 @@
           echo "</div>";
         } else {
           echo '<svg title="You must register to see your stats" height="140" width="140">';
-            echo '<circle cx="70" cy="70" r="60"></circle>';
-            echo '<line x1="30" y1="30" x2="110" y2="110"></line>';
+            echo '<circle cx="120" cy="120" r="110"></circle>';
+            echo '<line x1="40" y1="40" x2="200" y2="200"></line>';
           echo '</svg>';
         }
       ?>
