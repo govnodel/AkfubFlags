@@ -14,7 +14,7 @@
   if ($_COOKIE["userIdInFlags"] != "") {
     $authorized = true;
 
-    $query = pg_query($connect, "SELECT games, victories, percent, score, name FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+    $query = pg_query($connect, "SELECT games, victories, percent, score, login FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
     while($row = pg_fetch_row($query)){
       $place = 0;
