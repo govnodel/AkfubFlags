@@ -211,24 +211,25 @@ body {
 #stats > p{
   position: absolute;
   left: 50%;
+  margin-right: -50%;
   transform: translate(-50%, 0%);
   font-size: 6vh;
 }
 
 #place{
-  top: 16%;
+  top: 14%;
 }
 #games{
-  top: 16%;
+  top: 23%;
 }
 #victories{
-  top: 16%;
+  top: 32%;
 }
 #accuracy{
-  top: 16%;
+  top: 41%;
 }
 #score{
-  top: 16%;
+  top: 50%;
 }
 
 .emptyText {

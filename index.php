@@ -54,7 +54,7 @@
       <div id="logRegMenu">
         <?php
           if ($authorized) {
-
+            echo "<p>Name</p>";
           } else {
             echo "<h1 id = 'login'>Log in</h1>";
             echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>REGISTER</label> now</h2>";
