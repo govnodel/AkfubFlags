@@ -76,19 +76,22 @@
           }
         ?>
       </div>
-      <?php if ($authorized) {
-        echo "<div id='stats'>";
-          echo "<p id='place'>Place <label>".$place."</label></p>";
-          echo "<p id='games'>Games <label>".$games."</label></p>";
-          echo "<p id='victories'>Victories <label>".$victories."</label></p>";
-          echo "<p id='accuracy'>Accuracy <label>".$accuracy."</label>%</p>";
-          echo "<p id='score'>Score <label>".$score."</label></p>";
-        echo "</div>";
-      } else {
-
-      }
+      <?php
+        if ($authorized) {
+          echo "<div id='stats'>";
+            echo "<p id='place'>Place <label>".$place."</label></p>";
+            echo "<p id='games'>Games <label>".$games."</label></p>";
+            echo "<p id='victories'>Victories <label>".$victories."</label></p>";
+            echo "<p id='accuracy'>Accuracy <label>".$accuracy."</label>%</p>";
+            echo "<p id='score'>Score <label>".$score."</label></p>";
+          echo "</div>";
+        } else {
+          echo '<svg height="140" width="140">';
+            echo '<circle cx="70" cy="70" r="60"></circle>';
+            echo '<line x1="30" y1="30" x2="110" y2="110"></line>';
+          echo '</svg>';
+        }
       ?>
-
     </div>
     <svg id="buttonprofile" x = "0" y = "0" width="90px" height="150px">
       <polyline id = "proArrow" points="30,50 55,75 30,100" stroke="white" stroke-width="10" fill = "none">

@@ -216,6 +216,21 @@ body {
   font-size: 6vh;
 }
 
+#profilemenu > svg{
+
+}
+
+#profilemenu > svg > circle{
+  fill: white;
+  stroke: #dedede;
+  stroke-width: 12;
+}
+
+#profilemenu > svg > line{
+  stroke: #dedede;
+  stroke-width: 12;
+}
+
 #logRegMenu > p{
   position: absolute;
   top: -7vh;
