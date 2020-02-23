@@ -216,6 +216,16 @@ body {
   font-size: 6vh;
 }
 
+#logRegMenu > p{
+  position: absolute;
+  top: -7vh;
+  left: 70%;
+  margin-right: -50%;
+  font-size: 9.2vh;
+  color: black;
+  transform: translate(-70%, 0%);
+}
+
 #place{
   top: 14%;
 }

@@ -9,11 +9,12 @@
   $victories = 0;
   $accuracy = 0;
   $score = 0;
+  $name = "Error";
 
   if ($_COOKIE["userIdInFlags"] != "") {
     $authorized = true;
 
-    $query = pg_query($connect, "SELECT games, victories, percent, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+    $query = pg_query($connect, "SELECT games, victories, percent, score, name FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
     while($row = pg_fetch_row($query)){
       $place = 0;
@@ -21,6 +22,7 @@
       $victories = $row[1];
       $accuracy = $row[2];
       $score = $row[3];
+      $name = $row[4];
     }
   }
 
@@ -54,7 +56,7 @@
       <div id="logRegMenu">
         <?php
           if ($authorized) {
-            echo "<p>Name</p>";
+            echo "<p>".$name."</p>";
           } else {
             echo "<h1 id = 'login'>Log in</h1>";
             echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>REGISTER</label> now</h2>";
