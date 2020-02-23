@@ -1,3 +1,32 @@
+<?php
+  require "assets/php/functions/setConnection.php";
+  $connect = setConnection();
+
+  $authorized = false;
+
+  $place = 0;
+  $games = 0;
+  $victories = 0;
+  $accuracy = 0;
+  $score = 0;
+
+  if ($_COOKIE["userIdInFlags"] != "") {
+    $authorized = true;
+
+    $query = pg_query($connect, "SELECT games, victories, percent, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+
+    while($row = pg_fetch_row($query)){
+      $place = 0;
+      $games = $row[0];
+      $victories = $row[1];
+      $accuracy = $row[2];
+      $score = $row[3];
+    }
+  }
+
+
+
+ ?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,10 +52,8 @@
   <div id="second">
     <div id="profilemenu">
       <div id="logRegMenu">
-        <!-- $_COOKIE["userIdInFlags"] != ""
-      -->
         <?php
-          if (false) {
+          if ($authorized) {
 
           } else {
             echo "<h1 id = 'login'>Log in</h1>";
@@ -34,13 +61,13 @@
           }
         ?>
       </div>
-      <?php if (true) {
+      <?php if ($authorized) {
         echo "<div id='stats'>";
-          echo "<p id='place'>Place <label>0</label></p>";
-          echo "<p id='games'>Games <label>0</label></p>";
-          echo "<p id='victories'>Victories <label>0</label></p>";
-          echo "<p id='accuracy'>Accuracy <label>0</label>%</p>";
-          echo "<p id='score'>Score <label>0</label></p>";
+          echo "<p id='place'>Place <label>".$place."</label></p>";
+          echo "<p id='games'>Games <label>".$games."</label></p>";
+          echo "<p id='victories'>Victories <label>".$victories."</label></p>";
+          echo "<p id='accuracy'>Accuracy <label>".$accuracy."</label>%</p>";
+          echo "<p id='score'>Score <label>".$score."</label></p>";
         echo "</div>";
       } else {
 
