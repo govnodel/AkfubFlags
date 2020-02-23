@@ -217,7 +217,11 @@ body {
 }
 
 #profilemenu > svg{
-
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
 }
 
 #profilemenu > svg > circle{
