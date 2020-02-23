@@ -86,7 +86,7 @@
             echo "<p id='score'>Score <label>".$score."</label></p>";
           echo "</div>";
         } else {
-          echo '<svg title="You must register to see your stats" height="240" width="240">';
+          echo '<svg height="240" width="240">';
             echo '<circle cx="120" cy="120" r="110"></circle>';
             echo '<line x1="40" y1="40" x2="200" y2="200"></line>';
           echo '</svg>';
