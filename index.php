@@ -24,6 +24,19 @@
       $score = $row[3];
       $name = $row[4];
     }
+
+    // $player1 = array("...", "...", "..."); //name, score, place
+    // $player2 = array("...", "...", "...");
+    //
+    // if ($place > 1) {
+    //   $placer = pg_query($connect, "SELECT login, score FROM ourusers WHERE place = ".($place - 1).";");
+    //
+    //   if (!$placer) {
+    //
+    //   } else {
+    //
+    //   }
+    // }
   }
 
 
