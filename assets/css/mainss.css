@@ -227,12 +227,12 @@ body {
 #profilemenu > svg > circle{
   fill: white;
   stroke: #dedede;
-  stroke-width: 12;
+  stroke-width: 15px;
 }
 
 #profilemenu > svg > line{
   stroke: #dedede;
-  stroke-width: 12;
+  stroke-width: 15px;
 }
 
 #logRegMenu > p{
