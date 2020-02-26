@@ -25,6 +25,15 @@
       $name = $row[4];
     }
 
+    $placeQuery = pg_query($connect, "SELECT score, login FROM ourusers ORDER BY score;");
+
+    while ($row = pg_fetch_row($placeQuery)) {
+      $i++;
+      if ($row[1] == $name) {
+        $place = $i;
+      }
+    }
+
     // $player1 = array("...", "...", "..."); //name, score, place
     // $player2 = array("...", "...", "...");
     //
