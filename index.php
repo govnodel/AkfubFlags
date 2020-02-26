@@ -25,7 +25,7 @@
       $name = $row[4];
     }
 
-    $placeQuery = pg_query($connect, "SELECT score, login FROM ourusers ORDER BY score;");
+    $placeQuery = pg_query($connect, "SELECT score, login FROM ourusers ORDER BY score DESC;");
 
     while ($row = pg_fetch_row($placeQuery)) {
       $i++;
