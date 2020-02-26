@@ -35,7 +35,7 @@
 
         $ansProc = $ansQua * 10 / $games;
 
-        $score = $scoreOld;// + ($stats[1] - $stats[2])
+        $score = $scoreOld + 100 * $stats[0] + ($stats[1] - $stats[2]) * 10; 
 
         if (count($stats) > 3) {
           for ($i = 3; $i < count($stats); $i++) {
