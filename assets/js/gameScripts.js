@@ -115,7 +115,7 @@ function stat(flag){
     } else {
       stats = '1'
     }
-    stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
+    stats += ":" + counter + ":" + (3 - lives) + rightStr;
   }
 
   if (!flag) {
