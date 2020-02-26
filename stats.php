@@ -33,7 +33,7 @@
 
         $ansQua = $ansQuaOld + ($stats[1] - $stats[2]);
 
-        $ansProc = ($ansQua / ($games * 10)) * 100;
+        $ansProc = $ansQua * 10 / $games;
 
         $score = $scoreOld;// + ($ansQua * 10)
 
