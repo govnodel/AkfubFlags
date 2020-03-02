@@ -54,7 +54,7 @@ class User{
     $pass = htmlspecialchars($_POST["passRegInFlags"]);
     $rep = htmlspecialchars($_POST["repPassInFlags"]);
 
-    $_SESSION["loginRegInFlags"] = $login;
+    $_SESSION["loginInFlags"] = $login;
     $_SESSION["emailInFlags"] = $email;
 
     if ($this->validatePassword($pass) && $this->validateLogin($login) && $this->validateRepPassword($pass, $rep) && $this->validateEmail($email)){
@@ -72,6 +72,7 @@ class User{
           setcookie("userIdInFlags", $row[0]);
         }
         setcookie("enterAttempInFlags", "0");
+        setcookie("firstTimeInFlags", "1");
         header("Location: welcome.php");
       } else {
         $this->error_loginInFlags = "Such username already exists";
