@@ -10,9 +10,9 @@
   <title>Welcome</title>
 </head>
 <body>
-  <?php 
-    if (strlen($_SESSION["loginInFlags"]) == 0) {
-      echo "<p id='text'>Welcome, ".$_SESSION["loginRegInFlags"]."</p>";
+  <?php
+    if (strlen($_COOKIE["firstTimeInFlags"]) == 1) {
+      echo "<p id='text'>Welcome, ".$_SESSION["loginInFlags"]."</p>";
     } else {
       echo "<p id='text'>Welcome back, ".$_SESSION["loginInFlags"]."</p>";
     }

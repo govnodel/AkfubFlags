@@ -106,6 +106,7 @@ class User{
           if(password_verify($pass, $row[1])){
             setcookie("userIdInFlags", $row[0]);
             setcookie("enterAttempInFlags", "0");
+            setcookie("firstTimeInFlags", "0");
             header("Location: welcome.php");
           } else {
             $this->error_passInFlags = "Wrong password";
