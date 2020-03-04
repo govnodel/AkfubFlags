@@ -20,7 +20,10 @@ body{
 }
 
 #text2{
-  margin-left: 25%;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  margin-right: -50%;
+  position: absolute;
   margin-top: 36vh;
 }
 
