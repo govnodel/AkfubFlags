@@ -19,7 +19,6 @@
   <div id="nameContainer">
     <p><?=$_COOKIE["nameOldInFlag"]?></p>
   </div>
-  <h1 class="title">TEST</h1>
   <div id="tableContainer">
     <table id="table">
       <tr>
@@ -53,7 +52,7 @@
       <tr>
         <td>GAMES</td>
         <td><?=$_COOKIE["gamesOldInFlag"]?></td>
-        <td>+1</td>
+        <td class="green">+1</td>
         <td><?=$_COOKIE["gamesInFlag"]?></td>
       </tr>
       <tr class="row">
