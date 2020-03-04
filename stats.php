@@ -11,7 +11,7 @@
     <?php
       if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")){
         //example 0:4:3:Spain:France:Geramny
-        $query = pg_query($connect, "SELECT victories, games, percent, quantity, score FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+        $query = pg_query($connect, "SELECT victories, games, percent, quantity, score, login FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
         while($row = pg_fetch_row($query)){//$score $ansProc $games
           $victoriesOld = $row[0];
@@ -19,6 +19,7 @@
           $ansProcOld = $row[2];
           $ansQuaOld = $row[3];
           $scoreOld = $row[4];
+          $name = $row[5];
         }
 
         $placeQuery = pg_query($connect, "SELECT id FROM ourusers ORDER BY score DESC;");
@@ -81,6 +82,7 @@
         setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
         setcookie("placeInFlag", $place, time() + 7200);
         setcookie("placeOldInFlag", $placeOld, time() + 7200);
+        setcookie("nameOldInFlag", $name, time() + 7200);
       }
 
       header("Location: http://flags.alfa-omega.pro/winornot.php");
