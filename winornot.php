@@ -7,15 +7,6 @@
   <link rel="stylesheet" href="assets/css/winornotpage.css">
 </head>
 <body>
-  <!-- <div id = "profile">
-    <div id="ava">
-        <img src="assets/images/otherimgs/example.jpg" >
-
-    </div>
-   <div id="name">
-      Name
-    </div>
-  </div> -->
   <div id="nameContainer">
     <p><?=$_COOKIE["nameOldInFlag"]?></p>
   </div>
@@ -71,16 +62,31 @@
       </tr>
     </table>
   </div>
-  <?php
-    $answered = explode(':', $_COOKIE["answeredInFlags"]);
-    for ($i = 1; $i < count($answered); $i++) {
-      echo "<div class='anss'>";
-      echo "<div class='ans'>";
-      echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='nothing here'>";
-      echo "<p>".$answered[$i]."</p>";
-      echo "</div>";
-      echo "</div>";
-    }
-   ?>
+  <div class="">
+    <?php
+      $answered = explode(':', $_COOKIE["answeredInFlags"]);
+      for ($i = 1; $i < count($answered) / 2; $i++) {
+        echo "<div class='anss'>";
+        echo "<div class='ans'>";
+        echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='nothing here'>";
+        echo "<p>".$answered[$i]."</p>";
+        echo "</div>";
+        echo "</div>";
+        $j++;
+      }
+     ?>
+  </div>
+  <div class="">
+    <?php
+      for ($i = $j; $i < count($answered); $i++) {
+        echo "<div class='anss'>";
+        echo "<div class='ans'>";
+        echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='nothing here'>";
+        echo "<p>".$answered[$i]."</p>";
+        echo "</div>";
+        echo "</div>";
+      }
+     ?>
+  </div>
 </body>
 </html>

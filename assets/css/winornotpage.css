@@ -74,16 +74,3 @@ body, html {
   font-family: 'Oswald', sans-serif;
   color: steelblue;
 }
-.anss {
-  display: absolute;
-  width: 90%;
-  margin: auto;
-  padding: 0;
-
-}
-
-.ans {
-  width: 190px;
-  height: 120px;
-
-}
