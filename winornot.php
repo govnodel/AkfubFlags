@@ -62,7 +62,7 @@
       </tr>
     </table>
   </div>
-  <div class="">
+  <div id="firstFlags">
     <?php
       $answered = explode(':', $_COOKIE["answeredInFlags"]);
       for ($i = 1; $i < count($answered) / 2; $i++) {
@@ -72,7 +72,7 @@
       }
      ?>
   </div>
-  <div class="">
+  <div id="secondFlags">
     <?php
       for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
