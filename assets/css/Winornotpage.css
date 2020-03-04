@@ -58,7 +58,19 @@ body, html {
   font-size: 3vh;
   color: black;
   text-align: center;
-  font-weight: 100;
+  border-radius: 1px;
+}
+.table > td{
+  width: 25%;
+}
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
 }
 .flagName{
   font-family: 'Oswald', sans-serif;
