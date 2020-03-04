@@ -28,6 +28,8 @@
           <?php
             if ($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"] > 0){
               echo "<td class='plus'>+".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"])."</td>";
+            } else if ($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"] == 0){
+              echo "<td>".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"])."</td>";
             } else {
               echo "<td class='minus'>".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"])."</td>";
             }
@@ -40,6 +42,8 @@
           <?php
             if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] > 0){
               echo "<td class='plus'>+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
+            } else if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] == 0){
+              echo "<td>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
             } else {
               echo "<td class='minus'>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
             }
@@ -58,6 +62,8 @@
           <?php
             if ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"] > 0){
               echo "<td class='plus'>+".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"])."</td>";
+            } else if ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"] == 0){
+              echo "<td>".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"])."</td>";
             } else {
               echo "<td class='minus'>".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"])."</td>";
             }
