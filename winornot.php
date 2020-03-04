@@ -74,7 +74,7 @@
   </div>
   <div class="">
     <?php
-      for ($i = $j; $i < count($answered); $i++) {
+      for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
         echo "<p>".$answered[$i]."</p>";
       }
