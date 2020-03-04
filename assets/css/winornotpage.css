@@ -32,6 +32,12 @@ body, html {
 #secondFlags > img{
   position: absolute;
 }
+#firstFlags > p{
+  position: absolute;
+}
+#secondFlags > p{
+  position: absolute;
+}
 #nameContainer{
   position: absolute;
   width: 40%;
