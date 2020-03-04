@@ -26,6 +26,14 @@ body, html {
 .minus{
   color: red;
 }
+#firstFlags{
+  position: absolute;
+  top: 72vh;  
+}
+#secondFlags{
+  position: absolute;
+  top: 86vh;
+}
 #firstFlags > div{
   position: absolute;
 }
