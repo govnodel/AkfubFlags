@@ -84,5 +84,6 @@
       }
      ?>
   </div>
+  <script src="assets/js/winornotpage.js"></script>
 </body>
 </html>
