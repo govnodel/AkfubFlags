@@ -37,9 +37,11 @@ body, html {
   width: 100%
 }
 #firstFlags > div{
+  transform: translate(-50%, 0vh);
   position: absolute;
 }
 #secondFlags > div{
+  transform: translate(-50%, 0vh);
   position: absolute;
 }
 #nameContainer{
