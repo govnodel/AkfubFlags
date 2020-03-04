@@ -28,11 +28,13 @@ body, html {
 }
 #firstFlags{
   position: absolute;
-  top: 72vh;  
+  top: 72vh;
+  width: 100%
 }
 #secondFlags{
   position: absolute;
   top: 86vh;
+  width: 100%
 }
 #firstFlags > div{
   position: absolute;
