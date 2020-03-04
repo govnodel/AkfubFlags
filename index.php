@@ -104,13 +104,25 @@
       <div id="playerTable">
         <table>
           <tr>
-            <td>
-              Hello
-            </td>
-            <td>
-              Hi
-            </td>
-          </tr> 
+            <td>Name</td>
+            <td>Score</td>
+            <td>Place</td>
+          </tr>
+          <tr>
+            <td>Player1</td>
+            <td>3</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Kaiku</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Player2</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
         </table>
       </div>
     </div>
