@@ -21,6 +21,15 @@
           $scoreOld = $row[4];
         }
 
+        $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
+
+        while ($row = pg_fetch_row($placeQuery)) {
+          $i++;
+          if ($row[0] == $name) {
+            $placeOld = $i;
+          }
+        }
+
         $stats = explode(':', $_COOKIE["statsInFlags"]);
 
         $victories = $victoriesOld;
@@ -35,7 +44,7 @@
 
         $ansProc = $ansQua * 10 / $games;
 
-        $score = $scoreOld + 100 * $stats[0] + ($stats[1] - $stats[2]) * 10; 
+        $score = $scoreOld + 100 * $stats[0] + ($stats[1] - $stats[2]) * 10;
 
         if (count($stats) > 3) {
           for ($i = 3; $i < count($stats); $i++) {
@@ -51,6 +60,15 @@
         $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
         percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
+        $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
+
+        while ($row = pg_fetch_row($placeQuery)) {
+          $j++;
+          if ($row[0] == $name) {
+            $place = $j;
+          }
+        }
+
         setcookie("statsInFlags", "", time() - 3600);
 
         setcookie("ansProcInFlag", $ansProc, time() + 7200);
@@ -59,6 +77,8 @@
         setcookie("scoreOldInFlag", $scoreOld, time() + 7200);
         setcookie("gamesInFlag", $games, time() + 7200);
         setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
+        setcookie("placeInFlag", $place, time() + 7200);
+        setcookie("placeOldInFlag", $placeOld, time() + 7200);
       }
 
       header("Location: http://flags.alfa-omega.pro/winornot.php");
