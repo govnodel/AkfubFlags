@@ -61,7 +61,7 @@
         $result = pg_query($connect, "UPDATE ourusers SET victories = ".$victories." , games = ".$games.",
         percent = ".$ansProc.", quantity = ".$ansQua.", score = ".$score." WHERE id = ".$_COOKIE["userIdInFlags"]);
 
-        $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
+        $placeQuery = pg_query($connect, "SELECT id FROM ourusers ORDER BY score DESC;");
 
         $place = 0;
         while ($row = pg_fetch_row($placeQuery)) {
