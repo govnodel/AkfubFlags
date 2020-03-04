@@ -63,15 +63,6 @@ body, html {
 .table > td{
   width: 25%;
 }
-.center{
-  text-align: center;
-}
-.right{
-  text-align: right;
-}
-.left{
-  text-align: left;
-}
 .flagName{
   font-family: 'Oswald', sans-serif;
   color: steelblue;
