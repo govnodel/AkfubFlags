@@ -27,25 +27,31 @@
 
     $placeQuery = pg_query($connect, "SELECT score, login FROM ourusers ORDER BY score DESC;");
 
+    //name, score, place
+    $player1 = array("...", "...", "...");
+    $player2 = array("...", "...", "...");
+
     while ($row = pg_fetch_row($placeQuery)) {
       $i++;
       if ($row[1] == $name) {
         $place = $i;
       }
+
+      if (($i == $place + 1) && ($place != 0)) {
+        $player2[0] = $row[1];
+        $player2[1] = $row[0];
+        $player2[2] = $i;
+      }
     }
 
-    $player1 = array("...", "...", "..."); //name, score, place
-    $player2 = array("...", "...", "...");
-
-    // if ($place > 1) {
-    //   $placer = pg_query($connect, "SELECT login, score FROM ourusers WHERE place = ".($place - 1).";");
-    //
-    //   if (!$placer) {
-    //
-    //   } else {
-    //
-    //   }
-    // }
+    while ($row = pg_fetch_row($placeQuery)) {
+      $j++;
+      if ($j + 1 == $place) {
+        $player1[0] = $row[1];
+        $player1[1] = $row[0];
+        $player1[2] = $j;
+      }
+    }
   }
  ?>
 <html lang="en">
