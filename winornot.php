@@ -32,7 +32,7 @@
       </td>
       <td><?=$_COOKIE["scoreInFlag"]?></td>
     </tr>
-    <tr>
+    <tr class="row">
       <td>ACCURACY</td>
       <td><?=$_COOKIE["ansProcOldInFlag"]?></td>
       <td>
@@ -52,7 +52,7 @@
       <td>+1</td>
       <td><?=$_COOKIE["gamesInFlag"]?></td>
     </tr>
-    <tr>
+    <tr class="row">
       <td>PLACE</td>
       <td><?=$_COOKIE["placeOldInFlag"]?></td>
       <td>
