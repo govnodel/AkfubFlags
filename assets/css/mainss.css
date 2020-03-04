@@ -114,6 +114,21 @@ body {
   animation-iteration-count: infinite;
   animation-name: playButton;
 }
+#playerTable{
+  border-collapse: separate;
+  width: 92%;
+  text-align: center;
+  top: 70%;
+  position: absolute;
+  font-size: 2.6vh;
+  left: 50%;
+  transform: translate(-50%, 0vh);
+  margin-right: -50%;
+  border-spacing: 0px 1.5vh;
+}
+.row{
+  background: #ededed;
+}
 @keyframes into{
   0% {
     background-color: #9426e2
