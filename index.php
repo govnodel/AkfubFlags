@@ -47,9 +47,6 @@
     //   }
     // }
   }
-
-
-
  ?>
 <html lang="en">
 <head>
@@ -101,21 +98,6 @@
           echo '</svg>';
         }
       ?>
-      <!-- border-collapse: collapse;
-    width: 92%;
-    text-align: center;
-    top: 70%;
-    position: absolute;
-    font-size: 26px;
-    left: 50%;
-    transform: translate(-50%, 0vh);
-    margin-right: -50%;
-    border-spacing: 19px 10px; -->
-
-
-    <!-- border-bottom: 1px solid #c2c2c2;
-    border-top: 1px solid #c2c2c2;
-    background: #ededed; -->
       <div>
         <table id="playerTable">
           <tr>

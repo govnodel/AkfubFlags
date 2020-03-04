@@ -129,6 +129,9 @@ body {
 .row{
   background: #ededed;
 }
+.row > td{
+  height: 5vh
+}
 @keyframes into{
   0% {
     background-color: #9426e2
