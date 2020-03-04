@@ -44,12 +44,20 @@ body, html {
 .row{
   background: #f2f2f2;
 }
-.table{
+#tableContainer{
+  top: 41vh;
+  width: 94%;
+  position: absolute;
+  height: 29vh;
+  left: 50%;
+  transform: translate(-50%, 0vh);
+  background: white;
+}
+#table{
   font-family: 'Oswald', sans-serif;
   border-spacing: 0px 1.5vh;
-  top: 41vh;
   left: 50%;
-  width: 92%;
+  width: 94%;
   background: white;
   border-collapse: separate;
   position: absolute;
@@ -60,7 +68,7 @@ body, html {
   text-align: center;
   border-radius: 1px;
 }
-.table > td{
+#table > td{
   width: 25%;
 }
 .flagName{

@@ -17,56 +17,58 @@
     </div>
   </div> -->
   <h1 class="title">TEST</h1>
-  <table class="table">
-    <tr>
-      <td>SCORE</td>
-      <td><?=$_COOKIE["scoreOldInFlag"]?></td>
-      <td>
-        <?php
-          if ($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"] > 0){
-            echo "+".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"]);
-          } else {
-            echo $_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"];
-          }
-        ?>
-      </td>
-      <td><?=$_COOKIE["scoreInFlag"]?></td>
-    </tr>
-    <tr class="row">
-      <td>ACCURACY</td>
-      <td><?=$_COOKIE["ansProcOldInFlag"]?></td>
-      <td>
-        <?php
-          if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] > 0){
-            echo "+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2);
-          } else {
-            echo round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2);
-          }
-        ?>
-      </td>
-      <td><?=round($_COOKIE["ansProcInFlag"], 2)?></td>
-    </tr>
-    <tr>
-      <td>GAMES</td>
-      <td><?=$_COOKIE["gamesOldInFlag"]?></td>
-      <td>+1</td>
-      <td><?=$_COOKIE["gamesInFlag"]?></td>
-    </tr>
-    <tr class="row">
-      <td>PLACE</td>
-      <td><?=$_COOKIE["placeOldInFlag"]?></td>
-      <td>
-        <?php
-          if ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"] > 0){
-            echo "+".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"]);
-          } else {
-            echo ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"]);
-          }
-        ?>
-      </td>
-      <td><?=$_COOKIE["placeInFlag"]?></td>
-    </tr>
-  </table>
+  <div id="tableContainer">
+    <table id="table">
+      <tr>
+        <td>SCORE</td>
+        <td><?=$_COOKIE["scoreOldInFlag"]?></td>
+        <td>
+          <?php
+            if ($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"] > 0){
+              echo "+".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"]);
+            } else {
+              echo $_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"];
+            }
+          ?>
+        </td>
+        <td><?=$_COOKIE["scoreInFlag"]?></td>
+      </tr>
+      <tr class="row">
+        <td>ACCURACY</td>
+        <td><?=$_COOKIE["ansProcOldInFlag"]?></td>
+        <td>
+          <?php
+            if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] > 0){
+              echo "+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2);
+            } else {
+              echo round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2);
+            }
+          ?>
+        </td>
+        <td><?=round($_COOKIE["ansProcInFlag"], 2)?></td>
+      </tr>
+      <tr>
+        <td>GAMES</td>
+        <td><?=$_COOKIE["gamesOldInFlag"]?></td>
+        <td>+1</td>
+        <td><?=$_COOKIE["gamesInFlag"]?></td>
+      </tr>
+      <tr class="row">
+        <td>PLACE</td>
+        <td><?=$_COOKIE["placeOldInFlag"]?></td>
+        <td>
+          <?php
+            if ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"] > 0){
+              echo "+".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"]);
+            } else {
+              echo ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"]);
+            }
+          ?>
+        </td>
+        <td><?=$_COOKIE["placeInFlag"]?></td>
+      </tr>
+    </table>
+  </div>
   <?php
     $answered = explode(':', $_COOKIE["answeredInFlags"]);
     for ($i = 1; $i < count($answered); $i++) {
