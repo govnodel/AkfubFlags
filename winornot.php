@@ -66,8 +66,10 @@
     <?php
       $answered = explode(':', $_COOKIE["answeredInFlags"]);
       for ($i = 1; $i < count($answered) / 2; $i++) {
+        echo "<div>";
         echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
         echo "<p>".$answered[$i]."</p>";
+        echo "</div>";
         $j++;
       }
      ?>
@@ -75,8 +77,10 @@
   <div id="secondFlags">
     <?php
       for ($i = $j + 1; $i < count($answered); $i++) {
+        echo "<div>";
         echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
         echo "<p>".$answered[$i]."</p>";
+        echo "</div>";
       }
      ?>
   </div>

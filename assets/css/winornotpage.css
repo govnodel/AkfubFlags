@@ -26,16 +26,10 @@ body, html {
 .minus{
   color: red;
 }
-#firstFlags > img{
+#firstFlags > div{
   position: absolute;
 }
-#secondFlags > img{
-  position: absolute;
-}
-#firstFlags > p{
-  position: absolute;
-}
-#secondFlags > p{
+#secondFlags > div{
   position: absolute;
 }
 #nameContainer{
