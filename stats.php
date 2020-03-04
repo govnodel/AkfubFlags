@@ -21,12 +21,12 @@
           $scoreOld = $row[4];
         }
 
-        $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
+        $placeQuery = pg_query($connect, "SELECT id FROM ourusers ORDER BY score DESC;");
 
         $placeOld = 0;
         while ($row = pg_fetch_row($placeQuery)) {
           $i++;
-          if ($row[0] == $name) {
+          if ($row[0] == $_COOKIE["userIdInFlags"]) {
             $placeOld = $i;
           }
         }
@@ -66,7 +66,7 @@
         $place = 0;
         while ($row = pg_fetch_row($placeQuery)) {
           $j++;
-          if ($row[0] == $name) {
+          if ($row[0] == $_COOKIE["userIdInFlags"]) {
             $place = $j;
           }
         }
