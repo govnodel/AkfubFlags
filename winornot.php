@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Winner winner chicken dinner</title>
-  <link rel="stylesheet" href="assets/css/winPage.css">
+  <link rel="stylesheet" href="assets/css/winornotpage.css">
 </head>
 <body>
   <!-- <div id = "profile">
