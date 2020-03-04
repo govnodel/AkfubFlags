@@ -116,8 +116,8 @@
     <!-- border-bottom: 1px solid #c2c2c2;
     border-top: 1px solid #c2c2c2;
     background: #ededed; -->
-      <div id="playerTable">
-        <table>
+      <div>
+        <table id="playerTable">
           <tr>
             <td>Name</td>
             <td>Score</td>
