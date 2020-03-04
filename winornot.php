@@ -52,7 +52,7 @@
       <tr>
         <td>GAMES</td>
         <td><?=$_COOKIE["gamesOldInFlag"]?></td>
-        <td class="green">+1</td>
+        <td class="plus">+1</td>
         <td><?=$_COOKIE["gamesInFlag"]?></td>
       </tr>
       <tr class="row">
