@@ -101,6 +101,18 @@
           echo '</svg>';
         }
       ?>
+      <div id="playerTable">
+        <table>
+          <tr>
+            <td>
+              Hello
+            </td>
+            <td>
+              Hi
+            </td>
+          </tr> 
+        </table>
+      </div>
     </div>
     <svg id="buttonprofile" x = "0" y = "0" width="90px" height="150px">
       <polyline id = "proArrow" points="30,50 55,75 30,100" stroke="white" stroke-width="10" fill = "none">
