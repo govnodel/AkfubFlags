@@ -11,7 +11,7 @@
 </head>
 <body>
   <?php
-    if (strlen($_COOKIE["firstTimeInFlags"]) == 1) {
+    if ($_COOKIE["firstTimeInFlags"] == 1) {
       echo "<p id='text'>Welcome, ".$_SESSION["loginInFlags"]."</p>";
     } else {
       echo "<p id='text'>Welcome back, ".$_SESSION["loginInFlags"]."</p>";
