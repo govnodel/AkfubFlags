@@ -34,9 +34,9 @@
       }
     }
 
-    // $player1 = array("...", "...", "..."); //name, score, place
-    // $player2 = array("...", "...", "...");
-    //
+    $player1 = array("...", "...", "..."); //name, score, place
+    $player2 = array("...", "...", "...");
+
     // if ($place > 1) {
     //   $placer = pg_query($connect, "SELECT login, score FROM ourusers WHERE place = ".($place - 1).";");
     //
@@ -91,6 +91,30 @@
             echo "<p id='accuracy'>Accuracy <label>".$accuracy."</label>%</p>";
             echo "<p id='score'>Score <label>".$score."</label></p>";
           echo "</div>";
+          echo "<div>";
+            echo "<table id='playerTable'>";
+              echo "<tr>";
+                echo "<td>Name</td>";
+                echo "<td>Score</td>";
+                echo "<td>Place</td>";
+              echo "</tr>";
+              echo "<tr class='row'>";
+                echo "<td>".$player1[0]."</td>";
+                echo "<td>".$player1[1]."</td>";
+                echo "<td>".$player1[2]."</td>";
+              echo "</tr>";
+              echo "<tr>";
+                echo "<td>".$name."</td>";
+                echo "<td>".$score."</td>";
+                echo "<td>".$place."</td>";
+              echo "</tr>";
+              echo "<tr class='row'>";
+                echo "<td>".$player2[0]."</td>";
+                echo "<td>".$player2[1]."</td>";
+                echo "<td>".$player2[2]."</td>";
+              echo "</tr>";
+            echo "</table>";
+          echo "</div>";
         } else {
           echo '<svg height="240" width="240">';
             echo '<circle cx="120" cy="120" r="110"></circle>';
@@ -98,30 +122,6 @@
           echo '</svg>';
         }
       ?>
-      <div>
-        <table id="playerTable">
-          <tr>
-            <td>Name</td>
-            <td>Score</td>
-            <td>Place</td>
-          </tr>
-          <tr class="row">
-            <td>Player1</td>
-            <td>3</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>Kaiku</td>
-            <td>2</td>
-            <td>2</td>
-          </tr>
-          <tr class="row">
-            <td>Player2</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-        </table>
-      </div>
     </div>
     <svg id="buttonprofile" x = "0" y = "0" width="90px" height="150px">
       <polyline id = "proArrow" points="30,50 55,75 30,100" stroke="white" stroke-width="10" fill = "none">
