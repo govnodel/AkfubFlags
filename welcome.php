@@ -11,10 +11,10 @@
 </head>
 <body>
   <?php
-    if ($_COOKIE["firstTimeInFlags"] == 0) {
-      echo "<p id='text'>Welcome, ".$_SESSION["loginInFlags"]."</p>";
+    if ($_COOKIE["firstTimeInFlags"] == 1) {
+      echo "<p class='text' id='text1'>Welcome, ".$_SESSION["loginInFlags"]."</p>";
     } else {
-      echo "<p id='text'>Welcome back, ".$_SESSION["loginInFlags"]."</p>";
+      echo "<p class='text' id='text2'>Welcome back, ".$_SESSION["loginInFlags"]."</p>";
     }
    ?>
 </body>

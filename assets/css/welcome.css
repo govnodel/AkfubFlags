@@ -3,12 +3,23 @@ body{
   background-color: #2a5eb2;
 }
 
-#text{
+.text{
   color: white;
   opacity: 0;
   font-family: 'Oswald', sans-serif;
   font-weight: 1;
   font-size: 7em;
+}
+
+#text1{
+  transform: translate(-50%, 0%);
+  left: 25%;
+  margin-right: -50%;
+  position: absolute;
+  margin-top: 36vh;
+}
+
+#text2{
   margin-left: 25%;
   margin-top: 36vh;
 }
