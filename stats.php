@@ -23,6 +23,7 @@
 
         $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
 
+        $placeOld = 0;
         while ($row = pg_fetch_row($placeQuery)) {
           $i++;
           if ($row[0] == $name) {
@@ -62,6 +63,7 @@
 
         $placeQuery = pg_query($connect, "SELECT login FROM ourusers ORDER BY score DESC;");
 
+        $place = 0;
         while ($row = pg_fetch_row($placeQuery)) {
           $j++;
           if ($row[0] == $name) {
