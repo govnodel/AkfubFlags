@@ -25,7 +25,6 @@
       <tr>
         <td>SCORE</td>
         <td><?=$_COOKIE["scoreOldInFlag"]?></td>
-
           <?php
             if ($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"] > 0){
               echo "<td class='plus'>+".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"])."</td>";
@@ -33,13 +32,11 @@
               echo "<td class='minus'>".($_COOKIE["scoreInFlag"] - $_COOKIE["scoreOldInFlag"])."</td>";
             }
           ?>
-
         <td><?=$_COOKIE["scoreInFlag"]?></td>
       </tr>
       <tr class="row">
         <td>ACCURACY</td>
         <td><?=$_COOKIE["ansProcOldInFlag"]?></td>
-        <td>
           <?php
             if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] > 0){
               echo "<td class='plus'>+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
@@ -47,7 +44,6 @@
               echo "<td class='minus'>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
             }
           ?>
-        </td>
         <td><?=round($_COOKIE["ansProcInFlag"], 2)?></td>
       </tr>
       <tr>
@@ -59,7 +55,6 @@
       <tr class="row">
         <td>PLACE</td>
         <td><?=$_COOKIE["placeOldInFlag"]?></td>
-        <td>
           <?php
             if ($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"] > 0){
               echo "<td class='plus'>+".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"])."</td>";
@@ -67,7 +62,6 @@
               echo "<td class='minus'>".($_COOKIE["placeOldInFlag"] - $_COOKIE["placeInFlag"])."</td>";
             }
           ?>
-        </td>
         <td><?=$_COOKIE["placeInFlag"]?></td>
       </tr>
     </table>
