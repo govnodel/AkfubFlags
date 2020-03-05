@@ -19,5 +19,7 @@ function clickFlag(){
     last.style.animation = "flagApp 0.1s linear forwards";
     this.style.animation = "flagDis 0.1s linear forwards";
     last = this;
+  } else {
+    this.style.animation = "flagApp 0.1s linear forwards";
   }
 }
