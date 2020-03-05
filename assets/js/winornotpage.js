@@ -1,4 +1,4 @@
-var last;
+var last = 0;
 var WIDTH = document.documentElement.clientWidth;
 var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
@@ -16,7 +16,9 @@ $('.flag').bind("click", clickFlag);
 
 function clickFlag(){
   if (last != this) {
-    last.style.animation = "flagApp 0.1s linear forwards";
+    if (last != 0) {
+      last.style.animation = "flagApp 0.1s linear forwards";
+    }
     this.style.animation = "flagDis 0.1s linear forwards";
     last = this;
   } else {
