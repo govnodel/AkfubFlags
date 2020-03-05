@@ -54,7 +54,7 @@ body, html {
 }
 .flagNameContainer{
   position: absolute;
-  top: 0vh;
+  top: 0.3vh;
   width: 90%;
   left: 50%;
   background-color: black;

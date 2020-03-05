@@ -67,8 +67,10 @@
       $answered = explode(':', $_COOKIE["answeredInFlags"]);
       for ($i = 1; $i < count($answered) / 2; $i++) {
         echo "<div>";
-        echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-        echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
+          echo "<div class='flagNameContainer'>";
+            echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "</div>";
         echo "</div>";
         $j++;
       }
@@ -78,7 +80,7 @@
     <?php
       for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<div>";
-          echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
           echo "<div class='flagNameContainer'>";
             echo "<p class='flagName'>".$answered[$i]."</p>";
           echo "</div>";
@@ -86,6 +88,7 @@
       }
      ?>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/winornotpage.js"></script>
 </body>
 </html>

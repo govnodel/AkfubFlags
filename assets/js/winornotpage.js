@@ -10,3 +10,9 @@ for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) 
 for (var i = 0; i < document.getElementById("secondFlags").children.length; i++) {
   document.getElementById("secondFlags").children[i].style.left = 10 * i + start + "%";
 }
+
+$('.flag').bind("click", clickFlag);
+
+function clickFlag(){
+  this.style.opacity = "0"
+}
