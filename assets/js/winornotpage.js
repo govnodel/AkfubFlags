@@ -14,5 +14,7 @@ for (var i = 0; i < document.getElementById("secondFlags").children.length; i++)
 $('.flag').bind("click", clickFlag);
 
 function clickFlag(){
-  this.style.opacity = "0"
+  this.animate({
+    opacity: 0
+  }, 100);
 }
