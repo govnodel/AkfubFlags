@@ -78,8 +78,10 @@
     <?php
       for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<div>";
-        echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-        echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "<img width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
+          echo "<div class='flagNameContainer'>";
+            echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "</div>";
         echo "</div>";
       }
      ?>
