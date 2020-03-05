@@ -13,21 +13,21 @@ for (var i = 0; i < document.getElementById("secondFlags").children.length; i++)
 }
 
 for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
-  document.getElementsByClassName("flag")[i].addEventListener("click", clickFlag);
+  document.getElementsByClassName("flag")[i].parentNode.addEventListener("click", clickFlag);
 }
 
 function clickFlag(){
   if (last != this) {
     if (last != 0) {
-      last.style.animation = "flagApp 0.1s linear forwards";
-      last.parentNode.children[1].style.animation = "nameDis 0.1s linear forwards";
+      last.children[0].style.animation = "flagApp 0.1s linear forwards";
+      last.children[1].style.animation = "nameDis 0.1s linear forwards";
     }
-    this.style.animation = "flagDis 0.1s linear forwards";
-    this.parentNode.children[1].style.animation = "nameApp 0.1s linear forwards";
+    this.children[0].style.animation = "flagDis 0.1s linear forwards";
+    this.children[1].style.animation = "nameApp 0.1s linear forwards";
     last = this;
   } else {
-    this.style.animation = "flagApp 0.1s linear forwards";
-    this.parentNode.children[1].style.animation = "nameDis 0.1s linear forwards";
+    this.children[0].style.animation = "flagApp 0.1s linear forwards";
+    this.children[1].style.animation = "nameDis 0.1s linear forwards";
     last = 0;
   }
 }
