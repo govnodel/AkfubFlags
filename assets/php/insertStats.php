@@ -7,14 +7,14 @@
       echo "error";
       exit;
     }
-    while($row = pg_fetch_row($query)){
+
+    while($row = pg_fetch_row($query)){//$score $ansProc $games
       $victoriesOld = $row[0];
       $gamesOld = $row[1];
       $ansProcOld = $row[2];
       $ansQuaOld = $row[3];
       $scoreOld = $row[4];
     }
-
 
     $stats = explode(':', $_COOKIE["statsInFlags"]);
 
@@ -52,5 +52,8 @@
     }
 
     setcookie("statsInFlags", "", time() - 3600);
+
+    $data = array($score, $scoreOld, $ansProc, $ansProcOld, $games, $gamesOld);
+    setcookie("dataInFlags", $data, time() + 3600);
   }
  ?>

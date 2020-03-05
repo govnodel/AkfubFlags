@@ -115,7 +115,7 @@ function stat(flag){
     } else {
       stats = '1'
     }
-    stats += ":" + (counter + 1) + ":" + (3 - lives) + rightStr;
+    stats += ":" + counter + ":" + (3 - lives) + rightStr;
   }
 
   if (!flag) {
@@ -145,8 +145,12 @@ function refresh(flag){
     $('#flag' + i).unbind();
   }
 
+  $("#circle").animate({
+    opacity: 0
+  }, 300);
+
   setTimeout(function(){
-    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #circle, #pop, #cap").animate({
+    $("#flag0, #flag1, #flag2, #flag3, #timer_sec, #country, #pop, #cap").animate({
       opacity: 0
     }, 300);
     setTimeout(function(){
@@ -157,7 +161,7 @@ function refresh(flag){
         }, 400, function(){
           document.cookie = "statsInFlags=" + encodeURIComponent(stat(true)) + "; path=/";
           document.cookie = "answeredInFlags=" + encodeURIComponent(stat(false)) + "; path=/";
-          window.location.href = "winornot.php";
+          window.location.href = "stats.php";
         });
       } else {
         nonExit();

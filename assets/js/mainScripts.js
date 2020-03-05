@@ -1,5 +1,6 @@
 var reload;
 var pushed = true;
+var login = false;
 var into = "into 1s linear forwards";
 var outto = "outto 1s linear forwards";
 var profile = document.getElementById('profilemenu');
@@ -29,9 +30,16 @@ function pushMenu(){
 		pushed = false;
 	} else {
 		$("#profilemenu *:not(#logRegMenu)").fadeOut(800);
-		$('#buttonprofile').animate({
-			left: '0px'
-		}, 800);
+		if (login) {
+			$('#buttonprofile').animate({
+				left: '0px',
+				opacity: '0'
+			}, 800);
+		} else {
+			$('#buttonprofile').animate({
+				left: '0px'
+			}, 800);
+		}
 		button.style.animation = "pullButton 0.8s linear forwards";
 		$('#profilemenu').animate({
 			left: '-30%'
@@ -45,8 +53,7 @@ $(function() {
 	if(reload == "1"){
 		first.style.animation = outto;
 		second.style.animation = outto;
-		reload = "0";
-		sessionStorage.setItem("reload", reload);
+		sessionStorage.setItem("reload", "0");
 	}
 	$('html, body').animate({
 		scrollTop: $('#first').offset().top
@@ -59,16 +66,19 @@ function slowScroll(){
 	$('html, body').animate({
 		scrollTop: $('#second').offset().top
 	}, 500);
-	reload = "1";
-	sessionStorage.setItem("reload", reload);
+	sessionStorage.setItem("reload", "1");
 }
 
 function signUp(event){
-	if(event.data.index == 1){
-		window.location.href = "logPage.php";
-	} else {
-		window.location.href = "regPage.php";
-	}
+	login = true;
+	pushMenu();
+	$('#buttonplay').fadeOut(800, function(){
+		if(event.data.index == 1){
+			window.location.href = "logPage.php";
+		} else {
+			window.location.href = "regPage.php";
+		}
+	});
 }
 
 function startGame(){

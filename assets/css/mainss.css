@@ -114,6 +114,24 @@ body {
   animation-iteration-count: infinite;
   animation-name: playButton;
 }
+#playerTable{
+  border-collapse: separate;
+  width: 92%;
+  text-align: center;
+  top: 70%;
+  position: absolute;
+  font-size: 2.6vh;
+  left: 50%;
+  transform: translate(-50%, 0vh);
+  margin-right: -50%;
+  border-spacing: 0px 1.5vh;
+}
+.row{
+  background: #ededed;
+}
+.row > td{
+  height: 5vh
+}
 @keyframes into{
   0% {
     background-color: #9426e2
@@ -192,7 +210,6 @@ body {
   color: #2a5eb2;
   justify-content: center;
   text-align: center;
-
 }
 #logRegMenu > h1 {
   font-size: 4em;
@@ -208,6 +225,60 @@ body {
   width: 30%;
   float: left;
 }
+
+#stats > p{
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  font-size: 6vh;
+}
+
+#profilemenu > svg{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+}
+
+#profilemenu > svg > circle{
+  fill: white;
+  stroke: #dedede;
+  stroke-width: 15px;
+}
+
+#profilemenu > svg > line{
+  stroke: #dedede;
+  stroke-width: 15px;
+}
+
+#logRegMenu > p{
+  position: absolute;
+  top: -7vh;
+  left: 50%;
+  margin-right: -50%;
+  font-size: 9.2vh;
+  color: black;
+  transform: translate(-50%, 0%);
+}
+
+#place{
+  top: 14%;
+}
+#games{
+  top: 23%;
+}
+#victories{
+  top: 32%;
+}
+#accuracy{
+  top: 41%;
+}
+#score{
+  top: 50%;
+}
+
 .emptyText {
   margin-top: 9%;
   color: #666666;

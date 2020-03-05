@@ -2,28 +2,35 @@
   session_start();
   require "assets/php/functions/setConnection.php";
   $connect = setConnection();
-  require "assets/php/registration.php";
+  require "assets/php/classes/user.php";
+  $user = new User($connect);
+  if ($_POST["doneInFlags"] != null) $user->signUp();
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Registration</title>
-  <link rel="stylesheet" href="assets/css/registration.css">
-</head>
-<body>
-    <form role = "SignUp" id = "reg_menu" name="reg" action="" method="post">
-      <input type="text" name="email" placeholder="Email" value="<?=$_SESSION["email"]?>">
-      <p><?=$error_email?></p>
-      <input type="text" name="login" placeholder="Login" value="<?=$_SESSION["login"]?>">
-      <p><?=$error_login?></p>
-      <input type="password" name="pass" placeholder="Password">
-      <p><?=$error_pass?></p>
-      <input type="password" name="verif" placeholder="Repeat password">
-      <p><?=$error_verif?></p>
-      <input type="submit" name="done" value="Enter">
-    </form>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="assets/css/regPage.css">
+  </head>
+  <body>
+    <div id="frame">
+      <form role = "SignIn" id = "log_menu" name="log" action="" method="post">
+        <p class="label">Email</p>
+        <input class="inp" type="text" name="emailInFlags" placeholder="" value="<?=$_SESSION["emailInFlags"]?>">
+        <p class="error"><?=$user->error_emailInFlags?>&nbsp;</p>
+        <p class="label">Login</p>
+        <input class="inp" type="text" name="loginRegInFlags" placeholder="" value="<?=$_SESSION["loginRegInFlags"]?>">
+        <p class="error"><?=$user->error_loginInFlags?>&nbsp;</p>
+        <p class="label">Password</p>
+        <input class="inp" type="password" name="passRegInFlags" placeholder="">
+        <p class="error"><?=$user->error_passInFlags?>&nbsp;</p>
+        <p class="label">Repeat password</p>
+        <input class="inp" type="password" name="repPassInFlags" placeholder="">
+        <p class="error">&nbsp;</p>
+        <input id="subm" type="submit" name="doneInFlags" value="Enter">
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/regPage.js"></script>
+  </body>
 </html>
