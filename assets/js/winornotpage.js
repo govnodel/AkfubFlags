@@ -12,7 +12,9 @@ for (var i = 0; i < document.getElementById("secondFlags").children.length; i++)
   document.getElementById("secondFlags").children[i].style.left = 10 * i + start + "%";
 }
 
-document.getElementsByClassName("flag").addEventListener("click", clickFlag);
+for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
+  document.getElementsByClassName("flag")[i].addEventListener("click", clickFlag);
+}
 
 function clickFlag(){
   if (last != this) {
