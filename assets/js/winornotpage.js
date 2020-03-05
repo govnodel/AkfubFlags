@@ -1,5 +1,5 @@
 var WIDTH = document.documentElement.clientWidth;
-var start = (WIDTH - 10 * document.getElementById("firstFlags").children.length) / WIDTH * 100;
+var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
 document.body.style.animation = "end 0.8s linear forwards";
 
