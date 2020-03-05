@@ -41,6 +41,14 @@ body, html {
 #secondFlags > div{
   position: absolute;
 }
+#firstFlags > div > p{
+  position: absolute;
+  top: 0vh;
+}
+#secondFlags > div > p{
+  position: absolute;
+  top: 0vh;
+}
 #nameContainer{
   position: absolute;
   width: 40%;
