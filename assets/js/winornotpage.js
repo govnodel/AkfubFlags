@@ -18,14 +18,14 @@ function clickFlag(){
   if (last != this) {
     if (last != 0) {
       last.style.animation = "flagApp 0.1s linear forwards";
-      last.parentNode.children[1].style.opacity = 1;
+      last.parentNode.children[1].style.animation = "nameApp 0.1s linear forwards";
     }
     this.style.animation = "flagDis 0.1s linear forwards";
-    this.parentNode.children[1].style.opacity = 0;
+    this.parentNode.children[1].style.animation = "nameDis 0.1s linear forwards";
     last = this;
   } else {
     this.style.animation = "flagApp 0.1s linear forwards";
-    this.parentNode.children[1].style.opacity = 1;
+    this.parentNode.children[1].style.animation = "nameApp 0.1s linear forwards";
     last = 0;
   }
 }

@@ -129,3 +129,19 @@ body, html {
     opacity: 1
   }
 }
+@keyframes nameApp{
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+@keyframes nameDis{
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
