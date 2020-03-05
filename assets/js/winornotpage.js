@@ -25,7 +25,7 @@ function clickFlag(){
     last = this;
   } else {
     this.style.animation = "flagApp 0.1s linear forwards";
-    this.parentNode.children[1].style.opacity = 0;
+    this.parentNode.children[1].style.opacity = 1;
     last = 0;
   }
 }
