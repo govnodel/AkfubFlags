@@ -42,6 +42,7 @@ body, html {
   position: absolute;
 }
 .flagName{
+  font-family: 'Oswald', sans-serif;
   position: absolute;
   top: 0vh;
 }
@@ -88,10 +89,6 @@ body, html {
 }
 #table > td{
   width: 25%;
-}
-.flagName{
-  font-family: 'Oswald', sans-serif;
-  color: steelblue;
 }
 @keyframes end{
   0% {
