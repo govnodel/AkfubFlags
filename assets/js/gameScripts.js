@@ -53,9 +53,9 @@ function setFlags(){
   let popNum = pops[numbers[winPos]].slice(0, pops[numbers[winPos]].length - 3);;
   if (popNum.length > 3){
     if (popNum.length > 6){
-      popNum = popNum.slice(0, 1) + "," + popNum.slice(1, popNum.length - 3) + "," + popNum.slice(popNum.length - 3);
+      popNum = popNum.slice(0, 1) + " " + popNum.slice(1, popNum.length - 3) + " " + popNum.slice(popNum.length - 3);
     } else {
-      popNum = popNum.slice(0, popNum.length - 3) + "," + popNum.slice(popNum.length - 3);
+      popNum = popNum.slice(0, popNum.length - 3) + " " + popNum.slice(popNum.length - 3);
     }
   }
 
