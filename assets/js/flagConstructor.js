@@ -13,7 +13,7 @@ function draw(str){
   let color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
   let color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
-  alert(color1.r);
+  alert(color1.g);
 
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
