@@ -6,11 +6,11 @@ $diff = $options[2];
 
 switch ($options[0]) {
   case "m":
-    setcookie("modernInFlag", "MODERN", time() + 7200);
+    $_SESSION["modernInFlag"] = "MODERN";
     $query = $query."true";
     break;
   case "h":
-    setcookie("modernInFlag", "HISTORICAL", time() + 7200);
+    $_SESSION["modernInFlag"] = "HISTORICAL";
     $diff = 1;
     $query = $query."false";
     break;
