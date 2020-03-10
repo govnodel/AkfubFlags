@@ -24,10 +24,6 @@ function draw(str){
   ctx.fillStyle = startColor;
   ctx.fillRect(0, 0, size, size);
 
-  ctx.beginPath();
-  ctx.arc(size / 2, size / 2, 76, 0, Math.PI * 2);
-  ctx.clip();
-
   let proc2 = 38;
   let proc3 = 62;
   switch (pattern) {
