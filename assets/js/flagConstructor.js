@@ -6,7 +6,13 @@ class Color {
   }
 }
 
-function draw(pattern, color1, color2, color3){
+function draw(str){
+  let pattern = str.split(":")[0];
+
+  let color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
+  let color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
+  let color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
+
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
 

@@ -3,12 +3,10 @@ var WIDTH = document.documentElement.clientWidth;
 var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
 window.onload = function (){
-  var color1 = new Color(0, 35, 149);
-  var color2 = new Color(255, 255, 255);
-  var color3 = new Color(237, 41, 57);
+  var str = "2:0,35,149:255,255,255:237,41,57";
 
-  draw(2, color1, color2, color3);
-  
+  draw(str);
+
   document.body.style.animation = "end 0.8s linear forwards";
 
   for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) {
