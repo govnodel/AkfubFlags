@@ -75,7 +75,7 @@ body, html {
   transform: translate(-50%, 0vh);
   top: 8vh;
 }
-#nameContainer > p{
+#name{
   font-family: 'Oswald', sans-serif;
   left: 50%;
   position: absolute;
@@ -84,6 +84,9 @@ body, html {
   font-size: 10vh;
 }
 #please{
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0vh);
   font-size: 4.5vh;
   text-align: center;
   top: -4vh;
