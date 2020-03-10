@@ -2,18 +2,26 @@ var last = 0;
 var WIDTH = document.documentElement.clientWidth;
 var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
-document.body.style.animation = "end 0.8s linear forwards";
+window.onload = function (){
+  var color1 = new Color(0, 35, 149);
+  var color2 = new Color(255, 255, 255);
+  var color3 = new Color(237, 41, 57);
 
-for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) {
-  document.getElementById("firstFlags").children[i].style.left = 10 * i + start + "%";
-}
+  draw(2, color1, color2, color3);
+  
+  document.body.style.animation = "end 0.8s linear forwards";
 
-for (var i = 0; i < document.getElementById("secondFlags").children.length; i++) {
-  document.getElementById("secondFlags").children[i].style.left = 10 * i + start + "%";
-}
+  for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) {
+    document.getElementById("firstFlags").children[i].style.left = 10 * i + start + "%";
+  }
 
-for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
-  document.getElementsByClassName("flag")[i].parentNode.addEventListener("click", clickFlag);
+  for (var i = 0; i < document.getElementById("secondFlags").children.length; i++) {
+    document.getElementById("secondFlags").children[i].style.left = 10 * i + start + "%";
+  }
+
+  for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
+    document.getElementsByClassName("flag")[i].parentNode.addEventListener("click", clickFlag);
+  }
 }
 
 function clickFlag(){
