@@ -94,6 +94,9 @@
         }
         echo
     "</div>
+    <script>
+      var avatar = ".$_COOKIE["avatarInFlag"].";
+    </script>
     <script src='assets/js/flagConstructor.js'></script>
     <script src='assets/js/winornotpage.js'></script>";
   } else {
@@ -159,9 +162,6 @@
         }
         echo
     "</div>
-    <script>
-      var avatar = ".$_COOKIE["avatarInFlag"].";
-    </script>
     <script src='assets/js/flagConstructor.js'></script>
     <script src='assets/js/winornotpage.js'></script>";
   }
