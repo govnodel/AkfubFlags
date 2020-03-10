@@ -37,13 +37,13 @@ function draw(str){
   switch (pattern) {
     case '1':
       alert("go");
-      ctx.fillStyle = 'blue';//'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')'
+      ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
 
-      ctx.fillStyle = 'white';//'rgb(' + color2.r + ', ' + color2.g + ', ' + color2.b + ')'
+      ctx.fillStyle = 'rgb(' + color2.r + ', ' + color2.g + ', ' + color2.b + ')';
       ctx.fillRect(0, size * 2 / 100 * (proc2 / 2), size, size * 2 / 100 * ((proc3 - proc2) / 2));
 
-      ctx.fillStyle = 'red';//'rgb(' + color3.r + ', ' + color3.g + ', ' + color3.b + ')'
+      ctx.fillStyle = 'rgb(' + color3.r + ', ' + color3.g + ', ' + color3.b + ')';
       ctx.fillRect(0, size * 2 / 100 * (proc3 / 2), size, size / 2);
       break;
     case '2':
