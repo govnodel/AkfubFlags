@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
   session_start();
   require "assets/php/functions/setConnection.php";
