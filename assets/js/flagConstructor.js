@@ -36,6 +36,7 @@ function draw(str){
   let proc3 = 62;
   switch (pattern) {
     case 1:
+      alert("go");
       ctx.fillStyle = 'blue';//'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')'
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
 
