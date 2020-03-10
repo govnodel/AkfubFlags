@@ -90,6 +90,7 @@ body, html {
   transform: translate(-50%, 0vh);
   font-size: 4.5vh;
   text-align: center;
+  text-decoration: none;
 }
 #tableContainer{
   top: 32vh;
