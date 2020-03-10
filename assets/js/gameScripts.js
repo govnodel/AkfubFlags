@@ -70,7 +70,7 @@ function passSec(){
   seconds--;
   document.getElementById("timer_sec").setAttributeNS(null, 'x', 36);
   $("#timer_sec").text(seconds);
-  if(seconds < 0){
+  if(seconds < 1){
     liveDecrease();
   }
 }
