@@ -92,12 +92,12 @@
 
     </div>
     <div id='tableContainer'>
-      <table>
+      <table id='table'>
         <tr>
           <td>SCORE</td>
           <td class='plus'>+".$_COOKIE["newScoreInFlag"]."</td>
         </tr>
-        <tr>
+        <tr class='row'>
           <td>ACCURACY</td>
           <td>".$_COOKIE["newAnsProcInFlag"]."%</td>
         </tr>
@@ -105,7 +105,7 @@
           <td>GAMES</td>
           <td class='plus'>+1</td>
         </tr>
-        <tr>
+        <tr class='row'>
           <td>PLACE</td>
           <td>X</td>
         </tr>
