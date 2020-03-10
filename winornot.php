@@ -11,7 +11,7 @@
     echo
     "<div id='nameContainer'>
       <canvas id='canvas' width='200' height='200'></canvas>
-      <a href='http://flags.alfa-omega.pro/' id='name'>".$_COOKIE["nameOldInFlag"]."</p>
+      <p id='name'>".$_COOKIE["nameOldInFlag"]."</p>
     </div>
     <div id='tableContainer'>
       <table id='table'>
@@ -92,7 +92,7 @@
     echo
     "<div id='nameContainer'>
       <canvas id='canvas' width='200' height='200'></canvas>
-      <p id='please'>Please, sign up to save your statistic</p>
+      <a href='http://flags.alfa-omega.pro/' id='please'>Please, sign up to save your statistic</p>
     </div>
     <div id='tableContainer'>
       <table id='table'>
