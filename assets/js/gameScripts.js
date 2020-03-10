@@ -12,7 +12,7 @@ window.onload = function (){
   startGame();
 }
 
-function startGame (){
+function startGame(){
   setRegimeText();
   document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   setFlags();
