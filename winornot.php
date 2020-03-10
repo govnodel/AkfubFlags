@@ -29,16 +29,16 @@
         </tr>
         <tr class='row'>
           <td>ACCURACY</td>
-          <td>".$_COOKIE["ansProcOldInFlag"]."</td>";
+          <td>".$_COOKIE["ansProcOldInFlag"]."%</td>";
               if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] > 0){
-                echo "<td class='plus'>+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
+                echo "<td class='plus'>+".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."%</td>";
               } else if ($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"] == 0){
-                echo "<td>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
+                echo "<td>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."%</td>";
               } else {
-                echo "<td class='minus'>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."</td>";
+                echo "<td class='minus'>".round($_COOKIE["ansProcInFlag"] - $_COOKIE["ansProcOldInFlag"], 2)."%</td>";
               }
               echo
-          "<td>".round($_COOKIE["ansProcInFlag"], 2)."</td>
+          "<td>".round($_COOKIE["ansProcInFlag"], 2)."%</td>
         </tr>
         <tr>
           <td>GAMES</td>
@@ -95,11 +95,11 @@
       <table>
         <tr>
           <td>SCORE</td>
-          <td class='plus'>+".$_COOKIE["newScore"]."</td>
+          <td class='plus'>+".$_COOKIE["newScoreInFlag"]."</td>
         </tr>
         <tr>
           <td>ACCURACY</td>
-          <td class='plus'>+".$_COOKIE["newAnsProc"]."</td>
+          <td>".$_COOKIE["newAnsProcInFlag"]."%</td>
         </tr>
         <tr>
           <td>GAMES</td>
