@@ -11,7 +11,7 @@
     echo
     "<div id='nameContainer'>
       <canvas id='canvas' width='200' height='200'></canvas>
-      <p id='name'>".$_COOKIE["nameOldInFlag"]."</p>
+      <a href='' id='name'>".$_COOKIE["nameOldInFlag"]."</p>
     </div>
     <div id='tableContainer'>
       <table id='table'>
