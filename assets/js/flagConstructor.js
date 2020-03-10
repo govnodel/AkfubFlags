@@ -35,7 +35,7 @@ function draw(str){
   let proc2 = 38;
   let proc3 = 62;
   switch (pattern) {
-    case 1:
+    case '1':
       alert("go");
       ctx.fillStyle = 'blue';//'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')'
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
@@ -46,7 +46,7 @@ function draw(str){
       ctx.fillStyle = 'red';//'rgb(' + color3.r + ', ' + color3.g + ', ' + color3.b + ')'
       ctx.fillRect(0, size * 2 / 100 * (proc3 / 2), size, size / 2);
       break;
-    case 2:
+    case '2':
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size * 2 / 100 * (proc2 / 2), size);
 
