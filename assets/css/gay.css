@@ -14,8 +14,8 @@ body *:not(#upblock){
   stroke-width: 8px;
   stroke: white;
   stroke-dasharray: 300%;
-  animation: timer 10s linear;
-  -webkit-animation: timer 10s linear;
+  animation: timer 11s linear;
+  -webkit-animation: timer 11s linear;
   animation-fill-mode: forwards;
 }
 #innerCircle {
