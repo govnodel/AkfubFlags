@@ -9,6 +9,8 @@ class Color {
 function draw(str){
   let pattern = str.split(":")[0];
 
+  let color1, color2, color3;
+
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
 
@@ -30,9 +32,9 @@ function draw(str){
   let proc3 = 62;
   switch (pattern) {
     case '1':
-      let color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
-      let color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
-      let color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
+      color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
+      color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
+      color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
@@ -44,10 +46,10 @@ function draw(str){
       ctx.fillRect(0, size * 2 / 100 * (proc3 / 2), size, size / 2);
       break;
     case '2':
-      let color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
-      let color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
-      let color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
-      
+      color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
+      color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
+      color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
+
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size * 2 / 100 * (proc2 / 2), size);
 
