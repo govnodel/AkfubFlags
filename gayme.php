@@ -62,11 +62,9 @@
   var capitals = [];
   var diff;
   var modern;
-  var modernReg;
 
   <?php
   while ($row = pg_fetch_row($result)) {
-    echo "modernReg = '$modern';";
     echo "names[names.length] = '$row[0]';";
     echo "pops[pops.length] = '$row[1]';";
     echo "capitals[capitals.length] = '$row[2]';";
