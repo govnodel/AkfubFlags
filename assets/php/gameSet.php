@@ -7,11 +7,9 @@ $diff = $options[2];
 
 switch ($options[0]) {
   case "m":
-    $_SESSION["modernInFlag"] = "MODERN";
     $query = $query."true";
     break;
   case "h":
-    $_SESSION["modernInFlag"] = "HISTORICAL";
     $diff = 1;
     $query = $query."false";
     break;

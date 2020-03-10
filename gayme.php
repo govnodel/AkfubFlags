@@ -21,7 +21,7 @@
     </svg>
     <p id = "country">Lubava</p>
     <?php
-      $modern = explode(':', $_POST["name"])[0];
+      $modern = explode(':', $_POST["op"])[0];
 
       if ($modern == "m") {
         echo $modern;
