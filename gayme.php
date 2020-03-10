@@ -20,11 +20,18 @@
       <text id="timer_sec" x = "36" y = "58" fill = "white" >10</text>
     </svg>
     <p id = "country">Lubava</p>
-    <p class="data" id="popW">POP</p>
-    <p class="data" id="pop"></p>
-    <p class="data" id="capW">CAP</p>
-    <p class="data" id="cap">Ubuntu</p>
-    <p class="data" id="regime">MODERN|EASY</p>
+    <?php
+      if ($_COOKIE["modernInFlag"] == "MODERN") {
+        echo "<p class='data' id='popW'>POP</p>";
+        echo "<p class='data' id='pop'></p>";
+        echo "<p class='data' id='capW'>CAP</p>";
+        echo "<p class='data' id='cap'>Ubuntu</p>";
+      } else {
+        echo "<p class='data' id='capW1'>CAP</p>";
+        echo "<p class='data' id='cap1'>Ubuntu</p>";
+      }
+      echo "<p class='data' id='regime'>".$_COOKIE["modernInFlag"]."|EASY</p>";
+    ?>
     <div id="nolives">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">

@@ -149,6 +149,16 @@ svg.kruglyash text {
   left: 12.5%;
   margin-top: 0.5em;
 }
+#capW1 {
+  left: 8%;
+  margin-top: 0.5em;
+  top: 1vh;
+}
+#cap1 {
+  left: 12.5%;
+  margin-top: 0.5em;
+  top: 1vh;
+}
 @keyframes timer {
   from {
     stroke-dashoffset: 0

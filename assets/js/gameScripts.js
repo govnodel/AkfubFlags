@@ -90,16 +90,12 @@ function checkEnd(){
 }
 
 function setRegimeText() {
-  let res = "MODERN";
-
-  if (modern != "h")
-    res = "MODERN"
+  let res = document.getElementById("regime").textContent.split("|")[0];
 
   res += "|";
-
   res += "LVL" + diff;
 
-  $("#regime").text(res);
+  document.getElementById("regime").textContent = res;
 }
 
 function stat(flag){
