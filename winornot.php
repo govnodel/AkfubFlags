@@ -86,7 +86,7 @@
         echo
     "</div>
     <script src='assets/js/winornotpage.js'></script>";
-  } else {//SCORE ACCURACY GAMES PLACE
+  } else {
     echo
     "<div id='nameContainer'>
 
