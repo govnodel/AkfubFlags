@@ -21,7 +21,7 @@
     </svg>
     <p id = "country">Lubava</p>
     <?php
-      if ($_COOKIE["modernInFlag"] == "MODERN") {
+      if ($_COOKIE["modernInFlag"] != "HISTORICAL") {
         echo "<p class='data' id='popW'>POP</p>";
         echo "<p class='data' id='pop'></p>";
         echo "<p class='data' id='capW'>CAP</p>";
