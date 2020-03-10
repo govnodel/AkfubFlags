@@ -67,7 +67,11 @@
         for ($i = 1; $i < count($answered) / 2; $i++) {
           echo "<div>";
             echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            echo "<div class='flagNameContainer'>";
+            if (strlen($answered[$i]) > 16) {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+            } else {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+            }
               echo "<p class='flagName'>".$answered[$i]."</p>";
             echo "</div>";
           echo "</div>";
@@ -79,7 +83,11 @@
         for ($i = $j + 1; $i < count($answered); $i++) {
           echo "<div>";
             echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            echo "<div class='flagNameContainer'>";
+            if (strlen($answered[$i]) > 16) {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+            } else {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+            }
               echo "<p class='flagName'>".$answered[$i]."</p>";
             echo "</div>";
           echo "</div>";
@@ -124,7 +132,11 @@
         for ($i = 1; $i < count($answered) / 2; $i++) {
           echo "<div>";
             echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            echo "<div class='flagNameContainer'>";
+            if (strlen($answered[$i]) > 16) {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+            } else {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+            }
               echo "<p class='flagName'>".$answered[$i]."</p>";
             echo "</div>";
           echo "</div>";
@@ -136,7 +148,11 @@
         for ($i = $j + 1; $i < count($answered); $i++) {
           echo "<div>";
             echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            echo "<div class='flagNameContainer'>";
+            if (strlen($answered[$i]) > 16) {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+            } else {
+              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+            }
               echo "<p class='flagName'>".$answered[$i]."</p>";
             echo "</div>";
           echo "</div>";

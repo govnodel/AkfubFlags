@@ -45,11 +45,12 @@ body, html {
   font-family: 'Oswald', sans-serif;
   color: white;
   position: absolute;
-  top: -2.5vh;
+  top: -2.2vh;
   left: 50%;
-  font-size: 2.4vh;
+  font-size: 2.1vh;
   margin-right: -50%;
   transform: translate(-50%, 0vh);
+  text-align: center;
 }
 .flagNameContainer{
   opacity: 0;
@@ -58,8 +59,13 @@ body, html {
   width: 90%;
   left: 50%;
   background-color: black;
-  height: 3.5vh;
   transform: translate(-50%, 0vh);
+}
+#flagNameContainerHeight1{
+  height: 6.5vh;
+}
+#flagNameContainerHeight2{
+  height: 3.5vh;
 }
 #canvas{
   top: -2.1vh;
