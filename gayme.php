@@ -30,6 +30,7 @@
         echo "<p class='data' id='capW'>CAP</p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
+        echo $modern;
         $modern = "HISTORICAL";
         echo "<p class='data' id='capW1'>CAP</p>";
         echo "<p class='data' id='cap1'>Ubuntu</p>";
