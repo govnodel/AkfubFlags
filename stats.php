@@ -11,7 +11,7 @@
     <?php
       if (($_COOKIE["userIdInFlags"] != "") && ($_COOKIE["statsInFlags"] != "")){
         //example 0:4:3:Spain:France:Geramny
-        $query = pg_query($connect, "SELECT victories, games, percent, quantity, score, login FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+        $query = pg_query($connect, "SELECT victories, games, percent, quantity, score, login, avatar FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
         while($row = pg_fetch_row($query)){//$score $ansProc $games
           $victoriesOld = $row[0];
@@ -20,6 +20,7 @@
           $ansQuaOld = $row[3];
           $scoreOld = $row[4];
           $name = $row[5];
+          $avatar = $row[6];
         }
 
         $placeQuery = pg_query($connect, "SELECT id FROM ourusers ORDER BY score DESC;");
@@ -82,7 +83,8 @@
         setcookie("gamesOldInFlag", $gamesOld, time() + 7200);
         setcookie("placeInFlag", $place, time() + 7200);
         setcookie("placeOldInFlag", $placeOld, time() + 7200);
-        setcookie("nameOldInFlag", $name, time() + 7200);
+        setcookie("nameInFlag", $name, time() + 7200);
+        setcookie("avatarInFlag", $avatar, time() + 7200);
       } else {
         $stats = explode(':', $_COOKIE["statsInFlags"]);
 
