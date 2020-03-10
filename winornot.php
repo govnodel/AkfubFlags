@@ -10,6 +10,7 @@
   <?php if ($_COOKIE["userIdInFlags"] != "") {
     echo
     "<div id='nameContainer'>
+      <canvas id='canvas' width='200' height='200'></canvas>
       <p>".$_COOKIE["nameOldInFlag"]."</p>
     </div>
     <div id='tableContainer'>
@@ -85,6 +86,7 @@
         }
         echo
     "</div>
+    <script src='assets/js/flagConstructor.js'></script>
     <script src='assets/js/winornotpage.js'></script>";
   } else {
     echo
@@ -135,6 +137,7 @@
         }
         echo
     "</div>
+    <script src='assets/js/flagConstructor.js'></script>
     <script src='assets/js/winornotpage.js'></script>";
   }
   ?>
