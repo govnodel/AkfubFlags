@@ -23,6 +23,7 @@
     <?php
       $modern = explode(':', $_POST["op"])[0];
       echo $modern;
+      echo "string";
       if ($modern == "m") {
         $modern = "MODERN";
         echo "<p class='data' id='popW'>POP</p>";
