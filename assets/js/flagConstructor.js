@@ -63,13 +63,15 @@ function draw(str){
       ctx.fillStyle = 'rgb(209, 209, 209)';
       ctx.fillRect(0, 0, size, size);
 
-      ctx.fillStyle = 'rgb(181, 181, 181)';
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgb(181, 181, 181)';
       ctx.moveTo(10, 10);
       ctx.lineTo(size - 10, size - 10);
       ctx.lineWidth = 15;
       ctx.stroke();
 
-      ctx.fillStyle = 'rgb(181, 181, 181)';
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgb(181, 181, 181)';
       ctx.moveTo(size - 10, 10);
       ctx.lineTo(10, size - 10);
       ctx.lineWidth = 15;
