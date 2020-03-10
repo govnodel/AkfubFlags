@@ -13,8 +13,6 @@ function draw(str){
   let color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
   let color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
-  alert(pattern + " " + color1.r + " " + color1.g + " " + color1.b);
-
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
 
@@ -36,7 +34,6 @@ function draw(str){
   let proc3 = 62;
   switch (pattern) {
     case '1':
-      alert("go");
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
 
