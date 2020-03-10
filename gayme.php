@@ -24,14 +24,12 @@
       $modern = explode(':', $_POST["op"])[0];
 
       if ($modern == "m") {
-        echo $modern;
         $modern = "MODERN";
         echo "<p class='data' id='popW'>POP</p>";
         echo "<p class='data' id='pop'></p>";
         echo "<p class='data' id='capW'>CAP</p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
-        echo $modern;
         $modern = "HISTORICAL";
         echo "<p class='data' id='capW1'>CAP</p>";
         echo "<p class='data' id='cap1'>Ubuntu</p>";
