@@ -3,8 +3,6 @@ var WIDTH = document.documentElement.clientWidth;
 var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
 window.onload = function (){
-  // var str = "1:0,35,149:255,255,255:237,41,57";
-
   draw(avatar);
 
   document.body.style.animation = "end 0.8s linear forwards";
