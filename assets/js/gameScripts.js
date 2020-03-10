@@ -8,7 +8,9 @@ var seconds = 10;
 var lives = 3;
 var counter = 0;
 
-startGame(); //<-------------------change-this----------------------
+window.onload = function (){
+  startGame();
+}
 
 function startGame (){
   setRegimeText();
