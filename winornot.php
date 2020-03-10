@@ -88,7 +88,13 @@
     <script src='assets/js/winornotpage.js'></script>";
   } else {
     echo
-    "<div id='firstFlags'>";
+    "<div id='nameContainer'>
+    
+    </div>
+    <div id='tableContainer'>
+
+    </div>
+    <div id='firstFlags'>";
         $answered = explode(':', $_COOKIE["answeredInFlags"]);
         for ($i = 1; $i < count($answered) / 2; $i++) {
           echo "<div>";
