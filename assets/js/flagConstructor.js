@@ -36,6 +36,10 @@ function draw(str){
       color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, 76, 0, Math.PI * 2);
+      ctx.clip();
+
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
 
@@ -50,6 +54,10 @@ function draw(str){
       color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, 76, 0, Math.PI * 2);
+      ctx.clip();
+
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size * 2 / 100 * (proc2 / 2), size);
 
@@ -60,20 +68,26 @@ function draw(str){
       ctx.fillRect(size * 2 / 100 * (proc3 / 2), 0, size / 2, size);
       break;
     default:
-      ctx.fillStyle = 'rgb(209, 209, 209)';
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, 86, 0, Math.PI * 2);
+      ctx.clip();
+
+      ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, size, size);
 
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(181, 181, 181)';
-      ctx.moveTo(10, 10);
-      ctx.lineTo(size - 10, size - 10);
+      ctx.lineCap = 'round';
+      ctx.moveTo(45, 45);
+      ctx.lineTo(size - 45, size - 45);
       ctx.lineWidth = 15;
       ctx.stroke();
 
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(181, 181, 181)';
-      ctx.moveTo(size - 10, 10);
-      ctx.lineTo(10, size - 10);
+      ctx.lineCap = 'round';
+      ctx.moveTo(size - 45, 45);
+      ctx.lineTo(45, size - 45);
       ctx.lineWidth = 15;
       ctx.stroke();
   }
