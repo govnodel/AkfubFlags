@@ -1,4 +1,5 @@
 <?php
+session_start();
 $query = "SELECT name, pop, capital FROM flags WHERE modern = ";
 $options = explode(':', $_GET["op"]);
 
