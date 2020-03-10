@@ -21,12 +21,16 @@
     </svg>
     <p id = "country">Lubava</p>
     <?php
-      if ($_COOKIE["modernInFlag"] != "HISTORICAL") {
+      $modern = explode(':', $_POST["name"]);
+
+      if ($modern == "m") {
+        $modern = "MODERN";
         echo "<p class='data' id='popW'>POP</p>";
         echo "<p class='data' id='pop'></p>";
         echo "<p class='data' id='capW'>CAP</p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
+        $modern = "HISTORICAL";
         echo "<p class='data' id='capW1'>CAP</p>";
         echo "<p class='data' id='cap1'>Ubuntu</p>";
       }
@@ -63,6 +67,7 @@
 
   <?php
   while ($row = pg_fetch_row($result)) {
+    echo "modern = '$modern';";
     echo "names[names.length] = '$row[0]';";
     echo "pops[pops.length] = '$row[1]';";
     echo "capitals[capitals.length] = '$row[2]';";
