@@ -92,7 +92,7 @@
     echo
     "<div id='nameContainer'>
       <canvas id='canvas' width='200' height='200'></canvas>
-      <p>Please, sign up to save your statistic</p>
+      <p id='please'>Please, sign up to save your statistic</p>
     </div>
     <div id='tableContainer'>
       <table id='table'>
