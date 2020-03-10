@@ -22,7 +22,7 @@
     <p id = "country">Lubava</p>
     <?php
       $modern = explode(':', $_POST["op"])[0];
-
+      echo $modern;
       if ($modern == "m") {
         $modern = "MODERN";
         echo "<p class='data' id='popW'>POP</p>";
