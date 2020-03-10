@@ -91,7 +91,7 @@
   } else {
     echo
     "<div id='nameContainer'>
-
+    <canvas id='canvas' width='200' height='200'></canvas>
     </div>
     <div id='tableContainer'>
       <table id='table'>
