@@ -86,13 +86,30 @@
         echo
     "</div>
     <script src='assets/js/winornotpage.js'></script>";
-  } else {
+  } else {//SCORE ACCURACY GAMES PLACE
     echo
     "<div id='nameContainer'>
-    
+
     </div>
     <div id='tableContainer'>
-
+      <table>
+        <tr>
+          <td>SCORE</td>
+          <td class='plus'>+".$_COOKIE["newScore"]."</td>
+        </tr>
+        <tr>
+          <td>ACCURACY</td>
+          <td class='plus'>+".$_COOKIE["newAnsProc"]."</td>
+        </tr>
+        <tr>
+          <td>GAMES</td>
+          <td class='plus'>+1</td>
+        </tr>
+        <tr>
+          <td>PLACE</td>
+          <td>X</td>
+        </tr>
+      </table>
     </div>
     <div id='firstFlags'>";
         $answered = explode(':', $_COOKIE["answeredInFlags"]);
