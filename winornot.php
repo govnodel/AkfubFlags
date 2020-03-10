@@ -97,9 +97,14 @@
     <div id='tableContainer'>
       <table id='table'>
         <tr>
-          <td>SCORE</td>
-          <td class='plus'>+".$_COOKIE["newScoreInFlag"]."</td>
-        </tr>
+          <td>SCORE</td>";
+          if ($_COOKIE["newScoreInFlag"] != 0) {
+            echo "<td class='plus'>+".$_COOKIE["newScoreInFlag"]."</td>";
+          } else {
+            echo "<td>".$_COOKIE["newScoreInFlag"]."</td>";
+          }
+          echo
+        "</tr>
         <tr class='row'>
           <td>ACCURACY</td>
           <td>".$_COOKIE["newAnsProcInFlag"]."%</td>
