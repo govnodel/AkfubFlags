@@ -19,7 +19,7 @@ function draw(str){
   let ctx = canvas.getContext('2d');
 
   let size = canvas.width;
-  let startColor = 'white';
+  let startColor = 'black';
 
   ctx.beginPath();
   ctx.arc(size / 2, size / 2, 100, 0, Math.PI * 2);
