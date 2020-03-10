@@ -199,9 +199,9 @@ function nonExit(){
       }
       let circleEl = document.getElementById("circle");
       if(circleEl.style.animationName == "timer2"){
-        circleEl.style.animation = "timer 12s linear forwards";
+        circleEl.style.animation = "timer 14s linear forwards";
       } else {
-        circleEl.style.animation = "timer2 12s linear forwards";
+        circleEl.style.animation = "timer2 14s linear forwards";
       }
       $("#circle").animate({
         opacity: 1
