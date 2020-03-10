@@ -11,13 +11,13 @@ var counter = 0;
 startGame(); //<-------------------change-this----------------------
 
 function startGame (){
+  setRegimeText();
   document.getElementById("timer_sec").setAttributeNS(null, 'x', 30);
   setFlags();
   $("body *:not(#upblock)").animate({
     opacity: 1
   }, 300, function(){
     if(start){
-      setRegimeText();
       for(let i = 0; i < 4; i++){
         $("#flag" + i).bind("click", clickFlag);
       }

@@ -21,10 +21,7 @@
     </svg>
     <p id = "country">Lubava</p>
     <?php
-      $modern = explode(':', $_GET["op"])[0];
-      echo $modern;
-      echo "string";
-      if ($modern == "m") {
+      if (explode(':', $_GET["op"])[0] == "m") {
         $modern = "MODERN";
         echo "<p class='data' id='popW'>POP</p>";
         echo "<p class='data' id='pop'></p>";
@@ -35,7 +32,7 @@
         echo "<p class='data' id='capW1'>CAP</p>";
         echo "<p class='data' id='cap1'>Ubuntu</p>";
       }
-      echo "<p class='data' id='regime'>".$_COOKIE["modernInFlag"]."|EASY</p>";
+      echo "<p class='data' id='regime'>".$modern."|EASY</p>";
     ?>
     <div id="nolives">
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
