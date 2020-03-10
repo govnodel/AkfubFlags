@@ -102,8 +102,8 @@
 
         setcookie("statsInFlags", "", time() - 3600);
 
-        setcookie("ansProcInFlag", $newAnsProc, time() + 7200);
-        setcookie("scoreInFlag", $newScore, time() + 7200);
+        setcookie("newAnsProcInFlag", $newAnsProc, time() + 7200);
+        setcookie("newScoreInFlag", $newScore, time() + 7200);
       }
 
       header("Location: http://flags.alfa-omega.pro/winornot.php");
