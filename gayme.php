@@ -73,7 +73,7 @@
       echo "capitals[capitals.length] = '$row[2]';";
       echo "diff = '$diff';";
       echo "modern = '$options[0]';";
-      echo "dates[dates.length] = '$row[3]'";
+      echo "dates[dates.length] = '$row[3]';";
     }
   ?>
 </script>
