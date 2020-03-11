@@ -23,12 +23,14 @@
     <?php
       if (explode(':', $_GET["op"])[0] == "m") {
         $modern = "MODERN";
+        setcookie("modernInFlag", $modern, time() + 7200);
         echo "<p class='data' id='popW'>POP </p>";
         echo "<p class='data' id='pop'></p>";
         echo "<p class='data' id='capW'>CAP </p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
         $modern = "HISTORICAL";
+        setcookie("modernInFlag", $modern, time() + 7200);
         echo "<p class='data' id='datW'>DATE </p>";
         echo "<p class='data' id='dat'></p>";
         echo "<p class='data' id='capW'>CAP </p>";
