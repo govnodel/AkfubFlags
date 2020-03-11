@@ -1,6 +1,6 @@
 <?php
 session_start();
-$query = "SELECT name, pop, capital FROM flags WHERE modern = ";
+$query = "SELECT name, pop, capital, dat FROM flags WHERE modern = ";
 $options = explode(':', $_GET["op"]);
 
 $diff = $options[2];

@@ -29,8 +29,10 @@
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
         $modern = "HISTORICAL";
-        echo "<p class='data' id='capW1'>CAP</p>";
-        echo "<p class='data' id='cap1'>Ubuntu</p>";
+        echo "<p class='data' id='datW'>DATE</p>";
+        echo "<p class='data' id='dat'></p>";
+        echo "<p class='data' id='capW'>CAP</p>";
+        echo "<p class='data' id='cap'>Ubuntu</p>";
       }
       echo "<p class='data' id='regime'>".$modern."|EASY</p>";
     ?>
@@ -60,17 +62,19 @@
   var names = [];
   var pops = [];
   var capitals = [];
+  var dates = [];
   var diff;
   var modern;
 
   <?php
-  while ($row = pg_fetch_row($result)) {
-    echo "names[names.length] = '$row[0]';";
-    echo "pops[pops.length] = '$row[1]';";
-    echo "capitals[capitals.length] = '$row[2]';";
-    echo "diff = '$diff';";
-    echo "modern = '$options[0]';";
-  }
+    while ($row = pg_fetch_row($result)) {
+      echo "names[names.length] = '$row[0]';";
+      echo "pops[pops.length] = '$row[1]';";
+      echo "capitals[capitals.length] = '$row[2]';";
+      echo "diff = '$diff';";
+      echo "modern = '$options[0]';";
+      echo "dates[dates.length] = '$row[3]'";
+    }
   ?>
 </script>
 <script src = "assets/js/gameScripts.js"></script>
