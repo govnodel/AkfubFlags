@@ -99,6 +99,9 @@ body, html {
   text-decoration: none;
   color: black;
 }
+#please > label{
+  cursor: pointer;
+}
 #tableContainer{
   top: 32vh;
   width: 62%;
