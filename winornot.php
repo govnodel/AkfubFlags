@@ -69,7 +69,7 @@
     echo
     "<div id='nameContainer'>
       <canvas id='canvas' width='200' height='200'></canvas>
-      <a href='http://flags.alfa-omega.pro/' id='please'>Please, <label>sign up</label> or <label>log in</label> to save your statistic</a>
+      <a id='please'>Please, <label id='signUp'>sign up</label> or <label id='logIn'>log in</label> to save your statistic</a>
     </div>
     <div id='tableContainer'>
       <table id='table'>

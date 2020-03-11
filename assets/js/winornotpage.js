@@ -3,8 +3,12 @@ var WIDTH = document.documentElement.clientWidth;
 var start = (WIDTH - 190 * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
 
 window.onload = function (){
-  // draw(avatar);
-
+  if (document.cookie.replace(/(?:(?:^|.*;\s*)userIdInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != "") {
+    draw(avatar);
+  } else {
+    document.getElementById("logIn").addEventListener("click", signUp);
+    document.getElementById("signUp").addEventListener("click", signUp);
+  }
   document.body.style.animation = "end 0.8s linear forwards";
 
   for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) {
@@ -17,6 +21,14 @@ window.onload = function (){
 
   for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
     document.getElementsByClassName("flag")[i].parentNode.addEventListener("click", clickFlag);
+  }
+}
+
+function signUp(){
+  if (this.id == "logIn") {
+  	window.location.href = "logPage.php";
+  } else {
+    window.location.href = "regPage.php";
   }
 }
 
