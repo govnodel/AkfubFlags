@@ -33,7 +33,7 @@ function draw(str){
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
       ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.43, 0, Math.PI * 2);
+      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
       ctx.clip();
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
@@ -51,7 +51,7 @@ function draw(str){
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
       ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.43, 0, Math.PI * 2);
+      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
       ctx.clip();
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
@@ -65,7 +65,7 @@ function draw(str){
       break;
     case '3':
       ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.43, 0, Math.PI * 2);
+      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
       ctx.clip();
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
@@ -87,7 +87,7 @@ function draw(str){
       break;
     default:
       ctx.beginPath();
-      ctx.arc(size / 2, size / 2,  size * 0.47, 0, Math.PI * 2);
+      ctx.arc(size / 2, size / 2,  size * 0.45, 0, Math.PI * 2);
       ctx.clip();
 
       ctx.fillStyle = 'white';
