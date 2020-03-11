@@ -85,7 +85,7 @@
       <div id="logRegMenu">
         <?php
           if ($authorized) {
-            echo "<canvas id='canvas' width='150' height='150'></canvas>";
+            echo "<canvas id='canvas' width='160' height='160'></canvas>";
             echo "<p>".$name."</p>";
           } else {
             echo "<h1 id = 'login'>Log in</h1>";

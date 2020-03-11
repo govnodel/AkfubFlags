@@ -269,7 +269,7 @@ body {
 
 #logRegMenu > p{
   position: absolute;
-  top: 0vh;
+  top: -2vh;
   left: 50%;
   margin-right: -50%;
   font-size: 9.2vh;
