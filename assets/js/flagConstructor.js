@@ -15,7 +15,7 @@ function draw(str){
   let ctx = canvas.getContext('2d');
 
   let size = canvas.width;
-  let startColor = 'rgb(250, 250, 250)';
+  let startColor = 'rgb(242, 242, 242)';
 
   ctx.beginPath();
   ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
