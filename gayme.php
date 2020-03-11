@@ -23,15 +23,15 @@
     <?php
       if (explode(':', $_GET["op"])[0] == "m") {
         $modern = "MODERN";
-        echo "<p class='data' id='popW'>POP</p>";
+        echo "<p class='data' id='popW'>POP </p>";
         echo "<p class='data' id='pop'></p>";
-        echo "<p class='data' id='capW'>CAP</p>";
+        echo "<p class='data' id='capW'>CAP </p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       } else {
         $modern = "HISTORICAL";
-        echo "<p class='data' id='datW'>DATE</p>";
+        echo "<p class='data' id='datW'>DATE </p>";
         echo "<p class='data' id='dat'></p>";
-        echo "<p class='data' id='capW'>CAP</p>";
+        echo "<p class='data' id='capW'>CAP </p>";
         echo "<p class='data' id='cap'>Ubuntu</p>";
       }
       echo "<p class='data' id='regime'>".$modern."|EASY</p>";
