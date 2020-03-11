@@ -252,7 +252,8 @@ body {
 }
 
 #canvas{
-  left: 0%;
+  top: 0.4vh;
+  left: 5%;
   position: absolute;
 }
 
