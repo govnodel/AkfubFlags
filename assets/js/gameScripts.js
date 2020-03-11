@@ -50,10 +50,10 @@ function setFlags(){
   }
 
   winPos = Math.round(Math.random() * 3);
-  if (document.getElementById("regime").textContent.split("|")[0] != "MODERN") {
-    winName = names[numbers[winPos]].slice(0, names[numbers[winPos]].length - 1);
-  } else {
+  if (document.getElementById("regime").textContent.split("|")[0] == "MODERN") {
     winName = names[numbers[winPos]];
+  } else {
+    winName = names[numbers[winPos]].slice(0, names[numbers[winPos]].length - 1);
   }
 
   let popNum = pops[numbers[winPos]].slice(0, pops[numbers[winPos]].length - 3);
@@ -96,7 +96,7 @@ function checkEnd(){
 }
 
 function setRegimeText() {
-  let res = document.getElementById("regime").textContent.split("|")[0] != "MODERN"
+  let res = document.getElementById("regime").textContent.split("|")[0];
 
   res += "|";
   res += "LVL" + diff;
