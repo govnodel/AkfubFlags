@@ -69,7 +69,7 @@ function slideMenu(){
 	if (this.id != currentMenu) {
 		currentMenu = this.id;
 		if (this.id == "secondCircle") {
-			this.innerHTML = "<circle cx='20' cy='20' r='10' fill='white'></circle>";
+			this.innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle><circle cx='20' cy='20' r='10' fill='white'></circle>";
 			document.getElementById("playerTableContainer").style.opacity = 0;
 			document.getElementById("stats").style.opacity = 0;
 		} else {
