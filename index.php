@@ -123,6 +123,9 @@
               echo "</tr>";
             echo "</table>";
           echo "</div>";
+          echo "<svg class='circleButtons' height='40' width='40'>";
+            echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
+          echo "</svg>";
         } else {
           echo '<svg height="240" width="240">';
             echo '<circle cx="120" cy="120" r="110"></circle>';
