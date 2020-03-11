@@ -70,10 +70,22 @@ function slideMenu(){
 		currentMenu = this.id;
 		if (this.id == "secondCircle") {
 			this.innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle><circle cx='20' cy='20' r='10' fill='white'></circle>";
-			document.getElementById("playerTableContainer").style.opacity = 0;
-			document.getElementById("stats").style.opacity = 0;
+			document.getElementById("firstCircle").innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>"
+
+			$('#playerTableContainer, #stats').animate({
+				opacity: 0
+			}, 300);
+
+			//second menu appearing
 		} else {
+			this.innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle><circle cx='20' cy='20' r='10' fill='white'></circle>";
+			document.getElementById("secondCircle").innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>"
+
 			//second menu disappearing
+			
+			$('#playerTableContainer, #stats').animate({
+				opacity: 1
+			}, 300);
 		}
 	}
 }
