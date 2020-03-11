@@ -1,6 +1,6 @@
 var regime;
 var diff = 1;
-const maxDiff = 2;
+const maxDiff = 3;
 $( document ).ready(function() {
   setTimeout(function(){
     $(".flack, .chooseArea *").animate({
