@@ -10,11 +10,12 @@
   $accuracy = 0;
   $score = 0;
   $name = "Error";
+  $avatar = "Error";
 
   if ($_COOKIE["userIdInFlags"] != "") {
     $authorized = true;
 
-    $query = pg_query($connect, "SELECT games, victories, percent, score, login FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
+    $query = pg_query($connect, "SELECT games, victories, percent, score, login, avatar FROM ourusers WHERE id = ".$_COOKIE["userIdInFlags"].";");
 
     while($row = pg_fetch_row($query)){
       $place = 0;
@@ -23,6 +24,7 @@
       $accuracy = $row[2];
       $score = $row[3];
       $name = $row[4];
+      $avatar = $row[5];
     }
 
     $placeQuery = pg_query($connect, "SELECT score, login FROM ourusers ORDER BY score DESC;");
@@ -83,6 +85,7 @@
       <div id="logRegMenu">
         <?php
           if ($authorized) {
+            echo "<canvas id='avatarCanvas' width='200' height='200'></canvas>";
             echo "<p>".$name."</p>";
           } else {
             echo "<h1 id = 'login'>Log in</h1>";
@@ -126,6 +129,7 @@
           echo "<div id='circleButtons'>";
             echo "<svg id='firstCircle' height='40' width='40'>";
               echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
+              echo "<circle cx='20' cy='20' r='10' fill='white'></circle>";
             echo "</svg>";
             echo "<svg id='secondCircle' height='40' width='40'>";
               echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
@@ -147,6 +151,9 @@
       <polygon points="156,355 156,95 364,225" fill = "none" stroke="white"/>
     </svg>
   </div>
+  <script>
+    var avatar = "<?=$avatar?>";
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/mainScripts.js"></script>
 </body>

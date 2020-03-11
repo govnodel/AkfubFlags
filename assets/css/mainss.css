@@ -251,6 +251,11 @@ body {
   margin-right: -50%;
 }
 
+#avatarCanvas{
+  left: 0%;
+  position: absolute;
+}
+
 #cancelSymbol > circle{
   fill: white;
   stroke: #dedede;
@@ -264,12 +269,12 @@ body {
 
 #logRegMenu > p{
   position: absolute;
-  top: -9vh;
+  top: 0vh;
   left: 50%;
   margin-right: -50%;
   font-size: 9.2vh;
   color: black;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -50%);
 }
 
 #place{

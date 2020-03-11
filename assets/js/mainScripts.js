@@ -13,14 +13,20 @@ var WIDTH = document.documentElement.clientWidth;
 
 var currentMenu = "firstCircle";
 
-document.getElementById("firstCircle").addEventListener("click", slideMenu);
-document.getElementById("secondCircle").addEventListener("click", slideMenu);
+window.onload = function (){
+  draw(avatar);
 
-$('#buttonprofile').bind("click", pushMenu);
-$('#buttonplay').bind("click", startGame);
-$('#login').bind("click", {index: 1}, signUp);
-$('#register').bind("click", {index: 2}, signUp);
-$("#profilemenu *:not(#logRegMenu)").fadeOut(100);
+	document.getElementById("firstCircle").addEventListener("click", slideMenu);
+	document.getElementById("secondCircle").addEventListener("click", slideMenu);
+
+	$('#buttonprofile').bind("click", pushMenu);
+	$('#buttonplay').bind("click", startGame);
+	$('#login').bind("click", {index: 1}, signUp);
+	$('#register').bind("click", {index: 2}, signUp);
+	$("#profilemenu *:not(#logRegMenu)").fadeOut(100);
+}
+
+
 
 function pushMenu(){
 	if (pushed){
@@ -82,7 +88,7 @@ function slideMenu(){
 			document.getElementById("secondCircle").innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>"
 
 			//second menu disappearing
-			
+
 			$('#playerTableContainer, #stats').animate({
 				opacity: 1
 			}, 300);
