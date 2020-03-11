@@ -14,10 +14,12 @@ var WIDTH = document.documentElement.clientWidth;
 var currentMenu = "firstCircle";
 
 window.onload = function (){
-  draw(avatar);
+	if (authorized == '1') {
+		draw(avatar);
 
-	document.getElementById("firstCircle").addEventListener("click", slideMenu);
-	document.getElementById("secondCircle").addEventListener("click", slideMenu);
+		document.getElementById("firstCircle").addEventListener("click", slideMenu);
+		document.getElementById("secondCircle").addEventListener("click", slideMenu);
+	}
 
 	$('#buttonprofile').bind("click", pushMenu);
 	$('#buttonplay').bind("click", startGame);
