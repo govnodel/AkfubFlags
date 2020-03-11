@@ -62,43 +62,10 @@
         </tr>
       </table>
     </div>
-    <div id='firstFlags'>";
-        $answered = explode(':', $_COOKIE["answeredInFlags"]);
-        for ($i = 1; $i < count($answered) / 2; $i++) {
-          echo "<div>";
-            echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            if (strlen($answered[$i]) < 16) {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
-            } else {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
-            }
-              echo "<p class='flagName'>".$answered[$i]."</p>";
-            echo "</div>";
-          echo "</div>";
-          $j++;
-        }
-       echo
-    "</div>
-    <div id='secondFlags'>";
-        for ($i = $j + 1; $i < count($answered); $i++) {
-          echo "<div>";
-            echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            if (strlen($answered[$i]) < 16) {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
-            } else {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
-            }
-              echo "<p class='flagName'>".$answered[$i]."</p>";
-            echo "</div>";
-          echo "</div>";
-        }
-        echo
-    "</div>
+    </div>
     <script>
       var avatar = '".$_COOKIE["avatarInFlag"]."';
-    </script>
-    <script src='assets/js/flagConstructor.js'></script>
-    <script src='assets/js/winornotpage.js'></script>";
+    </script>";
   } else {
     echo
     "<div id='nameContainer'>
@@ -129,42 +96,50 @@
           <td>X</td>
         </tr>
       </table>
-    </div>
-    <div id='firstFlags'>";
-        $answered = explode(':', $_COOKIE["answeredInFlags"]);
-        for ($i = 1; $i < count($answered) / 2; $i++) {
-          echo "<div>";
-            echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            if (strlen($answered[$i]) < 16) {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
-            } else {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
-            }
-              echo "<p class='flagName'>".$answered[$i]."</p>";
-            echo "</div>";
-          echo "</div>";
-          $j++;
-        }
-       echo
-    "</div>
-    <div id='secondFlags'>";
-        for ($i = $j + 1; $i < count($answered); $i++) {
-          echo "<div>";
-            echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
-            if (strlen($answered[$i]) < 16) {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
-            } else {
-              echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
-            }
-              echo "<p class='flagName'>".$answered[$i]."</p>";
-            echo "</div>";
-          echo "</div>";
-        }
-        echo
-    "</div>
-    <script src='assets/js/flagConstructor.js'></script>
-    <script src='assets/js/winornotpage.js'></script>";
+    </div>";
   }
+  echo "<div id='firstFlags'>";
+      $answered = explode(':', $_COOKIE["answeredInFlags"]);
+      for ($i = 1; $i < count($answered) / 2; $i++) {
+        echo "<div>";
+        if () {
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i])."+.png' alt='x'>";
+        } else {
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
+        }
+          if (strlen($answered[$i]) < 16) {
+            echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+          } else {
+            echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+          }
+            echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "</div>";
+        echo "</div>";
+        $j++;
+      }
+     echo
+  "</div>
+  <div id='secondFlags'>";
+      for ($i = $j + 1; $i < count($answered); $i++) {
+        echo "<div>";
+        if () {
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i])."+.png' alt='x'>";
+        } else {
+          echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
+        }
+          if (strlen($answered[$i]) < 16) {
+            echo "<div class='flagNameContainer' id='flagNameContainerHeight2'>";
+          } else {
+            echo "<div class='flagNameContainer' id='flagNameContainerHeight1'>";
+          }
+            echo "<p class='flagName'>".$answered[$i]."</p>";
+          echo "</div>";
+        echo "</div>";
+      }
+      echo
+  "</div>
+  <script src='assets/js/flagConstructor.js'></script>
+  <script src='assets/js/winornotpage.js'></script>";
   ?>
 </body>
 </html>
