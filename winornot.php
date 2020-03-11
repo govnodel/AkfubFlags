@@ -121,7 +121,7 @@
   <div id='secondFlags'>";
       for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<div>";
-        if ($_COOKIE["modernInFlag"] == "MODERN") {
+        if ($_COOKIE["modernInFlag"] == "HISTORICAL") {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i])."+.png' alt='x'>";
         } else {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
