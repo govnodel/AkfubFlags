@@ -11,6 +11,11 @@ var arrow = document.getElementById('proArrow');
 var HEIGHT = document.documentElement.clientHeight / 2;
 var WIDTH = document.documentElement.clientWidth;
 
+var currentMenu = "firstCircle";
+
+document.getElementById("firstCircle").addEventListener("click", slideMenu);
+document.getElementById("secondCircle").addEventListener("click", slideMenu);
+
 $('#buttonprofile').bind("click", pushMenu);
 $('#buttonplay').bind("click", startGame);
 $('#login').bind("click", {index: 1}, signUp);
@@ -59,6 +64,19 @@ $(function() {
 		scrollTop: $('#first').offset().top
 	}, 500);
 });
+
+function slideMenu(){
+	if (this.id != currentMenu) {
+		currentMenu = this.id;
+		if (this.id == "secondCircle") {
+			this.innerHTML = "<circle cx='20' cy='20' r='10' fill='white'></circle>";
+			document.getElementById("playerTableContainer").style.opacity = 0;
+			document.getElementById("stats").style.opacity = 0;
+		} else {
+			//second menu disappearing
+		}
+	}
+}
 
 function slowScroll(){
 	first.style.animation = into;

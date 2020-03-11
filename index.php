@@ -99,7 +99,7 @@
             echo "<p id='accuracy'>Accuracy <label>".$accuracy."</label>%</p>";
             echo "<p id='score'>Score <label>".$score."</label></p>";
           echo "</div>";
-          echo "<div>";
+          echo "<div id='playerTableContainer'>";
             echo "<table id='playerTable'>";
               echo "<tr>";
                 echo "<td>Name</td>";
@@ -123,8 +123,11 @@
               echo "</tr>";
             echo "</table>";
           echo "</div>";
-          echo "<div class='circleButtons'>";
-            echo "<svg height='40' width='40'>";
+          echo "<div id='circleButtons'>";
+            echo "<svg id='firstCircle' height='40' width='40'>";
+              echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
+            echo "</svg>";
+            echo "<svg id='secondCircle' height='40' width='40'>";
               echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
             echo "</svg>";
           echo "</div>";
