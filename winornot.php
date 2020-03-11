@@ -101,7 +101,7 @@
       $answered = explode(':', $_COOKIE["answeredInFlags"]);
       for ($i = 1; $i < count($answered) / 2; $i++) {
         echo "<div>";
-        if (true) {
+        if () {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i])."+.png' alt='x'>";
         } else {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";
@@ -121,7 +121,7 @@
   <div id='secondFlags'>";
       for ($i = $j + 1; $i < count($answered); $i++) {
         echo "<div>";
-        if (true) {
+        if () {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i])."+.png' alt='x'>";
         } else {
           echo "<img class='flag' width='190px' height='120px' src='assets/images/flags/".str_replace(" ", "_", $answered[$i]).".png' alt='x'>";

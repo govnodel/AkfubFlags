@@ -56,6 +56,7 @@ function setFlags(){
     winName = names[numbers[winPos]].slice(0, names[numbers[winPos]].length - 1);
   }
 
+  let dat = dates[numbers[winPos]];
   let popNum = pops[numbers[winPos]].slice(0, pops[numbers[winPos]].length - 3);
   if (popNum.length > 3){
     if (popNum.length > 6){
@@ -66,6 +67,7 @@ function setFlags(){
   }
 
   $("#country").text(winName);
+  $("#dat").text(dat);
   $("#pop").text(popNum + "k");
   $("#cap, #cap1").text(capitals[numbers[winPos]]);
 }
