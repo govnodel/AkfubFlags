@@ -63,6 +63,28 @@ function draw(str){
       ctx.fillStyle = 'rgb(' + color3.r + ', ' + color3.g + ', ' + color3.b + ')';
       ctx.fillRect(size * 2 / 100 * (proc3 / 2), 0, size / 2, size);
       break;
+    case '3':
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, 76, 0, Math.PI * 2);
+      ctx.clip();
+
+      ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
+      ctx.fillRect(0, 0, size, size);
+
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgb(' + color2.r + ', ' + color2.g + ', ' + color2.b + ')';
+      ctx.moveTo(35, 35);
+      ctx.lineTo(size - 35, size - 35);
+      ctx.lineWidth = 25;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgb(' + color2.r + ', ' + color2.g + ', ' + color2.b + ')';
+      ctx.moveTo(size - 35, 35);
+      ctx.lineTo(35, size - 35);
+      ctx.lineWidth = 25;
+      ctx.stroke();
+      break;
     default:
       ctx.beginPath();
       ctx.arc(size / 2, size / 2, 86, 0, Math.PI * 2);
