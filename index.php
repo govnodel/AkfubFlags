@@ -127,7 +127,7 @@
             echo "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>";
           echo "</svg>";
         } else {
-          echo '<svg height="240" width="240">';
+          echo '<svg id="cancelSymbol" height="240" width="240">';
             echo '<circle cx="120" cy="120" r="110"></circle>';
             echo '<line x1="40" y1="40" x2="200" y2="200"></line>';
           echo '</svg>';
