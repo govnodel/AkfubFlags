@@ -218,6 +218,9 @@ body {
   justify-content: center;
   text-align: center;
 }
+#logRegMenu > h1 > label{
+  cursor: pointer;
+}
 #logRegMenu > h1 {
   margin-bottom: 2.5vh;
   margin-top: 2.5vh;

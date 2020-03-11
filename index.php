@@ -88,7 +88,7 @@
             echo "<canvas id='canvas' width='136' height='136'></canvas>";
             echo "<p>".$name."</p>";
           } else {
-            echo "<h1 id = 'login'>Log in</h1>";
+            echo "<h1 id = 'login'><label>Log in</label></h1>";
             echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>REGISTER</label> now</h2>";
           }
         ?>
