@@ -60,25 +60,25 @@
     <img id="flag3" alt="" >
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-  var names = [];
-  var pops = [];
-  var capitals = [];
-  var dates = [];
-  var diff;
-  var modern;
+  <script type="text/javascript">
+    var names = [];
+    var pops = [];
+    var capitals = [];
+    var dates = [];
+    var diff;
+    var modern;
 
-  <?php
-    while ($row = pg_fetch_row($result)) {
-      echo "names[names.length] = '$row[0]';";
-      echo "pops[pops.length] = '$row[1]';";
-      echo "capitals[capitals.length] = '$row[2]';";
-      echo "diff = '$diff';";
-      echo "modern = '$options[0]';";
-      echo "dates[dates.length] = '$row[3]';";
-    }
-  ?>
-</script>
-<script src = "assets/js/gameScripts.js"></script>
-    </body>
+    <?php
+      while ($row = pg_fetch_row($result)) {
+        echo "names[names.length] = '$row[0]';";
+        echo "pops[pops.length] = '$row[1]';";
+        echo "capitals[capitals.length] = '$row[2]';";
+        echo "diff = '$diff';";
+        echo "modern = '$options[0]';";
+        echo "dates[dates.length] = '$row[3]';";
+      }
+    ?>
+  </script>
+  <script src = "assets/js/gameScripts.js"></script>
+  </body>
 </html>
