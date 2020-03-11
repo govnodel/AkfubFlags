@@ -62,7 +62,6 @@
         </tr>
       </table>
     </div>
-    </div>
     <script>
       var avatar = '".$_COOKIE["avatarInFlag"]."';
     </script>";
