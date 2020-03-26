@@ -89,7 +89,7 @@
             echo "<p>".$name."</p>";
           } else {
             echo "<h1 id = 'login'><label>Log in</label></h1>";
-            echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>REGISTER</label> now</h2>";
+            echo "<h2 id = 'register'>or <label for='nothing' class = 'HochuCursor'>Sign up</label> now</h2>";
           }
         ?>
       </div>
