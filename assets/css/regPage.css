@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-body{
+body {
   background-color: #2a5eb2;
 }
 
-#frame{
+#frame {
   background-color: white;
   height: 70vh;
   width: 28%;
@@ -12,13 +12,13 @@ body{
   opacity: 0;
 }
 
-#log_menu{
+#log_menu {
   margin-left: 1%;
   margin-bottom: 1vh;
   padding: 4% 10%;
 }
 
-.label{
+.label {
   font-family: 'Oswald', sans-serif;
   font-weight: 1;
   font-size: 1.4em;
@@ -26,14 +26,14 @@ body{
   margin-top: -1vh;
 }
 
-.error{
+.error {
   font-family: 'Oswald', sans-serif;
   font-weight: 1;
   font-size: .95em;
   color: #de0000;
 }
 
-.inp{
+.inp {
   height: 6vh;
   width: 100%;
   border: 1px solid #cfcfcf;
@@ -44,7 +44,8 @@ body{
   margin-top: -2vh;
 }
 
-#subm{
+#subm {
+  font-size: 1.4em;
   background-color: #2a5eb2;
   border: none;
   color: white;
