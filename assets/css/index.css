@@ -260,6 +260,12 @@ body {
   margin-right: -50%;
 }
 
+#colorContainer{
+  top: 30vh;
+  position: absolute;
+  font-size: 2.4em;
+}
+
 #canvas{
   top: 0.4vh;
   left: 5%;

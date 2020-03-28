@@ -123,6 +123,11 @@
           $authorizedJS = 1;
           echo '<div id="editor">';
             echo '<canvas id="canvasEditor" height="300vh" width="300vh"></canvas>';
+            echo '<div id="colorContainer">';
+              echo '<p class="colorText">Color 1</p>';
+              echo '<p class="colorText">Color 2</p>';
+              echo '<p class="colorText">Color 3</p>';
+            echo '</div>';
           echo '</div>';
           echo "<div id='stats'>";
             echo "<p id='place'>Place <label>".$place."</label></p>";
