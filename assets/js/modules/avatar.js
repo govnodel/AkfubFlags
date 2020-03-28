@@ -96,17 +96,9 @@ function draw(str){
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(232, 232, 232)';
       ctx.lineCap = 'round';
-      ctx.moveTo(45, 45);
-      ctx.lineTo(size - 45, size - 45);
-      ctx.lineWidth = 15;
-      ctx.stroke();
-
-      ctx.beginPath();
-      ctx.strokeStyle = 'rgb(232, 232, 232)';
-      ctx.lineCap = 'round';
-      ctx.moveTo(size - 45, 45);
-      ctx.lineTo(45, size - 45);
-      ctx.lineWidth = 15;
+      ctx.moveTo(30, size / 2);
+      ctx.lineTo(size - 30, size / 2);
+      ctx.lineWidth = 12;
       ctx.stroke();
   }
 }
