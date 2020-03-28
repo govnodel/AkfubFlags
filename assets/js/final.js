@@ -2,12 +2,12 @@ var last = 0;
 var WIDTH = document.documentElement.clientWidth;
 
 window.onload = function (){
-  document.getElementById("home").addEventListener("click", goHome);
+  document.getElementById("home").addEventListener("click", exits);
   if (document.cookie.replace(/(?:(?:^|.*;\s*)userIdInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != "") {
     draw(avatar);
   } else {
-    document.getElementById("logIn").addEventListener("click", signUp);
-    document.getElementById("signUp").addEventListener("click", signUp);
+    document.getElementById("logIn").addEventListener("click", exits);
+    document.getElementById("signUp").addEventListener("click", exits);
   }
 
   document.body.style.animation = "end 0.8s linear forwards";
@@ -35,11 +35,28 @@ window.onload = function (){
   }
 }
 
-function signUp(){
+function exits(){
+  document.getElementById("home").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("nameContainer").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("tableContainer").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("firstFlags").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("secondFlags").style.animation = "nameDis 0.3s linear forwards";
+
   if (this.id == "logIn") {
-  	window.location.href = "logIn.php";
+    document.body.style.animation = "colorSign 0.3s linear forwards";
+    setTimeout(function(){
+      window.location.href = "logIn.php";
+    }, 300);
+  } else if (this.id == "signUp") {
+    document.body.style.animation = "colorSign 0.3s linear forwards";
+    setTimeout(function(){
+      window.location.href = "signUp.php";
+    }, 300);
   } else {
-    window.location.href = "signUp.php";
+    document.body.style.animation = "colorIndex 0.3s linear forwards";
+    setTimeout(function(){
+      window.location.href = "index.php";
+    }, 300);
   }
 }
 
@@ -57,17 +74,4 @@ function clickFlag(){
     this.children[1].style.animation = "nameDis 0.1s linear forwards";
     last = 0;
   }
-}
-
-function goHome(){
-  document.getElementById("home").style.animation = "nameDis 0.3s linear forwards";
-  document.getElementById("nameContainer").style.animation = "nameDis 0.3s linear forwards";
-  document.getElementById("tableContainer").style.animation = "nameDis 0.3s linear forwards";
-  document.getElementById("firstFlags").style.animation = "nameDis 0.3s linear forwards";
-  document.getElementById("secondFlags").style.animation = "nameDis 0.3s linear forwards";
-  document.body.style.animation = "color 0.3s linear forwards";
-
-  setTimeout(function(){
-    window.location.href = "index.php";
-  }, 300);
 }

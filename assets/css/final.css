@@ -180,11 +180,19 @@ body, html {
     opacity: 0
   }
 }
-@keyframes color {
+@keyframes colorIndex {
   0% {
     background-color: #E7F1F5
   }
   100% {
     background-color: #9426e2
+  }
+}
+@keyframes colorSign {
+  0% {
+    background-color: #E7F1F5
+  }
+  100% {
+    background-color: #2a5eb2
   }
 }
