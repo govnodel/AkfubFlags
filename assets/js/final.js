@@ -60,9 +60,13 @@ function clickFlag(){
 }
 
 function goHome(){
-  document.body.style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("home").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("nameContainer").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("tableContainer").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("firstFlags").style.animation = "nameDis 0.3s linear forwards";
+  document.getElementById("secondFlags").style.animation = "nameDis 0.3s linear forwards";
   document.body.style.animation = "color 0.3s linear forwards";
-  
+
   setTimeout(function(){
     window.location.href = "index.php";
   }, 300);
