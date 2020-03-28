@@ -118,6 +118,9 @@
           }
         ?>
       </div>
+      <div id="editor">
+        <canvas id="canvasEditor" height="400vh" width="400vh"></canvas>
+      </div>
       <?php
         if ($authorized) {
           $authorizedJS = 1;

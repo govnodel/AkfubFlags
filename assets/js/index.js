@@ -15,7 +15,8 @@ var currentMenu = "firstCircle";
 
 window.onload = function (){
 	if (authorized == '1') {
-		draw(avatar);
+		draw(avatar, document.getElementById("canvas"));
+		draw(avatar, document.getElementById("canvasEditor"));
 
 		document.getElementById("firstCircle").addEventListener("click", slideMenu);
 		document.getElementById("secondCircle").addEventListener("click", slideMenu);

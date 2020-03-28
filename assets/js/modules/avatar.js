@@ -6,12 +6,12 @@ class Color {
   }
 }
 
-function draw(str){
+function draw(str, cnv){
   let pattern = str.split(":")[0];
 
   let color1, color2, color3;
 
-  let canvas = document.getElementById('canvas');
+  let canvas = cnv;
   let ctx = canvas.getContext('2d');
 
   let size = canvas.width;

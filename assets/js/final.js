@@ -4,7 +4,7 @@ var WIDTH = document.documentElement.clientWidth;
 window.onload = function (){
   document.getElementById("home").addEventListener("click", exits);
   if (document.cookie.replace(/(?:(?:^|.*;\s*)userIdInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != "") {
-    draw(avatar);
+    draw(avatar, document.getElementById("canvas"));
   } else {
     document.getElementById("logIn").addEventListener("click", exits);
     document.getElementById("signUp").addEventListener("click", exits);
