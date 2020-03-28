@@ -21,12 +21,12 @@ window.onload = function (){
 
   for (var i = 0; i < children1.length; i++) {
     children1[i].style.left = 10 * i + start1 + "%";
-    children1[i].style.width = length + "px";
+    children1[i].children[0].style.width = length + "px";
   }
 
   for (var i = 0; i < children2.length; i++) {
     children2[i].style.left = 10 * i + start2 + "%";
-    children2[i].style.width = length + "px";
+    children2[i].children[0].style.width = length + "px";
   }
 
   for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
