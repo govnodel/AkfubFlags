@@ -269,12 +269,12 @@ body {
 #cancelSymbol > circle{
   fill: white;
   stroke: #dedede;
-  stroke-width: 15px;
+  stroke-width: 24px;
 }
 
 #cancelSymbol > line{
   stroke: #dedede;
-  stroke-width: 15px;
+  stroke-width: 24px;
 }
 
 #logRegMenu > p{

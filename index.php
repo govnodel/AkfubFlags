@@ -162,9 +162,9 @@
             echo "</svg>";
           echo "</div>";
         } else {
-          echo '<svg id="cancelSymbol" height="240" width="240">';
-            echo '<circle cx="120" cy="120" r="110"></circle>';
-            echo '<line x1="40" y1="40" x2="200" y2="200"></line>';
+          echo '<svg id="cancelSymbol" height="30vh" width="30vh">';
+            echo '<circle cx="150" cy="150" r="120"></circle>';
+            echo '<line x1="70" y1="70" x2="240" y2="240"></line>';
           echo '</svg>';
         }
       ?>
