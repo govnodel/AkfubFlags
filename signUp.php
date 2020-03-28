@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <title>Registration</title>
-    <link rel="stylesheet" href="assets/css/regPage.css">
+    <link rel="stylesheet" href="assets/css/signUp.css">
   </head>
   <body>
     <div id="frame">
@@ -31,6 +31,6 @@
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/js/regPage.js"></script>
+    <script src="assets/js/signUp.js"></script>
   </body>
 </html>

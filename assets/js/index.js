@@ -112,9 +112,9 @@ function signUp(event){
 	pushMenu();
 	$('#buttonplay').fadeOut(800, function(){
 		if(event.data.index == 1){
-			window.location.href = "logPage.php";
+			window.location.href = "logIn.php";
 		} else {
-			window.location.href = "regPage.php";
+			window.location.href = "signUp.php";
 		}
 	});
 }
@@ -123,6 +123,6 @@ function startGame(){
 	stopColoring = true;
 	$("#second *, #first").fadeOut();
 	setTimeout(function () {
-		window.location.href = "difficuty.html";
+		window.location.href = "difficulty.html";
 	}, 200);
 }

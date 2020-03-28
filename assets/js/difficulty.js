@@ -108,7 +108,7 @@ function redir(){
         height: '16vh'
       }, 460);
       setTimeout(function(){
-        window.location.href = "gayme.php?op=" + regime + ":" + diff;
+        window.location.href = "game.php?op=" + regime + ":" + diff;
       }, 460);
     }, 140);
   });

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Game</title>
-  <link rel="stylesheet" href="assets/css/gay.css">
+  <link rel="stylesheet" href="assets/css/game.css">
 </head>
 <body bgcolor = "#E7F1F5">
   <div id="upblock">
@@ -79,6 +79,6 @@
       }
     ?>
   </script>
-  <script src = "assets/js/gameScripts.js"></script>
+  <script src = "assets/js/game.js"></script>
   </body>
 </html>

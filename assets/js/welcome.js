@@ -7,7 +7,7 @@ $(function() {
     $('.text').animate({
       opacity: 0
     }, 300, function(){
-      window.location.href = "http://flags.alfa-omega.pro";
+      window.location.href = "index.php";
     });
   }, 1500);
 });

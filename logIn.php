@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <title>Log in</title>
-    <link rel="stylesheet" href="assets/css/logPage.css">
+    <link rel="stylesheet" href="assets/css/logIn.css">
   </head>
   <body>
     <div id="frame">
@@ -25,6 +25,6 @@
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/js/logPage.js"></script>
+    <script src="assets/js/logIn.js"></script>
   </body>
 </html>

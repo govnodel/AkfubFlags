@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Winner winner chicken dinner</title>
-  <link rel="stylesheet" href="assets/css/winornotpage.css">
+  <link rel="stylesheet" href="assets/css/final.css">
 </head>
 <body>
   <?php if ($_COOKIE["userIdInFlags"] != "") {
@@ -137,8 +137,8 @@
       }
       echo
   "</div>
-  <script src='assets/js/flagConstructor.js'></script>
-  <script src='assets/js/winornotpage.js'></script>";
+  <script src='assets/js/modules/flagConstructor.js'></script>
+  <script src='assets/js/final.js'></script>";
   ?>
 </body>
 </html>

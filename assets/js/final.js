@@ -26,9 +26,9 @@ window.onload = function (){
 
 function signUp(){
   if (this.id == "logIn") {
-  	window.location.href = "logPage.php";
+  	window.location.href = "logIn.php";
   } else {
-    window.location.href = "regPage.php";
+    window.location.href = "signUp.php";
   }
 }
 

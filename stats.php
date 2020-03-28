@@ -108,8 +108,9 @@
         setcookie("newScoreInFlag", $newScore, time() + 7200);
       }
 
-      header("Location: http://flags.alfa-omega.pro/winornot.php");
+      echo '<script type="text/javascript">window.location.href = "final.php";</script>';
       exit();
      ?>
+
   </body>
 </html>

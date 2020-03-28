@@ -64,7 +64,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AkfubFlags</title>
-  <link rel="stylesheet" href="assets/css/mainss.css">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
   <div id="first">
@@ -157,7 +157,7 @@
     var avatar = "<?=$avatar?>";
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src='assets/js/flagConstructor.js'></script>
-  <script src="assets/js/mainScripts.js"></script>
+  <script src='assets/js/modules/flagConstructor.js'></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>
