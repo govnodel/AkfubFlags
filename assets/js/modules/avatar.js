@@ -94,7 +94,7 @@ function draw(str){
       ctx.fillRect(0, 0, size, size);
 
       ctx.beginPath();
-      ctx.strokeStyle = 'rgb(214, 214, 214)';
+      ctx.strokeStyle = 'rgb(242, 242, 242)';
       ctx.lineCap = 'round';
       ctx.moveTo(45, 45);
       ctx.lineTo(size - 45, size - 45);
@@ -102,7 +102,7 @@ function draw(str){
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.strokeStyle = 'rgb(214, 214, 214)';
+      ctx.strokeStyle = 'rgb(242, 242, 242)';
       ctx.lineCap = 'round';
       ctx.moveTo(size - 45, 45);
       ctx.lineTo(45, size - 45);
