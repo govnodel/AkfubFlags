@@ -44,9 +44,9 @@
       <img src="assets/images/otherimgs/nolife.png" alt="nothing here">
     </div>
     <div id="lives">
-      <img src="assets/images/otherimgs/1life.png" alt="nothing here">
-      <img src="assets/images/otherimgs/1life.png" alt="nothing here">
-      <img src="assets/images/otherimgs/1life.png" alt="nothing here">
+      <img src="assets/images/otherimgs/life.png" alt="nothing here">
+      <img src="assets/images/otherimgs/life.png" alt="nothing here">
+      <img src="assets/images/otherimgs/life.png" alt="nothing here">
     </div>
   </div>
   <svg id = "vsyapoloska" >

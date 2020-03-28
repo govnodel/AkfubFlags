@@ -69,16 +69,16 @@ body, html {
     margin: 2%;
     position: relative;
 }
-.leftLevelArrow, .rightLevelArrow, {
+#leftLevelArrow, #rightLevelArrow, {
   position: absolute;
   cursor: pointer;
 }
-.leftLevelArrow {
+#leftLevelArrow {
   left: 42%;
 
   /* transform: rotate(45); */
 }
-.rightLevelArrow {
+#rightLevelArrow {
   right: 42%;
 }
 .chooseArea > button {
