@@ -118,12 +118,12 @@
           }
         ?>
       </div>
-      <div id="editor">
-        <canvas id="canvasEditor" height="400vh" width="400vh"></canvas>
-      </div>
       <?php
         if ($authorized) {
           $authorizedJS = 1;
+          echo '<div id="editor">';
+            echo '<canvas id="canvasEditor" height="300vh" width="300vh"></canvas>';
+          echo '</div>';
           echo "<div id='stats'>";
             echo "<p id='place'>Place <label>".$place."</label></p>";
             echo "<p id='games'>Games <label>".$games."</label></p>";
