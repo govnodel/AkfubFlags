@@ -84,9 +84,11 @@ function slideMenu(){
 				opacity: 0
 			}, 300);
 
-			$('#editor').animate({
-				opacity: 1
-			}, 300);
+			setTimeout(function(){
+				$('#editor').animate({
+					opacity: 1
+				}, 300);
+			}, 200);
 		} else {
 			this.innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle><circle cx='20' cy='20' r='10' fill='white'></circle>";
 			document.getElementById("secondCircle").innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>"
@@ -95,9 +97,11 @@ function slideMenu(){
 				opacity: 0
 			}, 300);
 
-			$('#playerTableContainer, #stats').animate({
-				opacity: 1
-			}, 300);
+			setTimeout(function(){
+				$('#playerTableContainer, #stats').animate({
+					opacity: 1
+				}, 300);
+			}, 200);
 		}
 	}
 }
