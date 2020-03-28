@@ -137,7 +137,7 @@
       }
       echo
   "</div>
-  <script src='assets/js/modules/flagConstructor.js'></script>
+  <script src='assets/js/modules/avatar.js'></script>
   <script src='assets/js/final.js'></script>";
   ?>
 </body>
