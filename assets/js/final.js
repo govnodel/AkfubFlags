@@ -2,6 +2,7 @@ var last = 0;
 var WIDTH = document.documentElement.clientWidth;
 
 window.onload = function (){
+  document.getElementById("home").addEventListener("click", goHome);
   if (document.cookie.replace(/(?:(?:^|.*;\s*)userIdInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != "") {
     draw(avatar);
   } else {
@@ -56,4 +57,13 @@ function clickFlag(){
     this.children[1].style.animation = "nameDis 0.1s linear forwards";
     last = 0;
   }
+}
+
+function goHome(){
+  document.body.style.animation = "nameDis 0.3s linear forwards";
+  document.body.style.animation = "color 0.3s linear forwards";
+  
+  setTimeout(function(){
+    window.location.href = "index.php";
+  }, 300);
 }

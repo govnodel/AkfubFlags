@@ -180,3 +180,11 @@ body, html {
     opacity: 0
   }
 }
+@keyframes color {
+  0% {
+    background-color: #E7F1F5
+  }
+  100% {
+    background-color: #9426e2
+  }
+}
