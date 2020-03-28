@@ -15,7 +15,7 @@ function draw(str){
   let ctx = canvas.getContext('2d');
 
   let size = canvas.width;
-  let startColor = 'rgb(242, 242, 242)';
+  let startColor = 'rgb(232, 232, 232)';
 
   ctx.beginPath();
   ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
@@ -94,7 +94,7 @@ function draw(str){
       ctx.fillRect(0, 0, size, size);
 
       ctx.beginPath();
-      ctx.strokeStyle = 'rgb(242, 242, 242)';
+      ctx.strokeStyle = 'rgb(232, 232, 232)';
       ctx.lineCap = 'round';
       ctx.moveTo(45, 45);
       ctx.lineTo(size - 45, size - 45);
@@ -102,7 +102,7 @@ function draw(str){
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.strokeStyle = 'rgb(242, 242, 242)';
+      ctx.strokeStyle = 'rgb(232, 232, 232)';
       ctx.lineCap = 'round';
       ctx.moveTo(size - 45, 45);
       ctx.lineTo(45, size - 45);
