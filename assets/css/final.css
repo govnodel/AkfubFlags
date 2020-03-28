@@ -7,6 +7,17 @@ body, html {
   background-color: #E7F1F5;
   overflow: hidden;
 }
+#home{
+  left: 100%;
+  transform: translate(-110%, 0vh);
+  top: 1vh;
+  position: fixed;
+}
+.line{
+  fill:none;
+  stroke:white;
+  stroke-width:18
+}
 #profile {
   width: 8.35%;
   height: 15.35%;

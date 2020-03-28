@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="assets/css/final.css">
 </head>
 <body>
+  <svg id="home" width="10vh" height="10vh" viewBox="0 0 200 200">
+    <polyline class="line" stroke-linecap="round" points="40,110 40,180 160,180 160,110"></polyline>
+    <polyline class="line" stroke-linecap="round" points="10,100 100,20 190,100"></polyline>
+  </svg>
   <?php if ($_COOKIE["userIdInFlags"] != "") {
     echo
     "<div id='nameContainer'>
