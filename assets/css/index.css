@@ -11,6 +11,12 @@ html, body {
 body {
   overflow: hidden
 }
+#exitSvg{
+  top: 100%;
+  left: 100%;
+  position: fixed;
+  transform: translate(-120%, -120%);
+}
 #first {
   background: #9426e2;
   width: 100%;

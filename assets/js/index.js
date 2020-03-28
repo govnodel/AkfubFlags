@@ -21,14 +21,13 @@ window.onload = function (){
 		document.getElementById("secondCircle").addEventListener("click", slideMenu);
 	}
 
+	$('#exitSvg').bind("click", exitUser);
 	$('#buttonprofile').bind("click", pushMenu);
 	$('#buttonplay').bind("click", startGame);
 	$('#login').bind("click", {index: 1}, signUp);
 	$('#register').bind("click", {index: 2}, signUp);
 	$("#profilemenu *:not(#logRegMenu)").fadeOut(100);
 }
-
-
 
 function pushMenu(){
 	if (pushed){
@@ -117,6 +116,11 @@ function signUp(event){
 			window.location.href = "signUp.php";
 		}
 	});
+}
+
+function exitUser(){
+	document.cookie = "userIdInFlags=''; path=/";
+	window.location.href = "index.php";
 }
 
 function startGame(){
