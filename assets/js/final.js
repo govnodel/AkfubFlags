@@ -1,6 +1,5 @@
 var last = 0;
 var WIDTH = document.documentElement.clientWidth;
-var start1, start2, length;
 
 window.onload = function (){
   if (document.cookie.replace(/(?:(?:^|.*;\s*)userIdInFlags\s*\=\s*([^;]*).*$)|^.*$/, "$1") != "") {
@@ -12,19 +11,22 @@ window.onload = function (){
 
   document.body.style.animation = "end 0.8s linear forwards";
 
-  length = 190;
+  let length = 190;
 
-  start1 = (WIDTH - length * document.getElementById("firstFlags").children.length) / 2 / WIDTH * 100;
-  start2 = (WIDTH - length * document.getElementById("secondFlags").children.length) / 2 / WIDTH * 100;
+  let children1 = document.getElementById("firstFlags").children;
+  let children2 = document.getElementById("secondFlags").children;
 
-  for (var i = 0; i < document.getElementById("firstFlags").children.length; i++) {
-    document.getElementById("firstFlags").children[i].style.left = 10 * i + start1 + "%";
-    document.getElementById("firstFlags").children[i].style.width = length + "px";
+  let start1 = (WIDTH - length * children1.length) / 2 / WIDTH * 100;
+  let start2 = (WIDTH - length * children2.length) / 2 / WIDTH * 100;
+
+  for (var i = 0; i < children1.length; i++) {
+    children1[i].style.left = 10 * i + start1 + "%";
+    children1[i].style.width = length + "px";
   }
 
-  for (var i = 0; i < document.getElementById("secondFlags").children.length; i++) {
-    document.getElementById("secondFlags").children[i].style.left = 10 * i + start2 + "%";
-    document.getElementById("secondFlags").children[i].style.width = length + "px";
+  for (var i = 0; i < children2.length; i++) {
+    children2[i].style.left = 10 * i + start2 + "%";
+    children2[i].style.width = length + "px";
   }
 
   for (var i = 0; i < document.getElementsByClassName("flag").length; i++) {
