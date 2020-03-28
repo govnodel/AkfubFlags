@@ -120,13 +120,13 @@ function signUp(event){
 
 function exitUser(){
 	document.cookie = 'userIdInFlags=; path=/';
-	window.location.href = "index.php";
+	window.location.reload(false);
 }
 
 function startGame(){
 	stopColoring = true;
-	$("#second *, #first").fadeOut();
+	$("#second *, #first, #exitSvg").fadeOut();
 	setTimeout(function () {
-		window.location.href = "testsvg.html";
+		window.location.href = "difficulty.html";
 	}, 200);
 }
