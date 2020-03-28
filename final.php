@@ -14,7 +14,7 @@
   <?php if ($_COOKIE["userIdInFlags"] != "") {
     echo
     "<div id='nameContainer'>
-      <canvas id='canvas' width='200' height='200'></canvas>
+      <canvas id='canvas' width='200vh' height='200vh'></canvas>
       <p id='name'>".$_COOKIE["nameInFlag"]."</p>
     </div>
     <div id='tableContainer'>
