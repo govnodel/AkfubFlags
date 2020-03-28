@@ -129,6 +129,6 @@ function startGame(){
 	stopColoring = true;
 	$("#second *, #first, #exitSvg").fadeOut();
 	setTimeout(function () {
-		window.location.href = "testsvg.html";
+		window.location.href = "difficulty.html";
 	}, 200);
 }
