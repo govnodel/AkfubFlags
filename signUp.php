@@ -9,7 +9,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registration</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="assets/css/signUp.css">
   </head>
   <body>
