@@ -27,7 +27,6 @@ window.onload = function (){
 	$('#login').bind("click", {index: 1}, signUp);
 	$('#register').bind("click", {index: 2}, signUp);
 	$("#profilemenu *:not(#logRegMenu)").fadeOut(100);
-	$('#exitSvg').fadeIn(300);
 }
 
 function pushMenu(){
@@ -120,7 +119,7 @@ function signUp(event){
 }
 
 function exitUser(){
-	$('#exitSvg').fadeOut(300, function(){
+	$('#exitSvg').fadeOut(200, function(){
 		document.cookie = 'userIdInFlags=; path=/';
 		window.location.reload(false);
 	});
