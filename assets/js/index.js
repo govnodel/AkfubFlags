@@ -119,7 +119,7 @@ function signUp(event){
 }
 
 function exitUser(){
-	document.cookie = 'userIdInFlags=""; path=/';
+	document.cookie = 'userIdInFlags=; path=/';
 	window.location.href = "index.php";
 }
 
