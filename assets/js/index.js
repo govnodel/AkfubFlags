@@ -84,12 +84,16 @@ function slideMenu(){
 				opacity: 0
 			}, 300);
 
-			//second menu appearing
+			$('#editor').animate({
+				opacity: 1
+			}, 300);
 		} else {
 			this.innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle><circle cx='20' cy='20' r='10' fill='white'></circle>";
 			document.getElementById("secondCircle").innerHTML = "<circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>"
 
-			//second menu disappearing
+			$('#editor').animate({
+				opacity: 0
+			}, 300);
 
 			$('#playerTableContainer, #stats').animate({
 				opacity: 1

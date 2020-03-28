@@ -266,6 +266,10 @@ body {
   position: absolute;
 }
 
+#editor{
+  opacity: 0;
+}
+
 #cancelSymbol > circle{
   fill: white;
   stroke: #dedede;
