@@ -11,7 +11,7 @@ window.onload = function (){
 
   document.body.style.animation = "end 0.8s linear forwards";
 
-  let length = 190;
+  let length = WIDTH / 10;
 
   let children1 = document.getElementById("firstFlags").children;
   let children2 = document.getElementById("secondFlags").children;
