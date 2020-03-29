@@ -269,7 +269,7 @@ body {
 .colorArea{
   position: absolute;
   z-index: 1;
-  
+  resize: none;
 }
 
 #canvas{
