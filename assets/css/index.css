@@ -266,7 +266,20 @@ body {
   font-size: 2.4em;
 }
 
+#colorArea1{
+  top: 5vh;
+}
+
+#colorArea2{
+  top: 15vh;
+}
+
+#colorArea3{
+  top: 25vh;
+}
+
 .colorArea{
+  left: 105%;
   position: absolute;
   z-index: 1;
   resize: none;
