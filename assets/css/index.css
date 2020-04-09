@@ -267,24 +267,24 @@ body {
   width: 100%;
 }
 
-#colorArea1{
-  top: 5vh;
-}
-
-#colorArea2{
-  top: 15vh;
-}
-
-#colorArea3{
-  top: 25vh;
-}
-
-.colorArea{
+#colorContainer > div{
   left: 105%;
   position: absolute;
   z-index: 1;
   resize: none;
   font-size: 1em;
+}
+
+#colorAreaContainer1{
+  top: 5vh;
+}
+
+#colorAreaContainer2{
+  top: 15vh;
+}
+
+#colorAreaContainer3{
+  top: 25vh;
 }
 
 #canvas{
