@@ -267,7 +267,7 @@ body {
   width: 100%;
 }
 
-#colorContainer > div{
+#colorContainer > div > textarea{
   left: 105%;
   position: absolute;
   z-index: 1;
