@@ -261,7 +261,7 @@ body {
 }
 
 #colorContainer{
-  top: 32vh;
+  top: 26vh;
   position: absolute;
   width: 100%;
 }
@@ -271,6 +271,7 @@ body {
   font-weight: 1;
   font-size: 1.4em;
   color: #424242;
+  margin-bottom: 0vh;
 }
 
 #colorContainer > div > textarea{
@@ -299,6 +300,7 @@ body {
 }
 
 #canvasEditor{
+  top: -5vh;
   left: 50%;
   position: absolute;
   transform: translate(-50%, 0px);
