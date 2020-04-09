@@ -264,6 +264,7 @@ body {
   top: 26vh;
   position: absolute;
   width: 100%;
+  font-size: 5em;
 }
 
 #colorContainer > div > p{
