@@ -263,20 +263,21 @@ body {
 #colorContainer{
   top: 32vh;
   position: absolute;
-  font-size: 2.4em;
   width: 100%;
 }
 
-#colorContainer > p > textarea{
+#colorContainer > div > p{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 1;
+  font-size: 1.4em;
+  color: #424242;
+}
+
+#colorContainer > div > textarea{
   left: 36%;
   z-index: 1;
   resize: none;
   font-size: 1em;
-  display: inline;
-}
-
-#colorContainer > p{
-  display: inline;
 }
 
 #colorArea1{
