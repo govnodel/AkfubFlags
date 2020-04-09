@@ -267,7 +267,7 @@ body {
   width: 100%;
 }
 
-#colorContainer > div > textarea{
+#colorContainer > p > textarea{
   left: 36%;
   z-index: 1;
   resize: none;
@@ -275,19 +275,19 @@ body {
   display: inline;
 }
 
-#colorContainer > div > p{
+#colorContainer > p{
   display: inline;
 }
 
-#colorAreaContainer1{
+#colorArea1{
   top: 5vh;
 }
 
-#colorAreaContainer2{
+#colorArea2{
   top: 15vh;
 }
 
-#colorAreaContainer3{
+#colorArea3{
   top: 25vh;
 }
 
