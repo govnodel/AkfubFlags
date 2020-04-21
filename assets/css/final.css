@@ -101,6 +101,7 @@ body, html {
   font-size: 10vh;
 }
 #please{
+  width: 100%;
   font-family: 'Oswald', sans-serif;
   left: 50%;
   position: absolute;
