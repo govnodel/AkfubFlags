@@ -17,6 +17,8 @@ function draw(str, cnv){
   let size = canvas.width;
   let startColor = 'rgb(232, 232, 232)';
 
+  let borderWidth = 10; //10%
+
   ctx.beginPath();
   ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
   ctx.clip();
@@ -33,7 +35,7 @@ function draw(str, cnv){
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
       ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
+      ctx.arc(size / 2, size / 2, size / 2 * ((100 - borderWidth) / 100), 0, Math.PI * 2);
       ctx.clip();
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
