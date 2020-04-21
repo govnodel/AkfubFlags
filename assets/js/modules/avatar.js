@@ -17,7 +17,7 @@ function draw(str, cnv){
   let size = canvas.width;
   let startColor = 'rgb(232, 232, 232)';
 
-  let borderWidth = 50; //10%
+  let borderWidth = 10; //10%
   let standartLineWidth = 10; //10%
 
   ctx.beginPath();
@@ -90,7 +90,7 @@ function draw(str, cnv){
       ctx.lineCap = 'round';
       ctx.moveTo(32, size / 2);
       ctx.lineTo(size - 32, size / 2);
-      ctx.lineWidth = 15;
+      ctx.lineWidth = standartLineWidth;
       ctx.stroke();
   }
 }
