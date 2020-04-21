@@ -90,8 +90,8 @@ function draw(str, cnv){
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(232, 232, 232)';
       ctx.lineCap = 'round';
-      ctx.moveTo(32 / 100 * (size / 2), size / 2);
-      ctx.lineTo(size - 32 / 100 * (size / 2), size / 2);
+      ctx.moveTo(proc / 100 * (size / 2), size / 2);
+      ctx.lineTo(size - proc / 100 * (size / 2), size / 2);
       ctx.lineWidth = standartLineWidth / 100 * (size / 2);
       ctx.stroke();
   }
