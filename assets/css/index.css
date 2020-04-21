@@ -265,7 +265,6 @@ body {
   position: absolute;
   width: 100%;
   z-index: 10;
-  /* transform: translate(0, -50%); */
   font-size: 1.5em;
 }
 
@@ -273,10 +272,14 @@ body {
   list-style: none;
   opacity: 0;
   font-size: 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #patternContainer > a{
   font-size: 2.6em;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #colorContainer{
