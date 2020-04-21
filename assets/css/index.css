@@ -264,33 +264,19 @@ body {
   top: 26vh;
   position: absolute;
   width: 100%;
-}
-
-#colorContainer > div > p{
-  font-family: 'Oswald', sans-serif;
-  font-weight: 1;
-  font-size: 1.4em;
-  color: #424242;
-  margin-bottom: 0vh;
-}
-
-#colorContainer > div > textarea{
-  left: 36%;
-  z-index: 1;
-  resize: none;
-  font-size: 3.4em;
+  z-index: 10;
 }
 
 #colorArea1{
-  top: 5vh;
+
 }
 
 #colorArea2{
-  top: 15vh;
+
 }
 
 #colorArea3{
-  top: 25vh;
+
 }
 
 #canvas{
