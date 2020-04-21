@@ -82,7 +82,7 @@ function draw(str, cnv){
       ctx.stroke();
       break;
     default:
-      let proc = 67;
+      let proc = 40;
 
       ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, size, size);
