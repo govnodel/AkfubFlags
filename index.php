@@ -124,9 +124,9 @@
           echo '<div id="editor">';
             echo '<canvas id="canvasEditor" height="300vh" width="300vh"></canvas>';
             echo '<div id="colorContainer">';
-              echo '<div id="colorArea1"></div>';
-              echo '<div id="colorArea2"></div>';
-              echo '<div id="colorArea3"></div>';
+              echo '<input type="color" id="colorArea1"></input>';
+              echo '<input type="color" id="colorArea2"></input>';
+              echo '<input type="color" id="colorArea3"></input>';
             echo '</div>';
           echo '</div>';
           echo "<div id='stats'>";
