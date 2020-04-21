@@ -18,6 +18,7 @@ function draw(str, cnv){
   let startColor = 'rgb(232, 232, 232)';
 
   let borderWidth = 10; //10%
+  let standartLineWidth = 10; //10%
 
   ctx.beginPath();
   ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
@@ -28,15 +29,16 @@ function draw(str, cnv){
 
   let proc2 = 38;
   let proc3 = 62;
+
+  ctx.beginPath();
+  ctx.arc(size / 2, size / 2, size / 2 * ((100 - borderWidth) / 100), 0, Math.PI * 2);
+  ctx.clip();
+
   switch (pattern) {
     case '1':
       color1 = new Color(str.split(":")[1].split(",")[0], str.split(":")[1].split(",")[1], str.split(":")[1].split(",")[2]);
       color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
-
-      ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size / 2 * ((100 - borderWidth) / 100), 0, Math.PI * 2);
-      ctx.clip();
 
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size * 2 / 100 * (proc2 / 2));
@@ -52,10 +54,6 @@ function draw(str, cnv){
       color2 = new Color(str.split(":")[2].split(",")[0], str.split(":")[2].split(",")[1], str.split(":")[2].split(",")[2]);
       color3 = new Color(str.split(":")[3].split(",")[0], str.split(":")[3].split(",")[1], str.split(":")[3].split(",")[2]);
 
-      ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
-      ctx.clip();
-
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size * 2 / 100 * (proc2 / 2), size);
 
@@ -66,10 +64,6 @@ function draw(str, cnv){
       ctx.fillRect(size * 2 / 100 * (proc3 / 2), 0, size / 2, size);
       break;
     case '3':
-      ctx.beginPath();
-      ctx.arc(size / 2, size / 2, size * 0.40, 0, Math.PI * 2);
-      ctx.clip();
-
       ctx.fillStyle = 'rgb(' + color1.r + ', ' + color1.g + ', ' + color1.b + ')';
       ctx.fillRect(0, 0, size, size);
 
@@ -88,10 +82,6 @@ function draw(str, cnv){
       ctx.stroke();
       break;
     default:
-      ctx.beginPath();
-      ctx.arc(size / 2, size / 2,  size * 0.45, 0, Math.PI * 2);
-      ctx.clip();
-
       ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, size, size);
 
