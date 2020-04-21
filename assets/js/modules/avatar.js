@@ -90,7 +90,7 @@ function draw(str, cnv){
       ctx.lineCap = 'round';
       ctx.moveTo(32, size / 2);
       ctx.lineTo(size - 32, size / 2);
-      ctx.lineWidth = standartLineWidth / 100 * size;
+      ctx.lineWidth = standartLineWidth / 100 * (size / 2);
       ctx.stroke();
   }
 }
