@@ -268,21 +268,22 @@ body {
 }
 
 #colorContainer > div{
-  width: 33%;
-  padding-bottom: 33%;
+  width: 25%;
+  padding-bottom: 25%;
   display: inline-block;
+  background-color: black;
 }
 
 #colorArea1{
-  background-color: red;
+
 }
 
 #colorArea2{
-  background-color: green;
+
 }
 
 #colorArea3{
-  background-color: blue;
+
 }
 
 #canvas{
