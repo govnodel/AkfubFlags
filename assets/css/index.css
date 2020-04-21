@@ -270,6 +270,7 @@ body {
 }
 
 #patternContainer > ul{
+  width: 45%;
   padding: 0;
   position: absolute;
   list-style: none;
@@ -279,6 +280,10 @@ body {
   margin-top: 15%;
   transform: translate(-50%, 0);
   background-color: #2a5eb2;
+}
+
+#patternContainer > ul > li:hover{
+  background-color: #e8e8e8;
 }
 
 #patternContainer > a{
