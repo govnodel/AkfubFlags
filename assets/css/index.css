@@ -260,8 +260,22 @@ body {
   margin-right: -50%;
 }
 
-#colorContainer{
+#patternContainer{
   top: 70%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transform: translate(0, -50%);
+  font-size: 1.5em;
+}
+
+#patternContainer > ul{
+  list-style: none;
+  opacity: 0;
+}
+
+#colorContainer{
+  top: 90%;
   position: absolute;
   width: 100%;
   z-index: 10;
