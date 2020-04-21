@@ -276,6 +276,7 @@ body {
   font-size: 1em;
   left: 50%;
   transform: translate(-50%, 0);
+  background-color: blue;
 }
 
 #patternContainer > a{
