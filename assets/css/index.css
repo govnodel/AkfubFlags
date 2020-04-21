@@ -269,6 +269,7 @@ body {
 }
 
 #patternContainer > ul{
+  position: absolute;
   list-style: none;
   opacity: 0;
   font-size: 1em;
@@ -277,6 +278,7 @@ body {
 }
 
 #patternContainer > a{
+  position: absolute;
   font-size: 2.6em;
   left: 50%;
   transform: translate(-50%, 0);
