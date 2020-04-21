@@ -264,7 +264,6 @@ body {
   top: 26vh;
   position: absolute;
   width: 100%;
-  font-size: 5em;
 }
 
 #colorContainer > div > p{
@@ -279,7 +278,7 @@ body {
   left: 36%;
   z-index: 1;
   resize: none;
-  font-size: 1em;
+  font-size: 3.4em;
 }
 
 #colorArea1{
