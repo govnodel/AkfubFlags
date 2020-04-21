@@ -289,8 +289,9 @@ body {
 }
 
 #canvas{
-  top: 0.4vh;
+  top: 50%;
   left: 5%;
+  transform: translate(0, -50%);
   position: absolute;
 }
 

@@ -123,6 +123,13 @@
           $authorizedJS = 1;
           echo '<div id="editor">';
             echo '<canvas id="canvasEditor" height="300vh" width="300vh"></canvas>';
+            echo '<a href="" class="down">None';
+              echo '<ul class="submenu">';
+                echo '<li><a href="">Pattern 1</a></li>';
+                echo '<li><a href="">Pattern 2</a></li>';
+                echo '<li><a href="">Pattern 3</a></li>';
+              echo '</ul>';
+            echo '</a>';
             echo '<div id="colorContainer">';
               echo '<div id="colorArea1"></div>';
               echo '<div id="colorArea2"></div>';
