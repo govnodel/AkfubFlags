@@ -270,13 +270,15 @@ body {
 }
 
 #patternContainer > ul{
+  padding: 0;
   position: absolute;
   list-style: none;
-  opacity: 0;
+  opacity: 1;
   font-size: 1em;
-  left: 50%;
+  margin-left: 50%;
+  margin-top: 15%;
   transform: translate(-50%, 0);
-  background-color: blue;
+  background-color: #2a5eb2;
 }
 
 #patternContainer > a{
