@@ -82,14 +82,16 @@ function draw(str, cnv){
       ctx.stroke();
       break;
     default:
+      let proc = 32;
+
       ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, size, size);
 
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(232, 232, 232)';
       ctx.lineCap = 'round';
-      ctx.moveTo(32, size / 2);
-      ctx.lineTo(size - 32, size / 2);
+      ctx.moveTo(32 / 100 * (size / 2), size / 2);
+      ctx.lineTo(size - 32 / 100 * (size / 2), size / 2);
       ctx.lineWidth = standartLineWidth / 100 * (size / 2);
       ctx.stroke();
   }
