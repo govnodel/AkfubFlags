@@ -270,6 +270,7 @@ body {
 #colorContainer > div{
   width: 33%;
   padding-bottom: 33%;
+  display: inline-block;
 }
 
 #colorArea1{
