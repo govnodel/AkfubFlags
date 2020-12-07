@@ -1,0 +1,60 @@
+/* @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.first {
+    background: #9426e2;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: -1;
+}
+
+.titleText {
+    padding-top: 50vh;
+}
+
+.first > div > h1, .first > div > h4 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 200;
+}
+
+.first > div > h1 {
+    font-size: 8em;
+}
+
+.first > div > h4 {
+    font-size: 3em;
+}
+
+/* #buttonscroll {
+  top: 43vh;
+  width: 120px;
+  height: 47px;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-name: strelkaJumping;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-timing-function: ease-out;
+}
+#first > h4 {
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  position: relative;
+  letter-spacing: 3px;
+  top: 30vh;
+  left: 50%;
+  font-size: 3em;
+  width: 14%;
+  margin-left: -7%;
+} */
