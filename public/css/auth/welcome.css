@@ -1,0 +1,27 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #2a5eb2;
+  font-size: 8vh;
+  color: white;
+}
+
+p {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    margin: 0;
+}
+
+@keyframes color {
+  0% {
+    background: #2a5eb2;
+  }
+  100% {
+    background-color: #9426e2
+  }
+}
+

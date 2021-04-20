@@ -1,10 +1,10 @@
 const express = require("express");
 // const { check, body } = require("express-validator");
 
-const basicController = require("../controllers/basicController");
+const indexController = require("../controllers/indexController");
 
 const router = express.Router();
 
-router.get("/", basicController.getBasic);
+router.get("/", indexController.getIndex);
 
 module.exports = router;

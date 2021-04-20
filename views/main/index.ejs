@@ -1,31 +1,171 @@
 <%- include('../includes/header.ejs') %>
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/main/animations.css">
+<link rel="stylesheet" href="/css/main/main.css">
 </head>
 <body>
-
-    <div id="first" class="first">
-        <div class="titleText">
+    <% if (authorized) { %>
+        <form id="exitForm" action="/logout" method="post"></form>
+        <svg id="exit" width="14vh" height="14vh" viewBox="0 0 1280 1280">
+            <g transform="translate(0,1280) scale(0.1,-0.1)" fill="white">
+                <path d="M6310 9806 c-178 -38 -312 -185 -340 -371 -7 -47 -10 -505 -8 -1380
+                l3 -1310 23 -60 c101 -270 412 -385 651 -242 98 59 176 172 201 291 7 35 10
+                479 8 1386 l-3 1335 -22 57 c-59 155 -192 268 -347 297 -72 13 -95 13 -166 -3z">
+                </path>
+                <path d="M5000 9516 c-963 -433 -1672 -1287 -1920 -2310 -68 -281 -94 -502
+                -94 -806 0 -386 49 -698 166 -1060 397 -1231 1474 -2142 2758 -2334 244 -37
+                570 -47 810 -26 1249 112 2332 889 2828 2030 147 339 241 715 273 1088 15 177
+                6 560 -16 722 -102 756 -424 1418 -948 1956 -275 283 -575 504 -913 673 -126
+                63 -239 111 -261 111 -11 0 -13 -87 -13 -474 l0 -474 138 -97 c177 -126 283
+                -215 407 -340 396 -398 642 -910 711 -1475 22 -180 14 -553 -14 -715 -75 -422
+                -231 -785 -485 -1124 -92 -124 -364 -396 -488 -488 -305 -228 -657 -389 -1010
+                -463 -237 -49 -568 -65 -804 -40 -856 93 -1606 617 -1989 1389 -121 245 -195
+                481 -237 756 -29 184 -31 499 -5 689 58 428 229 843 492 1196 155 209 303 353
+                596 581 l153 119 7 53 c11 91 9 566 -4 740 -10 139 -15 167 -28 166 -8 0 -58
+                -19 -110 -43z">
+                </path>
+            </g>
+        </svg>
+    <% } %>
+    <div id="first">
+        <div id="titleText">
             <h1>WELCOME</h1>
             <h1>to AkfubFlags</h1>
         </div>
-        <div class="startText">
+        <div id="startText">
             <h4>Let's start</h4>
         </div>
         
-        <svg id = "buttonscroll"
-            viewBox="0 0 451.847 451.847"
-            onclick="slowScroll()">
+        <svg id="scroll" viewBox="0 0 451.847 451.847">
             <g transform="matrix(0.39836581, 0, 0, 0.38825076, 132.10826, 144.2361)">
                 <path d="m 186.86879,791.26871 c -90.307199,0 -173.520872,-12.13198 -246.380416,
                 -45.69229 L -2143.1073,-150.0312 c 0,0 -79.1581,-81.76849 8.7112,-184.98223 94.3893,
                 -58.18359 140.4548,-32.61512 278.2917,25.56842 L 186.95048,546.09801 2363.249,
                 -309.44501 c 137.8252,-58.18354 192.255,-85.21932 258.5071,-5.51408 48.2708,
                 90.46614 -5.728,160.52513 -23.4894,167.37357 L 436.27325,745.08729 c -94.67248,
-                31.55794 -159.13048,46.18142 -249.40446,46.18142 z"
-                style="fill:#ffffff"/>
+                31.55794 -159.13048,46.18142 -249.40446,46.18142 z" />
             </g>
         </svg>
     </div>
+
+    <div id="second">
+        <div id="profile">
+            <div>
+                <% if (authorized) { %>
+                    <div>
+                        <canvas id='avatar'></canvas>
+                        <p><%= userData.login %></p>
+                    </div>
+                <% } else { %>
+                    <div>   
+                        <h1 id="login"><a href="/login">Log in</a></h1>
+                        <h2 id="register">or <a href="/signUp">Sign up now</a></h2>
+                    </div>
+                <% } %>
+            </div>
+            <div>
+                <% if (authorized) { %>
+                    <!-- <div id="editor">
+                        <canvas id="canvasEditor" height="300vh" width="300vh"></canvas>
+                        <div id="patternContainer">
+                            <a class="down">None</a>
+                            <ul class="submenu">
+                                <li><a>Pattern 1</a></li>
+                                <li><a>Pattern 2</a></li>
+                                <li><a>Pattern 3</a></li>
+                            </ul>
+                        </div>
+                        <div id="colorContainer">
+                            <div id="colorArea1"></div>
+                            <div id="colorArea2"></div>
+                            <div id="colorArea3"></div>
+                        </div>
+                    </div> -->
+                    <div id="page1">
+                        <div class="statsContainer">
+                            <div>
+                                <p>YOUR STATS</p>
+                            </div>
+                            <svg viewBox="0 0 51 200.787">
+                                <g>
+                                    <path d="M0.0240945 91.8181l0 17.0428c4.52776,0.108425 8.23831,1.57016 11.1015,4.38319 2.83713,2.78492 4.74059,6.56173 
+                                    5.70638,11.3043 0.933661,4.77874 1.44768,12.9789 1.4778,24.6045 0.0622441,11.6617 0.240945,19.2917 0.544134,23.0042 0.53811,5.91921 
+                                    1.50791,10.6237 2.95559,14.1535 1.44768,3.52984 3.22866,6.34488 5.34295,8.44913 2.14039,2.14039 4.85504,3.74669 8.14394,4.85102 
+                                    2.23276,0.783071 5.88709,1.17661 10.9509,1.17661l4.95343 0 0 -16.4043 -2.74677 0c-6.12602,0 -10.1699,-1.31717 -12.1918,-3.91736 
+                                    -1.99181,-2.60823 -2.98772,-8.4913 -2.98772,-17.6191 0,-17.3982 -0.271063,-28.4556 -0.815197,-33.1239 -0.935669,-7.7022 -2.83311,-13.9065 
+                                    -5.64012,-18.5467 -2.83913,-4.59602 -6.85087,-8.19815 -12.0392,-10.8004 6.78862,-3.81496 11.5553,-8.87882 14.3322,-15.1916 2.77689,-6.31276 
+                                    4.16232,-16.9384 4.16232,-31.9131 0,-13.5833 0.12248,-21.681 0.421654,-24.3555 0.425669,-4.66831 1.57016,-7.91303 3.49972,-9.77031 
+                                    1.90346,-1.81913 5.67626,-2.74677 11.2581,-2.74677l2.74677 0 0 -16.3983 -4.95343 0c-5.7626,0 -9.95504,0.534094 -12.5512,1.67457 
+                                    -3.7728,1.53402 -6.87697,4.09807 -9.35067,7.7022 -2.4737,3.63827 -4.1061,8.19815 -4.82894,13.6937 -0.724843,5.52366 -1.14449,14.5491 
+                                    -1.20673,27.0601 -0.0301181,12.5532 -0.544134,21.1831 -1.4778,25.9618 -0.965787,4.77874 -2.86925,8.55756 -5.70638,11.3405 -2.86323,2.7789 
+                                    -6.57378,4.24063 -11.1015,4.3852z"/>
+                                </g>
+                            </svg>
+                            <div id='stats'>
+                                <p id='place'>Place <label><%= userData.place %></label></p>
+                                <p id='games'>Games <label><%= userData.games %></label></p>
+                                <p id='victories'>Victories <label><%= userData.victories %></label></p>
+                                <p id='accuracy'>Accuracy <label><%= userData.accuracy %></label>%</p>
+                                <p id='score'>Score <label><%= userData.score %></label></p>
+                            </div>
+                        </div>
+                        <div>
+                            <table id='top'>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Score</td>
+                                    <td>Place</td>
+                                </tr>
+                                <tr class='row'>
+                                    <td><%= userData.upperUser.login %></td>
+                                    <td><%= userData.upperUser.score %></td>
+                                    <td><%= userData.upperUser.place %></td>
+                                </tr>
+                                <tr>
+                                    <td><%= userData.login %></td>
+                                    <td><%= userData.score %></td>
+                                    <td><%= userData.place %></td>
+                                </tr>
+                                <tr class='row'>
+                                    <td><%= userData.lowerUser.login %></td>
+                                    <td><%= userData.lowerUser.score %></td>
+                                    <td><%= userData.lowerUser.place %></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="page2">
+                        help me
+                    </div>
+                    <div id='sliders'>
+                        <svg id="slider1" height='4vh' width='4vh' viewBox="0 0 40 40">
+                            <circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>
+                            <circle id="sliderCircle" cx='20' cy='20' r='10' fill='white'></circle>
+                        </svg>
+                        <svg id="slider2" height='4vh' width='4vh' viewBox="0 0 40 40">
+                            <circle cx='20' cy='20' r='16' fill='#2a5eb2'></circle>
+                        </svg>
+                    </div>
+                <% } else { %>
+                    <svg id="cancel" height="30vh" width="30vh" viewBox="0 0 300 300">
+                        <circle cx="150" cy="150" r="120"></circle>
+                        <line x1="70" y1="70" x2="240" y2="240"></line>
+                    </svg>
+                <% } %>
+            </div>
+        </div>
+        <div id="openProfile">
+            <svg x="0" y="0" width="9vh" height="15vh" viewBox="0 0 90 150">
+                <polyline points="30,50 55,75 30,100" stroke="white" stroke-width="10" fill="none">
+            </svg>
+        </div>
+        <form id="startForm" action="/difficulty" method="get"></form>
+        <svg id="start" width="40vh" height="40vh" viewBox="0 0 10 10">
+            <circle cx="5" cy="5" r="4" fill="none" stroke="white" stroke-width="0.6"/>
+            <polygon points="4,7 4,3 7.2,5" fill="none" stroke="white" stroke-width="0.6"/>
+        </svg>
+    </div>
+
+    <script src="/js/main.js"></script>
 
 <%- include('../includes/footer.ejs') %>

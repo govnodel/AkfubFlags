@@ -1,0 +1,78 @@
+@keyframes scroll {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: translateY(50%)
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes rotateStart {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes into{
+  0% {
+    background-color: #9426e2
+  }
+  100% {
+    background-color: #2a5eb2
+  }
+}
+
+@keyframes outto{
+  0% {
+    background-color: #9426e2
+  }
+  100% {
+    background-color: #2a5eb2
+  }
+}
+
+@keyframes closeProfile{
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: -30vw;
+  }
+}
+
+@keyframes openProfile{
+  0% {
+    left: -30vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+@keyframes closeProfileButton{
+  0% {
+    left: 30vw;
+    transform: rotatey(180deg) translate(0, -50%);
+  }
+  100% {
+    left: 0vw;
+    transform: rotatey(0deg) translate(0, -50%);
+  }
+}
+
+@keyframes openProfileButton{
+  0% {
+    left: 0vw;
+    transform: rotatey(0deg) translate(0, -50%);
+  }
+  100% {
+    left: 30vw;
+    transform: rotatey(180deg) translate(0, -50%);
+  }
+}

@@ -1,0 +1,111 @@
+body {
+  background-color: #2a5eb2;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  animation: begin-appear 1s linear forwards;
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: -102%;
+  left: 50vw;
+  background-color: white;
+  height: 100vh;
+  width: 50vw;
+  transform: translate(-50%, 0);
+  animation: begin-move 1.6s 0.2s ease-in-out forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  height: 100vh;
+  width: 200vw;
+  /* transform: translate(0, -50%); */
+  animation: appear-flags 8s linear infinite;
+}
+
+svg > path:nth-child(1) {
+  stroke: grey;
+}
+
+svg > path:nth-child(2) {
+  stroke: whitesmoke;
+}
+
+/* rect {
+  transform: translate(0, 50%) rotate(-45deg);
+} */
+
+.container > div {
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+}
+
+.container > div:nth-child(1) {
+  top: 10vh;
+}
+
+.container > div:nth-child(2) {
+  top: 30vh;
+}
+
+button {
+  width: 22vw;
+  height: 15vh;
+  background-color: #2a5eb2;
+  border: none;
+  border-radius: 0.5vw;
+  font-size: 1.7vw;
+  color: white;
+}
+
+@keyframes begin-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes begin-move {
+  0% {
+    top: -102%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes move-flags {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 100vh;
+    left: -100vw;
+  }
+}
+
+@keyframes appear-flags {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: -100vw;
+  }
+}

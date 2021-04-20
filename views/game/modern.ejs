@@ -1,0 +1,60 @@
+<%- include('../includes/header.ejs') %>
+
+<link rel="stylesheet" href="/css/game.css">
+</head>
+    <body>
+        <div id="upBlock">
+            <svg id="circleTimer" width="91" height="91" fill = 'none'>
+                <circle id = "inner" cx = "-45" cy = "45" r = "40"/>
+                <circle id = "outer" cx = "-45" cy = "45" r = "40"/>
+                <text id="textTimer" x = "36" y = "58" fill = "white" >10</text>
+            </svg>
+            <p id="country">Lubava</p>
+            <p class="data" id="pop">POP <span></span></p>
+            <p class="data" id="cap">CAP <span>Ubuntu</span></p>
+            <p class="data" id="regime">MODERN|EASY</p>
+            <div id="lives">
+                <div id="empty">
+                    <img src="assets/images/otherimgs/nolife.png">
+                    <img src="assets/images/otherimgs/nolife.png">
+                    <img src="assets/images/otherimgs/nolife.png">
+                </div>
+                <div id="full">
+                    <img src="assets/images/otherimgs/life.png">
+                    <img src="assets/images/otherimgs/life.png">
+                    <img src="assets/images/otherimgs/life.png">
+                </div>
+            </div>
+        </div>
+  <svg id="progressBar">
+    <rect id="empty" x="0" y="0" width="100%" height="10px"/>
+    <rect id="full" x="0" y="0" width="0%" height="10px"/>
+  </svg>
+  <div id = "flags">
+    <img id="flag0">
+    <img id="flag1">
+    <img id="flag2">
+    <img id="flag3">
+  </div>
+
+   
+
+  <%-"<script type='text/javascript'>"%>
+    const names = [];
+    const pops = [];
+    const capitals = [];
+    const dates = [];
+    let diff = <%= "1" %>;
+    let modern = <%= "1" %>;
+
+    <% while (false) { %>
+        names[names.length] = <%= "1" %>;
+        pops[pops.length] = <%= "1" %>;
+        capitals[capitals.length] = <%= "1" %>;
+        dates[dates.length] = <%= "1" %>;
+    <% } %>
+  </script>
+
+  <script src="assets/js/game.js"></script>
+
+<%- include('../includes/footer.ejs') %>

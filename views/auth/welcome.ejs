@@ -1,0 +1,14 @@
+<%- include('../includes/header.ejs') %>
+
+    <link rel="stylesheet" href="/css/auth/welcome.css">
+</head>
+<body>
+    <% if (firstTime) { %>
+    <p>Welcome, <%= login %></p>
+    <% } else { %>
+    <p>Welcome back, <%= login %></p>
+    <% } %>
+
+    <script src="/js/welcome.js"></script>
+
+<%- include('../includes/footer.ejs') %>

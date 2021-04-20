@@ -1,0 +1,90 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #2a5eb2;
+  font-size: 2.2vh;
+}
+
+label {
+  color: #424242;
+}
+
+.container {
+  background-color: white;
+  transform: translate(-50%, 0);
+  width: 28vw;
+  top: 15vh;
+  height: 60vh;
+  left: 50%;
+  position: absolute;
+}
+
+form {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  width: 100%;
+  height: 6vh;
+  border: 0.01vh solid #cfcfcf;
+  border-radius: 0.01vh;
+  font-size: 1.8vh;
+  font-family: "Fjalla One", sans-serif;
+  margin-top: 0.5vh;
+  color: #424242;
+}
+
+button {
+  background-color: #2a5eb2;
+  border: none;
+  color: white;
+  padding: 2vh;
+  cursor: pointer;
+  font-size: 1.4vh;
+  width: 100%;
+}
+
+form > div {
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: 50%;
+  width: 74%;
+}
+
+form > div:nth-child(1) {
+  top: 10%;
+}
+
+form > div:nth-child(2) {
+  top: 35%;
+}
+
+form > div:nth-child(3) {
+  top: 75%;
+}
+
+@keyframes begin {
+  0% {
+    top: 30vh;
+    opacity: 0;
+  }
+  100% {
+    top: 15vh;
+    opacity: 1;
+  }
+}
+
+@keyframes end {
+  0% {
+    top: 15vh;
+    opacity: 1;
+  }
+  100% {
+    top: 15vh;
+    opacity: 0;
+  }
+}

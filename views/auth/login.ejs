@@ -1,0 +1,25 @@
+<%- include('../includes/header.ejs') %>
+
+    <link rel="stylesheet" href="/css/auth/login.css">
+</head>
+<body>
+    <div class="container">
+        <%- include('../includes/errors.ejs') %>
+        <form id="loginMenu" action="/login" method="post">
+            <div>
+                <label for="login">Login</label>
+                <input required type="text" name="login" value="<%= oldInput.login %>">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input required type="password" name="password" value="<%= oldInput.password %>">
+            </div>
+            <div>
+                <button type="button">Enter</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="/js/login.js"></script>
+
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
+body {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.errors {
+  color: #721c24;
+  background-color: #f8d7da;
+  width: 80%;
+  transform: translate(-50%, 0);
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  height: 4vh;
+  top: 1vh;
+  border: 0.01vh solid #f5c6cb;
+  border-radius: 1px;
+  font-size: 1.9vh;
+  line-height: 4vh;
+  white-space: nowrap;
+}
