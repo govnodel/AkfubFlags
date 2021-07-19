@@ -22,6 +22,7 @@ exports.getIndex = async (req, res, next) => {
       userData: req.session.authorized
         ? {
             login: req.session.user.login,
+            role: req.session.user.role,
             games: req.session.user.stats.games,
             victories: req.session.user.stats.victories,
             place: req.session.user.stats.place,

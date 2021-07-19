@@ -1,0 +1,69 @@
+<%- include('../includes/header.ejs') %>
+
+<link rel="stylesheet" href="/css/flags/add.css">
+</head>
+<body>
+    <form action="/flags/add" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input required type="text" name="name" id="name"
+                value="<%= oldInput.name %>">
+        </div>
+        <div>
+            <label for="continent">Continent</label>
+            <input required type="text" name="continent" id="continent"
+                value="<%= oldInput.continent %>">
+        </div>
+        <div>
+            <label for="century">Century</label>
+            <input required type="number" name="century" id="century"
+                value="<%= oldInput.century %>">
+        </div>
+        <div>
+            <label for="difficulty">Difficulty</label>
+            <input required type="number" name="difficulty" id="difficulty"
+                value="<%= oldInput.difficulty %>">
+        </div>
+        <div>
+            <label for="population">Population</label>
+            <input required type="number" name="population" id="population"
+                value="<%= oldInput.population %>">
+        </div>
+        <div>
+            <label for="capital">Capital</label>
+            <input required type="text" name="capital" id="capital"
+                value="<%= oldInput.capital %>">
+        </div>
+        <div>
+            <label for="area">Area</label>
+            <input required type="number" name="area" id="area"
+                value="<%= oldInput.area %>">
+        </div>
+        <div>
+            <label for="currency">Currency</label>
+            <input required type="text" name="currency" id="currency"
+                value="<%= oldInput.currency %>">
+        </div>
+        <div>
+            <label for="path">Path</label>
+            <input type="text" name="path" id="path"
+                value="<%= oldInput.path %>">
+        </div>
+        <div>
+            <label for="modern">Modern</label>
+            <input type="checkbox" name="modern" id="modern" 
+                <%= oldInput.modern ? "checked" : "" %>>
+        </div>
+        <div <%= oldInput.modern ? "hidden" : "" %> id="dateContainer">
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date"
+                value="<%= oldInput.date %>">
+        </div>
+        <div>
+            <input type="submit" value="Done">
+        </div>
+    </form>
+
+    <script src="/js/flags/add.js"></script>
+
+<%- include('../includes/footer.ejs') %>

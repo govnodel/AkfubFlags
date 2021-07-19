@@ -33,11 +33,13 @@ const basicRoutes = require("./routes/main");
 const authRoutes = require("./routes/auth");
 const difficultyRoutes = require("./routes/difficulty");
 const gameRoutes = require("./routes/game");
+const flagsRoutes = require("./routes/flags");
 
 app.use(basicRoutes);
 app.use(authRoutes);
 app.use(difficultyRoutes);
 app.use(gameRoutes);
+app.use(flagsRoutes);
 
 mongoose
   .connect(MONGODB_URI, {

@@ -1,0 +1,70 @@
+<%- include('../includes/header.ejs') %>
+
+<link rel="stylesheet" href="/css/flags/edit.css">
+</head>
+<body>
+    <form action="/flags/edit" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input required type="text" name="name" id="name"
+                value="<%= oldInput.name ? oldInput.name : flag.name %>">
+        </div>
+        <div>
+            <label for="continent">Continent</label>
+            <input required type="text" name="continent" id="continent"
+                value="<%= oldInput.continent ? oldInput.continent : flag.continent %>">
+        </div>
+        <div>
+            <label for="century">Century</label>
+            <input required type="number" name="century" id="century"
+                value="<%= oldInput.century ? oldInput.century : flag.century %>">
+        </div>
+        <div>
+            <label for="difficulty">Difficulty</label>
+            <input required type="number" name="difficulty" id="difficulty"
+                value="<%= oldInput.difficulty ? oldInput.difficulty : flag.difficulty %>">
+        </div>
+        <div>
+            <label for="population">Population</label>
+            <input required type="number" name="population" id="population"
+                value="<%= oldInput.population ? oldInput.population : flag.population %>">
+        </div>
+        <div>
+            <label for="capital">Capital</label>
+            <input required type="text" name="capital" id="capital"
+                value="<%= oldInput.capital ? oldInput.capital : flag.capital %>">
+        </div>
+        <div>
+            <label for="area">Area</label>
+            <input required type="number" name="area" id="area"
+                value="<%= oldInput.area ? oldInput.area : flag.area %>">
+        </div>
+        <div>
+            <label for="currency">Currency</label>
+            <input required type="text" name="currency" id="currency"
+                value="<%= oldInput.currency ? oldInput.currency : flag.currency %>">
+        </div>
+        <div>
+            <label for="path">Path</label>
+            <input type="text" name="path" id="path"
+                value="<%= oldInput.path ? oldInput.path : flag.path %>">
+        </div>
+        <div>
+            <label for="modern">Modern</label>
+            <input type="checkbox" name="modern" id="modern" 
+                <%= oldInput.modern === true ? "checked" : oldInput.modern === false ? "" : flag.modern ? "checked" : "" %>>
+        </div>
+        <div <%= oldInput.modern === true ? "hidden" : oldInput.modern === false ? "" : flag.modern ? "hidden" : "" %> id="dateContainer">
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date"
+                value="<%= oldInput.date ? oldInput.date : flag.date %>">
+        </div>
+        <div>
+            <input type="hidden" name="flagId" value="<%= flag._id %>">      
+            <input type="submit" value="Done">
+        </div>
+    </form>
+
+    <script src="/js/flags/edit.js"></script>
+
+<%- include('../includes/footer.ejs') %>

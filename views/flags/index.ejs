@@ -1,0 +1,52 @@
+<%- include('../includes/header.ejs') %>
+
+<link rel="stylesheet" href="/css/flags/index.css">
+</head>
+<body>
+    <img src="/images/flags/x.png" alt="Hover on element">
+    <a class="add" href="/flags/add">Add new</a>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Modern</td>
+            <td>Continent</td>
+            <td>Century</td>
+            <td>Difficulty</td>
+            <td>Pop</td>
+            <td>Capital</td>
+            <td>Area</td>
+            <td>Currency</td>
+            <td>Rating</td>
+            <td>Date</td>
+            <td>Path</td>
+            <td class="lastCell"></td>
+        </tr>
+        <% for (let flag of flags) { %>
+        <tr class="flagCell">
+            <td class="name"><%= flag.name %></td>
+            <td>True</td>
+            <td><%= flag.continent %></td>
+            <td><%= flag.century %></td>
+            <td><%= flag.difficulty %></td>
+            <td><%= flag.population %></td>
+            <td><%= flag.capital %></td>
+            <td><%= flag.area %></td>
+            <td><%= flag.currency %></td>
+            <td><%= flag.rating %></td>
+            <td><%= flag.date %></td>
+            <td><%= flag.path %></td>
+            <td>
+                <a class="edit" href="/flags/edit/<%= flag._id %>">Edit</a>
+                <form action="/flags/delete" method="POST">
+                    <input type="hidden" value="<%= flag._id %>" name="flagId">
+                    <button class="delete" type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+
+    <script src="/js/flags/index.js"></script>
+
+<%- include('../includes/footer.ejs') %>

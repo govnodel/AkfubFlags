@@ -227,3 +227,13 @@ a {
 #page2 {
   display: none;
 }
+
+#flags {
+  position: fixed;
+  width: 10vh;
+  height: 10vh;
+  background-color: white;
+  top: 13vh;
+  left: 99vw;
+  transform: translate(-100%, 0);
+}
